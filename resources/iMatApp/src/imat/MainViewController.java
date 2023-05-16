@@ -43,13 +43,13 @@ public class MainViewController implements Initializable {
         //pathLabel.setText(iMatDirectory);
     }
     // Specific Methods
-    private void myAccountButtonClick() throws IOException {
+    public void myAccountButtonClick() throws IOException {
         myAccountWindow.toFront();
     }
-    private void myListButtonClick() throws IOException {
+    public void myListButtonClick() throws IOException {
         myListWindow.toFront();
     }
-    private void myHistoryButtonClick() throws IOException {
+    public void myHistoryButtonClick() throws IOException {
         myHistoryWindow.toFront();
     }
 
