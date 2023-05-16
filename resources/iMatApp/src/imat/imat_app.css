@@ -29,9 +29,9 @@
 
 
 .top-bar{
-    -fx-border-width: 0 0 2px 0;
+    /*-fx-border-width: 0 0 2px 0;
     -fx-border-color: black;
-    -fx-border-style: solid;
+    -fx-border-style: solid; */
 }
 
 .account-side-bar-button{
@@ -43,4 +43,14 @@
 
 .accountPage{
     -fx-background-color: #C0C0C0;
+}
+
+.accordion .accordion-header {
+    content: "\002B";
+    /* other styles */
+}
+
+.accordion .accordion-header.active {
+    content: "\2212";
+    /* other styles */
 }
