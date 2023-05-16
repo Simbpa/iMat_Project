@@ -44,3 +44,13 @@
 .accountPage{
     -fx-background-color: #C0C0C0;
 }
+
+.accordion .accordion-header {
+    content: "\002B";
+    /* other styles */
+}
+
+.accordion .accordion-header.active {
+    content: "\2212";
+    /* other styles */
+}
