@@ -28,6 +28,9 @@
 }
 
 
+
+
+
 .top-bar{
     /*-fx-border-width: 0 0 2px 0;
     -fx-border-color: black;
@@ -45,12 +48,6 @@
     -fx-background-color: #C0C0C0;
 }
 
-.accordion .accordion-header {
-    content: "\002B";
-    /* other styles */
-}
-
-.accordion .accordion-header.active {
-    content: "\2212";
-    /* other styles */
+.titled-pane{
+    -fx-font-size: 25px;
 }
