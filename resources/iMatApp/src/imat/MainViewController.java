@@ -17,15 +17,15 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 public class MainViewController implements Initializable {
 
     @FXML
-    Label pathLabel;
+    private Label pathLabel;
 
     // Account View
     @FXML
-    Button myAccountButton;
+    private Button myAccountButton;
     @FXML
-    Button myListButton;
+    private Button myListButton;
     @FXML
-    Button myHistoryButton;
+    private Button myHistoryButton;
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -33,10 +33,10 @@ public class MainViewController implements Initializable {
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
-        pathLabel.setText(iMatDirectory);
+        //pathLabel.setText(iMatDirectory);
     }
     // Specific Methods
-    private void myAccountButtonPress() throws IOException {
+    public void myAccountButtonPress() throws IOException {
         change_view("Basket_view.fxml", myAccountButton);
     }
 
