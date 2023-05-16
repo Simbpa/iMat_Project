@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="1280" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.BasketView">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="138.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
+        <AnchorPane layoutX="50.0" layoutY="170.0" prefHeight="40.0" prefWidth="997.0" style="-fx-background-color: white;">
+            <children>
+                <AnchorPane prefHeight="40.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-radius: 30;" />
+                <AnchorPane layoutX="275.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;" />
+                <AnchorPane layoutX="485.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;" />
+                <AnchorPane layoutX="695.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;" />
+                <AnchorPane layoutX="905.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;" />
+                <AnchorPane layoutX="1115.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;" />
+                <AnchorPane layoutX="335.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
+                <AnchorPane layoutX="545.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
+                <AnchorPane layoutX="755.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
+                <AnchorPane layoutX="965.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
