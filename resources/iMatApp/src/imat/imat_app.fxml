@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -78,53 +79,6 @@
                         <Image url="@resources/3031293.png" />
                      </image>
                   </ImageView>
-               </children>
-            </AnchorPane>
-
-            <AnchorPane fx:id="minaListor" layoutY="110.0" prefHeight="673.0" prefWidth="1280.0" styleClass="accountPage">
-               <children>
-                  <AnchorPane fx:id="minaUppgifterSidebar" layoutX="14.0" layoutY="27.0" prefHeight="619.0" prefWidth="231.0" styleClass="account-side-bar">
-                     <children>
-                        <Text fx:id="accountName" layoutX="9.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mitt namn" textAlignment="CENTER" wrappingWidth="213.13671875">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Text>
-                        <AnchorPane layoutX="1.0" layoutY="97.0" prefHeight="70.0" prefWidth="195.0" styleClass="account-side-bar-button" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
-                           <children>
-                              <Text layoutX="31.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina uppgifter">
-                                 <font>
-                                    <Font size="25.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane id="middle-item" layoutX="18.0" layoutY="167.0" prefHeight="70.0" prefWidth="195.0" style="-fx-border-color: white; -fx-background-color: A2D085;" styleClass="account-side-bar-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                           <children>
-                              <Text layoutX="55.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina listor">
-                                 <font>
-                                    <Font size="25.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="1.0" layoutY="237.0" prefHeight="70.0" prefWidth="195.0" styleClass="account-side-bar-button" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
-                           <children>
-                              <Text layoutX="28.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min köphistorik">
-                                 <font>
-                                    <Font size="25.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <Text layoutX="669.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina listor">
-                     <font>
-                        <Font size="40.0" />
-                     </font>
-                  </Text>
-                  <AnchorPane layoutX="318.0" layoutY="88.0" prefHeight="558.0" prefWidth="888.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="minaUppgifter" layoutY="110.0" prefHeight="673.0" prefWidth="1280.0" styleClass="accountPage">
@@ -213,7 +167,120 @@
                </children>
             </AnchorPane>
 
-            <Line endX="881.0" endY="6.103515625E-5" layoutX="395.0" layoutY="109.0" startX="-404.0000305175781" startY="4.57763671875E-5" strokeWidth="3.0" />
+            <AnchorPane fx:id="minaListor" layoutY="110.0" prefHeight="673.0" prefWidth="1280.0" styleClass="accountPage">
+               <children>
+                  <AnchorPane fx:id="minaUppgifterSidebar" layoutX="14.0" layoutY="27.0" prefHeight="619.0" prefWidth="231.0" styleClass="account-side-bar">
+                     <children>
+                        <Text fx:id="accountName" layoutX="9.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mitt namn" textAlignment="CENTER" wrappingWidth="213.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <AnchorPane layoutX="1.0" layoutY="97.0" prefHeight="70.0" prefWidth="195.0" styleClass="account-side-bar-button" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                           <children>
+                              <Text layoutX="31.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina uppgifter">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane id="middle-item" layoutX="18.0" layoutY="167.0" prefHeight="70.0" prefWidth="195.0" style="-fx-border-color: white; -fx-background-color: A2D085;" styleClass="account-side-bar-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Text layoutX="55.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina listor">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="1.0" layoutY="237.0" prefHeight="70.0" prefWidth="195.0" styleClass="account-side-bar-button" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                           <children>
+                              <Text layoutX="28.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min köphistorik">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Text layoutX="669.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina listor">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="318.0" layoutY="88.0" prefHeight="558.0" prefWidth="888.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="minaListor1" layoutY="110.0" prefHeight="673.0" prefWidth="1280.0" styleClass="accountPage">
+               <children>
+                  <AnchorPane fx:id="minaUppgifterSidebar1" layoutX="14.0" layoutY="27.0" prefHeight="619.0" prefWidth="231.0" styleClass="account-side-bar">
+                     <children>
+                        <Text fx:id="accountName1" layoutX="9.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mitt namn" textAlignment="CENTER" wrappingWidth="213.13671875">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <AnchorPane layoutX="1.0" layoutY="97.0" prefHeight="70.0" prefWidth="195.0" styleClass="account-side-bar-button" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                           <children>
+                              <Text layoutX="31.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina uppgifter">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane id="middle-item" layoutX="18.0" layoutY="167.0" prefHeight="70.0" prefWidth="195.0" style="-fx-border-color: white;" styleClass="account-side-bar-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <Text layoutX="55.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina listor">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="1.0" layoutY="237.0" prefHeight="70.0" prefWidth="195.0" style="-fx-background-color: A2D085;" styleClass="account-side-bar-button" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                           <children>
+                              <Text layoutX="28.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min köphistorik">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <Text layoutX="669.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min köphistorik">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane layoutX="318.0" layoutY="88.0" prefHeight="558.0" prefWidth="888.0">
+                     <children>
+                        <Accordion layoutX="365.0" layoutY="109.0">
+                          <panes>
+                            <TitledPane animated="false" text="untitled 1">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="untitled 2">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="untitled 3">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
