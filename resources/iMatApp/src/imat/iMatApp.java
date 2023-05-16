@@ -19,9 +19,12 @@ public class iMatApp extends Application {
     public void start(Stage stage) throws Exception {
         
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("imat/resources/iMat");
-        
+
+        // Creates initial root to fxml file
+        // * Creates initial scene from root
+        // * Connects scene to stage
         Parent root = FXMLLoader.load(getClass().getResource("imat_app.fxml"), bundle);
-        
+
         Scene scene = new Scene(root, 1000, 700);
         
         stage.setTitle(bundle.getString("application.name"));
