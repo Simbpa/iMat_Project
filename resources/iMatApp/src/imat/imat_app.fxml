@@ -168,17 +168,20 @@
                   </AnchorPane>
                   <AnchorPane fx:id="myHistoryWindow" layoutX="10.0" layoutY="10.0" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <Text layoutX="390.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina listor">
+                        <Text layoutX="355.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min köphistorik">
                            <font>
                               <Font size="40.0" />
                            </font>
                         </Text>
-                        <Accordion layoutX="399.0" layoutY="232.0" styleClass="custom-accordion">
+                        <Accordion layoutX="197.0" layoutY="127.0" prefHeight="400.0" prefWidth="600.0" styleClass="custom-accordion">
                           <panes>
                             <TitledPane animated="false" text="untitled 1">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                               </content>
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
                             </TitledPane>
                             <TitledPane animated="false" text="untitled 2">
                               <content>
