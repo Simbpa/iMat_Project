@@ -45,12 +45,11 @@
     -fx-background-color: #C0C0C0;
 }
 
-.accordion .accordion-header {
-    content: "\002B";
-    /* other styles */
+.custom-accordion .titled-pane > .title > .arrow-button > .arrow {
+    -fx-shape: "M 0 0 L 6 6 L 0 12";
 }
 
-.accordion .accordion-header.active {
-    content: "\2212";
-    /* other styles */
+.custom-accordion .titled-pane:expanded > .title > .arrow-button > .arrow {
+    -fx-shape: "M 0 0 L 12 0 L 6 6";
 }
+
