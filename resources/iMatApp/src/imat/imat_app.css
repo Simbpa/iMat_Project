@@ -29,9 +29,9 @@
 
 
 .top-bar{
-    -fx-border-width: 0 0 2px 0;
+    /*-fx-border-width: 0 0 2px 0;
     -fx-border-color: black;
-    -fx-border-style: solid;
+    -fx-border-style: solid; */
 }
 
 .account-side-bar-button{
