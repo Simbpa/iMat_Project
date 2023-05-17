@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.effect.ColorAdjust;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -34,6 +35,10 @@ public class MainViewController implements Initializable {
     @FXML
     private AnchorPane myHistoryWindow;
 
+    ColorAdjust hoverAdjust = new ColorAdjust(0, 0, -0.4, 0);
+
+    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.2, 0);
+
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -42,24 +47,32 @@ public class MainViewController implements Initializable {
 
         //pathLabel.setText(iMatDirectory);
     }
-    // Specific Methods
-    public void myAccountButtonClick() throws IOException {
+    // Account Methods
+    public void myAccountButtonClick() {
         myAccountWindow.toFront();
     }
-    public void myListButtonClick() throws IOException {
+    public void myListButtonClick() {
         myListWindow.toFront();
     }
-    public void myHistoryButtonClick() throws IOException {
+    public void myHistoryButtonClick() {
         myHistoryWindow.toFront();
     }
 
 
 
+
     // General Methods
-    private void changeView(String filename, Control fxml_object) throws IOException {
+    public void changeView(String filename, Control fxml_object) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(filename));
         Stage stage = (Stage) fxml_object.getScene().getWindow();
         stage.setScene(new Scene(root, 1280, 800));
     }
+    public void buttonHover(Button button) {
+        button.setEffect(hoverAdjust);
+    }
+    public void buttonPress(Button button) {
+        button.setEffect(pressAdjust);
+    }
+
 
 }
