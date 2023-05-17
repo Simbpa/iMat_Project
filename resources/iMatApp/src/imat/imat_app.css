@@ -45,9 +45,9 @@
 }
 
 .accountPage{
-    -fx-background-color: #C0C0C0;
+    -fx-background-color: #CDCDCD;
 }
 
 .titled-pane{
-    -fx-font-size: 25px;
+    -fx-font-size: 30px;
 }
