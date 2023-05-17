@@ -78,9 +78,9 @@ public class MainViewController implements Initializable {
 
 
 
-    ColorAdjust hoverAdjust = new ColorAdjust(0, 0, -0.4, 0);
-
-    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.2, 0);
+    ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.2, 0);
+    ColorAdjust exitAdjust = new ColorAdjust(0,0,0, 0);
+    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.4, 0);
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
@@ -110,11 +110,14 @@ public class MainViewController implements Initializable {
     public void myHistoryButtonClick() {
         myHistoryWindow.toFront();
     }
-    public void myAccountButtonHover() {
-        myAccountButton.setEffect(hoverAdjust);
+    public void myAccountButtonEnter() {
+        myAccountButton.setEffect(enterAdjust);
+    }
+    public void myAccountButtonExit() {
+        myAccountButton.setEffect(exitAdjust);
     }
     public void myAccountButtonPress() {
-        myAccountButton.setEffect(hoverAdjust);
+        myAccountButton.setEffect(pressAdjust);
     }
 
     // Create Account Methods
