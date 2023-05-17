@@ -169,12 +169,12 @@ public class MainViewController implements Initializable {
         Stage stage = (Stage) fxml_object.getScene().getWindow();
         stage.setScene(new Scene(root, 1280, 800));
     }
-    public void buttonHover(Button button) {
+    /* public void buttonHover(Button button) {
         button.setEffect(hoverAdjust);
     }
     public void buttonPress(Button button) {
         button.setEffect(pressAdjust);
-    }
+    }*/
 
 
 }
