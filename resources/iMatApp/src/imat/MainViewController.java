@@ -110,12 +110,6 @@ public class MainViewController implements Initializable {
     public void myHistoryButtonClick() {
         myHistoryWindow.toFront();
     }
-    public void myAccountButtonHover() {
-        myAccountButton.setEffect(hoverAdjust);
-    }
-    public void myAccountButtonPress() {
-        myAccountButton.setEffect(pressAdjust);
-    }
 
     // Create Account Methods
 
@@ -164,10 +158,23 @@ public class MainViewController implements Initializable {
     public void toAccountView() {
 
     }
+
+
+
+
+
+
     public void changeView(String filename, Control fxml_object) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(filename));
         Stage stage = (Stage) fxml_object.getScene().getWindow();
         stage.setScene(new Scene(root, 1280, 800));
     }
+    /* public void buttonHover(Button button) {
+        button.setEffect(hoverAdjust);
+    }
+    public void buttonPress(Button button) {
+        button.setEffect(pressAdjust);
+    }*/
+
 
 }

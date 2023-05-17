@@ -84,7 +84,7 @@
                </children>
             </AnchorPane>
 
-                                          <AnchorPane layoutY="110.0" prefHeight="673.0" prefWidth="1280.0" styleClass="accountPage" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                          <AnchorPane layoutY="110.0" prefHeight="673.0" prefWidth="1280.0" styleClass="accountPage" AnchorPane.rightAnchor="0.0">
                <children>
                   <AnchorPane fx:id="myAccountWindow" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>

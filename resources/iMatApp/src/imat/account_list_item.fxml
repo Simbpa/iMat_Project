@@ -51,10 +51,6 @@
          </font>
       </Button>
       <Button layoutX="809.0" layoutY="2.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Button" />
-      <ScrollPane layoutX="169.0" layoutY="62.0" prefHeight="189.0" prefWidth="768.0" vbarPolicy="NEVER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-        </content>
-      </ScrollPane>
+      <ScrollPane layoutX="169.0" layoutY="62.0" prefHeight="189.0" prefWidth="768.0" vbarPolicy="NEVER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </fx:root>
