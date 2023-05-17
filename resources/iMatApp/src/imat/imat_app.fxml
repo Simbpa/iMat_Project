@@ -147,7 +147,7 @@
                               <Font size="27.0" />
                            </font>
                         </Button>
-                        <Button fx:id="myAccountButton" layoutX="1.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#myAccountButtonClick" prefHeight="70.0" prefWidth="229.0" styleClass="account-side-bar-button" text="Mina uppgifter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <Button fx:id="myAccountButton" layoutX="1.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#myAccountButtonClick" onMouseEntered="#myAccountButtonEnter" onMouseExited="#myAccountButtonExit" onMousePressed="#myAccountButtonPress" prefHeight="70.0" prefWidth="229.0" styleClass="account-side-bar-button" text="Mina uppgifter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <font>
                               <Font size="27.0" />
                            </font>
@@ -175,7 +175,7 @@
                               <Font size="40.0" />
                            </font>
                         </Text>
-                        <AnchorPane layoutX="16.0" layoutY="64.0" prefWidth="970.0" AnchorPane.bottomAnchor="34.66666666666674" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+                        <AnchorPane layoutX="16.0" layoutY="64.0" prefWidth="970.0" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
                            <children>
                               <ScrollPane hbarPolicy="NEVER" layoutX="24.0" layoutY="75.0" prefHeight="563.0" prefWidth="925.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="6.0">
                                  <content>
