@@ -78,9 +78,9 @@ public class MainViewController implements Initializable {
 
 
 
-    ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.2, 0);
+    ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);
     ColorAdjust exitAdjust = new ColorAdjust(0,0,0, 0);
-    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.4, 0);
+    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.2, 0);
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
