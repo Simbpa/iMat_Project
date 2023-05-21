@@ -2,7 +2,11 @@
 package imat;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -16,8 +20,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Order;
 
 public class MainViewController implements Initializable {
+    public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
+    public HashMap<String, accountListItem> orderMap = new HashMap<String, accountListItem>();
+
 
     @FXML
     private Label pathLabel;
@@ -168,7 +176,46 @@ public class MainViewController implements Initializable {
 
     }
 
+    public void initMonthMap(){
+        monthMap.put(0, "Januari");
+        monthMap.put(1, "Februari");
+        monthMap.put(2, "Mars");
+        monthMap.put(3, "April");
+        monthMap.put(4, "Maj");
+        monthMap.put(5, "Juni");
+        monthMap.put(6, "Juli");
+        monthMap.put(7, "Augusti");
+        monthMap.put(8, "September");
+        monthMap.put(9, "Oktober");
+        monthMap.put(10, "November");
+        monthMap.put(11, "December");
+    }
 
+    private ArrayList<ArrayList<Order>> findAndAdd(ArrayList<ArrayList<Order>> groupedOrders, Order newOrder) {
+        for(ArrayList<Order> group : groupedOrders){
+            if(group.get(0).getDate().getYear() == newOrder.getDate().getYear() && group.get(0).getDate().getMonth() == newOrder.getDate().getMonth()){
+                group.add(newOrder);
+                return groupedOrders;
+            }
+        }
+        ArrayList<Order> newGroup = new ArrayList<Order>();
+        newGroup.add(newOrder);
+        groupedOrders.add(newGroup);
+        return groupedOrders;
+    }
+
+    public void initAccountView(){
+        initMonthMap();
+        ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
+        for (Order order : IMatDataHandler.getInstance().getOrders()){
+            if(groupedOrders.size() != 0){
+                groupedOrders = findAndAdd(groupedOrders, order);
+                accountListItem AccountListItem = new accountListItem(order, this, monthMap);
+                orderMap.put(String.valueOf(order.getOrderNumber()), AccountListItem);
+            }
+        }
+
+    }
 
 
 
