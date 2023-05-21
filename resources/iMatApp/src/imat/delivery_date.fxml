@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="228.0" prefWidth="134.0" style="-fx-border-radius: 5; -fx-border-color: gray;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.DeliveryDate">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="134.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: gray;">
+         <children>
+            <Label alignment="CENTER" layoutY="36.0" prefHeight="35.0" prefWidth="134.0" text="Maj 4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="35.0" prefWidth="134.0" style="-fx-background-color: #a2d085; -fx-background-radius: 5;">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="134.0" text="Idag">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Button layoutX="7.0" layoutY="75.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #a2d085; -fx-background-radius: 5;" text="8:00 - 12:00">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="7.0" layoutY="175.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #a2d085; -fx-background-radius: 5;" text="18:00-22:00">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="7.0" layoutY="125.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #a2d085; -fx-background-radius: 5;" text="14:00-18:00">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
