@@ -26,6 +26,12 @@ public class MainViewController implements Initializable {
     public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
     public HashMap<String, accountListItem> orderMap = new HashMap<String, accountListItem>();
 
+    ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);
+    ColorAdjust exitAdjust = new ColorAdjust(0,0,0, 0);
+    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.2, 0);
+
+    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+
 
     @FXML
     private Label pathLabel;
@@ -84,13 +90,6 @@ public class MainViewController implements Initializable {
     @FXML
     private Button confirmationMainButton;
 
-
-
-    ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);
-    ColorAdjust exitAdjust = new ColorAdjust(0,0,0, 0);
-    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.2, 0);
-
-    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
 
