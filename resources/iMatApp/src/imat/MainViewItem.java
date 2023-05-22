@@ -17,6 +17,7 @@ public class MainViewItem extends AnchorPane {
 
     private MainViewController parentController;
     private Product product;
+    private MainViewItemDetail mainViewItemDetail;
     private int amount = 0;
     @FXML
     private ImageView itemImageView;
@@ -42,22 +43,27 @@ public class MainViewItem extends AnchorPane {
         }
         this.parentController = mainViewController;
         this.product = product;
+        this.mainViewItemDetail = new MainViewItemDetail(product, parentController);
 
         itemImageView.setImage(parentController.iMatDataHandler.getFXImage(product));
         itemNameLabel.setText(product.getName());
         itemPriceLabel.setText(Double.toString(product.getPrice()));
         itemAmountLabel.setText(Integer.toString(amount));
+
     }
 
     // -- Methods -- //
 
-    public void increase_amount() {
+    public void popUpItemDetail() {
+
+    }
+    public void increaseAmount() {
         amount += 1;
         itemAmountLabel.setText(Integer.toString(amount));
     }
 
-    public void decrease_amount() {
-        if(amount>=0){
+    public void decreaseAmount() {
+        if(amount>=1){
             amount -= 1;
             itemAmountLabel.setText(Integer.toString(amount));
         }

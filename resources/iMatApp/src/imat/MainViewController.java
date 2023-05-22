@@ -103,6 +103,8 @@ public class MainViewController implements Initializable {
     private TextField loginTelephoneTextField;
     @FXML
     private TextField loginPasswordTextField;
+    @FXML
+    private AnchorPane mainViewItemDetails;
 
     // Confirmation View
 
@@ -121,10 +123,13 @@ public class MainViewController implements Initializable {
 
     // Navigation Bar Methods
 
-    public void navigationBarHelpButton() throws IOException {
+    public void popUpHelp() {
         // Pop Up
     }
-    public void navigationBarBasketButton() throws IOException {
+    public void popUpAccount() throws IOException {
+        changeView("imat_app.fxml", navigationBarHelpButton);
+    }
+    public void popUpBasket() {
         // Pop Up, if not greyed out
     }
 

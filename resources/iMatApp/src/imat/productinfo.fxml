@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
@@ -10,25 +9,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1444.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1444.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.4071132596685083" layoutX="-2.0" layoutY="5.0" prefHeight="792.0" prefWidth="1450.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <ImageView fitHeight="412.0" fitWidth="609.0" layoutX="18.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../../imat/images/product_1.jpg" />
-                     </image>
-                  </ImageView>
+                  <ImageView fitHeight="412.0" fitWidth="551.0" layoutX="18.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
                   <AnchorPane layoutX="105.0" layoutY="535.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="111.0" prefWidth="385.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
                      <children>
-                        <Label alignment="CENTER" layoutX="137.0" layoutY="19.0" prefHeight="22.0" prefWidth="113.0" text="0 st">
+                        <Label fx:id="itemDetailAmountLabel" alignment="CENTER" layoutX="137.0" layoutY="19.0" prefHeight="22.0" prefWidth="113.0" text="0 st">
                            <font>
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <AnchorPane layoutX="20.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-style: solid; -fx-border-width: 1;">
+                        <AnchorPane fx:id="itemDetailMinusButton" layoutX="20.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-style: solid; -fx-border-width: 1;">
                            <children>
                               <Label layoutX="17.0" layoutY="-20.0" prefHeight="63.0" prefWidth="30.0" text="-">
                                  <font>
@@ -37,7 +32,7 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="295.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: #a2d085; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-style: solid; -fx-border-width: 1;">
+                        <AnchorPane fx:id="itemDetailPlusButton" layoutX="295.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="69.0" style="-fx-background-color: #a2d085; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-style: solid; -fx-border-width: 1;">
                            <children>
                               <Label layoutX="16.0" layoutY="-7.0" prefHeight="63.0" prefWidth="30.0" text="+">
                                  <font>
@@ -52,12 +47,12 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="712.0" prefWidth="779.0">
                <children>
-                  <Label layoutX="71.0" layoutY="52.0" prefHeight="118.0" prefWidth="422.0" text="varunamn" textAlignment="CENTER">
+                  <Label fx:id="itemDetailNameLabel" layoutX="71.0" layoutY="52.0" prefHeight="118.0" prefWidth="422.0" text="varunamn" textAlignment="CENTER">
                      <font>
                         <Font size="96.0" />
                      </font>
                   </Label>
-                  <Label layoutX="84.0" layoutY="189.0" prefHeight="94.0" prefWidth="157.0" text="9:00">
+                  <Label fx:id="itemDetailPriceLabel" layoutX="84.0" layoutY="189.0" prefHeight="94.0" prefWidth="157.0" text="9:00">
                      <font>
                         <Font size="70.0" />
                      </font>
@@ -69,7 +64,7 @@
                   </Label>
                   <AnchorPane layoutX="81.0" layoutY="337.0" prefHeight="293.0" prefWidth="638.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                      <children>
-                        <Label layoutX="24.0" layoutY="13.0" text="produktsinformation">
+                        <Label layoutX="11.0" layoutY="7.0" text="produktsinformation">
                            <font>
                               <Font size="38.0" />
                            </font>
@@ -91,4 +86,4 @@
         </items>
       </SplitPane>
    </children>
-</AnchorPane>
+</fx:root>
