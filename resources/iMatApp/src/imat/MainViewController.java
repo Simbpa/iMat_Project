@@ -1,14 +1,13 @@
-// This module serves as the main controller of the program
 
-// -- Packages -- //
 package imat;
 
-
-// -- Imports -- //
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,38 +15,18 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
-import se.chalmers.cse.dat216.project.Product;
 
 public class MainViewController implements Initializable {
-
-    // -- General Attributes -- //
-    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
-
     public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
     public HashMap<String, accountListItem> orderMap = new HashMap<String, accountListItem>();
-    private Map<String, MainViewItem> mainViewItemMap = new HashMap<String, MainViewItem>();
 
-    List<Product> productList =  iMatDataHandler.getProducts();
-
-    ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);
-    ColorAdjust exitAdjust = new ColorAdjust(0,0,0, 0);
-    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.2, 0);
-
-
-
-
-    // -- Specific Attributes -- //
 
     @FXML
     private Label pathLabel;
@@ -64,9 +43,6 @@ public class MainViewController implements Initializable {
     @FXML
     private Button navigationBarBasketButton;
 
-    // Main View
-    @FXML
-    private FlowPane mainViewFlowPane;
 
     // Account View
     @FXML
@@ -118,11 +94,16 @@ public class MainViewController implements Initializable {
     private Button confirmationMainButton;
 
 
-    // -- Methods -- //
+
+    ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);
+    ColorAdjust exitAdjust = new ColorAdjust(0,0,0, 0);
+    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.2, 0);
+
+    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+
     public void initialize(URL url, ResourceBundle rb) {
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
-        mainViewInitialize();
 
         //pathLabel.setText(iMatDirectory);
     }
@@ -134,25 +115,6 @@ public class MainViewController implements Initializable {
     }
     public void navigationBarBasketButton() throws IOException {
         // Pop Up, if not greyed out
-    }
-
-    // Main View Methods
-
-    public void mainViewInitialize() {
-        populateItemMap();
-        populateMainView();
-    }
-    public void populateItemMap() {
-        for (Product product: productList) {
-            MainViewItem mainViewItem = new MainViewItem(product, this);
-            mainViewItemMap.put(product.getName(), mainViewItem);
-        }
-    }
-    public void populateMainView() {
-        mainViewFlowPane.getChildren().clear();
-            for (Product product : productList) {
-                mainViewFlowPane.getChildren().add(mainViewItemMap.get(product.getName()));
-            }
     }
 
     // Account Methods
@@ -174,6 +136,54 @@ public class MainViewController implements Initializable {
     }
     public void myAccountButtonPress() {
         myAccountButton.setEffect(pressAdjust);
+    }
+
+    // Create Account Methods
+
+    public void CreateAccountMainButtonClick() {
+        // Save information
+        // Change view to ShowAccountView
+
+    }
+
+    // Login View Methods
+
+    public void loginMainButtonClick() {
+        // If correct -> Show Account View
+        // If not correct -> Error Message
+    }
+
+    // Confirmation View Methods
+
+
+    // General Methods
+
+    public void toShopView() {
+
+    }
+    public void toBasketView() {
+
+    }
+    public void toLoginView() {
+
+    }
+    public void toShowAccountView() {
+
+    }
+    public void toCreateAccountView() {
+
+    }
+    public void toDeliveryView() {
+
+    }
+    public void toPaymentView() {
+
+    }
+    public void toConfirmationView() {
+
+    }
+    public void toAccountView() {
+
     }
 
     public void initMonthMap(){
@@ -244,53 +254,6 @@ public class MainViewController implements Initializable {
     }
 
 
-    // Create Account Methods
-
-    public void CreateAccountMainButtonClick() {
-        // Save information
-        // Change view to ShowAccountView
-
-    }
-
-    // Login View Methods
-
-    public void loginMainButtonClick() {
-        // If correct -> Show Account View
-        // If not correct -> Error Message
-    }
-
-    // Confirmation View Methods
-
-
-    // General Methods
-
-    public void toMainView() throws IOException{
-
-    }
-    public void toBasketView() {
-
-    }
-    public void toLoginView() {
-
-    }
-    public void toShowAccountView() {
-
-    }
-    public void toCreateAccountView() {
-
-    }
-    public void toDeliveryView() {
-
-    }
-    public void toPaymentView() {
-
-    }
-    public void toConfirmationView() {
-
-    }
-    public void toAccountView() {
-
-    }
 
 
     public void changeView(String filename, Control fxml_object) throws IOException {
