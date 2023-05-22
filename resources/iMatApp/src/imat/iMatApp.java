@@ -23,8 +23,7 @@ public class iMatApp extends Application {
         // Creates initial root to fxml file
         // * Creates initial scene from root
         // * Connects scene to stage
-
-        Parent root = FXMLLoader.load(getClass().getResource("main_view.fxml"), bundle);
+        Parent root = FXMLLoader.load(getClass().getResource("imat_app.fxml"), bundle);
 
         Scene scene = new Scene(root, 1280, 800);
         
