@@ -1,13 +1,14 @@
+// This module serves as the main controller of the program
 
+// -- Packages -- //
 package imat;
 
+
+// -- Imports -- //
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,18 +16,38 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.Product;
 
 public class MainViewController implements Initializable {
+
+    // -- General Attributes -- //
+    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+
     public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
     public HashMap<String, accountListItem> orderMap = new HashMap<String, accountListItem>();
+    private Map<String, MainViewItem> mainViewItemMap = new HashMap<String, MainViewItem>();
 
+    List<Product> productList =  iMatDataHandler.getProducts();
+
+    ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);
+    ColorAdjust exitAdjust = new ColorAdjust(0,0,0, 0);
+    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.2, 0);
+
+
+
+
+    // -- Specific Attributes -- //
 
     @FXML
     private Label pathLabel;
@@ -43,10 +64,11 @@ public class MainViewController implements Initializable {
     @FXML
     private Button navigationBarBasketButton;
 
+    // Main View
+    @FXML
+    private FlowPane mainViewFlowPane;
 
     // Account View
-    @FXML
-    private Accordion accountHistoryAccordion;
     @FXML
     private Button myAccountButton;
     @FXML
@@ -59,14 +81,8 @@ public class MainViewController implements Initializable {
     private AnchorPane myListWindow;
     @FXML
     private AnchorPane myHistoryWindow;
-    @FXML
-    private Text paneDateText;
-    @FXML
-    private FlowPane theFlowPane;
-
 
     // Create Account View
-
     @FXML
     private Button createAccountMainButton;
     @FXML
@@ -96,16 +112,11 @@ public class MainViewController implements Initializable {
     private Button confirmationMainButton;
 
 
-
-    ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);
-    ColorAdjust exitAdjust = new ColorAdjust(0,0,0, 0);
-    ColorAdjust pressAdjust = new ColorAdjust(0,0,-0.2, 0);
-
-    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
-
+    // -- Methods -- //
     public void initialize(URL url, ResourceBundle rb) {
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
+        mainViewInitialize();
 
         //pathLabel.setText(iMatDirectory);
     }
@@ -122,6 +133,25 @@ public class MainViewController implements Initializable {
         // Pop Up, if not greyed out
     }
 
+    // Main View Methods
+
+    public void mainViewInitialize() {
+        populateItemMap();
+        populateMainView();
+    }
+    public void populateItemMap() {
+        for (Product product: productList) {
+            MainViewItem mainViewItem = new MainViewItem(product, this);
+            mainViewItemMap.put(product.getName(), mainViewItem);
+        }
+    }
+    public void populateMainView() {
+        mainViewFlowPane.getChildren().clear();
+            for (Product product : productList) {
+                mainViewFlowPane.getChildren().add(mainViewItemMap.get(product.getName()));
+            }
+    }
+
     // Account Methods
     public void myAccountButtonClick() {
         myAccountWindow.toFront();
@@ -131,7 +161,6 @@ public class MainViewController implements Initializable {
     }
     public void myHistoryButtonClick() {
         myHistoryWindow.toFront();
-        initHistoryView();
     }
     public void myAccountButtonEnter() {
         myAccountButton.setEffect(enterAdjust);
@@ -141,54 +170,6 @@ public class MainViewController implements Initializable {
     }
     public void myAccountButtonPress() {
         myAccountButton.setEffect(pressAdjust);
-    }
-
-    // Create Account Methods
-
-    public void CreateAccountMainButtonClick() {
-        // Save information
-        // Change view to ShowAccountView
-
-    }
-
-    // Login View Methods
-
-    public void loginMainButtonClick() {
-        // If correct -> Show Account View
-        // If not correct -> Error Message
-    }
-
-    // Confirmation View Methods
-
-
-    // General Methods
-
-    public void toShopView() {
-
-    }
-    public void toBasketView() {
-
-    }
-    public void toLoginView() {
-
-    }
-    public void toShowAccountView() {
-
-    }
-    public void toCreateAccountView() {
-
-    }
-    public void toDeliveryView() {
-
-    }
-    public void toPaymentView() {
-
-    }
-    public void toConfirmationView() {
-
-    }
-    public void toAccountView() {
-
     }
 
     public void initMonthMap(){
@@ -219,46 +200,67 @@ public class MainViewController implements Initializable {
         return groupedOrders;
     }
 
-    /*private void createTitledPane(ArrayList<Order> group){
-        customTitledPane newPane = new customTitledPane(group, this, monthMap);
-        String dateText = monthMap.get(group.get(0).getDate().getMonth()) + "" + group.get(0).getDate().getYear() + "              ";
-        newPane.paneDateText.setText(dateText);
-        newPane.setText(String.valueOf(group.size()));
-
-        for (Order order : group){
-            accountListItem orderItem = new accountListItem(order, newPane, monthMap);
-            newPane.theFlowPane.getChildren().add(orderItem);
-        }
-        accountHistoryAccordion.getPanes().add(newPane);
-    }*/
-
-    private void createTitledPane(ArrayList<Order> group){
-        TitledPane newPane = new TitledPane();
-        String dateText = monthMap.get(group.get(0).getDate().getMonth()) + " " + (group.get(0).getDate().getYear() + 1900) + "                                        ";
-        newPane.setText(dateText + String.valueOf(group.size()) + " Varor");
-        FlowPane fp = new FlowPane();
-        for (Order order : group){
-            accountListItem orderItem = new accountListItem(order, newPane, monthMap);
-            fp.getChildren().add(orderItem);
-        }
-        newPane.setContent(fp);
-        accountHistoryAccordion.getPanes().add(newPane);
-    }
-    public void initHistoryView(){
+    public void initAccountView(){
         initMonthMap();
         ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
-
         for (Order order : IMatDataHandler.getInstance().getOrders()){
+            if(groupedOrders.size() != 0){
                 groupedOrders = findAndAdd(groupedOrders, order);
+                accountListItem AccountListItem = new accountListItem(order, this, monthMap);
+                orderMap.put(String.valueOf(order.getOrderNumber()), AccountListItem);
+            }
         }
-        System.out.println(groupedOrders);
 
-        for (ArrayList<Order> group : groupedOrders){
-            createTitledPane(group);
-        }
     }
 
 
+    // Create Account Methods
+
+    public void CreateAccountMainButtonClick() {
+        // Save information
+        // Change view to ShowAccountView
+
+    }
+
+    // Login View Methods
+
+    public void loginMainButtonClick() {
+        // If correct -> Show Account View
+        // If not correct -> Error Message
+    }
+
+    // Confirmation View Methods
+
+
+    // General Methods
+
+    public void toMainView() throws IOException{
+
+    }
+    public void toBasketView() {
+
+    }
+    public void toLoginView() {
+
+    }
+    public void toShowAccountView() {
+
+    }
+    public void toCreateAccountView() {
+
+    }
+    public void toDeliveryView() {
+
+    }
+    public void toPaymentView() {
+
+    }
+    public void toConfirmationView() {
+
+    }
+    public void toAccountView() {
+
+    }
 
 
     public void changeView(String filename, Control fxml_object) throws IOException {
