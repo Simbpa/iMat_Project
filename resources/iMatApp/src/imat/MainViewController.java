@@ -17,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -45,6 +46,8 @@ public class MainViewController implements Initializable {
 
     // Account View
     @FXML
+    private Accordion accountHistoryAccordion;
+    @FXML
     private Button myAccountButton;
     @FXML
     private Button myListButton;
@@ -56,8 +59,14 @@ public class MainViewController implements Initializable {
     private AnchorPane myListWindow;
     @FXML
     private AnchorPane myHistoryWindow;
+    @FXML
+    private Text paneDateText;
+    @FXML
+    private FlowPane theFlowPane;
+
 
     // Create Account View
+
     @FXML
     private Button createAccountMainButton;
     @FXML
@@ -117,6 +126,7 @@ public class MainViewController implements Initializable {
     }
     public void myHistoryButtonClick() {
         myHistoryWindow.toFront();
+        initHistoryView();
     }
     public void myAccountButtonEnter() {
         myAccountButton.setEffect(enterAdjust);
@@ -204,17 +214,43 @@ public class MainViewController implements Initializable {
         return groupedOrders;
     }
 
-    public void initAccountView(){
+    /*private void createTitledPane(ArrayList<Order> group){
+        customTitledPane newPane = new customTitledPane(group, this, monthMap);
+        String dateText = monthMap.get(group.get(0).getDate().getMonth()) + "" + group.get(0).getDate().getYear() + "              ";
+        newPane.paneDateText.setText(dateText);
+        newPane.setText(String.valueOf(group.size()));
+
+        for (Order order : group){
+            accountListItem orderItem = new accountListItem(order, newPane, monthMap);
+            newPane.theFlowPane.getChildren().add(orderItem);
+        }
+        accountHistoryAccordion.getPanes().add(newPane);
+    }*/
+
+    private void createTitledPane(ArrayList<Order> group){
+        TitledPane newPane = new TitledPane();
+        String dateText = monthMap.get(group.get(0).getDate().getMonth()) + " " + (group.get(0).getDate().getYear() + 1900) + "                                        ";
+        newPane.setText(dateText + String.valueOf(group.size()) + " Varor");
+        FlowPane fp = new FlowPane();
+        for (Order order : group){
+            accountListItem orderItem = new accountListItem(order, newPane, monthMap);
+            fp.getChildren().add(orderItem);
+        }
+        newPane.setContent(fp);
+        accountHistoryAccordion.getPanes().add(newPane);
+    }
+    public void initHistoryView(){
         initMonthMap();
         ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
-        for (Order order : IMatDataHandler.getInstance().getOrders()){
-            if(groupedOrders.size() != 0){
-                groupedOrders = findAndAdd(groupedOrders, order);
-                accountListItem AccountListItem = new accountListItem(order, this, monthMap);
-                orderMap.put(String.valueOf(order.getOrderNumber()), AccountListItem);
-            }
-        }
 
+        for (Order order : IMatDataHandler.getInstance().getOrders()){
+                groupedOrders = findAndAdd(groupedOrders, order);
+        }
+        System.out.println(groupedOrders);
+
+        for (ArrayList<Order> group : groupedOrders){
+            createTitledPane(group);
+        }
     }
 
 

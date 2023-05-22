@@ -4,11 +4,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -177,33 +175,14 @@
                         </Text>
                         <AnchorPane layoutX="16.0" layoutY="64.0" prefWidth="970.0" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
                            <children>
+                              <Text layoutX="274.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Du har inte gjort några köp än! ">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Text>
                               <ScrollPane hbarPolicy="NEVER" layoutX="24.0" layoutY="75.0" prefHeight="563.0" prefWidth="925.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="6.0">
                                  <content>
-                                    <Accordion prefHeight="564.0" prefWidth="929.0" styleClass="custom-accordion">
-                                       <panes>
-                                          <TitledPane prefHeight="307.0" prefWidth="600.0" text="34 ordrar">
-                                             <font>
-                                                <Font size="25.0" />
-                                             </font>
-                                             <graphic>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="September 2022" wrappingWidth="610.008544921875" />
-                                             </graphic>
-                                             <content>
-                                                <FlowPane prefHeight="200.0" prefWidth="200.0" />
-                                             </content>
-                                          </TitledPane>
-                                          <TitledPane animated="false" text="untitled 2">
-                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                             </content>
-                                          </TitledPane>
-                                          <TitledPane animated="false" text="untitled 3">
-                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                                             </content>
-                                          </TitledPane>
-                                       </panes>
-                                    </Accordion>
+                                    <Accordion fx:id="accountHistoryAccordion" prefHeight="564.0" prefWidth="929.0" style="-fx-background-color: C0C0C0;" styleClass="custom-accordion" />
                                  </content>
                               </ScrollPane>
                            </children>
