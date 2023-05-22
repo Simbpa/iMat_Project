@@ -214,19 +214,7 @@ public class MainViewController implements Initializable {
         groupedOrders.add(newGroup);
         return groupedOrders;
     }
-
-    /*private void createTitledPane(ArrayList<Order> group){
-        customTitledPane newPane = new customTitledPane(group, this, monthMap);
-        String dateText = monthMap.get(group.get(0).getDate().getMonth()) + "" + group.get(0).getDate().getYear() + "              ";
-        newPane.paneDateText.setText(dateText);
-        newPane.setText(String.valueOf(group.size()));
-
-        for (Order order : group){
-            accountListItem orderItem = new accountListItem(order, newPane, monthMap);
-            newPane.theFlowPane.getChildren().add(orderItem);
-        }
-        accountHistoryAccordion.getPanes().add(newPane);
-    }*/
+    
 
     private void createTitledPane(ArrayList<Order> group){
         TitledPane newPane = new TitledPane();
