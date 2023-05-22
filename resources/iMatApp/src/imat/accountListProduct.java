@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TitledPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.Product;
@@ -17,6 +18,12 @@ import java.util.Map;
 
 public class accountListProduct extends AnchorPane {
 
+    @FXML
+    private ImageView accountHistoryProductImage;
+    @FXML
+    public Text accountHistoryProductName;
+    @FXML
+    public Text accountHistoryProductAmount;
 
     private TitledPane parentController;
 
@@ -31,6 +38,10 @@ public class accountListProduct extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+        this.accountHistoryProductAmount.setText(String.valueOf(product.getAmount()) + " st");
+        this.accountHistoryProductName.setText(product.getProduct().getName());
+
+        this.accountHistoryProductImage.setImage(IMatDataHandler.getInstance().getFXImage(product.getProduct()));
         this.parentController = mainController;
 
     }

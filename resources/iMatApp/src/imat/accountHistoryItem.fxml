@@ -38,7 +38,7 @@
             <Font size="13.0" />
          </font>
       </Button>
-      <Button layoutX="809.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Visa allt">
+      <Button layoutX="809.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#historyViewAllClick" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Visa allt">
          <font>
             <Font size="13.0" />
          </font>
@@ -50,10 +50,13 @@
                   <Image url="@resources/3022251.png" />
                </image>
             </ImageView>
-         </graphic></Button>
-      <ScrollPane layoutX="169.0" layoutY="62.0" prefHeight="189.0" prefWidth="768.0" vbarPolicy="NEVER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         </graphic>
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <ScrollPane fx:id="historyItemScrollPane" hbarPolicy="NEVER" layoutX="169.0" layoutY="62.0" prefHeight="189.0" prefWidth="768.0" vbarPolicy="NEVER" vmax="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <content>
-            <FlowPane fx:id="itemFlowPane" maxHeight="189.0" minHeight="189.0" prefHeight="189.0" prefWidth="200.0" />
+            <FlowPane fx:id="itemFlowPane" maxHeight="190.0" minHeight="189.0" prefHeight="190.0" prefWidth="934.0" />
          </content></ScrollPane>
    </children>
 </fx:root>

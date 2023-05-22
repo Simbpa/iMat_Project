@@ -4,10 +4,7 @@ package imat;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +19,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 public class MainViewController implements Initializable {
     public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
@@ -118,6 +117,7 @@ public class MainViewController implements Initializable {
     }
 
     // Account Methods
+
     public void myAccountButtonClick() {
         myAccountWindow.toFront();
     }
@@ -202,6 +202,7 @@ public class MainViewController implements Initializable {
     }
 
     private ArrayList<ArrayList<Order>> findAndAdd(ArrayList<ArrayList<Order>> groupedOrders, Order newOrder) {
+
         for(ArrayList<Order> group : groupedOrders){
             if(group.get(0).getDate().getYear() == newOrder.getDate().getYear() && group.get(0).getDate().getMonth() == newOrder.getDate().getMonth()){
                 group.add(newOrder);
@@ -249,6 +250,24 @@ public class MainViewController implements Initializable {
         System.out.println(groupedOrders);
 
         for (ArrayList<Order> group : groupedOrders){
+            accountHistoryAccordion.getPanes().clear();
+            createTitledPane(group);
+        }
+    }
+
+
+
+    public void initListView(){
+        initMonthMap();
+        ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
+
+        for (Order order : IMatDataHandler.getInstance().getOrders()){
+            groupedOrders = findAndAdd(groupedOrders, order);
+        }
+        System.out.println(groupedOrders);
+
+        for (ArrayList<Order> group : groupedOrders){
+            accountHistoryAccordion.getPanes().clear();
             createTitledPane(group);
         }
     }
