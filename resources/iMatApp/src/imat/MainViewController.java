@@ -33,10 +33,9 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 public class MainViewController implements Initializable {
 
     // -- General Attributes -- //
-    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
-    public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
-    public HashMap<String, accountListItem> orderMap = new HashMap<String, accountListItem>();
+
+
     private Map<String, MainViewItem> mainViewItemMap = new HashMap<String, MainViewItem>();
 
     List<Product> productList =  iMatDataHandler.getProducts();
@@ -71,10 +70,6 @@ public class MainViewController implements Initializable {
 
     // Account View
     @FXML
-    private FlowPane accountListFlowPane;
-    @FXML
-    private Accordion accountHistoryAccordion;
-    @FXML
     private Button myAccountButton;
     @FXML
     private Button myListButton;
@@ -86,11 +81,7 @@ public class MainViewController implements Initializable {
     private AnchorPane myListWindow;
     @FXML
     private AnchorPane myHistoryWindow;
-    @FXML
-    private Text paneDateText;
-    @FXML
-    private FlowPane theFlowPane;
-
+    
     // Create Account View
     @FXML
     private Button createAccountMainButton;
@@ -232,82 +223,7 @@ public class MainViewController implements Initializable {
 
     }
 
-    public void initMonthMap(){
-        monthMap.put(0, "Januari");
-        monthMap.put(1, "Februari");
-        monthMap.put(2, "Mars");
-        monthMap.put(3, "April");
-        monthMap.put(4, "Maj");
-        monthMap.put(5, "Juni");
-        monthMap.put(6, "Juli");
-        monthMap.put(7, "Augusti");
-        monthMap.put(8, "September");
-        monthMap.put(9, "Oktober");
-        monthMap.put(10, "November");
-        monthMap.put(11, "December");
-    }
 
-    private ArrayList<ArrayList<Order>> findAndAdd(ArrayList<ArrayList<Order>> groupedOrders, Order newOrder) {
-
-        for(ArrayList<Order> group : groupedOrders){
-            if(group.get(0).getDate().getYear() == newOrder.getDate().getYear() && group.get(0).getDate().getMonth() == newOrder.getDate().getMonth()){
-                group.add(newOrder);
-                return groupedOrders;
-            }
-        }
-        ArrayList<Order> newGroup = new ArrayList<Order>();
-        newGroup.add(newOrder);
-        groupedOrders.add(newGroup);
-        return groupedOrders;
-    }
-
-
-    private void createTitledPane(ArrayList<Order> group){
-        customTitledPane newPane = new customTitledPane();
-        String dateText = monthMap.get(group.get(0).getDate().getMonth()) + " " + (group.get(0).getDate().getYear() + 1900) + "                                                        ";
-        newPane.setText(dateText + String.valueOf(group.size()) + " köp");
-        FlowPane fp = new FlowPane();
-        for (Order order : group){
-            accountHistoryListItem orderItem = new accountHistoryListItem(order, newPane, monthMap);
-            fp.getChildren().add(orderItem);
-        }
-        newPane.setContent(fp);
-        accountHistoryAccordion.getPanes().add(newPane);
-    }
-    public void initHistoryView(){
-        ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
-
-        for (Order order : IMatDataHandler.getInstance().getOrders()){
-            groupedOrders = findAndAdd(groupedOrders, order);
-        }
-        accountHistoryAccordion.getPanes().clear();
-        for (ArrayList<Order> group : groupedOrders){
-            createTitledPane(group);
-        }
-    }
-
-
-
-    public void initListView(){
-        accountListFlowPane.getChildren().clear();
-        ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
-        Random rand = new Random();
-        for(int i = 1; i<10; i++){
-            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble(11));
-            test.add(test2);
-        }
-        accountListListItem test3 = new accountListListItem("Söndag", test, this);
-        accountListFlowPane.getChildren().add(test3);
-
-        test = new ArrayList<ShoppingItem>();
-        rand = new Random();
-        for(int i = 11; i<35; i++){
-            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble(11));
-            test.add(test2);
-        }
-        test3 = new accountListListItem("Storhandling", test, this);
-        accountListFlowPane.getChildren().add(test3);
-    }
 
 
 
