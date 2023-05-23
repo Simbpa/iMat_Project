@@ -60,9 +60,6 @@ public class ApplicationController extends AnchorPane {
 
     }
 
-    public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
-    public HashMap<String, accountListItem> orderMap = new HashMap<String, accountListItem>();
-
 
     ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);
     ColorAdjust exitAdjust = new ColorAdjust(0, 0, 0, 0);
@@ -151,62 +148,9 @@ public class ApplicationController extends AnchorPane {
     // Account Methods
 
 
-    public void initMonthMap() {
-        monthMap.put(0, "Januari");
-        monthMap.put(1, "Februari");
-        monthMap.put(2, "Mars");
-        monthMap.put(3, "April");
-        monthMap.put(4, "Maj");
-        monthMap.put(5, "Juni");
-        monthMap.put(6, "Juli");
-        monthMap.put(7, "Augusti");
-        monthMap.put(8, "September");
-        monthMap.put(9, "Oktober");
-        monthMap.put(10, "November");
-        monthMap.put(11, "December");
-    }
-
-    private ArrayList<ArrayList<Order>> findAndAdd(ArrayList<ArrayList<Order>> groupedOrders, Order newOrder) {
-        for (ArrayList<Order> group : groupedOrders) {
-            if (group.get(0).getDate().getYear() == newOrder.getDate().getYear() && group.get(0).getDate().getMonth() == newOrder.getDate().getMonth()) {
-                group.add(newOrder);
-                return groupedOrders;
-            }
-        }
-        ArrayList<Order> newGroup = new ArrayList<Order>();
-        newGroup.add(newOrder);
-        groupedOrders.add(newGroup);
-        return groupedOrders;
-    }
-
-    public void initAccountView() {
-        initMonthMap();
-        ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
-        for (Order order : IMatDataHandler.getInstance().getOrders()) {
-            if (groupedOrders.size() != 0) {
-                groupedOrders = findAndAdd(groupedOrders, order);
-                accountListItem AccountListItem = new accountListItem(order, this, monthMap);
-                orderMap.put(String.valueOf(order.getOrderNumber()), AccountListItem);
-            }
-        }
-
-    }
-
 
     // Create Account Methods
 
-    public void CreateAccountMainButtonClick() {
-        // Save information
-        // Change view to ShowAccountView
-
-    }
-
-    // Login View Methods
-
-    public void loginMainButtonClick() {
-        // If correct -> Show Account View
-        // If not correct -> Error Message
-    }
 
     // General Methods
 }
