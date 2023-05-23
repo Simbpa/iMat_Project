@@ -1,21 +1,18 @@
-// This module serves as a template for all cards put into the main view grid
-
-// -- Packages -- //
-package imat;
-
 // -- Imports -- //
+import imat.MainViewItemDetail;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
 public class MainViewItem extends AnchorPane {
 
-    private MainViewController parentController;
+    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     private Product product;
     private MainViewItemDetail mainViewItemDetail;
     private int amount = 0;
@@ -31,7 +28,7 @@ public class MainViewItem extends AnchorPane {
 
 
     // -- Constructor -- //
-    public MainViewItem(Product product, MainViewController mainViewController){
+    public MainViewItem(Product product){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main_view_item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -41,11 +38,11 @@ public class MainViewItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        this.parentController = mainViewController;
-        this.product = product;
-        this.mainViewItemDetail = new MainViewItemDetail(product, parentController);
 
-        itemImageView.setImage(parentController.iMatDataHandler.getFXImage(product));
+        this.product = product;
+        this.mainViewItemDetail = new MainViewItemDetail(product);
+
+        itemImageView.setImage(iMatDataHandler.getFXImage(product));
         itemNameLabel.setText(product.getName());
         itemPriceLabel.setText(Double.toString(product.getPrice()));
         itemAmountLabel.setText(Integer.toString(amount));
