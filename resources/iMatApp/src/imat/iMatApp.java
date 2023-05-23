@@ -3,10 +3,12 @@ package imat;
 
 import java.util.ResourceBundle;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,23 +16,25 @@ import javafx.stage.Stage;
  * and open the template in the editor.
  */
 public class iMatApp extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
-        
+
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("imat/resources/iMat");
 
         // Creates initial root to fxml file
         // * Creates initial scene from root
         // * Connects scene to stage
 
-        Parent root = FXMLLoader.load(getClass().getResource("main_view.fxml"), bundle);
+        // Parent root = FXMLLoader.load(getClass().getResource("imat_app.fxml"), bundle);
 
-        Scene scene = new Scene(root, 1280, 800);
-        
+        Scene scene = new Scene(new ApplicationController(), 1280, 800);
+
         stage.setTitle(bundle.getString("application.name"));
         stage.setScene(scene);
         stage.show();
+
+
 
     }
 
@@ -40,5 +44,5 @@ public class iMatApp extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }
