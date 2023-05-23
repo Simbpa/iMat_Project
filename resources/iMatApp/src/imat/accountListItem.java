@@ -3,14 +3,12 @@ package imat;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Order;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 
 public class accountListItem extends AnchorPane {
 
@@ -21,9 +19,9 @@ public class accountListItem extends AnchorPane {
     @FXML
     private Text totalPriceText;
 
-    private MainViewController parentController;
+    private ApplicationController parentController;
     private Order order;
-    public accountListItem(Order incomingOrder, MainViewController mainController, HashMap<Integer, String> monthMap) {
+    public accountListItem(Order incomingOrder, ApplicationController applicationController, HashMap<Integer, String> monthMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("account_list_item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -40,7 +38,7 @@ public class accountListItem extends AnchorPane {
         amountOfProductText.setText(amount);
         String price = String.valueOf(order.getItems().size() * 21);
         totalPriceText.setText(price);
-        this.parentController = mainController;
+        this.parentController = applicationController;
 
     }
 
