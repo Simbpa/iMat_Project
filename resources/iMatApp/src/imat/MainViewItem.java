@@ -1,3 +1,5 @@
+package imat;
+
 // -- Imports -- //
 import imat.MainViewItemDetail;
 import javafx.fxml.FXML;

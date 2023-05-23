@@ -171,7 +171,7 @@ public class AccountViewController extends AnchorPane {
     }
 
 
-
+    /*
     public void initListView(){
         accountListFlowPane.getChildren().clear();
         ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
@@ -192,5 +192,5 @@ public class AccountViewController extends AnchorPane {
         test3 = new accountListListItem("Storhandling", test, this);
         accountListFlowPane.getChildren().add(test3);
     }
-
+    */
 }

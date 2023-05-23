@@ -4,13 +4,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
 public class MainViewItemDetail extends AnchorPane {
 
-    MainViewController parentController;
+    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     Product product;
     int amount = 0;
 
@@ -26,7 +27,7 @@ public class MainViewItemDetail extends AnchorPane {
     private AnchorPane itemDetailMinusButton;
 
 
-    public MainViewItemDetail(Product product, MainViewController mainViewController) {
+    public MainViewItemDetail(Product product) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("productinfo.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -36,7 +37,6 @@ public class MainViewItemDetail extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        this.parentController = mainViewController;
         this.product = product;
 
         //itemDetailImageView.setImage(parentController.iMatDataHandler.getFXImage(product));
