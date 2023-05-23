@@ -125,7 +125,7 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
-        //mainViewInitialize();
+        mainViewInitialize();
 
         //pathLabel.setText(iMatDirectory);
     }
@@ -136,7 +136,7 @@ public class MainViewController implements Initializable {
         // Pop Up
     }
     public void popUpAccount() throws IOException {
-        changeView("imat_app.fxml", navigationBarHelpButton);
+        changeView("imat_app.fxml", navigationBarAccountButton);
     }
     public void popUpBasket() {
         // Pop Up, if not greyed out
@@ -180,7 +180,7 @@ public class MainViewController implements Initializable {
     public void myAccountButtonPress() {
         myAccountButton.setEffect(pressAdjust);
     }
-    
+
 
 
 
