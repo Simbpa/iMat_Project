@@ -26,7 +26,7 @@ public class iMatApp extends Application {
         // * Creates initial scene from root
         // * Connects scene to stage
 
-        // Parent root = FXMLLoader.load(getClass().getResource("imat_app.fxml"), bundle);
+        // Parent root = FXMLLoader.load(getClass().getResource("account_view.fxml"), bundle);
 
         Scene scene = new Scene(new ApplicationController(), 1280, 800);
 
