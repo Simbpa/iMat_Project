@@ -24,9 +24,11 @@ public class customTitledPane extends TitledPane {
     public Text paneDateText;
     @FXML
     public FlowPane theFlowPane;
-    public customTitledPane(ArrayList<Order> group, MainViewController mainViewController, HashMap<Integer, String> monthMap) {
+    public customTitledPane() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customTitledPane.fxml"));
+        fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
+
         try {
             fxmlLoader.load();
         } catch (IOException exception) {

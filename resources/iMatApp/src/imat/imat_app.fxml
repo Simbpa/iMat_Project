@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -84,55 +85,6 @@
 
                                           <AnchorPane layoutY="110.0" prefHeight="673.0" prefWidth="1280.0" styleClass="accountPage" AnchorPane.rightAnchor="0.0">
                <children>
-                  <AnchorPane fx:id="myAccountWindow" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                     <children>
-                        <TextField fx:id="firstnameField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Förnamn" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="lastNameField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Efternamn" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="addressField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="260.0" prefHeight="47.0" prefWidth="403.0" promptText="Adress" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="cityField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="332.0" prefHeight="47.0" prefWidth="184.0" promptText="Ort" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="postalCodeField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="332.0" prefHeight="47.0" prefWidth="184.0" promptText="Postkod" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="phoneField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="403.0" prefHeight="47.0" prefWidth="184.0" promptText="Telefon" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="mailField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="403.0" prefHeight="47.0" prefWidth="184.0" promptText="E-post" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <Button fx:id="saveButton" layoutX="460.0" layoutY="488.0" mnemonicParsing="false" styleClass="save-button" text="Spara">
-                           <font>
-                              <Font size="25.0" />
-                           </font>
-                        </Button>
-                        <Text layoutX="378.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina uppgifter">
-                           <font>
-                              <Font size="40.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </AnchorPane>
                   <AnchorPane layoutX="26.0" layoutY="24.0" prefHeight="619.0" prefWidth="231.0" styleClass="account-side-bar">
                      <children>
                         <Text layoutX="9.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mitt namn" textAlignment="CENTER" wrappingWidth="213.13671875">
@@ -159,11 +111,16 @@
                   </AnchorPane>
                   <AnchorPane fx:id="myListWindow" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <Text layoutX="390.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina listor">
+                        <Text layoutX="390.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina listor">
                            <font>
                               <Font size="40.0" />
                            </font>
                         </Text>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="31.0" layoutY="96.0" prefHeight="565.0" prefWidth="938.0" style="-fx-background-color: #CDCDCD;">
+                           <content>
+                              <FlowPane fx:id="accountListFlowPane" prefHeight="560.0" prefWidth="936.0" style="-fx-background-color: #CDCDCD;" />
+                           </content>
+                        </ScrollPane>
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="myHistoryWindow" layoutX="10.0" layoutY="10.0" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -182,11 +139,60 @@
                               </Text>
                               <ScrollPane hbarPolicy="NEVER" layoutX="24.0" layoutY="75.0" prefHeight="563.0" prefWidth="925.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="6.0">
                                  <content>
-                                    <Accordion fx:id="accountHistoryAccordion" prefHeight="564.0" prefWidth="929.0" style="-fx-background-color: C0C0C0;" styleClass="custom-accordion" />
+                                    <Accordion fx:id="accountHistoryAccordion" prefHeight="564.0" prefWidth="929.0" scaleShape="false" style="-fx-background-color: C0C0C0;" />
                                  </content>
                               </ScrollPane>
                            </children>
                         </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="myAccountWindow" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <TextField fx:id="firstnameField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="163.0" prefHeight="47.0" prefWidth="184.0" promptText="Förnamn" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="lastNameField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="163.0" prefHeight="47.0" prefWidth="184.0" promptText="Efternamn" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="addressField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="250.0" prefHeight="47.0" prefWidth="403.0" promptText="Adress" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="cityField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="342.0" prefHeight="47.0" prefWidth="184.0" promptText="Ort" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="postalCodeField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="342.0" prefHeight="47.0" prefWidth="184.0" promptText="Postkod" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="phoneField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="433.0" prefHeight="47.0" prefWidth="184.0" promptText="Telefon" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="mailField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="433.0" prefHeight="47.0" prefWidth="184.0" promptText="E-post" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="saveButton" layoutX="460.0" layoutY="518.0" mnemonicParsing="false" styleClass="save-button" text="Spara">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="378.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina uppgifter">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Text>
                      </children>
                   </AnchorPane>
                </children>

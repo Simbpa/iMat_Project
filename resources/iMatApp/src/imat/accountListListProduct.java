@@ -12,7 +12,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
-public class accountListProduct extends AnchorPane {
+public class accountListListProduct extends AnchorPane {
 
     @FXML
     private ImageView accountHistoryProductImage;
@@ -21,9 +21,9 @@ public class accountListProduct extends AnchorPane {
     @FXML
     public Text accountHistoryProductAmount;
 
-    private TitledPane parentController;
+    private MainViewController parentController;
 
-    public accountListProduct(ShoppingItem product, TitledPane mainController) {
+    public accountListListProduct(ShoppingItem product, MainViewController mainController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("accountHistoryProduct.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);

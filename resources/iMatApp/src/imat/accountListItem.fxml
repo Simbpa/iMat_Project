@@ -9,9 +9,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root prefHeight="189.0" prefWidth="201.0" style="-fx-border-color: black; -fx-border-width: 1;" stylesheets="@imat_app.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="189.0" prefWidth="201.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white;" stylesheets="@imat_app.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text fx:id="dateText" layoutX="23.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23 april 2022">
+      <Text fx:id="nameText" layoutX="23.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23 april 2022">
          <font>
             <Font size="30.0" />
          </font>
@@ -50,7 +50,7 @@
             <Font size="13.0" />
          </font>
       </Button>
-      <Button layoutX="799.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" styleClass="save-button" text="Lägg i varukorg">
+      <Button layoutX="799.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addListToCart" prefHeight="40.0" prefWidth="130.0" styleClass="save-button" text="Lägg i varukorg">
          <graphic>
             <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -58,9 +58,27 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <ScrollPane layoutX="169.0" layoutY="62.0" prefHeight="189.0" prefWidth="768.0" vbarPolicy="NEVER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <ScrollPane fx:id="listItemScrollPane" fitToHeight="true" hbarPolicy="NEVER" layoutX="169.0" layoutY="62.0" prefHeight="189.0" prefWidth="768.0" vbarPolicy="NEVER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <content>
-            <FlowPane fx:id="itemFlowPane" maxHeight="189.0" minHeight="189.0" prefHeight="189.0" prefWidth="200.0" />
+            <FlowPane fx:id="itemFlowPane" maxHeight="189.0" minHeight="189.0" prefHeight="189.0" prefWrapLength="40000.0" />
          </content></ScrollPane>
+      <Button layoutX="32.0" layoutY="132.0" mnemonicParsing="false" onMouseClicked="#leftArrowClick">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/271220.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="883.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#rightArrowClick">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/32213.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </fx:root>

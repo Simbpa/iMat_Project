@@ -2,7 +2,6 @@
 package imat;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.*;
 
@@ -19,12 +18,11 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
-import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 public class MainViewController implements Initializable {
     public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
-    public HashMap<String, accountListItem> orderMap = new HashMap<String, accountListItem>();
+    public HashMap<String, accountHistoryListItem> orderMap = new HashMap<String, accountHistoryListItem>();
 
 
     @FXML
@@ -44,6 +42,8 @@ public class MainViewController implements Initializable {
 
 
     // Account View
+    @FXML
+    private FlowPane accountListFlowPane;
     @FXML
     private Accordion accountHistoryAccordion;
     @FXML
@@ -101,6 +101,7 @@ public class MainViewController implements Initializable {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
+        initMonthMap();
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
@@ -123,6 +124,7 @@ public class MainViewController implements Initializable {
     }
     public void myListButtonClick() {
         myListWindow.toFront();
+        initListView();
     }
     public void myHistoryButtonClick() {
         myHistoryWindow.toFront();
@@ -214,31 +216,47 @@ public class MainViewController implements Initializable {
         groupedOrders.add(newGroup);
         return groupedOrders;
     }
-    
+
 
     private void createTitledPane(ArrayList<Order> group){
-        TitledPane newPane = new TitledPane();
-        String dateText = monthMap.get(group.get(0).getDate().getMonth()) + " " + (group.get(0).getDate().getYear() + 1900) + "                                        ";
-        newPane.setText(dateText + String.valueOf(group.size()) + " Varor");
+        customTitledPane newPane = new customTitledPane();
+        String dateText = monthMap.get(group.get(0).getDate().getMonth()) + " " + (group.get(0).getDate().getYear() + 1900) + "                                                        ";
+        newPane.setText(dateText + String.valueOf(group.size()) + " köp");
         FlowPane fp = new FlowPane();
         for (Order order : group){
-            accountListItem orderItem = new accountListItem(order, newPane, monthMap);
+            accountHistoryListItem orderItem = new accountHistoryListItem(order, newPane, monthMap);
             fp.getChildren().add(orderItem);
         }
         newPane.setContent(fp);
         accountHistoryAccordion.getPanes().add(newPane);
     }
     public void initHistoryView(){
-        initMonthMap();
+        /*ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
+        for(int i = 1; i<15; i++){
+            test.add(new ShoppingItem(IMatDataHandler.getInstance().getProducts().get(i)));
+        }
+        IMatDataHandler.getInstance().placeOrder();
+        Date test2 = IMatDataHandler.getInstance().getOrders().get(IMatDataHandler.getInstance().getOrders().size()-1).getDate();
+        test2.setMonth(2);
+        IMatDataHandler.getInstance().getOrders().get(IMatDataHandler.getInstance().getOrders().size()-1).setDate(test2);
+
+        IMatDataHandler.getInstance().placeOrder();
+        test2 = IMatDataHandler.getInstance().getOrders().get(IMatDataHandler.getInstance().getOrders().size()-1).getDate();
+        test2.setYear(110);
+        IMatDataHandler.getInstance().getOrders().get(IMatDataHandler.getInstance().getOrders().size()-1).setDate(test2);
+        for (Order order : IMatDataHandler.getInstance().getOrders()){
+            order.setItems(test);
+        }
+        IMatDataHandler.getInstance().shutDown();*/
+
+
         ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
 
         for (Order order : IMatDataHandler.getInstance().getOrders()){
                 groupedOrders = findAndAdd(groupedOrders, order);
         }
-        System.out.println(groupedOrders);
-
+        accountHistoryAccordion.getPanes().clear();
         for (ArrayList<Order> group : groupedOrders){
-            accountHistoryAccordion.getPanes().clear();
             createTitledPane(group);
         }
     }
@@ -246,18 +264,25 @@ public class MainViewController implements Initializable {
 
 
     public void initListView(){
-        initMonthMap();
-        ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
-
-        for (Order order : IMatDataHandler.getInstance().getOrders()){
-            groupedOrders = findAndAdd(groupedOrders, order);
+        accountListFlowPane.getChildren().clear();
+        ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
+        Random rand = new Random();
+        for(int i = 1; i<10; i++){
+            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble(11));
+            test.add(test2);
         }
-        System.out.println(groupedOrders);
+        accountListListItem test3 = new accountListListItem("Söndag", test, this);
+        accountListFlowPane.getChildren().add(test3);
 
-        for (ArrayList<Order> group : groupedOrders){
-            accountHistoryAccordion.getPanes().clear();
-            createTitledPane(group);
+        test = new ArrayList<ShoppingItem>();
+        rand = new Random();
+        for(int i = 11; i<35; i++){
+            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble(11));
+            test.add(test2);
         }
+         test3 = new accountListListItem("Storhandling", test, this);
+        accountListFlowPane.getChildren().add(test3);
+
     }
 
 

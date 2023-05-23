@@ -14,7 +14,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class accountListItem extends AnchorPane {
+public class accountHistoryListItem extends AnchorPane {
 
     @FXML
     private Text dateText;
@@ -40,6 +40,15 @@ public class accountListItem extends AnchorPane {
         updateListItems();
         updateChildren();
     }
+    @FXML
+    protected void rightArrowClick(){
+        historyItemScrollPane.setHvalue(historyItemScrollPane.getHvalue() + 0.025);
+    }
+    @FXML
+    protected void leftArrowClick(){
+        historyItemScrollPane.setHvalue(historyItemScrollPane.getHvalue() - 0.025);
+    }
+
     private void updateListItems(){
         if(!state){
             this.getChildren().clear();
@@ -69,7 +78,7 @@ public class accountListItem extends AnchorPane {
     private void updateChildren(){
         String month = monthmap.get(order.getDate().getMonth());
         dateText.setText(order.getDate().getDay() + " " + month + " " + (order.getDate().getYear()+1900));
-        String amount = String.valueOf(order.getItems().size());
+        String amount = String.valueOf(Math.round(order.getItems().size()));
         amountOfProductText.setText(amount + " varor");
         String price = String.valueOf(order.getItems().size() * 21);
         totalPriceText.setText(price + " kr");
@@ -84,7 +93,7 @@ public class accountListItem extends AnchorPane {
         }
     }
 
-    public accountListItem(Order incomingOrder, TitledPane mainController, HashMap<Integer, String> monthMap) {
+    public accountHistoryListItem(Order incomingOrder, TitledPane mainController, HashMap<Integer, String> monthMap) {
         this.order = incomingOrder;
         this.monthmap = monthMap;
         this.parentController = mainController;
