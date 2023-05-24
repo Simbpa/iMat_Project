@@ -57,7 +57,7 @@ public class LoginViewController extends AnchorPane {
         loginViewLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                //ApplicationController.getInstance().switchPage();
+                ApplicationController.getInstance().switchPage(showAccountViewController.getPage());
             }
         });
 

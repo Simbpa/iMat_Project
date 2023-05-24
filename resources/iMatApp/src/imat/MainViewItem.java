@@ -2,6 +2,8 @@ package imat;
 
 // -- Imports -- //
 import imat.MainViewItemDetail;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -51,6 +53,14 @@ public class MainViewItem extends AnchorPane {
         itemPriceLabel.setText(Double.toString(product.getPrice()));
         itemAmountTextField.setText(Integer.toString(amount));
 
+        // Button Actions
+
+        itemAmountTextField.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                setAmount();
+            }
+        });
     }
 
     // -- Methods -- //
@@ -68,6 +78,11 @@ public class MainViewItem extends AnchorPane {
             amount -= 1;
             itemAmountTextField.setText(Integer.toString(amount));
         }
+    }
+    public void setAmount(){
+        String text = itemAmountTextField.getText();
+        int textValue = Integer.valueOf(text);
+        amount = textValue;
     }
 
 }
