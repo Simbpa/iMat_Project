@@ -9,80 +9,12 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1280.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="-21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="860.0" layoutY="-56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Text layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="iMat" wrappingWidth="147.9013671875">
-                     <font>
-                        <Font name="Impact" size="70.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="searchArea" alignment="BOTTOM_LEFT" layoutX="162.0" layoutY="50.0" prefHeight="49.0" prefWidth="639.0" promptText="Sök..." styleClass="search-bar" AnchorPane.topAnchor="25.0">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </TextField>
-                  <Button fx:id="accountButtonLoggedIn" layoutX="956.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="154.0" styleClass="bar-buttons" stylesheets="@../imat_app.css" text="Mitt namn" AnchorPane.topAnchor="25.0">
-                     <graphic>
-                        <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@1946429.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="accountButton" layoutX="956.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="154.0" styleClass="bar-buttons" stylesheets="@../imat_app.css" text="Mitt konto" AnchorPane.topAnchor="25.0">
-                     <graphic>
-                        <ImageView fitHeight="41.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@1946429.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="cartButton" layoutX="1124.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="134.0" style="-fx-background-color: C2C2C2;" styleClass="bar-buttons" stylesheets="@../imat_app.css" text="0,00 kr" AnchorPane.topAnchor="25.0">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@263142.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="helpButton" layoutX="825.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="107.0" styleClass="bar-buttons" stylesheets="@../imat_app.css" text="Hjälp" AnchorPane.topAnchor="25.0">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@question-mark-circled-icon-512x512-wsm5hkwj.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="752.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="35.0">
-                     <image>
-                        <Image url="@3031293.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="204.0" layoutY="184.0" prefHeight="502.0" prefWidth="904.0">
+            <AnchorPane layoutX="204.0" layoutY="66.0" prefHeight="502.0" prefWidth="904.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="503.0" layoutX="4.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="896.0" />
                   <Line endX="562.0" endY="-3.0517578125E-5" layoutX="338.0" layoutY="110.0" startX="-333.9999694824219" startY="-3.0517578125E-5" />
@@ -202,25 +134,25 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <Button fx:id="loginBackButton" alignment="CENTER" layoutX="66.0" layoutY="695.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="    Tillbaka">
+            <Button fx:id="loginBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="    Tillbaka">
                <font>
                   <Font size="40.0" />
                </font>
             </Button>
-            <Line endX="89.16592407226562" layoutX="27.0" layoutY="736.0" startX="58.08722686767578" strokeWidth="5.0" />
-            <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="25.0" layoutY="721.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
-            <Line endX="54.58723068237305" endY="1.0" layoutX="30.0" layoutY="736.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
-            <Button fx:id="loginBackButton1" alignment="CENTER" layoutX="1029.0" layoutY="695.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: FFC327; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="Nästa    ">
+            <Line endX="89.16592407226562" layoutX="27.0" layoutY="626.0" startX="58.08722686767578" strokeWidth="5.0" />
+            <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="25.0" layoutY="611.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
+            <Line endX="54.58723068237305" endY="1.0" layoutX="30.0" layoutY="626.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
+            <Button fx:id="loginBackButton1" alignment="CENTER" layoutX="1029.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: FFC327; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="Nästa    ">
                <font>
                   <Font size="40.0" />
                </font>
             </Button>
-            <Line endX="89.16592407226562" layoutX="1135.0" layoutY="736.0" rotate="180.0" startX="58.08722686767578" strokeWidth="5.0" />
-            <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="1155.0" layoutY="721.0" rotate="90.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
-            <Line endX="54.58723068237305" endY="1.0" layoutX="1159.0" layoutY="736.0" rotate="90.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
+            <Line endX="89.16592407226562" layoutX="1135.0" layoutY="626.0" rotate="180.0" startX="58.08722686767578" strokeWidth="5.0" />
+            <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="1155.0" layoutY="611.0" rotate="90.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
+            <Line endX="54.58723068237305" endY="1.0" layoutX="1159.0" layoutY="626.0" rotate="90.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="-116.0" layoutY="126.0" prefHeight="44.0" prefWidth="1183.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="-116.0" layoutY="16.0" prefHeight="44.0" prefWidth="1183.0" style="-fx-background-color: white;">
          <children>
             <AnchorPane layoutX="393.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>
