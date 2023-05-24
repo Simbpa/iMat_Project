@@ -63,7 +63,7 @@
                         <Font size="18.75" />
                     </font>
                 </Button>
-                <Button fx:id="navigationBarBasketButton" layoutX="1104.0" layoutY="29.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="127.5" styleClass="bar-buttons" stylesheets="@imat_app.css" text="0,00 kr" AnchorPane.topAnchor="34.0">
+                <Button fx:id="applicationBasketButton" layoutX="1104.0" layoutY="29.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="127.5" styleClass="bar-buttons" stylesheets="@imat_app.css" text="0,00 kr" AnchorPane.topAnchor="34.0">
                     <graphic>
                         <ImageView fitHeight="33.75" fitWidth="33.75" pickOnBounds="true" preserveRatio="true">
                             <image>

@@ -6,6 +6,7 @@ package imat;
 // -- Imports -- //
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -56,6 +57,15 @@ public class MainViewController extends AnchorPane {
         }
 
         mainViewInitialize();
+
+        // Button Actions
+
+        mainViewBasketCloseButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                hideMainViewBasket();
+            }
+        });
     }
 
     // -- FXML objects -- //
@@ -63,6 +73,10 @@ public class MainViewController extends AnchorPane {
     private FlowPane mainViewFlowPane;
     @FXML
     private AnchorPane mainViewBasket;
+    @FXML
+    private Button mainViewToBasketButton;
+    @FXML
+    private Button mainViewBasketCloseButton;
 
 
     // -- Methods -- //
@@ -82,5 +96,12 @@ public class MainViewController extends AnchorPane {
         for (Product product : productList) {
             mainViewFlowPane.getChildren().add(mainViewItemMap.get(product.getName()));
         }
+    }
+
+    public void showMainViewBasket() {
+        mainViewBasket.toFront();
+    }
+    public void hideMainViewBasket() {
+        mainViewBasket.toBack();
     }
 }
