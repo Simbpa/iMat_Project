@@ -30,6 +30,8 @@ public class accountListListItem extends AnchorPane {
     public FlowPane itemFlowPane;
     @FXML
     private ScrollPane listItemScrollPane;
+    @FXML
+    private Button removeButton;
 
     private boolean state = false;
     private ArrayList<ShoppingItem> content;
@@ -40,6 +42,10 @@ public class accountListListItem extends AnchorPane {
         for(ShoppingItem item : this.content){
             IMatDataHandler.getInstance().getShoppingCart().addItem(item);
         }
+    }
+    @FXML
+    protected void removeButtonClick(){
+
     }
     @FXML
     protected void rightArrowClick(){

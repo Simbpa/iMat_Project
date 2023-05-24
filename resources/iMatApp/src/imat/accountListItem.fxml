@@ -26,11 +26,11 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Button layoutX="528.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Maila kvitto">
+      <Button layoutX="528.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Ta bort">
          <graphic>
             <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@resources/666162.png" />
+                  <Image url="@resources/1843344.png" />
                </image>
             </ImageView>
          </graphic>
