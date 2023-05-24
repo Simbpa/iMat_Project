@@ -30,7 +30,7 @@
                </font>
             </Text>
             <FlowPane fx:id="historyItemOpenedFlow" layoutY="56.0" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="929.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button layoutX="558.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Maila kvitto">
+            <Button layoutX="558.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Maila kvitto">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -42,12 +42,12 @@
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="809.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#historyViewAllClick" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Stäng order">
+            <Button layoutX="809.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#historyViewAllClick" prefHeight="40.0" prefWidth="111.0" styleClass="save-butgreen-rounded-buttonston" text="Stäng order">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="687.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="102.0" styleClass="save-button" text="Skriv ut">
+            <Button layoutX="687.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="102.0" styleClass="green-rounded-buttons" text="Skriv ut">
                <graphic>
                   <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>

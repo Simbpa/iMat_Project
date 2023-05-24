@@ -30,7 +30,7 @@
                   <Font size="25.0" />
                </font>
             </Text>
-            <Button layoutX="528.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Ta bort">
+            <Button layoutX="528.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Ta bort">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -42,7 +42,7 @@
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="669.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Ändra lista">
+            <Button layoutX="669.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Ändra lista">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -54,7 +54,7 @@
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="799.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addListToCart" prefHeight="40.0" prefWidth="130.0" styleClass="save-button" text="Lägg i varukorg">
+            <Button layoutX="799.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addListToCart" prefHeight="40.0" prefWidth="130.0" styleClass="green-rounded-buttons" text="Lägg i varukorg">
                <graphic>
                   <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>

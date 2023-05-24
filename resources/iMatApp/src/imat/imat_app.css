@@ -1,51 +1,39 @@
 
 
 /* Rounded corners*/
-.account-side-bar, .search-bar, .bar-buttons, .save-button{
+.account-side-bar, .search-bar, .white-rounded-buttons, .green-rounded-buttons{
     -fx-border-radius: 30px;
     -fx-background-radius: 30px;
 }
 /* Black full border */
-.account-side-bar, .search-bar, .bar-buttons, .save-button, .info-field {
+.account-side-bar, .search-bar, .white-rounded-buttons, .green-rounded-buttons, .info-field {
     -fx-border-color: black;
     -fx-border-width: 1px;
     -fx-border-style: solid;
 }
 
 /* Hand icon */
-.logo, .bar-buttons, .account-side-bar-button, .save-button, .bar-buttons:hover{
+.logo, .white-rounded-buttons, .account-side-bar-button, .green-rounded-buttons, .bar-buttons:hover{
     -fx-cursor: hand;
 }
-
-/* Green background */
-.save-button, .top-bar, .bar-buttons:hover{
-    -fx-background-color: A2D085;
-}
-
-/* White background */
-.account-side-bar, .search-bar, .bar-buttons{
-    -fx-background-color : white;
-}
-
-
-
-
-
 .top-bar{
     /*-fx-border-width: 0 0 2px 0;
     -fx-border-color: black;
     -fx-border-style: solid; */
 }
 
-.account-side-bar-button{
+#account-side-bar-button{
     -fx-border-color : black;
-    -fx-background-color : white;
     -fx-border-width: 2px 0 2px 0;
     -fx-border-style: solid;
 }
 
 .accountPage{
     -fx-background-color: #CDCDCD;
+}
+
+.chattBubbla{
+    -fx-border-radius: 10 10 10 0;
 }
 
 .titled-pane{
@@ -55,4 +43,27 @@
 .titled-pane > .content > * {
     -fx-padding: 0px;
     -fx-font-size: 15px;
+}
+/* Green background */
+.green-rounded-buttons, .top-bar{
+    -fx-background-color: #A2D085;
+}
+
+.green-rounded-buttons:hover{
+    -fx-background-color: #91BB77;
+}
+.green-rounded-buttons:pressed{
+    -fx-background-color: #81A66A;
+}
+
+
+/* White background */
+.account-side-bar, .search-bar, .white-rounded-buttons, .white-button{
+    -fx-background-color : #ffffff;
+}
+.white-rounded-buttons:hover, .white-button:hover{
+    -fx-background-color : #e5e5e5;
+}
+.white-rounded-buttons:pressed, .white-button:pressed{
+    -fx-background-color : #cccccc;
 }

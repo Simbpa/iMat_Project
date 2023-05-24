@@ -30,7 +30,7 @@
                   <Font size="25.0" />
                </font>
             </Text>
-            <Button layoutX="538.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Maila kvitto">
+            <Button layoutX="538.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Maila kvitto">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -42,12 +42,12 @@
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="799.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#historyViewAllClick" prefHeight="40.0" prefWidth="111.0" styleClass="save-button" text="Visa allt">
+            <Button layoutX="799.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#historyViewAllClick" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Visa allt">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="677.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="102.0" styleClass="save-button" text="Skriv ut">
+            <Button layoutX="677.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="102.0" styleClass="green-rounded-buttons" text="Skriv ut">
                <graphic>
                   <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
