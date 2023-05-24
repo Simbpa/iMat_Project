@@ -46,6 +46,12 @@ public class ApplicationController extends AnchorPane {
             }
         });
 
+        applicationBasketButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                switchPage(BasketViewController.getPage());
+            }
+        });
 
     }
 
@@ -79,6 +85,8 @@ public class ApplicationController extends AnchorPane {
     // Navigation Bar Component
     @FXML
     private Button applicationAccountButton;
+    @FXML
+    private Button applicationBasketButton;
     // Main View
 
     @FXML
@@ -134,8 +142,9 @@ public class ApplicationController extends AnchorPane {
         pageRoot.getChildren().add(page);
     }
 
-    // Account Methods
+    // Main View Methods
 
+    // Account Methods
 
 
     // Create Account Methods
