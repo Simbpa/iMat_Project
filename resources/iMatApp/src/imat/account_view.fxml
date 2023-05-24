@@ -159,7 +159,7 @@
                         </Text>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="myLIstWindow" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <AnchorPane fx:id="myListWindow" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <TextField fx:id="firstnameField1" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Förnamn" styleClass="info-field">
                            <font>
