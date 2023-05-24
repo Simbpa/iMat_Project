@@ -60,7 +60,7 @@ public class ApplicationController extends AnchorPane {
         applicationBasketButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                switchPage(BasketViewController.getPage());
+                //MainViewController.getPage().showMainViewBasket();
             }
         });
 

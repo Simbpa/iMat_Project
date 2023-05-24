@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280.0" stylesheets="@../../../../../../../../../Projekt/resources/iMatApp/src/imat/imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280.0" style="-fx-background-color: white;" stylesheets="@imat_app.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -63,7 +63,7 @@
                   <AnchorPane layoutX="545.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
                   <AnchorPane layoutX="755.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
                   <AnchorPane layoutX="965.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
-                  <Button fx:id="loginShopButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 30; -fx-border-color: black; -fx-background-radius: 30;" text="Forsätt handla" />
+                  <Button fx:id="loginViewToMainViewButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 30; -fx-border-color: black; -fx-background-radius: 30;" text="Forsätt handla" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="338.0" layoutY="100.0" prefHeight="529.0" prefWidth="636.0">
@@ -75,12 +75,12 @@
                   </Label>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="455.0" layoutX="1.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" width="636.0" />
                   <Line endX="320.0" layoutX="317.0" layoutY="404.0" startX="-316.0" />
-                  <Button fx:id="loginMainButton" alignment="CENTER" layoutX="124.0" layoutY="294.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="382.0" style="-fx-background-color: FFC327; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="Log in">
+                  <Button fx:id="loginViewLoginButton" alignment="CENTER" layoutX="124.0" layoutY="294.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="382.0" style="-fx-background-color: FFC327; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="Log in">
                      <font>
                         <Font size="50.0" />
                      </font>
                   </Button>
-                  <Button fx:id="loginCreateAccountButton" alignment="CENTER" layoutX="124.0" layoutY="417.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="382.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="skapa konto">
+                  <Button fx:id="loginViewCreateAccountButton" alignment="CENTER" layoutX="124.0" layoutY="417.0" mnemonicParsing="false" prefHeight="98.0" prefWidth="382.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="skapa konto">
                      <font>
                         <Font size="50.0" />
                      </font>
@@ -95,7 +95,7 @@
                      </font></TextField>
                </children>
             </AnchorPane>
-            <Button fx:id="loginBackButton" alignment="CENTER" layoutX="66.0" layoutY="570.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="  Tillbaka">
+            <Button fx:id="loginViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="570.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="  Tillbaka">
                <font>
                   <Font size="40.0" />
                </font>
@@ -106,4 +106,4 @@
          </children>
       </AnchorPane>
    </children>
-</AnchorPane>
+</fx:root>
