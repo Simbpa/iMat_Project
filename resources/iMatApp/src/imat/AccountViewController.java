@@ -52,25 +52,28 @@ public class AccountViewController extends AnchorPane {
         }
 
         // Button Actions
+
         myAccountButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 showMyAccountWindow();
             }
         });
+
         myListButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 showMyListWindow();
             }
         });
+        /*
         myHistoryButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 showMyHistoryWindow();
             }
         });
-
+        */
     }
 
     // -- FXML Object -- //
@@ -115,7 +118,7 @@ public class AccountViewController extends AnchorPane {
 
     public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
     public HashMap<String, accountListItem> orderMap = new HashMap<String, accountListItem>();
-
+    /*
     public void initMonthMap(){
         monthMap.put(0, "Januari");
         monthMap.put(1, "Februari");
@@ -170,8 +173,6 @@ public class AccountViewController extends AnchorPane {
         }
     }
 
-
-    /*
     public void initListView(){
         accountListFlowPane.getChildren().clear();
         ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();

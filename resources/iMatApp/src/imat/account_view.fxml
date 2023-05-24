@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../../../../../../../../../../Projekt/resources/iMatApp/src/imat/imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="-21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #C0C0C0;" stylesheets="@imat_app.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -82,55 +82,6 @@
 
                                           <AnchorPane fx:id="minaListor" layoutY="110.0" prefHeight="673.0" prefWidth="1280.0" styleClass="accountPage">
                <children>
-                  <AnchorPane fx:id="minaUppgifter" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                     <children>
-                        <TextField fx:id="firstnameField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Förnamn" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="lastNameField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Efternamn" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="addressField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="260.0" prefHeight="47.0" prefWidth="403.0" promptText="Adress" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="cityField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="332.0" prefHeight="47.0" prefWidth="184.0" promptText="Ort" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="postalCodeField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="332.0" prefHeight="47.0" prefWidth="184.0" promptText="Postkod" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="phoneField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="403.0" prefHeight="47.0" prefWidth="184.0" promptText="Telefon" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="mailField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="403.0" prefHeight="47.0" prefWidth="184.0" promptText="E-post" styleClass="info-field">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                        </TextField>
-                        <Button fx:id="saveButton" layoutX="460.0" layoutY="488.0" mnemonicParsing="false" styleClass="save-button" text="Spara">
-                           <font>
-                              <Font size="25.0" />
-                           </font>
-                        </Button>
-                        <Text layoutX="378.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina uppgifter">
-                           <font>
-                              <Font size="40.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </AnchorPane>
                   <AnchorPane layoutX="26.0" layoutY="24.0" prefHeight="619.0" prefWidth="231.0" styleClass="account-side-bar">
                      <children>
                         <Text layoutX="9.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mitt namn" textAlignment="CENTER" wrappingWidth="213.13671875">
@@ -138,7 +89,7 @@
                               <Font size="30.0" />
                            </font>
                         </Text>
-                        <AnchorPane id="middle-item" fx:id="myListButton" layoutX="18.0" layoutY="167.0" prefHeight="70.0" prefWidth="195.0" style="-fx-border-color: white;" styleClass="account-side-bar-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <AnchorPane id="middle-item" layoutX="18.0" layoutY="167.0" prefHeight="70.0" prefWidth="195.0" style="-fx-border-color: white;" styleClass="account-side-bar-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <children>
                               <Button fx:id="myListButton" layoutX="-8.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="229.0" styleClass="account-side-bar-button" text="Mina listor" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                  <font>
@@ -159,7 +110,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="minaUppgifter1" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                  <AnchorPane fx:id="myListWindow" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
                         <TextField fx:id="firstnameField1" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Förnamn" styleClass="info-field">
                            <font>
@@ -202,6 +153,55 @@
                            </font>
                         </Button>
                         <Text layoutX="378.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina listor">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="myAccountWindow" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <TextField fx:id="firstnameField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Förnamn" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="lastNameField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Efternamn" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="addressField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="260.0" prefHeight="47.0" prefWidth="403.0" promptText="Adress" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="cityField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="332.0" prefHeight="47.0" prefWidth="184.0" promptText="Ort" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="postalCodeField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="332.0" prefHeight="47.0" prefWidth="184.0" promptText="Postkod" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="phoneField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="403.0" prefHeight="47.0" prefWidth="184.0" promptText="Telefon" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="mailField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="403.0" prefHeight="47.0" prefWidth="184.0" promptText="E-post" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="saveButton" layoutX="460.0" layoutY="488.0" mnemonicParsing="false" styleClass="save-button" text="Spara">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="378.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina uppgifter">
                            <font>
                               <Font size="40.0" />
                            </font>

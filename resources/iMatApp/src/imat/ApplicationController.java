@@ -27,7 +27,7 @@ public class ApplicationController extends AnchorPane {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     public ApplicationController() {
-        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("account_view.fxml"));
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("imat_app.fxml"));
         loader.setRoot(this);
         loader.setController(this);
 
