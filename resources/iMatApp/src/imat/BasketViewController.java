@@ -55,5 +55,25 @@ public class BasketViewController extends AnchorPane {
 
         // Button Actions
 
+        basketToMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                //ApplicationController.switchpage(MainViewController.getPage());
+            }
+        });
+
+        basketToLoginViewButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                //ApplicationController.switchpage(MainViewController.getPage());
+            }
+        });
+
     }
+
+    // -- FXML-Object -- //
+    @FXML
+    private Button basketToMainViewButton;
+    @FXML
+    private Button basketToLoginViewButton;
 }
