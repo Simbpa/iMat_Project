@@ -20,6 +20,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -66,14 +67,14 @@ public class AccountViewController extends AnchorPane {
                 showMyListWindow();
             }
         });
-        /*
+
         myHistoryButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 showMyHistoryWindow();
             }
         });
-        */
+
     }
 
     // -- FXML Object -- //
@@ -109,16 +110,18 @@ public class AccountViewController extends AnchorPane {
     }
     public void showMyListWindow() {
         myListWindow.toFront();
+        initListView();
     }
     public void showMyHistoryWindow() {
         myHistoryWindow.toFront();
+        initHistoryView();
     }
 
     // -- Extra Code -- //
 
     public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
     public HashMap<String, accountListItem> orderMap = new HashMap<String, accountListItem>();
-    /*
+
     public void initMonthMap(){
         monthMap.put(0, "Januari");
         monthMap.put(1, "Februari");
@@ -155,13 +158,35 @@ public class AccountViewController extends AnchorPane {
         newPane.setText(dateText + String.valueOf(group.size()) + " köp");
         FlowPane fp = new FlowPane();
         for (Order order : group){
-            accountHistoryListItem orderItem = new accountHistoryListItem(order, newPane, monthMap);
+            accountHistoryListItem orderItem = new accountHistoryListItem(order, monthMap);
             fp.getChildren().add(orderItem);
         }
         newPane.setContent(fp);
         accountHistoryAccordion.getPanes().add(newPane);
     }
     public void initHistoryView(){
+        /*ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
+        for(int i = 1; i<20; i++){
+            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProducts().get(i));
+            test.add(test2);
+        }
+        IMatDataHandler.getInstance().placeOrder();
+        IMatDataHandler.getInstance().getOrders().get(0).setItems(test);
+        Date test3 = IMatDataHandler.getInstance().getOrders().get(0).getDate();
+        test3.setMonth(test3.getMonth() - 1);
+        IMatDataHandler.getInstance().getOrders().get(0).setDate(test3);
+
+        for(int i = 1; i<20; i++){
+            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProducts().get(i));
+            test.add(test2);
+        }
+        IMatDataHandler.getInstance().placeOrder();
+        IMatDataHandler.getInstance().getOrders().get(1).setItems(test);
+        test3 = IMatDataHandler.getInstance().getOrders().get(1).getDate();
+        test3.setMonth(test3.getMonth() - 2);
+        IMatDataHandler.getInstance().getOrders().get(1).setDate(test3);
+        IMatDataHandler.getInstance().shutDown(); */
+
         ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
 
         for (Order order : IMatDataHandler.getInstance().getOrders()){
@@ -181,7 +206,7 @@ public class AccountViewController extends AnchorPane {
             ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble(11));
             test.add(test2);
         }
-        accountListListItem test3 = new accountListListItem("Söndag", test, this);
+        accountListListItem test3 = new accountListListItem("Söndag", test);
         accountListFlowPane.getChildren().add(test3);
 
         test = new ArrayList<ShoppingItem>();
@@ -190,8 +215,8 @@ public class AccountViewController extends AnchorPane {
             ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble(11));
             test.add(test2);
         }
-        test3 = new accountListListItem("Storhandling", test, this);
+        test3 = new accountListListItem("Storhandling", test);
         accountListFlowPane.getChildren().add(test3);
     }
-    */
+
 }

@@ -30,7 +30,6 @@ public class accountHistoryListItem extends AnchorPane {
     private ScrollPane historyItemScrollPane;
 
     private boolean state = false;
-    private TitledPane parentController;
     private Order order;
     private HashMap<Integer, String> monthmap;
     @FXML
@@ -83,7 +82,7 @@ public class accountHistoryListItem extends AnchorPane {
         String price = String.valueOf(order.getItems().size() * 21);
         totalPriceText.setText(price + " kr");
         for(ShoppingItem product : order.getItems()){
-            accountListProduct historyProduct = new accountListProduct(product, parentController);
+            accountListProduct historyProduct = new accountListProduct(product);
             if(!state) {
                 itemFlowPane.getChildren().add(historyProduct);
             }
@@ -93,10 +92,9 @@ public class accountHistoryListItem extends AnchorPane {
         }
     }
 
-    public accountHistoryListItem(Order incomingOrder, TitledPane mainController, HashMap<Integer, String> monthMap) {
+    public accountHistoryListItem(Order incomingOrder, HashMap<Integer, String> monthMap) {
         this.order = incomingOrder;
         this.monthmap = monthMap;
-        this.parentController = mainController;
         updateListItems();
         updateChildren();
 

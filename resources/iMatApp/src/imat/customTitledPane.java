@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 public class customTitledPane extends TitledPane {
-    private AccountViewController parentController;
     private ArrayList<Order> group;
     @FXML
     private TitledPane thePane;
@@ -26,7 +25,7 @@ public class customTitledPane extends TitledPane {
     public FlowPane theFlowPane;
     public customTitledPane() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customTitledPane.fxml"));
-        fxmlLoader.setRoot(this);
+        //fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
         try {
