@@ -25,7 +25,7 @@ public class customTitledPane extends TitledPane {
     public FlowPane theFlowPane;
     public customTitledPane() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customTitledPane.fxml"));
-        //fxmlLoader.setRoot(this);
+        fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
         try {

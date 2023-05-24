@@ -26,6 +26,12 @@ public class ApplicationController extends AnchorPane {
     // -- General Attributes -- //
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
+    private static ApplicationController instance = null;
+
+    public static synchronized ApplicationController getInstance() {
+        return instance;
+    }
+
 
     public ApplicationController() {
         FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("imat_app.fxml"));
@@ -38,7 +44,11 @@ public class ApplicationController extends AnchorPane {
             throw new RuntimeException(e);
         }
 
+        instance = this;
+
         switchPage(MainViewController.getPage());
+
+        // Button Actions
 
         applicationAccountButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override

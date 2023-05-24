@@ -58,7 +58,7 @@ public class BasketViewController extends AnchorPane {
         basketToMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                //ApplicationController.switchpage(MainViewController.getPage());
+                ApplicationController.getInstance().switchPage(MainViewController.getPage());
             }
         });
 
