@@ -216,7 +216,6 @@ public class AccountViewController extends AnchorPane {
     }
 
     private ArrayList<ArrayList<Order>> findAndAdd(ArrayList<ArrayList<Order>> groupedOrders, Order newOrder) {
-
         for(ArrayList<Order> group : groupedOrders){
             if(group.get(0).getDate().getYear() == newOrder.getDate().getYear() && group.get(0).getDate().getMonth() == newOrder.getDate().getMonth()){
                 group.add(newOrder);
@@ -231,9 +230,8 @@ public class AccountViewController extends AnchorPane {
 
 
     private void createTitledPane(ArrayList<Order> group){
-        customTitledPane newPane = new customTitledPane();
-        String dateText = monthMap.get(group.get(0).getDate().getMonth()) + " " + (group.get(0).getDate().getYear() + 1900) + "                                                        ";
-        newPane.setText(dateText + String.valueOf(group.size()) + " köp");
+        customTitledPane newPane = new customTitledPane(group, monthMap);
+        newPane.setText(String.valueOf(group.size()) + " köp");
         FlowPane fp = new FlowPane();
         fp.setStyle("-fx-background-color: D2D2D2");
         for (Order order : group){
