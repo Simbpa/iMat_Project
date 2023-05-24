@@ -88,7 +88,7 @@
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="lastNameField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Efternamn" styleClass="info-field">
+                        <TextField fx:id="lastnameField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Efternamn" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
@@ -98,27 +98,27 @@
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="cityField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="332.0" prefHeight="47.0" prefWidth="184.0" promptText="Ort" styleClass="info-field">
+                        <TextField fx:id="cityField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="333.0" prefHeight="47.0" prefWidth="184.0" promptText="Ort" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="postalCodeField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="332.0" prefHeight="47.0" prefWidth="184.0" promptText="Postkod" styleClass="info-field">
+                        <TextField fx:id="postcodeField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="332.0" prefHeight="47.0" prefWidth="184.0" promptText="Postkod" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="phoneField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="403.0" prefHeight="47.0" prefWidth="184.0" promptText="Telefon" styleClass="info-field">
+                        <TextField fx:id="phoneField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="408.0" prefHeight="47.0" prefWidth="184.0" promptText="Telefonnummer" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="mailField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="403.0" prefHeight="47.0" prefWidth="184.0" promptText="E-post" styleClass="info-field">
+                        <TextField fx:id="emailField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="408.0" prefHeight="47.0" prefWidth="184.0" promptText="E-post" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <Button fx:id="saveButton" layoutX="460.0" layoutY="488.0" mnemonicParsing="false" styleClass="save-button" text="Spara">
+                        <Button fx:id="saveButton" layoutX="460.0" layoutY="598.0" mnemonicParsing="false" onMouseClicked="#saveAccountInfo" styleClass="save-button" text="Spara">
                            <font>
                               <Font size="25.0" />
                            </font>
@@ -126,6 +126,41 @@
                         <Text layoutX="378.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina uppgifter">
                            <font>
                               <Font size="40.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="310.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Förnamn">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="526.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="311.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="526.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ort">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="308.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postkod">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="526.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-post">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="309.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer">
+                           <font>
+                              <Font size="15.0" />
                            </font>
                         </Text>
                      </children>
