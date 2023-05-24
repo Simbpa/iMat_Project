@@ -4,13 +4,11 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="1280" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="138.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
-      <AnchorPane layoutX="1005.0" layoutY="235.0" prefHeight="407.0" prefWidth="260.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15;">
+      <AnchorPane layoutX="1005.0" layoutY="110.0" prefHeight="407.0" prefWidth="260.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15;">
          <children>
             <Label layoutX="47.0" layoutY="41.0" text="Totalsumma">
                <font>
@@ -51,7 +49,7 @@
             <Button layoutX="75.0" layoutY="335.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="133.0" style="-fx-background-color: #FFC327; -fx-background-radius: 40;" text="Button" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="50.0" layoutY="170.0" prefHeight="40.0" prefWidth="997.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="50.0" layoutY="45.0" prefHeight="40.0" prefWidth="997.0" style="-fx-background-color: white;">
          <children>
             <AnchorPane layoutX="275.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;" />
             <AnchorPane layoutX="485.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;" />
@@ -65,6 +63,6 @@
             <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 30; -fx-border-color: black; -fx-background-radius: 30;" text="Button" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="15.0" layoutY="235.0" prefHeight="540.0" prefWidth="975.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15;" />
+      <AnchorPane layoutX="15.0" layoutY="110.0" prefHeight="540.0" prefWidth="975.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15;" />
    </children>
 </AnchorPane>
