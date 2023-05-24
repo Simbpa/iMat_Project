@@ -30,8 +30,6 @@ public class accountListListItem extends AnchorPane {
     public FlowPane itemFlowPane;
     @FXML
     private ScrollPane listItemScrollPane;
-    @FXML
-    private Button removeButton;
 
     private boolean state = false;
     private ArrayList<ShoppingItem> content;

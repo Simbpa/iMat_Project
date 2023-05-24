@@ -7,8 +7,8 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<fx:root prefHeight="189.0" prefWidth="201.0" style="-fx-background-color: black;" stylesheets="@imat_app.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="189.0" prefWidth="201.0" stylesheets="@imat_app.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="accountHistoryProductImage" fitHeight="94.0" fitWidth="317.0" layoutX="39.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="-152.0">
          <image>
@@ -17,7 +17,7 @@
       </ImageView>
       <Text fx:id="accountHistoryProductName" layoutX="14.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Äpple" textAlignment="CENTER" wrappingWidth="171.69794464111328" />
       <Text fx:id="accountHistoryProductAmount" layoutX="70.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 st" textAlignment="CENTER" wrappingWidth="56.91407012939453" />
-      <Line endX="100.0" layoutX="100.0" layoutY="133.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Line endX="98.29289245605469" endY="-1.52587890625E-5" layoutX="100.0" layoutY="133.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>
    <padding>

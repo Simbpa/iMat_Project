@@ -10,7 +10,7 @@
       <FlowPane fx:id="theFlowPane" prefHeight="200.0" prefWidth="200.0" />
    </content>
    <graphic>
-      <Text fx:id="paneDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="September 2023                                ">
+      <Text fx:id="paneDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="September 2023                                " wrappingWidth="421.82159423828125">
          <font>
             <Font size="25.0" />
          </font>
