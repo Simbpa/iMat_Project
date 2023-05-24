@@ -13,7 +13,7 @@
 
 <fx:root type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <javafx.scene.layout.AnchorPane prefHeight="253.0" prefWidth="920.0" style="-fx-border-color: black; -fx-border-width: 1;" stylesheets="@imat_app.css">
+      <javafx.scene.layout.AnchorPane prefHeight="253.0" prefWidth="920.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white;" stylesheets="@imat_app.css">
          <children>
             <Text fx:id="dateText" layoutX="23.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23 april 2022">
                <font>

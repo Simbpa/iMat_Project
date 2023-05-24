@@ -118,7 +118,7 @@
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <Button fx:id="saveButton" layoutX="460.0" layoutY="598.0" mnemonicParsing="false" onMouseClicked="#saveAccountInfo" styleClass="save-button" text="Spara">
+                        <Button fx:id="saveButton" layoutX="460.0" layoutY="518.0" mnemonicParsing="false" onMouseClicked="#saveAccountInfo" styleClass="save-button" text="Spara">
                            <font>
                               <Font size="25.0" />
                            </font>
