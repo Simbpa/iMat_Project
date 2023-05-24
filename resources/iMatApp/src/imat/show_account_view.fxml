@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1280.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1280.0" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="-21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -53,46 +53,28 @@
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <Button layoutX="748.0" layoutY="121.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: A2D085;" text="Ändra   ">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Button>
                   <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="848.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@1860115.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="748.0" layoutY="198.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: A2D085;" text="Ändra   ">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Button>
                   <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="848.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@1860115.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="748.0" layoutY="274.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: A2D085;" text="Ändra   ">
+                  <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="739.0" layoutY="274.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="152.0" style="-fx-background-radius: 20; -fx-background-color: A2D085;" styleClass="green-rounded-buttons" text="Ändra" textAlignment="CENTER">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="27.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/1860115.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="848.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@1860115.png" />
-                     </image>
-                  </ImageView>
-                  <Button layoutX="748.0" layoutY="353.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: A2D085;" text="Ändra   ">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Button>
-                  <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="848.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@1860115.png" />
-                     </image>
-                  </ImageView>
                   <Line endX="562.0" endY="-3.0517578125E-5" layoutX="341.0" layoutY="189.0" startX="-333.9999694824219" startY="-3.0517578125E-5" />
                   <Line endX="562.0" endY="-3.0517578125E-5" layoutX="340.0" layoutY="267.0" startX="-333.9999694824219" startY="-3.0517578125E-5" />
                   <Line endX="562.0" endY="-3.0517578125E-5" layoutX="339.0" layoutY="345.0" startX="-333.9999694824219" startY="-3.0517578125E-5" />
@@ -122,16 +104,54 @@
                         <Font size="40.0" />
                      </font>
                   </Label>
-                  <Button layoutX="748.0" layoutY="430.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="136.0" style="-fx-background-radius: 20; -fx-background-color: A2D085;" text="Ändra   ">
+                  <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="741.0" layoutY="356.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="152.0" styleClass="green-rounded-buttons" text="Ändra" textAlignment="CENTER">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="27.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/1860115.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
-                  <ImageView fitHeight="32.0" fitWidth="30.0" layoutX="848.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@1860115.png" />
-                     </image>
-                  </ImageView>
+                  <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="739.0" layoutY="432.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="152.0" styleClass="green-rounded-buttons" text="Ändra" textAlignment="CENTER">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/1860115.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="740.0" layoutY="196.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="152.0" styleClass="green-rounded-buttons" text="Ändra" textAlignment="CENTER">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/1860115.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="739.0" layoutY="118.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="152.0" styleClass="green-rounded-buttons" text="Ändra" textAlignment="CENTER">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/1860115.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children>
             </AnchorPane>
             <Button fx:id="showAccountViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="    Tillbaka">
