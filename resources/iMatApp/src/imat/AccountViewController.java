@@ -75,8 +75,7 @@ public class AccountViewController extends AnchorPane {
                 showMyHistoryWindow();
             }
         });
-        initHistoryView();
-        initListView();
+
     }
 
     // -- FXML Object -- //
@@ -112,9 +111,11 @@ public class AccountViewController extends AnchorPane {
     }
     public void showMyListWindow() {
         myListWindow.toFront();
+        initListView();
     }
     public void showMyHistoryWindow() {
         myHistoryWindow.toFront();
+        initHistoryView();
     }
 
     // -- Extra Code -- //
