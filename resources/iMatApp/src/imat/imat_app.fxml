@@ -12,11 +12,6 @@
     <children>
         <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="1456.0" style="-fx-background-color: #A2D085;" styleClass="top-bar">
             <children>
-                <Text layoutX="29.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="iMat" wrappingWidth="178.9013671875">
-                    <font>
-                        <Font name="Impact" size="67.5" />
-                    </font>
-                </Text>
                 <TextField fx:id="searchArea" alignment="BOTTOM_LEFT" layoutX="191.0" layoutY="38.0" prefHeight="53.0" prefWidth="603.0" promptText="Sök..." styleClass="search-bar" AnchorPane.bottomAnchor="35.0" AnchorPane.topAnchor="38.0">
                     <font>
                         <Font size="22.5" />
@@ -75,6 +70,15 @@
                         <Font size="18.75" />
                     </font>
                 </Button>
+            <Button fx:id="homeButton" layoutX="21.0" layoutY="22.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="135.0" style="-fx-background-color: #A2D085;">
+               <graphic>
+                      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="iMat" wrappingWidth="133.56805419921875">
+                          <font>
+                              <Font name="Impact" size="67.5" />
+                          </font>
+                      </Text>
+               </graphic>
+            </Button>
             </children>
         </AnchorPane>
         <AnchorPane fx:id="pageRoot" layoutY="126.0" prefHeight="676.0" prefWidth="1280.0" />

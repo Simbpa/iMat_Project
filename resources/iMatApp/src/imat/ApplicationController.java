@@ -54,6 +54,13 @@ public class ApplicationController extends AnchorPane {
             }
         });
 
+        homeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                switchPage(MainViewController.getPage());
+            }
+        });
+
     }
 
 
@@ -71,6 +78,8 @@ public class ApplicationController extends AnchorPane {
     private AnchorPane accountViewRoot;
     @FXML
     private AnchorPane pageRoot;
+    @FXML
+    private Button homeButton;
 
     @FXML
     private AnchorPane applicationRoot;
