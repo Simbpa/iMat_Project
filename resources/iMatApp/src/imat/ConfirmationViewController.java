@@ -1,6 +1,10 @@
 package imat;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -35,6 +39,15 @@ public class ConfirmationViewController extends AnchorPane {
         }
 
         // Button Actions
+        confirmationViewToMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ApplicationController.getInstance().switchPage(MainViewController.getPage());
+            }
+        });
 
     }
+    // -- FXMl Objects -- //
+    @FXML
+    private Button confirmationViewToMainViewButton;
 }

@@ -9,16 +9,16 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
-public class showAccountViewController extends AnchorPane {
+public class ShowAccountViewController extends AnchorPane {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
-    private static showAccountViewController instance = null;
+    private static ShowAccountViewController instance = null;
 
     // -- Methods -- //
 
-    private static synchronized showAccountViewController getInstance() {
+    private static synchronized ShowAccountViewController getInstance() {
         if (instance == null) {
-            instance = new showAccountViewController();
+            instance = new ShowAccountViewController();
         }
         return instance;
     }
@@ -27,7 +27,7 @@ public class showAccountViewController extends AnchorPane {
         return getInstance();
     }
 
-    private showAccountViewController() {
+    private ShowAccountViewController() {
         FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("show_account_view.fxml"));
         loader.setRoot(this);
         loader.setController(this);
