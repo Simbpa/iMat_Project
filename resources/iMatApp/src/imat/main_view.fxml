@@ -59,165 +59,169 @@
             </ScrollPane>
          </children>
       </AnchorPane>
-      <SplitPane dividerPositions="0.263302034428795" layoutX="100.0" prefHeight="664.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <SplitPane dividerPositions="0.2633" layoutX="100.0" prefHeight="664.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="662.0" prefWidth="312.0">
                <children>
-                  <ScrollPane hbarPolicy="NEVER" layoutX="89.0" layoutY="198.0" prefHeight="662.0" prefWidth="345.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="0.0">
+                  <ScrollPane hbarPolicy="NEVER" layoutX="89.0" layoutY="198.0" prefHeight="662.0" prefWidth="355.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-22.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <AnchorPane prefHeight="752.0" prefWidth="319.0">
+                        <AnchorPane prefHeight="752.0" prefWidth="327.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
-                                 <font>
-                                    <Font name="System Bold" size="20.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Button>
-                              <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/32213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/32213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/32213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/32213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/32213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/32213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/32213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/32213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/32213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/32213.png" />
-                                 </image>
-                              </ImageView>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Alla varor" wrappingWidth="311.75785064697266">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Frukt &amp; Grönt" wrappingWidth="311.75785064697266">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Frys" wrappingWidth="311.75785064697266">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Mejeri &amp; Ägg" wrappingWidth="311.75785064697266">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Kött, Fågel &amp; Chark" wrappingWidth="311.75785064697266">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Skafferi" wrappingWidth="311.75785064697266">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Barn" wrappingWidth="311.75785064697266">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Vegetariskt" wrappingWidth="311.75785064697266">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Dryck" wrappingWidth="311.75785064697266">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Kryddor" wrappingWidth="311.75785064697266">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Text>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 1;">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="333.0" style="-fx-border-color: black; -fx-border-width: 0;">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Button>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Alla varor" wrappingWidth="311.75785064697266">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Frukt &amp; Grönt" wrappingWidth="311.75785064697266">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Frys" wrappingWidth="311.75785064697266">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Mejeri &amp; Ägg" wrappingWidth="311.75785064697266">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Kött, Fågel &amp; Chark" wrappingWidth="311.75785064697266">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Skafferi" wrappingWidth="311.75785064697266">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Barn" wrappingWidth="311.75785064697266">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Vegetariskt" wrappingWidth="311.75785064697266">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Dryck" wrappingWidth="311.75785064697266">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Kryddor" wrappingWidth="311.75785064697266">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="324.0" style="-fx-border-color: black; -fx-border-width: 1;">
                                  <children>
                                     <Button layoutX="2.0" layoutY="76.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
                                        <font>
@@ -269,102 +273,102 @@
                                           <Font size="20.0" />
                                        </font>
                                     </Button>
-                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="260.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="260.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="260.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="260.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="260.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="319.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="260.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="397.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="260.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="473.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="260.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="260.0" layoutY="618.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="618.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
                                     </ImageView>
-                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="260.0" layoutY="700.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="700.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
                                     </ImageView>
-                                    <Text layoutX="2.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Alla varor" wrappingWidth="311.75785064697266">
+                                    <Text layoutX="2.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Alla varor" wrappingWidth="311.75785064697266">
                                        <font>
                                           <Font size="35.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="2.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Frukt &amp; Grönt" wrappingWidth="311.75785064697266">
+                                    <Text layoutX="2.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Frukt &amp; Grönt" wrappingWidth="311.75785064697266">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="2.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Frys" wrappingWidth="311.75785064697266">
+                                    <Text layoutX="2.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Frys" wrappingWidth="311.75785064697266">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="2.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Mejeri &amp; Ägg" wrappingWidth="311.75785064697266">
+                                    <Text layoutX="2.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Mejeri &amp; Ägg" wrappingWidth="311.75785064697266">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="2.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Kött, Fågel &amp; Chark" wrappingWidth="311.75785064697266">
+                                    <Text layoutX="2.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Kött, Fågel &amp; Chark" wrappingWidth="311.75785064697266">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="2.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Skafferi" wrappingWidth="311.75785064697266">
+                                    <Text layoutX="2.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Skafferi" wrappingWidth="311.75785064697266">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="2.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Barn" wrappingWidth="311.75785064697266">
+                                    <Text layoutX="2.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Barn" wrappingWidth="311.75785064697266">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="2.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Vegetariskt" wrappingWidth="311.75785064697266">
+                                    <Text layoutX="2.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Vegetariskt" wrappingWidth="311.75785064697266">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="2.0" layoutY="649.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Dryck" wrappingWidth="311.75785064697266">
+                                    <Text layoutX="2.0" layoutY="649.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Dryck" wrappingWidth="311.75785064697266">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Text>
-                                    <Text layoutX="2.0" layoutY="731.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Kryddor" wrappingWidth="311.75785064697266">
+                                    <Text layoutX="2.0" layoutY="731.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Kryddor" wrappingWidth="311.75785064697266">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
@@ -376,9 +380,9 @@
                   </ScrollPane>
                </children>
             </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="662.0" prefWidth="914.0">
                <children>
-                  <ScrollPane layoutX="233.0" layoutY="171.0" prefHeight="675.3333333333334" prefWidth="894.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ScrollPane layoutX="1.0" layoutY="171.0" prefHeight="662.0" prefWidth="937.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
                         <FlowPane fx:id="mainViewFlowPane" prefHeight="672.0" prefWidth="918.0" />
                      </content>

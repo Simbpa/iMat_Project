@@ -13,25 +13,25 @@
 <fx:root fx:id="product" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="226.0" style="-fx-background-color: D2D2D2;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="321.0" layoutX="5.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
-      <ImageView fx:id="itemImageView" fitHeight="142.0" fitWidth="167.0" layoutX="31.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
-      <AnchorPane layoutX="98.0" layoutY="8.0" prefHeight="61.0" prefWidth="119.0" style="-fx-border-radius: 10; -fx-border-color: black;">
+      <ImageView fx:id="itemImageView" fitHeight="122.0" fitWidth="170.0" layoutX="29.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="98.0" layoutY="8.0" prefHeight="45.0" prefWidth="119.0" style="-fx-border-radius: 10; -fx-border-color: black;">
          <cursor>
             <Cursor fx:constant="SW_RESIZE" />
          </cursor>
       </AnchorPane>
-      <AnchorPane layoutX="19.0" layoutY="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="186.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
+      <AnchorPane layoutX="19.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="186.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
          <children>
-            <AnchorPane layoutX="14.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#decreaseAmount" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-style: solid; -fx-border-width: 1;">
+            <AnchorPane layoutX="14.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#decreaseAmount" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-style: solid; -fx-border-width: 1;">
                <children>
                   <Button layoutX="4.0" layoutY="5.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: #c0c0c0;" />
-                  <Label layoutX="10.0" layoutY="-5.0" prefHeight="41.0" prefWidth="15.0" text="-">
+                  <Label layoutX="10.0" layoutY="-6.0" prefHeight="40.0" prefWidth="15.0" text="-">
                      <font>
                         <Font size="33.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="141.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#increaseAmount" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #a2d085; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-style: solid; -fx-border-width: 1;">
+            <AnchorPane layoutX="141.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#increaseAmount" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #a2d085; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-style: solid; -fx-border-width: 1;">
                <children>
                   <Button layoutX="3.0" layoutY="4.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: #a2d085;" />
                   <Label layoutX="7.0" layoutY="-6.0" text="+">
@@ -41,24 +41,24 @@
                   </Label>
                </children>
             </AnchorPane>
-            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="58.0" layoutY="7.0" prefHeight="46.0" prefWidth="70.0" promptText="0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;">
+            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="58.0" layoutY="2.0" prefHeight="46.0" prefWidth="70.0" promptText="0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;">
                <font>
                   <Font size="20.0" />
                </font>
             </TextField>
          </children>
       </AnchorPane>
-      <Text fx:id="itemNameText" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="varunamn" textAlignment="CENTER" wrappingWidth="226.0">
+      <Text fx:id="itemNameText" layoutX="21.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ehffniekhsvikejsvojeovsf" textAlignment="CENTER" wrappingWidth="177.90548706054688">
          <font>
-            <Font size="30.0" />
+            <Font size="25.0" />
          </font>
       </Text>
-      <Label layoutX="198.0" layoutY="-8.0" prefHeight="99.0" prefWidth="23.0" text="/st" AnchorPane.bottomAnchor="243.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="-8.0">
+      <Label layoutX="198.0" layoutY="-12.0" prefHeight="99.0" prefWidth="23.0" text="/st" AnchorPane.bottomAnchor="247.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="-12.0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Text fx:id="itemPriceLabel" layoutX="17.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:00 " textAlignment="RIGHT" wrappingWidth="178.18802370340347" AnchorPane.bottomAnchor="278.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="30.811976296596526" AnchorPane.topAnchor="19.0">
+      <Text fx:id="itemPriceLabel" layoutX="17.0" layoutY="43.00390625" strokeType="OUTSIDE" strokeWidth="0.0" text="9:00 " textAlignment="RIGHT" wrappingWidth="178.18802370340347" AnchorPane.bottomAnchor="284.66796875" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="30.811976296596526" AnchorPane.topAnchor="14.0">
          <font>
             <Font size="30.0" />
          </font>
