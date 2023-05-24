@@ -32,7 +32,6 @@ public class accountListListItem extends AnchorPane {
     private ScrollPane listItemScrollPane;
 
     private boolean state = false;
-    private AccountViewController parentController;
     private ArrayList<ShoppingItem> content;
     private String name;
     private HashMap<Integer, String> monthmap;
@@ -70,16 +69,15 @@ public class accountListListItem extends AnchorPane {
         String price = String.valueOf(this.content.size() * 21);
         totalPriceText.setText(price + " kr");
         for(ShoppingItem product : this.content){
-            accountListListProduct listProduct = new accountListListProduct(product, this.parentController);
+            accountListListProduct listProduct = new accountListListProduct(product);
             itemFlowPane.getChildren().add(listProduct);
         }
     }
 
-    public accountListListItem(String listName, ArrayList<ShoppingItem> contents, AccountViewController mainController){
+    public accountListListItem(String listName, ArrayList<ShoppingItem> contents){
         this.name = listName;
         this.content = contents;
 
-        this.parentController = mainController;
         updateListItems();
         updateChildren();
 

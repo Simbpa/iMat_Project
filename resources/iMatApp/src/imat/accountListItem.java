@@ -21,9 +21,8 @@ public class accountListItem extends AnchorPane {
     @FXML
     private Text totalPriceText;
 
-    private MainViewController parentController;
     private Order order;
-    public accountListItem(Order incomingOrder, MainViewController mainController, HashMap<Integer, String> monthMap) {
+    public accountListItem(Order incomingOrder, HashMap<Integer, String> monthMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("account_list_item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -40,7 +39,6 @@ public class accountListItem extends AnchorPane {
         amountOfProductText.setText(amount);
         String price = String.valueOf(order.getItems().size() * 21);
         totalPriceText.setText(price);
-        this.parentController = mainController;
 
     }
 
