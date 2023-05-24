@@ -7,54 +7,54 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="324.0" style="-fx-border-color: black; -fx-border-width: 1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="324.0" style="-fx-border-color: black; -fx-border-width: 1;" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="2.0" layoutY="76.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+      <Button layoutX="2.0" layoutY="76.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="2.0" layoutY="150.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+      <Button layoutX="2.0" layoutY="150.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="2.0" layoutY="225.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="225.0">
+      <Button layoutX="2.0" layoutY="225.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="225.0">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="2.0" layoutY="300.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
+      <Button layoutX="2.0" layoutY="300.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="3.0" layoutY="375.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="375.0">
+      <Button layoutX="3.0" layoutY="375.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="375.0">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="3.0" layoutY="450.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="450.0">
+      <Button layoutX="3.0" layoutY="450.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="450.0">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="3.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Button layoutX="3.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="1.0" layoutY="526.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="525.0">
+      <Button layoutX="1.0" layoutY="526.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="525.0">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="2.0" layoutY="601.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="600.0">
+      <Button layoutX="2.0" layoutY="601.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="600.0">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="2.0" layoutY="676.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 1 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="675.0">
+      <Button layoutX="2.0" layoutY="676.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="675.0">
          <font>
             <Font size="20.0" />
          </font>

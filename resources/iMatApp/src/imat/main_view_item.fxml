@@ -13,7 +13,7 @@
 <fx:root fx:id="product" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="226.0" style="-fx-background-color: D2D2D2;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="321.0" layoutX="5.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
-      <ImageView fx:id="itemImageView" fitHeight="122.0" fitWidth="170.0" layoutX="29.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="clickable-main-view" fx:id="itemImageView" fitHeight="122.0" fitWidth="170.0" layoutX="29.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
       <AnchorPane layoutX="97.0" layoutY="7.0" prefHeight="49.0" prefWidth="116.0" style="-fx-border-color: black;" styleClass="chattBubbla">
          <cursor>
             <Cursor fx:constant="SW_RESIZE" />
@@ -60,7 +60,7 @@
             </TextField>
          </children>
       </AnchorPane>
-      <Text fx:id="itemNameText" layoutX="21.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ehffniekhsvikejsvojeovsf" textAlignment="CENTER" wrappingWidth="177.90548706054688">
+      <Text id="clickable-main-view" fx:id="itemNameText" layoutX="21.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ehffniekhsvikejsvojeovsf" textAlignment="CENTER" wrappingWidth="177.90548706054688">
          <font>
             <Font size="25.0" />
          </font>

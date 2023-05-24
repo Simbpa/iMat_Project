@@ -13,14 +13,20 @@
 }
 
 /* Hand icon */
-.logo, .white-rounded-buttons, .account-side-bar-button, .green-rounded-buttons, .bar-buttons:hover{
+.white-rounded-buttons, #account-side-bar-button, .green-rounded-buttons, .bar-buttons:hover, #logo, #clickable-main-view{
     -fx-cursor: hand;
 }
-.top-bar{
-    /*-fx-border-width: 0 0 2px 0;
-    -fx-border-color: black;
-    -fx-border-style: solid; */
+/*Logo color */
+#logo{
+    -fx-fill: #000000;
 }
+#logo:hover{
+    -fx-fill: #191919;
+}
+#logo:pressed{
+    -fx-fill: #323232;
+}
+
 
 #account-side-bar-button{
     -fx-border-color : black;
