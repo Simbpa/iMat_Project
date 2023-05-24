@@ -33,7 +33,7 @@ public class MainViewController extends AnchorPane {
 
     // -- Methods -- //
 
-    private static synchronized MainViewController getInstance() {
+    public static synchronized MainViewController getInstance() {
         if (instance == null) {
             instance = new MainViewController();
         }

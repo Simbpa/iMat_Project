@@ -23,11 +23,11 @@ public class MainViewItem extends AnchorPane {
     @FXML
     private ImageView itemImageView;
     @FXML
-    private Label itemNameLabel;
+    private Text itemNameText;
     @FXML
     private Text itemPriceLabel;
     @FXML
-    private TextField itemAmountLabel;
+    private TextField itemAmountTextField;
 
 
 
@@ -47,9 +47,9 @@ public class MainViewItem extends AnchorPane {
         this.mainViewItemDetail = new MainViewItemDetail(product);
 
         itemImageView.setImage(iMatDataHandler.getFXImage(product));
-        itemNameLabel.setText(product.getName());
+        itemNameText.setText(product.getName());
         itemPriceLabel.setText(Double.toString(product.getPrice()));
-        itemAmountLabel.setText(Integer.toString(amount));
+        itemAmountTextField.setText(Integer.toString(amount));
 
     }
 
@@ -60,13 +60,13 @@ public class MainViewItem extends AnchorPane {
     }
     public void increaseAmount() {
         amount += 1;
-        itemAmountLabel.setText(Integer.toString(amount));
+        itemAmountTextField.setText(Integer.toString(amount));
     }
 
     public void decreaseAmount() {
         if(amount>=1){
             amount -= 1;
-            itemAmountLabel.setText(Integer.toString(amount));
+            itemAmountTextField.setText(Integer.toString(amount));
         }
     }
 
