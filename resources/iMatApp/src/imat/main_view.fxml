@@ -21,7 +21,7 @@
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Button layoutX="315.0" layoutY="30.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;">
+                  <Button fx:id="mainViewBasketCloseButton" layoutX="315.0" layoutY="30.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -32,7 +32,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="171.0" layoutY="487.0" prefHeight="120.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 1 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <AnchorPane fx:id="mainViewBasket" layoutX="171.0" layoutY="487.0" prefHeight="120.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 1 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
                   <Label layoutX="39.0" layoutY="42.0" text="Totalt:" AnchorPane.leftAnchor="39.0">
                      <font>
