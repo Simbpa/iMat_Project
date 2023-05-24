@@ -59,11 +59,16 @@ public class MainViewController extends AnchorPane {
         mainViewInitialize();
 
         // Button Actions
-
         mainViewBasketCloseButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 hideMainViewBasket();
+            }
+        });
+        mainViewToBasketButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ApplicationController.getInstance().switchPage(BasketViewController.getPage());
             }
         });
     }
