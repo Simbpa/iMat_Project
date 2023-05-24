@@ -51,3 +51,8 @@
 .titled-pane{
     -fx-font-size: 30px;
 }
+
+.titled-pane > .content > * {
+    -fx-padding: 0px;
+    -fx-font-size: 15px;
+}
