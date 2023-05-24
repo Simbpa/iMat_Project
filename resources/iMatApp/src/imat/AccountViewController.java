@@ -165,7 +165,7 @@ public class AccountViewController extends AnchorPane {
         accountHistoryAccordion.getPanes().add(newPane);
     }
     public void initHistoryView(){
-        /*ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
+        ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
         for(int i = 1; i<20; i++){
             ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProducts().get(i));
             test.add(test2);
@@ -185,7 +185,7 @@ public class AccountViewController extends AnchorPane {
         test3 = IMatDataHandler.getInstance().getOrders().get(1).getDate();
         test3.setMonth(test3.getMonth() - 2);
         IMatDataHandler.getInstance().getOrders().get(1).setDate(test3);
-        IMatDataHandler.getInstance().shutDown(); */
+        IMatDataHandler.getInstance().shutDown();
 
         ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
 
