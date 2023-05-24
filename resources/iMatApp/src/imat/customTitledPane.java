@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 public class customTitledPane extends TitledPane {
-    private MainViewController parentController;
+    private AccountViewController parentController;
     private ArrayList<Order> group;
     @FXML
     private TitledPane thePane;

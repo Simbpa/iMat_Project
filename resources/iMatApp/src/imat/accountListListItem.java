@@ -32,7 +32,7 @@ public class accountListListItem extends AnchorPane {
     private ScrollPane listItemScrollPane;
 
     private boolean state = false;
-    private MainViewController parentController;
+    private AccountViewController parentController;
     private ArrayList<ShoppingItem> content;
     private String name;
     private HashMap<Integer, String> monthmap;
@@ -75,7 +75,7 @@ public class accountListListItem extends AnchorPane {
         }
     }
 
-    public accountListListItem(String listName, ArrayList<ShoppingItem> contents, MainViewController mainController){
+    public accountListListItem(String listName, ArrayList<ShoppingItem> contents, AccountViewController mainController){
         this.name = listName;
         this.content = contents;
 
