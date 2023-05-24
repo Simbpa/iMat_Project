@@ -11,19 +11,19 @@ import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.Order;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 public class customTitledPane extends TitledPane {
-    private ArrayList<Order> group;
     @FXML
     private TitledPane thePane;
     @FXML
     public Text paneDateText;
     @FXML
     public FlowPane theFlowPane;
-    public customTitledPane() {
+    public customTitledPane(ArrayList<Order> group, HashMap<Integer, String> monthMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customTitledPane.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -33,6 +33,7 @@ public class customTitledPane extends TitledPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+        paneDateText.setText(monthMap.get(group.get(0).getDate().getMonth()) + " " + (group.get(0).getDate().getYear() + 1900));
 
 
 

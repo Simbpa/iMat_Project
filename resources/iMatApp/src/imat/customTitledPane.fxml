@@ -5,12 +5,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root fx:id="thePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1440.0" prefWidth="600.0" text="43 ordrar" type="TitledPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="thePane" alignment="BASELINE_LEFT" graphicTextGap="575.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1440.0" prefWidth="929.0" text="43 ordrar" type="TitledPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <FlowPane fx:id="theFlowPane" prefHeight="200.0" prefWidth="200.0" />
    </content>
    <graphic>
-      <Text fx:id="paneDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="September 2023                                " wrappingWidth="421.82159423828125">
+      <Text fx:id="paneDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="September 2023" wrappingWidth="183.8216094970703">
          <font>
             <Font size="25.0" />
          </font>
