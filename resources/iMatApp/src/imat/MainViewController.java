@@ -79,6 +79,7 @@ public class MainViewController extends AnchorPane {
     private Button mainViewBasketCloseButton;
 
 
+
     // -- Methods -- //
 
     public void mainViewInitialize() {

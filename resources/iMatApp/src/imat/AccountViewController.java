@@ -8,8 +8,10 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
@@ -41,6 +43,16 @@ public class AccountViewController extends AnchorPane {
     }
 
     private AccountViewController() {
+        initMonthMap();
+        /*IMatDataHandler.getInstance().getCustomer().setFirstName("Bert");
+        IMatDataHandler.getInstance().getCustomer().setLastName("Karlsson");
+        IMatDataHandler.getInstance().getCustomer().setAddress("Äpplevägen 42");
+        IMatDataHandler.getInstance().getCustomer().setPostAddress("Göteborg");
+        IMatDataHandler.getInstance().getCustomer().setPostCode("12345");
+        IMatDataHandler.getInstance().getCustomer().setEmail("bert.karlsson@bert.se");
+        IMatDataHandler.getInstance().shutDown();*/
+
+
         FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("account_view.fxml"));
         loader.setRoot(this);
         loader.setController(this);
@@ -53,6 +65,7 @@ public class AccountViewController extends AnchorPane {
         }
 
         // Button Actions
+        initAccountView();
 
         myAccountButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -78,7 +91,22 @@ public class AccountViewController extends AnchorPane {
     }
 
     // -- FXML Object -- //
-
+    @FXML
+    private TextField firstnameField;
+    @FXML
+    private TextField lastnameField;
+    @FXML
+    private TextField addressField;
+    @FXML
+    private TextField cityField;
+    @FXML
+    private TextField postcodeField;
+    @FXML
+    private TextField phoneField;
+    @FXML
+    private TextField emailField;
+    @FXML
+    private Button saveButton;
     @FXML
     private Button myAccountButton;
     @FXML
@@ -104,9 +132,34 @@ public class AccountViewController extends AnchorPane {
 
 
     // -- Methods -- //
+    public void saveAccountInfo(){
+        if(firstnameField != null){
+            IMatDataHandler.getInstance().getCustomer().setFirstName(firstnameField.getText());
+        };
 
+        if(lastnameField != null){
+            IMatDataHandler.getInstance().getCustomer().setLastName(lastnameField.getText());
+        };
+        if(addressField != null){
+            IMatDataHandler.getInstance().getCustomer().setAddress(addressField.getText());
+        };
+        if(cityField != null){
+            IMatDataHandler.getInstance().getCustomer().setPostAddress(cityField.getText());
+        };
+        if(postcodeField!= null){
+            IMatDataHandler.getInstance().getCustomer().setPostCode(postcodeField.getText());
+        };
+        if(phoneField!= null){
+            IMatDataHandler.getInstance().getCustomer().setMobilePhoneNumber(phoneField.getText());
+        };
+        if(emailField != null){
+            IMatDataHandler.getInstance().getCustomer().setEmail(emailField.getText());
+        };
+        initAccountView();
+    }
     public void showMyAccountWindow() {
         myAccountWindow.toFront();
+        initAccountView();
     }
     public void showMyListWindow() {
         myListWindow.toFront();
@@ -118,6 +171,31 @@ public class AccountViewController extends AnchorPane {
     }
 
     // -- Extra Code -- //
+
+    public void initAccountView(){
+
+        if(IMatDataHandler.getInstance().getCustomer().getFirstName() != null){
+            firstnameField.setText(IMatDataHandler.getInstance().getCustomer().getFirstName());
+        };
+        if(IMatDataHandler.getInstance().getCustomer().getLastName() != null){
+            lastnameField.setText(IMatDataHandler.getInstance().getCustomer().getLastName());
+        };
+        if(IMatDataHandler.getInstance().getCustomer().getAddress() != null){
+            addressField.setText(IMatDataHandler.getInstance().getCustomer().getAddress());
+        };
+        if(IMatDataHandler.getInstance().getCustomer().getPostAddress() != null){
+            cityField.setText(IMatDataHandler.getInstance().getCustomer().getPostAddress());
+        };
+        if(IMatDataHandler.getInstance().getCustomer().getPostCode() != null){
+            postcodeField.setText(IMatDataHandler.getInstance().getCustomer().getPostCode());
+        };
+        if(IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber() != null){
+            phoneField.setText(IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber());
+        };
+        if(IMatDataHandler.getInstance().getCustomer().getEmail() != null){
+            emailField.setText(IMatDataHandler.getInstance().getCustomer().getEmail());
+        };
+    }
 
     public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
     public HashMap<String, accountListItem> orderMap = new HashMap<String, accountListItem>();
@@ -157,6 +235,7 @@ public class AccountViewController extends AnchorPane {
         String dateText = monthMap.get(group.get(0).getDate().getMonth()) + " " + (group.get(0).getDate().getYear() + 1900) + "                                                        ";
         newPane.setText(dateText + String.valueOf(group.size()) + " köp");
         FlowPane fp = new FlowPane();
+        fp.setStyle("-fx-background-color: D2D2D2");
         for (Order order : group){
             accountHistoryListItem orderItem = new accountHistoryListItem(order, monthMap);
             fp.getChildren().add(orderItem);
@@ -165,7 +244,7 @@ public class AccountViewController extends AnchorPane {
         accountHistoryAccordion.getPanes().add(newPane);
     }
     public void initHistoryView(){
-        ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
+        /*ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
         for(int i = 1; i<20; i++){
             ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProducts().get(i));
             test.add(test2);
@@ -185,7 +264,7 @@ public class AccountViewController extends AnchorPane {
         test3 = IMatDataHandler.getInstance().getOrders().get(1).getDate();
         test3.setMonth(test3.getMonth() - 2);
         IMatDataHandler.getInstance().getOrders().get(1).setDate(test3);
-        IMatDataHandler.getInstance().shutDown();
+        IMatDataHandler.getInstance().shutDown();*/
 
         ArrayList<ArrayList<Order>> groupedOrders = new ArrayList<ArrayList<Order>>();
 

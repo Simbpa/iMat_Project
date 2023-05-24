@@ -42,6 +42,10 @@ public class accountListListItem extends AnchorPane {
         }
     }
     @FXML
+    protected void removeButtonClick(){
+
+    }
+    @FXML
     protected void rightArrowClick(){
         listItemScrollPane.setHvalue(listItemScrollPane.getHvalue() + 0.0125);
     }
