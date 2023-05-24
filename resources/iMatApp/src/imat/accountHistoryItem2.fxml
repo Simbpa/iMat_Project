@@ -42,7 +42,7 @@
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="809.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#historyViewAllClick" prefHeight="40.0" prefWidth="111.0" styleClass="save-butgreen-rounded-buttonston" text="Stäng order">
+            <Button layoutX="809.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#historyViewAllClick" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Stäng order">
                <font>
                   <Font size="13.0" />
                </font>
