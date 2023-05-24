@@ -13,6 +13,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
@@ -83,6 +85,24 @@ public class MainViewItem extends AnchorPane {
         String text = itemAmountTextField.getText();
         int textValue = Integer.valueOf(text);
         amount = textValue;
+
+        
+    }
+
+    public void addAmountToShoppingCart(int amount) {
+        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
+        ShoppingItem shoppingItem = new ShoppingItem(product);
+        for (int i = 0; amount < i; i++) {
+            shoppingCart.addItem(shoppingItem);
+        }
+    }
+
+    public void removeAmountToShoppingCart(int amount) {
+        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
+        ShoppingItem shoppingItem = new ShoppingItem(product);
+        for (int i = 0; amount < i; i++) {
+            shoppingCart.removeItem(shoppingItem);
+        }
     }
 
 }
