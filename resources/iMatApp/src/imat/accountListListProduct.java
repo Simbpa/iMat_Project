@@ -21,9 +21,9 @@ public class accountListListProduct extends AnchorPane {
     @FXML
     public Text accountHistoryProductAmount;
 
-    private MainViewController parentController;
+    private AccountViewController parentController;
 
-    public accountListListProduct(ShoppingItem product, MainViewController mainController) {
+    public accountListListProduct(ShoppingItem product, AccountViewController mainController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("accountHistoryProduct.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
