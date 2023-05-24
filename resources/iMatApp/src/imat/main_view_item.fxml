@@ -53,12 +53,12 @@
             <Font size="30.0" />
          </font>
       </Text>
-      <Label layoutX="193.0" layoutY="-8.0" prefHeight="99.0" prefWidth="23.0" text="/st" AnchorPane.bottomAnchor="243.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="-8.0">
+      <Label layoutX="198.0" layoutY="-8.0" prefHeight="99.0" prefWidth="23.0" text="/st" AnchorPane.bottomAnchor="243.0" AnchorPane.leftAnchor="198.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="-8.0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Text fx:id="itemPriceLabel" layoutX="-2.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:00      " textAlignment="RIGHT" wrappingWidth="230.7492047199088">
+      <Text fx:id="itemPriceLabel" layoutX="17.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:00 " textAlignment="RIGHT" wrappingWidth="178.18802370340347" AnchorPane.bottomAnchor="278.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="30.811976296596526" AnchorPane.topAnchor="19.0">
          <font>
             <Font size="30.0" />
          </font>
