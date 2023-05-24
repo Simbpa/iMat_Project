@@ -280,7 +280,7 @@ public class AccountViewController extends AnchorPane {
         ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
         Random rand = new Random();
         for(int i = 1; i<10; i++){
-            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble(11));
+            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble()*10);
             test.add(test2);
         }
         accountListListItem test3 = new accountListListItem("Söndag", test);
@@ -289,7 +289,7 @@ public class AccountViewController extends AnchorPane {
         test = new ArrayList<ShoppingItem>();
         rand = new Random();
         for(int i = 11; i<35; i++){
-            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble(11));
+            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble()*10);
             test.add(test2);
         }
         test3 = new accountListListItem("Storhandling", test);

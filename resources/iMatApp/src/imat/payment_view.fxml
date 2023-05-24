@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="675.0" prefWidth="1280.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="675.0" prefWidth="1280.0" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="80.0" layoutY="157.0" prefHeight="407.0" prefWidth="744.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-color: white; -fx-background-radius: 15;">
          <children>
@@ -91,10 +91,10 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="paymentViewPayButton" layoutX="75.0" layoutY="335.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="133.0" style="-fx-background-color: #FFC327; -fx-background-radius: 40;" text="Betala" />
+            <Button fx:id="paymentViewPayButton" layoutX="75.0" layoutY="335.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="133.0" styleClass="special-rounded-button" text="Betala" />
          </children>
       </AnchorPane>
-      <Button fx:id="paymentViewBackButton" layoutX="50.0" layoutY="597.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="134.0" style="-fx-background-radius: 28; -fx-background-color: #a2d085;" text="Tillbaka" />
+      <Button fx:id="paymentViewBackButton" layoutX="50.0" layoutY="597.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="134.0" styleClass="green-rounded-buttons" text="Tillbaka" />
       <AnchorPane layoutX="50.0" layoutY="45.0" prefHeight="40.0" prefWidth="997.0" style="-fx-background-color: white;">
          <children>
             <AnchorPane layoutX="275.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">

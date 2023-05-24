@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="1005.0" layoutY="110.0" prefHeight="407.0" prefWidth="260.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15;">
          <children>
@@ -46,7 +46,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="basketToLoginViewButton" layoutX="75.0" layoutY="335.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="133.0" style="-fx-background-color: #FFC327; -fx-background-radius: 40;" text="Nästa" />
+            <Button fx:id="basketToLoginViewButton" layoutX="75.0" layoutY="335.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="133.0" styleClass="special-rounded-button" text="Nästa" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="15.0" layoutY="110.0" prefHeight="540.0" prefWidth="975.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15;" />

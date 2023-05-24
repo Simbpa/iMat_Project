@@ -120,7 +120,7 @@
                         <Font size="45.0" />
                      </font>
                   </Label>
-                  <Button fx:id="confirmationViewToMainViewButton" alignment="CENTER" layoutX="110.0" layoutY="424.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="396.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="Fortsätt handla">
+                  <Button fx:id="confirmationViewToMainViewButton" alignment="CENTER" layoutX="110.0" layoutY="424.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="396.0" styleClass="green-rounded-buttons" text="Fortsätt handla">
                      <font>
                         <Font size="40.0" />
                      </font>
