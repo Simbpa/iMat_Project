@@ -48,7 +48,7 @@
             </TextField>
          </children>
       </AnchorPane>
-      <Text layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="varunamn" textAlignment="CENTER" wrappingWidth="226.0">
+      <Text fx:id="itemNameLabel" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="varunamn" textAlignment="CENTER" wrappingWidth="226.0">
          <font>
             <Font size="30.0" />
          </font>
@@ -58,7 +58,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Text layoutX="-2.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:00      " textAlignment="RIGHT" wrappingWidth="230.7492047199088">
+      <Text fx:id="itemPriceLabel" layoutX="-2.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:00      " textAlignment="RIGHT" wrappingWidth="230.7492047199088">
          <font>
             <Font size="30.0" />
          </font>
