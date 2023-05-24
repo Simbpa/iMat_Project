@@ -41,6 +41,7 @@ public class AccountViewController extends AnchorPane {
     }
 
     private AccountViewController() {
+        initMonthMap();
         FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("account_view.fxml"));
         loader.setRoot(this);
         loader.setController(this);
