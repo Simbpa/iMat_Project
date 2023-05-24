@@ -3,7 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
@@ -11,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@../../Projekt/resources/iMatApp/src/imat/imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="-21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: white;" stylesheets="@Documents/GitHub/iMat_Project/resources/iMatApp/src/imat/imat_app.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="-21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="860.0" layoutY="-56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="1280.0" styleClass="top-bar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane layoutX="860.0" layoutY="-56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Text fx:id="navigationBarIMatButton" layoutX="14.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="logo" text="iMat" wrappingWidth="147.9013671875">
                      <font>
@@ -27,59 +26,39 @@
                         <Font size="24.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="accountButtonLoggedIn" layoutX="956.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="154.0" styleClass="bar-buttons" stylesheets="@Documents/GitHub/iMat_Project/resources/iMatApp/src/imat/imat_app.css" text="Mitt namn" AnchorPane.topAnchor="25.0">
+                  <Button fx:id="accountButtonLoggedIn" layoutX="956.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="154.0" text="Mitt namn" AnchorPane.topAnchor="25.0">
                      <graphic>
-                        <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Documents/GitHub/iMat_Project/resources/iMatApp/src/imat/resources/1946429.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fitHeight="34.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic>
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Button>
-                  <Button fx:id="navigationBarAccountButton" layoutX="956.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="154.0" styleClass="bar-buttons" stylesheets="@Documents/GitHub/iMat_Project/resources/iMatApp/src/imat/imat_app.css" text="Mitt konto" AnchorPane.topAnchor="25.0">
+                  <Button fx:id="navigationBarAccountButton" layoutX="956.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="154.0" styleClass="bar-buttons" text="Mitt konto" AnchorPane.topAnchor="25.0">
                      <graphic>
-                        <ImageView fitHeight="41.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Documents/GitHub/iMat_Project/resources/iMatApp/src/imat/resources/1946429.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fitHeight="41.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic>
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Button>
-                  <Button fx:id="navigationBarBasketButton" layoutX="1124.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="134.0" style="-fx-background-color: C2C2C2;" styleClass="bar-buttons" stylesheets="@Documents/GitHub/iMat_Project/resources/iMatApp/src/imat/imat_app.css" text="0,00 kr" AnchorPane.topAnchor="25.0">
+                  <Button fx:id="navigationBarBasketButton" layoutX="1124.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="134.0" style="-fx-background-color: C2C2C2;" styleClass="bar-buttons" text="0,00 kr" AnchorPane.topAnchor="25.0">
                      <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Documents/GitHub/iMat_Project/resources/iMatApp/src/imat/resources/263142.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic>
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Button>
-                  <Button fx:id="navigationBarHelopButton" layoutX="825.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="107.0" styleClass="bar-buttons" stylesheets="@Documents/GitHub/iMat_Project/resources/iMatApp/src/imat/imat_app.css" text="Hjälp" AnchorPane.topAnchor="25.0">
+                  <Button fx:id="navigationBarHelopButton" layoutX="825.0" layoutY="47.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="107.0" styleClass="bar-buttons" text="Hjälp" AnchorPane.topAnchor="25.0">
                      <font>
                         <Font size="19.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Documents/GitHub/iMat_Project/resources/iMatApp/src/imat/resources/question-mark-circled-icon-512x512-wsm5hkwj.png" />
-                           </image>
-                        </ImageView>
+                        <ImageView fitHeight="24.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic>
                   </Button>
-                  <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="752.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="35.0">
-                     <image>
-                        <Image url="@Documents/GitHub/iMat_Project/resources/iMatApp/src/imat/resources/3031293.png" />
-                     </image>
-                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="35.0" layoutX="752.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="35.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="317.0" layoutY="193.0" prefHeight="583.0" prefWidth="697.0">
@@ -87,7 +66,7 @@
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="584.0" layoutX="2.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" width="695.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="21.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" width="319.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="21.0" layoutY="182.0" stroke="BLACK" strokeType="INSIDE" width="655.0" />
-                  <Button fx:id="createAccountMainButton" alignment="CENTER" layoutX="164.0" layoutY="472.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="382.0" style="-fx-background-color: FFC327; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="skapa konto">
+                  <Button fx:id="createAccountViewCreateAccountButton" alignment="CENTER" layoutX="164.0" layoutY="472.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="382.0" style="-fx-background-color: FFC327; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="skapa konto">
                      <font>
                         <Font size="45.0" />
                      </font>
@@ -133,7 +112,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Button fx:id="createAccountBackButton" alignment="CENTER" layoutX="66.0" layoutY="695.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="  Tillbaka">
+            <Button fx:id="createAccountViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="695.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="  Tillbaka">
                <font>
                   <Font size="40.0" />
                </font>
@@ -194,7 +173,7 @@
             <AnchorPane layoutX="618.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
             <AnchorPane layoutX="797.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
             <AnchorPane layoutX="974.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
-            <Button fx:id="createAcountShopButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="201.0" style="-fx-border-radius: 50; -fx-background-radius: 50;" text="Fortsätt handla">
+            <Button fx:id="createAccountViewToMainViewButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="201.0" style="-fx-border-radius: 50; -fx-background-radius: 50;" text="Fortsätt handla">
                <font>
                   <Font size="26.0" />
                </font>
@@ -202,4 +181,4 @@
          </children>
       </AnchorPane>
    </children>
-</AnchorPane>
+</fx:root>

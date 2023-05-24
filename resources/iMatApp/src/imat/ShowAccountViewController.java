@@ -9,16 +9,16 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
-public class LoginViewController extends AnchorPane {
+public class ShowAccountViewController extends AnchorPane {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
-    private static LoginViewController instance = null;
+    private static ShowAccountViewController instance = null;
 
     // -- Methods -- //
 
-    private static synchronized LoginViewController getInstance() {
+    private static synchronized ShowAccountViewController getInstance() {
         if (instance == null) {
-            instance = new LoginViewController();
+            instance = new ShowAccountViewController();
         }
         return instance;
     }
@@ -27,8 +27,8 @@ public class LoginViewController extends AnchorPane {
         return getInstance();
     }
 
-    private LoginViewController() {
-        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("login_view.fxml"));
+    private ShowAccountViewController() {
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("show_account_view.fxml"));
         loader.setRoot(this);
         loader.setController(this);
 
@@ -39,45 +39,34 @@ public class LoginViewController extends AnchorPane {
         }
 
         // Button Actions
-
-        loginViewToMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
+        showAccountViewtoMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 ApplicationController.getInstance().switchPage(MainViewController.getPage());
             }
         });
 
-        loginViewBackButton.setOnAction(new EventHandler<ActionEvent>() {
+        showAccountViewBackButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 ApplicationController.getInstance().switchPage(BasketViewController.getPage());
             }
         });
-
-        loginViewLoginButton.setOnAction(new EventHandler<ActionEvent>() {
+        showAccountViewNextButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                ApplicationController.getInstance().switchPage(ShowAccountViewController.getPage());
-            }
-        });
-
-        loginViewCreateAccountButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ApplicationController.getInstance().switchPage(CreateAccountViewController.getPage());
+                ApplicationController.getInstance().switchPage(DeliveryViewController.getPage());
             }
         });
 
     }
 
     // -- FXML Objects -- //
+    @FXML
+    private Button showAccountViewtoMainViewButton;
+    @FXML
+    private Button showAccountViewBackButton;
+    @FXML
+    private Button showAccountViewNextButton;
 
-    @FXML
-    private Button loginViewToMainViewButton;
-    @FXML
-    private Button loginViewBackButton;
-    @FXML
-    private Button loginViewLoginButton;
-    @FXML
-    private Button loginViewCreateAccountButton;
 }
