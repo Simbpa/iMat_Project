@@ -86,7 +86,7 @@ public class MainViewItem extends AnchorPane {
         int textValue = Integer.valueOf(text);
         amount = textValue;
 
-        
+
     }
 
     public void addAmountToShoppingCart(int amount) {
