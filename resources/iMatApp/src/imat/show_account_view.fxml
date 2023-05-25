@@ -160,7 +160,7 @@
             <Line endX="54.58723068237305" endY="1.0" layoutX="1159.0" layoutY="618.0" rotate="90.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="-116.0" layoutY="16.0" prefHeight="44.0" prefWidth="1183.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="-116.0" layoutY="16.0" prefHeight="44.0" prefWidth="878.0" style="-fx-background-color: white;">
          <children>
             <AnchorPane layoutX="393.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>

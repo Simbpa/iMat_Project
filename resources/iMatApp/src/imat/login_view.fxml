@@ -13,86 +13,32 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280.0" style="-fx-background-color: white;" stylesheets="@imat_app.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="50.0" layoutY="45.0" prefHeight="40.0" prefWidth="997.0" style="-fx-background-color: white;">
+            <AnchorPane layoutX="353.0" layoutY="103.0" prefHeight="544.0" prefWidth="638.0">
                <children>
-                  <AnchorPane layoutX="275.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">
-                     <children>
-                        <Label layoutX="13.0" layoutY="2.0" text="1">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="485.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">
-                     <children>
-                        <Label layoutX="13.0" layoutY="2.0" text="2">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="695.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
-                     <children>
-                        <Label layoutX="13.0" layoutY="2.0" text="3">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="905.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
-                     <children>
-                        <Label layoutX="13.0" layoutY="2.0" text="4">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="1115.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
-                     <children>
-                        <Label layoutX="14.0" layoutY="2.0" text="5">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="335.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #a2d085;" />
-                  <AnchorPane layoutX="545.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
-                  <AnchorPane layoutX="755.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
-                  <AnchorPane layoutX="965.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
-                  <Button fx:id="loginViewToMainViewButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 30; -fx-border-color: black; -fx-background-radius: 30;" text="Forsätt handla" />
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="338.0" layoutY="100.0" prefHeight="529.0" prefWidth="636.0">
-               <children>
-                  <Label layoutX="185.0" layoutY="-8.0" text="Logga in">
+                  <Label layoutX="234.0" layoutY="20.0" text="Logga in">
                      <font>
-                        <Font size="60.0" />
+                        <Font size="45.0" />
                      </font>
                   </Label>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="455.0" layoutX="1.0" layoutY="80.0" stroke="BLACK" strokeType="INSIDE" width="636.0" />
-                  <Line endX="320.0" layoutX="317.0" layoutY="404.0" startX="-316.0" />
-                  <Button fx:id="loginViewLoginButton" alignment="CENTER" layoutX="180.0" layoutY="294.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="282.0" styleClass="special-rounded-button" text="Logga in">
-                     <font>
-                        <Font size="45.0" />
-                     </font>
-                  </Button>
-                  <Button fx:id="loginViewCreateAccountButton" alignment="CENTER" layoutX="161.0" layoutY="410.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="314.0" styleClass="green-rounded-buttons" text="Skapa konto">
-                     <font>
-                        <Font size="45.0" />
-                     </font>
-                  </Button>
-                  <TextField fx:id="loginTelephoneTextField" layoutX="92.0" layoutY="92.0" prefHeight="89.0" prefWidth="449.0" promptText="Telefonnummer" style="-fx-border-color: black;">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="351.0" layoutX="1.0" layoutY="93.0" stroke="BLACK" strokeType="INSIDE" width="636.0" />
+                  <Line endX="320.0" layoutX="317.0" layoutY="354.0" startX="-316.0" />
+                  <Button fx:id="loginViewLoginButton" alignment="CENTER" layoutX="215.0" layoutY="264.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="202.0" styleClass="special-rounded-button" text="Logga in">
                      <font>
                         <Font size="40.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="loginViewCreateAccountButton" alignment="CENTER" layoutX="196.0" layoutY="364.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="245.0" styleClass="green-rounded-buttons" text="Skapa konto">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="loginTelephoneTextField" layoutX="92.0" layoutY="105.0" prefHeight="69.0" prefWidth="449.0" promptText="Telefonnummer" style="-fx-border-color: black;">
+                     <font>
+                        <Font size="35.0" />
                      </font></TextField>
-                  <PasswordField fx:id="loginPasswordTextField" layoutX="92.0" layoutY="193.0" prefHeight="90.0" prefWidth="450.0" promptText="Lösenord" style="-fx-background-color: white;" styleClass="info-field">
+                  <PasswordField fx:id="loginPasswordTextField" layoutX="92.0" layoutY="184.0" prefHeight="69.0" prefWidth="450.0" promptText="Lösenord" style="-fx-background-color: white;" styleClass="info-field">
                      <font>
-                        <Font size="40.0" />
+                        <Font size="35.0" />
                      </font>
                   </PasswordField>
                </children>
@@ -105,6 +51,64 @@
             <Line endX="89.16592407226562" layoutX="35.0" layoutY="618.0" startX="58.08722686767578" strokeWidth="5.0" />
             <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="33.0" layoutY="603.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
             <Line endX="54.58723068237305" endY="1.0" layoutX="38.0" layoutY="618.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-96.0" layoutY="36.0" prefHeight="44.0" prefWidth="878.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="393.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="12.0" layoutY="1.0" text="1">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="574.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="11.0" layoutY="1.0" text="2">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="752.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="11.0" layoutY="2.0" text="3">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="931.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="9.0" text="4">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1107.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="11.0" layoutY="2.0" text="5">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="440.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
+            <AnchorPane layoutX="618.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
+            <AnchorPane layoutX="797.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
+            <AnchorPane layoutX="974.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
+            <Button fx:id="loginViewToMainViewButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="211.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-background-color: white; -fx-border-color: black;" text="Fortsätt handla">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </children>
