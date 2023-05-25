@@ -35,9 +35,9 @@ public class MainViewBasketItem extends AnchorPane {
     @FXML
     private Label itemAmountLabel;
     @FXML
-    private AnchorPane minusButton;
+    private Button minusButton;
     @FXML
-    private AnchorPane plusButton;
+    private Button plusButton;
 
 
     // -- Constructor -- //
