@@ -22,7 +22,7 @@
                         <Image url="@resources/3031293.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="applicationHelpButton" layoutX="807.0" layoutY="34.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="127.5" styleClass="green-rounded-buttons" stylesheets="@imat_app.css" text="Hjälp" AnchorPane.topAnchor="34.0">
+                <Button fx:id="applicationHelpButton" layoutX="807.0" layoutY="34.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="127.5" style="-fx-background-color: white;" styleClass="green-rounded-buttons" stylesheets="@imat_app.css" text="Hjälp" AnchorPane.topAnchor="34.0">
                     <graphic>
                         <ImageView fitHeight="33.75" fitWidth="33.75" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -46,7 +46,7 @@
                         <Font size="18.75" />
                     </font>
                 </Button>
-                <Button fx:id="applicationAccountButton" layoutX="941.0" layoutY="31.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="153.75" styleClass="green-rounded-buttons" stylesheets="@imat_app.css" text="Mitt konto" AnchorPane.topAnchor="34.0">
+                <Button fx:id="applicationAccountButton" layoutX="941.0" layoutY="31.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="153.75" style="-fx-background-color: white;" styleClass="green-rounded-buttons" stylesheets="@imat_app.css" text="Mitt konto" AnchorPane.topAnchor="34.0">
                     <graphic>
                         <ImageView fitHeight="33.75" fitWidth="33.75" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -58,7 +58,7 @@
                         <Font size="18.75" />
                     </font>
                 </Button>
-                <Button fx:id="applicationBasketButton" layoutX="1104.0" layoutY="29.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="127.5" styleClass="green-rounded-buttons" stylesheets="@imat_app.css" text="0,00 kr" AnchorPane.topAnchor="34.0">
+                <Button fx:id="applicationBasketButton" layoutX="1104.0" layoutY="29.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="127.5" style="-fx-background-color: white;" styleClass="green-rounded-buttons" stylesheets="@imat_app.css" text="0,00 kr" AnchorPane.topAnchor="34.0">
                     <graphic>
                         <ImageView fitHeight="33.75" fitWidth="33.75" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -70,15 +70,12 @@
                         <Font size="18.75" />
                     </font>
                 </Button>
-            <Button fx:id="homeButton" layoutX="21.0" layoutY="22.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="135.0" style="-fx-background-color: #A2D085;">
-               <graphic>
-                      <Text id="logo" strokeType="OUTSIDE" strokeWidth="0.0" text="iMat" wrappingWidth="133.56805419921875">
-                          <font>
-                              <Font name="Impact" size="67.5" />
-                          </font>
-                      </Text>
-               </graphic>
-            </Button>
+            <Button fx:id="homeButton" layoutX="21.0" layoutY="22.0" mnemonicParsing="false" prefHeight="82.0" prefWidth="135.0" style="-fx-background-color: #A2D085;" />
+                <Text id="logo" layoutX="12.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="iMat" wrappingWidth="133.56805419921875">
+                    <font>
+                        <Font name="Impact" size="74.0" />
+                    </font>
+                </Text>
             </children>
         </AnchorPane>
         <AnchorPane fx:id="pageRoot" layoutY="126.0" prefHeight="676.0" prefWidth="1280.0" />
