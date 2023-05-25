@@ -110,4 +110,8 @@ public class MainViewController extends AnchorPane {
     public void hideMainViewBasket() {
         mainViewBasket.toBack();
     }
+
+    public void populateMainViewBasket() {
+
+    }
 }
