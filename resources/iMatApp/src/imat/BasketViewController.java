@@ -121,6 +121,7 @@ public class BasketViewController extends AnchorPane {
                 for (ShoppingItem item : productsInCategory) {
                     BasketItem basketItem = new BasketItem(item);
                     fp.getChildren().add(basketItem);
+
                 }
                 tp.setContent(fp);
                 result.add(tp);
