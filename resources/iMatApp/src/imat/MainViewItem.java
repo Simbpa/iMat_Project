@@ -6,9 +6,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -21,6 +23,7 @@ import java.io.IOException;
 public class MainViewItem extends AnchorPane {
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+    ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
     private Product product;
     private MainViewItemDetail mainViewItemDetail;
     private int amount = 0;
@@ -32,7 +35,10 @@ public class MainViewItem extends AnchorPane {
     private Text itemPriceLabel;
     @FXML
     private TextField itemAmountTextField;
-
+    @FXML
+    private AnchorPane minusButton;
+    @FXML
+    private AnchorPane plusButton;
 
 
     // -- Constructor -- //
@@ -60,48 +66,46 @@ public class MainViewItem extends AnchorPane {
         itemAmountTextField.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                setAmount();
+                setItemInShoppingCart();
+            }
+        });
+        minusButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                removeItemFromShoppingCart();
+            }
+        });
+        plusButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                addItemToShoppingCart();
             }
         });
     }
 
     // -- Methods -- //
 
-    public void popUpItemDetail() {
-
-    }
-    public void increaseAmount() {
+    public void addItemToShoppingCart() {
+        shoppingCart.addProduct(product);
+        int amount = Integer.valueOf(itemAmountTextField.getText());
         amount += 1;
         itemAmountTextField.setText(Integer.toString(amount));
     }
 
-    public void decreaseAmount() {
-        if(amount>=1){
+    public void removeItemFromShoppingCart() {
+        shoppingCart.removeProduct(product);
+        int amount = Integer.valueOf(itemAmountTextField.getText());
+        if (amount >= 1) {
             amount -= 1;
-            itemAmountTextField.setText(Integer.toString(amount));
         }
+        itemAmountTextField.setText(Integer.toString(amount));
     }
-    public void setAmount(){
-        String text = itemAmountTextField.getText();
-        int textValue = Integer.valueOf(text);
-        amount = textValue;
-
-
-    }
-
-    public void addAmountToShoppingCart(int amount) {
-        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
-        ShoppingItem shoppingItem = new ShoppingItem(product);
-        for (int i = 0; amount < i; i++) {
-            shoppingCart.addItem(shoppingItem);
-        }
-    }
-
-    public void removeAmountToShoppingCart(int amount) {
-        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
-        ShoppingItem shoppingItem = new ShoppingItem(product);
-        for (int i = 0; amount < i; i++) {
-            shoppingCart.removeItem(shoppingItem);
+    public void setItemInShoppingCart() {
+        int amount = Integer.valueOf(itemAmountTextField.getText());
+        if (amount >= 0) {
+            shoppingCart.removeItem(new ShoppingItem(product));
+            Double new_amount = Double.valueOf(amount);
+            shoppingCart.addProduct(product, new_amount);
         }
     }
 
