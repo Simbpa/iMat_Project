@@ -1,13 +1,10 @@
 package imat;
 
 // -- Imports -- //
-import imat.MainViewItemDetail;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -20,7 +17,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
-public class MainViewItem extends AnchorPane {
+public class MainViewBasketItem extends AnchorPane {
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
@@ -42,8 +39,8 @@ public class MainViewItem extends AnchorPane {
 
 
     // -- Constructor -- //
-    public MainViewItem(Product product){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main_view_item.fxml"));
+    public MainViewBasketItem(Product product){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main_view_basket_item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -90,6 +87,7 @@ public class MainViewItem extends AnchorPane {
         int amount = Integer.valueOf(itemAmountTextField.getText());
         amount += 1;
         itemAmountTextField.setText(Integer.toString(amount));
+        MainViewController.getInstance().populateMainViewBasket();
     }
 
     public void removeItemFromShoppingCart() {
@@ -99,6 +97,7 @@ public class MainViewItem extends AnchorPane {
             amount -= 1;
         }
         itemAmountTextField.setText(Integer.toString(amount));
+        MainViewController.getInstance().populateMainViewBasket();
     }
     public void setItemInShoppingCart() {
         int amount = Integer.valueOf(itemAmountTextField.getText());
@@ -107,9 +106,11 @@ public class MainViewItem extends AnchorPane {
             Double new_amount = Double.valueOf(amount);
             shoppingCart.addProduct(product, new_amount);
         }
+        MainViewController.getInstance().populateMainViewBasket();
     }
 
 }
+
 
 
 

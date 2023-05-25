@@ -54,7 +54,7 @@
             </AnchorPane>
             <ScrollPane hbarPolicy="NEVER" layoutX="86.0" layoutY="101.0" prefHeight="313.0" prefWidth="308.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
                <content>
-                  <FlowPane prefHeight="450.0" prefWidth="390.0" />
+                  <FlowPane fx:id="mainViewBasketFlowPane" prefHeight="450.0" prefWidth="390.0" />
                </content>
             </ScrollPane>
          </children>
