@@ -16,12 +16,12 @@
             <AnchorPane layoutX="215.0" layoutY="85.0" prefHeight="480.0" prefWidth="906.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                <children>
                   <Line endX="562.0" endY="-3.0517578125E-5" layoutX="338.0" layoutY="110.0" startX="-333.9999694824219" startY="-3.0517578125E-5" />
-                  <TextField fx:id="loginTelephoneTextField" layoutX="199.0" layoutY="191.0" prefHeight="50.0" prefWidth="498.0" promptText="Postkod" style="-fx-border-color: black;">
+                  <TextField fx:id="loginPostCodeTextField" layoutX="199.0" layoutY="191.0" prefHeight="50.0" prefWidth="498.0" promptText="Postkod" style="-fx-border-color: black;">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="loginPasswordTextField" layoutX="199.0" layoutY="116.0" prefHeight="50.0" prefWidth="498.0" promptText="Adress" style="-fx-border-color: black;">
+                  <TextField fx:id="loginAdressTextField" layoutX="199.0" layoutY="116.0" prefHeight="50.0" prefWidth="498.0" promptText="Adress" style="-fx-border-color: black;">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -31,22 +31,22 @@
                         <Font size="42.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="loginTelephoneTextField1" layoutX="199.0" layoutY="265.0" prefHeight="50.0" prefWidth="498.0" promptText="Ort" style="-fx-border-color: black;">
+                  <TextField fx:id="loginCityTextField1" layoutX="199.0" layoutY="265.0" prefHeight="50.0" prefWidth="498.0" promptText="Ort" style="-fx-border-color: black;">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="loginTelephoneTextField11" layoutX="199.0" layoutY="339.0" prefHeight="50.0" prefWidth="498.0" promptText="E-post" style="-fx-border-color: black;">
+                  <TextField fx:id="loginEmailTextField" layoutX="199.0" layoutY="339.0" prefHeight="50.0" prefWidth="498.0" promptText="E-post" style="-fx-border-color: black;">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="loginTelephoneTextField12" layoutX="199.0" layoutY="412.0" prefHeight="50.0" prefWidth="498.0" promptText="Telefonnummer" style="-fx-border-color: black;">
+                  <TextField fx:id="loginTelephoneTextField" layoutX="199.0" layoutY="412.0" prefHeight="50.0" prefWidth="498.0" promptText="Telefonnummer" style="-fx-border-color: black;">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField alignment="CENTER" layoutX="290.0" layoutY="48.0" prefHeight="57.0" prefWidth="316.0" text="&lt;förnamn efternamn&gt;">
+                  <TextField fx:id="showAccountPageNameText" alignment="CENTER" layoutX="290.0" layoutY="48.0" prefHeight="57.0" prefWidth="316.0" text="&lt;förnamn efternamn&gt;">
                      <font>
                         <Font size="30.0" />
                      </font>
