@@ -11,23 +11,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import javafx.scene.layout.VBox;
+import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class BasketViewController extends AnchorPane {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+    private Map<String, Integer> categoryMap = new HashMap<String, Integer>();
 
     private static BasketViewController instance = null;
 
@@ -43,8 +40,38 @@ public class BasketViewController extends AnchorPane {
     public static synchronized Pane getPage() {
         return getInstance();
     }
+    private void initCategories(){
+        categoryMap.put("BERRY", 0 );
+        categoryMap.put("BREAD", 1);
+        categoryMap.put("CABBAGE", 2);
+        categoryMap.put("CITRUS_FRUITS", 3);
+        categoryMap.put("COLD_DRINKS", 4);
+        categoryMap.put("DAIRIES", 5);
+        categoryMap.put("EXOTIC_FRUIT", 6);
+        categoryMap.put("FISH", 7);
+        categoryMap.put("FLOUR_SUGAR_SALT", 8);
+        categoryMap.put("FRUIT", 9);
+        categoryMap.put("HERB", 10);
+        categoryMap.put("HOT_DRINKS", 11);
+        categoryMap.put("MEAT", 12);
+        categoryMap.put("MELONS", 13);
+        categoryMap.put("NUTS_AND_SEEDS", 14);
+        categoryMap.put("PASTA", 15);
+        categoryMap.put("POD", 16);
+        categoryMap.put("POTATO_RICE", 17);
+        categoryMap.put("ROOT_VEGETABLE", 18);
+        categoryMap.put("SWEET", 19);
+        categoryMap.put("VEGETABLE_FRUIT", 20);
+
+
+
+
+
+
+    }
 
     private BasketViewController() {
+        initCategories();
         FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("basket_view.fxml"));
         loader.setRoot(this);
         loader.setController(this);
@@ -83,12 +110,40 @@ public class BasketViewController extends AnchorPane {
 
     // -- Methods -- //
 
+
+    private Collection<TitledPane> createPanes(ArrayList<ArrayList<ShoppingItem>> basketItems){
+        Collection<TitledPane> result = new ArrayList<TitledPane>();
+        for(ArrayList<ShoppingItem> productsInCategory : basketItems){
+            if(productsInCategory.size() >= 1) {
+                TitledPane tp = new TitledPane();
+                tp.setText(productsInCategory.get(0).getProduct().getCategory().name());
+                FlowPane fp = new FlowPane();
+                for (ShoppingItem item : productsInCategory) {
+                    BasketItem basketItem = new BasketItem(item);
+                    fp.getChildren().add(basketItem);
+                }
+                tp.setContent(fp);
+                result.add(tp);
+            }
+        }
+        return result;
+    }
+    public ArrayList<ArrayList<ShoppingItem>> categorizeBasket(){
+        ArrayList<ArrayList<ShoppingItem>> categorizedBasket = new ArrayList<ArrayList<ShoppingItem>>();
+        for(int i = 0; i<=20;i++){
+            categorizedBasket.add(new ArrayList<ShoppingItem>());
+        }
+        for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+            System.out.println(categoryMap.get(item.getProduct().getCategory().name()));
+            System.out.println(item.getProduct().getCategory().name());
+            categorizedBasket.get(categoryMap.get(item.getProduct().getCategory().name())).add(item);
+        }
+        return categorizedBasket;
+    }
     public void populateMainViewBasket() {
         basketFlowPane.getChildren().clear();
-        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
-        for (ShoppingItem shoppingItem : shoppingCart.getItems()) {
-            BasketItem basketItem = new BasketItem(shoppingItem.getProduct());
-            basketFlowPane.getChildren().add(basketItem);
-        }
+        VBox noaccordion = new VBox();
+        noaccordion.getChildren().addAll(this.createPanes(categorizeBasket()));
+        basketFlowPane.getChildren().add(noaccordion);
     }
 }

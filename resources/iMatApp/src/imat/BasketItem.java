@@ -1,6 +1,8 @@
 package imat;
 
 // -- Imports -- //
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -23,8 +25,8 @@ public class BasketItem extends AnchorPane {
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
-    private Product product;
-    private int amount = 0;
+    private ShoppingItem product;
+    private int amount;
     @FXML
     private ImageView itemImageView;
     @FXML
@@ -32,7 +34,7 @@ public class BasketItem extends AnchorPane {
     @FXML
     private Label itemPriceLabel;
     @FXML
-    private Label itemAmountLabel;
+    private TextField itemAmountLabel;
     @FXML
     private Button minusButton;
     @FXML
@@ -40,7 +42,7 @@ public class BasketItem extends AnchorPane {
 
 
     // -- Constructor -- //
-    public BasketItem(Product product){
+    public BasketItem(ShoppingItem product){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("basket_item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -52,13 +54,33 @@ public class BasketItem extends AnchorPane {
         }
 
         this.product = product;
+        this.amount = (int) product.getAmount();
 
-        itemImageView.setImage(iMatDataHandler.getFXImage(product));
-        itemNameLabel.setText(product.getName());
-        itemPriceLabel.setText(Double.toString(product.getPrice()));
+        itemImageView.setImage(iMatDataHandler.getFXImage(product.getProduct()));
+        itemNameLabel.setText(product.getProduct().getName());
+        itemPriceLabel.setText(Double.toString(product.getProduct().getPrice()));
         itemAmountLabel.setText(Integer.toString(amount));
 
-        // Button Actions
+        itemAmountLabel.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(final ObservableValue<? extends String> observable, final String oldValue, final String newValue) {
+                if (newValue != null && !newValue.isEmpty() && !newValue.isBlank()) {
+                    System.out.println(Double.valueOf(shoppingCart.getTotal()));
+                    System.out.println("here");
+                    if (Double.valueOf(newValue) <= 0) {
+                        shoppingCart.removeItem(product);
+                        return;
+                    }
+                    double v = Double.valueOf(newValue) - product.getAmount();
+                    shoppingCart.addProduct(product.getProduct(), v);
+                    System.out.println(Double.valueOf(shoppingCart.getTotal()));
+                    MainViewController.getInstance().populateMainViewBasket();
+                }
+            }
+        });
+
+
+                                                       // Button Actions
         minusButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -75,24 +97,27 @@ public class BasketItem extends AnchorPane {
 
     // -- Methods -- //
 
+
     public void addItemToShoppingCart() {
-        shoppingCart.addProduct(product);
-        int amount = Integer.valueOf(itemAmountLabel.getText());
-        amount += 1;
+        shoppingCart.addProduct(product.getProduct());
+        int amount = (int) product.getAmount();
         itemAmountLabel.setText(Integer.toString(amount));
         MainViewController.getInstance().populateMainViewBasket();
     }
 
     public void removeItemFromShoppingCart() {
-        shoppingCart.removeProduct(product);
-        int amount = Integer.valueOf(itemAmountLabel.getText());
-        if (amount >= 1) {
-            amount -= 1;
+        int amount = (int) product.getAmount();
+        if (amount <= 1) {
+            shoppingCart.removeItem(product);
         }
-        itemAmountLabel.setText(Integer.toString(amount));
+        else{
+            amount -= 1;
+            shoppingCart.removeProduct(product.getProduct());
+            itemAmountLabel.setText(Integer.toString(amount));
+
+        }
         MainViewController.getInstance().populateMainViewBasket();
     }
-
 }
 
 
