@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
@@ -35,8 +36,6 @@
             <TextField layoutX="215.0" layoutY="21.0" prefHeight="30.0" prefWidth="350.0" />
             <TextField layoutX="215.0" layoutY="60.0" prefHeight="30.0" prefWidth="350.0" />
          </children></AnchorPane>
-      <Button fx:id="deliveryViewBackButton" layoutX="50.0" layoutY="600.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="134.0" styleClass="green-rounded-buttons" text="Tillbaka" />
-      <Button fx:id="deliveryViewNextButton" layoutX="1109.0" layoutY="600.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="134.0" styleClass="special-rounded-button" text="Nästa" />
       <AnchorPane layoutX="50.0" layoutY="45.0" prefHeight="40.0" prefWidth="997.0" style="-fx-background-color: white;">
          <children>
             <AnchorPane layoutX="275.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">
@@ -91,5 +90,21 @@
             <Button fx:id="deliveryViewToMainViewButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 30; -fx-border-color: black; -fx-background-radius: 30;" text="Forsätt handla" />
          </children>
       </AnchorPane>
+      <Button fx:id="loginViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="green-rounded-buttons" text="  Tillbaka">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+      <Line endX="89.16592407226562" layoutX="35.0" layoutY="618.0" startX="58.08722686767578" strokeWidth="5.0" />
+      <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="33.0" layoutY="603.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
+      <Line endX="54.58723068237305" endY="1.0" layoutX="38.0" layoutY="618.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
+      <Button fx:id="showAccountViewNextButton" alignment="CENTER" layoutX="1029.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="special-rounded-button" text="Nästa    ">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+      <Line endX="89.16592407226562" layoutX="1135.0" layoutY="618.0" startX="58.08722686767578" strokeWidth="5.0" />
+      <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="1155.0" layoutY="603.0" rotate="90.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
+      <Line endX="54.58723068237305" endY="1.0" layoutX="1160.0" layoutY="618.0" rotate="90.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
     </children>
 </fx:root>
