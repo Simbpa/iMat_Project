@@ -305,8 +305,8 @@
                      </font>
                   </Label>
                   <Button fx:id="mainViewBasketCloseButton" layoutX="315.0" layoutY="30.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
-                  <Button layoutX="185.0" layoutY="57.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="193.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: A2D085;" text="                                                  " />
-                  <Button layoutX="18.0" layoutY="57.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="151.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: A2D085;" text="                                     " textAlignment="RIGHT" />
+                  <Button fx:id="clearMainViewBasketButton" layoutX="185.0" layoutY="57.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="193.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: A2D085;" text="                                                  " />
+                  <Button fx:id="saveTheListButton" layoutX="18.0" layoutY="57.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="151.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: A2D085;" text="                                     " textAlignment="RIGHT" />
                   <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="29.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../../../Downloads/1913842-200.png" />
