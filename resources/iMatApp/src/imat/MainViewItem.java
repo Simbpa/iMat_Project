@@ -90,6 +90,7 @@ public class MainViewItem extends AnchorPane {
         int amount = Integer.valueOf(itemAmountTextField.getText());
         amount += 1;
         itemAmountTextField.setText(Integer.toString(amount));
+        MainViewController.getInstance().populateMainViewBasket();
     }
 
     public void removeItemFromShoppingCart() {
@@ -99,6 +100,7 @@ public class MainViewItem extends AnchorPane {
             amount -= 1;
         }
         itemAmountTextField.setText(Integer.toString(amount));
+        MainViewController.getInstance().populateMainViewBasket();
     }
     public void setItemInShoppingCart() {
         int amount = Integer.valueOf(itemAmountTextField.getText());
@@ -107,6 +109,7 @@ public class MainViewItem extends AnchorPane {
             Double new_amount = Double.valueOf(amount);
             shoppingCart.addProduct(product, new_amount);
         }
+        MainViewController.getInstance().populateMainViewBasket();
     }
 
 }

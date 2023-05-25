@@ -5,6 +5,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -27,11 +29,11 @@ public class MainViewBasketItem extends AnchorPane {
     @FXML
     private ImageView itemImageView;
     @FXML
-    private Text itemNameText;
+    private Label itemNameLabel;
     @FXML
-    private Text itemPriceLabel;
+    private Label itemPriceLabel;
     @FXML
-    private TextField itemAmountTextField;
+    private Label itemAmountLabel;
     @FXML
     private AnchorPane minusButton;
     @FXML
@@ -54,18 +56,11 @@ public class MainViewBasketItem extends AnchorPane {
         this.mainViewItemDetail = new MainViewItemDetail(product);
 
         itemImageView.setImage(iMatDataHandler.getFXImage(product));
-        itemNameText.setText(product.getName());
+        itemNameLabel.setText(product.getName());
         itemPriceLabel.setText(Double.toString(product.getPrice()));
-        itemAmountTextField.setText(Integer.toString(amount));
+        itemAmountLabel.setText(Integer.toString(amount));
 
         // Button Actions
-
-        itemAmountTextField.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                setItemInShoppingCart();
-            }
-        });
         minusButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -84,23 +79,23 @@ public class MainViewBasketItem extends AnchorPane {
 
     public void addItemToShoppingCart() {
         shoppingCart.addProduct(product);
-        int amount = Integer.valueOf(itemAmountTextField.getText());
+        int amount = Integer.valueOf(itemAmountLabel.getText());
         amount += 1;
-        itemAmountTextField.setText(Integer.toString(amount));
+        itemAmountLabel.setText(Integer.toString(amount));
         MainViewController.getInstance().populateMainViewBasket();
     }
 
     public void removeItemFromShoppingCart() {
         shoppingCart.removeProduct(product);
-        int amount = Integer.valueOf(itemAmountTextField.getText());
+        int amount = Integer.valueOf(itemAmountLabel.getText());
         if (amount >= 1) {
             amount -= 1;
         }
-        itemAmountTextField.setText(Integer.toString(amount));
+        itemAmountLabel.setText(Integer.toString(amount));
         MainViewController.getInstance().populateMainViewBasket();
     }
     public void setItemInShoppingCart() {
-        int amount = Integer.valueOf(itemAmountTextField.getText());
+        int amount = Integer.valueOf(itemAmountLabel.getText());
         if (amount >= 0) {
             shoppingCart.removeItem(new ShoppingItem(product));
             Double new_amount = Double.valueOf(amount);
