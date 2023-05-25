@@ -6,31 +6,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="200.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="127.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 12; -fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid; -fx-border-width: 1;">
          <children>
-            <Button layoutX="3.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;">
+            <Button fx:id="minusButton" layoutX="3.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;">
                <font>
                   <Font size="6.0" />
                </font>
             </Button>
-            <Button layoutX="54.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: #a2d085; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;">
+            <Button fx:id="plusButton" layoutX="54.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: #a2d085; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;">
                <font>
                   <Font size="5.0" />
                </font>
             </Button>
-            <Label alignment="CENTER" layoutY="4.0" prefHeight="17.0" prefWidth="72.0" text="0 " textAlignment="CENTER" />
+            <Label fx:id="itemAmountLabel" alignment="CENTER" layoutY="4.0" prefHeight="17.0" prefWidth="72.0" text="0 " textAlignment="CENTER" />
          </children>
       </AnchorPane>
-      <ImageView fitHeight="47.0" fitWidth="50.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="58.0" layoutY="6.0" text="Varunamn" />
-      <Label layoutX="58.0" layoutY="27.0" prefHeight="17.0" prefWidth="35.0" text="00:00" />
+      <ImageView fx:id="itemImageView" fitHeight="47.0" fitWidth="50.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="itemNameLabel" layoutX="58.0" layoutY="6.0" text="Varunamn" />
       <Label layoutX="99.0" layoutY="34.0" text="/st">
          <font>
             <Font size="10.0" />
          </font>
       </Label>
+      <Label fx:id="itemPriceLabel" layoutX="58.0" layoutY="27.0" prefHeight="17.0" prefWidth="35.0" text="00:00" />
    </children>
-</AnchorPane>
+</fx:root>
