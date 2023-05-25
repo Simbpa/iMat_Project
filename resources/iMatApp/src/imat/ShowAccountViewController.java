@@ -5,11 +5,16 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class ShowAccountViewController extends AnchorPane {
+
+
+
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     private static ShowAccountViewController instance = null;
@@ -45,6 +50,13 @@ public class ShowAccountViewController extends AnchorPane {
                 ApplicationController.getInstance().switchPage(MainViewController.getPage());
             }
         });
+        showAccountPageNameText.setText(IMatDataHandler.getInstance().getCustomer().getFirstName() + " " +IMatDataHandler.getInstance().getCustomer().getLastName());
+        loginEmailTextField.setText(IMatDataHandler.getInstance().getCustomer().getEmail());
+        loginAdressTextField.setText(IMatDataHandler.getInstance().getCustomer().getAddress());
+        loginPostCodeTextField.setText(IMatDataHandler.getInstance().getCustomer().getPostCode());
+        loginTelephoneTextField.setText(IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber());
+        loginCityTextField1.setText(IMatDataHandler.getInstance().getCustomer().getPostAddress());
+
 
         showAccountViewBackButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -68,5 +80,16 @@ public class ShowAccountViewController extends AnchorPane {
     private Button showAccountViewBackButton;
     @FXML
     private Button showAccountViewNextButton;
-
+    @FXML
+    private TextField showAccountPageNameText;
+    @FXML
+    private TextField loginEmailTextField;
+    @FXML
+    private TextField loginAdressTextField;
+    @FXML
+    private TextField loginCityTextField1;
+    @FXML
+    private TextField loginPostCodeTextField;
+    @FXML
+    private TextField loginTelephoneTextField;
 }

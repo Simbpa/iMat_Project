@@ -90,7 +90,7 @@
             <Button fx:id="deliveryViewToMainViewButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 30; -fx-border-color: black; -fx-background-radius: 30;" text="Forsätt handla" />
          </children>
       </AnchorPane>
-      <Button fx:id="loginViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="green-rounded-buttons" text="  Tillbaka">
+      <Button fx:id="deliveryViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="green-rounded-buttons" text="  Tillbaka">
          <font>
             <Font size="33.0" />
          </font>
@@ -98,7 +98,7 @@
       <Line endX="89.16592407226562" layoutX="35.0" layoutY="618.0" startX="58.08722686767578" strokeWidth="5.0" />
       <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="33.0" layoutY="603.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
       <Line endX="54.58723068237305" endY="1.0" layoutX="38.0" layoutY="618.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
-      <Button fx:id="showAccountViewNextButton" alignment="CENTER" layoutX="1029.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="special-rounded-button" text="Nästa    ">
+      <Button fx:id="deliveryViewNextButton" alignment="CENTER" layoutX="1029.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="special-rounded-button" text="Nästa    ">
          <font>
             <Font size="33.0" />
          </font>
