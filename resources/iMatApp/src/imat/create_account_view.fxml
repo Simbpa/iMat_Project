@@ -2,63 +2,57 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1280.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1280.0" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="-21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="317.0" layoutY="80.0" prefHeight="571.0" prefWidth="695.0" style="-fx-border-color: black; -fx-border-radius: 15;">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="21.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" width="319.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="21.0" layoutY="182.0" stroke="BLACK" strokeType="INSIDE" width="655.0" />
-                  <Button fx:id="createAccountViewCreateAccountButton" alignment="CENTER" layoutX="164.0" layoutY="472.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="382.0" style="-fx-background-color: FFC327; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="skapa konto">
+                  <Button fx:id="createAccountViewCreateAccountButton" alignment="CENTER" layoutX="164.0" layoutY="466.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="382.0" styleClass="special-rounded-button" text="Skapa konto">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </Button>
-                  <Label layoutX="233.0" layoutY="8.0" text="Gå med...">
+                  <Label layoutX="233.0" layoutY="8.0" prefHeight="82.0" prefWidth="226.0" text="Gå med...">
                      <font>
                         <Font size="55.0" />
                      </font>
                   </Label>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="21.0" layoutY="369.0" stroke="BLACK" strokeType="INSIDE" width="655.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="359.0" layoutY="85.0" stroke="BLACK" strokeType="INSIDE" width="317.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="359.0" layoutY="278.0" stroke="BLACK" strokeType="INSIDE" width="317.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="21.0" layoutY="278.0" stroke="BLACK" strokeType="INSIDE" width="319.0" />
-                  <Label layoutX="48.0" layoutY="103.0" text="Förnamn">
+                  <TextField alignment="BASELINE_LEFT" layoutX="22.0" layoutY="86.0" prefHeight="80.0" prefWidth="317.0" promptText="Förnamn" styleClass="info-field">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </TextField>
+                  <TextField alignment="BASELINE_LEFT" layoutX="359.0" layoutY="85.0" prefHeight="80.0" prefWidth="317.0" promptText="Efternamn" styleClass="info-field">
                      <font>
                         <Font size="37.0" />
                      </font>
-                  </Label>
-                  <Label layoutX="387.0" layoutY="103.0" text="Efternamn">
+                  </TextField>
+                  <TextField alignment="BASELINE_LEFT" layoutX="359.0" layoutY="278.0" prefHeight="80.0" prefWidth="317.0" promptText="Telefonnummer" styleClass="info-field">
                      <font>
                         <Font size="37.0" />
                      </font>
-                  </Label>
-                  <Label layoutX="48.0" layoutY="198.0" text="Adress">
+                  </TextField>
+                  <TextField alignment="BASELINE_LEFT" layoutX="22.0" layoutY="278.0" prefHeight="80.0" prefWidth="317.0" promptText="Postkod" styleClass="info-field">
                      <font>
                         <Font size="37.0" />
                      </font>
-                  </Label>
-                  <Label layoutX="48.0" layoutY="296.0" text="Post">
+                  </TextField>
+                  <TextField alignment="BASELINE_LEFT" layoutX="22.0" layoutY="182.0" prefHeight="80.0" prefWidth="655.0" promptText="Adress" styleClass="info-field">
                      <font>
                         <Font size="37.0" />
                      </font>
-                  </Label>
-                  <Label layoutX="387.0" layoutY="296.0" text="Telefon">
+                  </TextField>
+                  <TextField alignment="BASELINE_LEFT" layoutX="22.0" layoutY="369.0" prefHeight="80.0" prefWidth="655.0" promptText="E-post" styleClass="info-field">
                      <font>
                         <Font size="37.0" />
                      </font>
-                  </Label>
-                  <Label layoutX="48.0" layoutY="388.0" text="E-post">
-                     <font>
-                        <Font size="37.0" />
-                     </font>
-                  </Label>
+                  </TextField>
                </children>
             </AnchorPane>
             <Button fx:id="createAccountViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="  Tillbaka">
@@ -122,7 +116,7 @@
             <AnchorPane layoutX="618.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
             <AnchorPane layoutX="797.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
             <AnchorPane layoutX="974.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
-            <Button fx:id="createAccountViewToMainViewButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="201.0" style="-fx-border-radius: 50; -fx-background-radius: 50;" text="Fortsätt handla">
+            <Button fx:id="createAccountViewToMainViewButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="208.0" style="-fx-border-radius: 50; -fx-background-radius: 50;" text="Fortsätt handla">
                <font>
                   <Font size="26.0" />
                </font>
