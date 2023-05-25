@@ -16,6 +16,8 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 import java.net.URL;
@@ -82,6 +84,8 @@ public class MainViewController extends AnchorPane {
     private Button mainViewToBasketButton;
     @FXML
     private Button mainViewBasketCloseButton;
+    @FXML
+    private FlowPane mainViewBasketFlowPane;
 
 
 
@@ -112,6 +116,11 @@ public class MainViewController extends AnchorPane {
     }
 
     public void populateMainViewBasket() {
-
+        mainViewBasketFlowPane.getChildren().clear();
+        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
+        for (ShoppingItem shoppingItem : shoppingCart.getItems()) {
+            MainViewBasketItem mainViewBasketItem = new MainViewBasketItem(shoppingItem.getProduct());
+            mainViewBasketFlowPane.getChildren().add(mainViewBasketItem);
+        }
     }
 }
