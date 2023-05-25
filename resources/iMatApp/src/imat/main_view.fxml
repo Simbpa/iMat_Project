@@ -299,39 +299,49 @@
          <children>
             <AnchorPane layoutX="2.0" prefHeight="100.0" prefWidth="399.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-border-style: solid;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <Label layoutX="18.0" layoutY="4.0" prefHeight="50.0" prefWidth="203.0" text="Varukorg" AnchorPane.leftAnchor="18.0">
+                  <Label layoutX="18.0" prefHeight="50.0" prefWidth="203.0" text="Varukorg" AnchorPane.leftAnchor="18.0">
                      <font>
                         <Font size="40.0" />
                      </font>
                   </Label>
-                  <Button fx:id="mainViewBasketCloseButton" layoutX="315.0" layoutY="30.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
-                  <Button fx:id="clearMainViewBasketButton" layoutX="185.0" layoutY="57.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="193.0" style="-fx-border-radius: 20; -fx-background-radius: 20; -fx-background-color: A2D085;" text="                                                  " />
-                  <Button fx:id="saveTheListButton" layoutX="18.0" layoutY="57.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="151.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: A2D085;" text="                                     " textAlignment="RIGHT" />
-                  <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="29.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../Downloads/1913842-200.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="348.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/icon_close.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="58.0" layoutY="60.0" text="Spara listan">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="225.0" layoutY="61.0" text="Töm varukorgen">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="201.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../../Downloads/free-trash-icon-347-thumb.png" />
-                     </image>
-                  </ImageView>
+                  <Button fx:id="mainViewBasketCloseButton" layoutX="337.0" layoutY="13.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon_close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="clearMainViewBasketButton" layoutX="189.0" layoutY="54.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="193.0" styleClass="green-rounded-buttons" text="                                                  ">
+                     <graphic>
+                        <Label text="Töm varukorgen">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/free-trash-icon-347-thumb.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </graphic></Button>
+                  <Button fx:id="saveTheListButton" layoutX="18.0" layoutY="53.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="151.0" styleClass="green-rounded-buttons" text="                                     " textAlignment="RIGHT">
+                     <graphic>
+                        <Label text="Spara listan">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/1913842-200.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </graphic></Button>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="171.0" layoutY="487.0" prefHeight="120.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 1 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
@@ -346,7 +356,7 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <Button fx:id="mainViewToBasketButton" layoutX="252.0" layoutY="23.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="131.0" style="-fx-background-radius: 35; -fx-background-color: FFC327;" text="Till kassa">
+                  <Button fx:id="mainViewToBasketButton" layoutX="252.0" layoutY="23.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="137.0" styleClass="special-rounded-button" text="Till kassa">
                      <font>
                         <Font size="25.0" />
                      </font>

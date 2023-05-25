@@ -55,10 +55,10 @@ public class MainViewItem extends AnchorPane {
 
         this.product = product;
         this.mainViewItemDetail = new MainViewItemDetail(product);
-
         itemImageView.setImage(iMatDataHandler.getFXImage(product));
         itemNameText.setText(product.getName());
         itemPriceLabel.setText(Double.toString(product.getPrice()));
+
         itemAmountTextField.setText(Integer.toString(amount));
 
         // Button Actions
@@ -95,6 +95,9 @@ public class MainViewItem extends AnchorPane {
     }
 
     public void removeItemFromShoppingCart() {
+        if(shoppingCart.getItems().contains(new ShoppingItem(product))){
+            System.out.println("Here");
+        }
         shoppingCart.removeProduct(product);
         int amount = Integer.valueOf(itemAmountTextField.getText());
         if (amount >= 1) {

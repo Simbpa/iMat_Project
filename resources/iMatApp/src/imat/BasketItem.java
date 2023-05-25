@@ -28,6 +28,8 @@ public class BasketItem extends AnchorPane {
     private ShoppingItem product;
     private int amount;
     @FXML
+    private Label basketItemSum;
+    @FXML
     private ImageView itemImageView;
     @FXML
     private Label itemNameLabel;
@@ -60,6 +62,9 @@ public class BasketItem extends AnchorPane {
         itemNameLabel.setText(product.getProduct().getName());
         itemPriceLabel.setText(Double.toString(product.getProduct().getPrice()));
         itemAmountLabel.setText(Integer.toString(amount));
+        basketItemSum.setText(Double.toString(amount * product.getProduct().getPrice()));
+
+
 
         itemAmountLabel.textProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -82,7 +87,10 @@ public class BasketItem extends AnchorPane {
                         }
                     }
                     System.out.println(Double.valueOf(shoppingCart.getTotal()));
+                    MainViewController.getInstance().populateMainView();
                     MainViewController.getInstance().populateMainViewBasket();
+                    BasketViewController.getInstance().populateMainViewBasket();
+
                 }
             }
         });
@@ -110,7 +118,10 @@ public class BasketItem extends AnchorPane {
         shoppingCart.addProduct(product.getProduct());
         int amount = (int) product.getAmount();
         itemAmountLabel.setText(Integer.toString(amount));
+        MainViewController.getInstance().populateMainView();
         MainViewController.getInstance().populateMainViewBasket();
+        BasketViewController.getInstance().populateMainViewBasket();
+
     }
 
     public void removeItemFromShoppingCart() {
@@ -119,12 +130,18 @@ public class BasketItem extends AnchorPane {
             shoppingCart.removeItem(product);
         }
         else{
+            System.out.println(amount);
             amount -= 1;
-            shoppingCart.removeProduct(product.getProduct());
-            itemAmountLabel.setText(Integer.toString(amount));
+            System.out.println(amount);
+            shoppingCart.addProduct(product.getProduct(), -1);
+            System.out.println(product.getAmount());
 
+            itemAmountLabel.setText(Integer.toString(amount));
         }
+        MainViewController.getInstance().populateMainView();
         MainViewController.getInstance().populateMainViewBasket();
+        BasketViewController.getInstance().populateMainViewBasket();
+
     }
 }
 
