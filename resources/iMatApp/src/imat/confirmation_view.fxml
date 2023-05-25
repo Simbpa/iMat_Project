@@ -58,7 +58,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="-86.0" layoutY="46.0" prefHeight="44.0" prefWidth="878.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="-96.0" layoutY="36.0" prefHeight="44.0" prefWidth="878.0" style="-fx-background-color: white;">
          <children>
             <AnchorPane layoutX="393.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>
@@ -109,7 +109,7 @@
             <AnchorPane layoutX="618.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
             <AnchorPane layoutX="797.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
             <AnchorPane layoutX="974.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
-            <Button fx:id="confirmationViewtoMainViewButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="211.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-background-color: white; -fx-border-color: black;" text="Fortsätt handla">
+            <Button fx:id="confirmationToMainViewButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="211.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-background-color: white; -fx-border-color: black;" text="Fortsätt handla">
                <font>
                   <Font size="26.0" />
                </font>

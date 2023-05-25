@@ -299,9 +299,9 @@
          <children>
             <AnchorPane layoutX="2.0" prefHeight="100.0" prefWidth="399.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-border-style: solid;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <Label layoutX="18.0" layoutY="7.0" prefHeight="43.0" prefWidth="138.0" text="Varukorg" AnchorPane.leftAnchor="18.0">
+                  <Label layoutX="18.0" layoutY="4.0" prefHeight="50.0" prefWidth="203.0" text="Varukorg" AnchorPane.leftAnchor="18.0">
                      <font>
-                        <Font size="35.0" />
+                        <Font size="40.0" />
                      </font>
                   </Label>
                   <Button fx:id="mainViewBasketCloseButton" layoutX="315.0" layoutY="30.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
