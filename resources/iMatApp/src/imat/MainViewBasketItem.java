@@ -102,6 +102,7 @@ public class MainViewBasketItem extends AnchorPane {
             shoppingCart.addProduct(product, new_amount);
         }
         MainViewController.getInstance().populateMainViewBasket();
+
     }
 
 }
