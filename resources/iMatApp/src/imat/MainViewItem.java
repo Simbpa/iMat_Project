@@ -34,9 +34,9 @@ public class MainViewItem extends AnchorPane {
     @FXML
     private TextField itemAmountTextField;
     @FXML
-    private AnchorPane minusButton;
+    private Button minusButton;
     @FXML
-    private AnchorPane plusButton;
+    private Button plusButton;
 
 
     // -- Constructor -- //

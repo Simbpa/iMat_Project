@@ -33,26 +33,16 @@
       </AnchorPane>
       <AnchorPane layoutX="19.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="186.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
          <children>
-            <AnchorPane fx:id="minusButton" layoutX="14.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 10;">
-               <children>
-                  <Button layoutX="4.0" layoutY="5.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: #c0c0c0;" />
-                  <Label layoutX="10.0" layoutY="-9.0" prefHeight="40.0" prefWidth="15.0" text="-">
-                     <font>
-                        <Font size="33.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="plusButton" layoutX="141.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #a2d085; -fx-background-radius: 10;">
-               <children>
-                  <Button layoutX="3.0" layoutY="4.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: #a2d085;" />
-                  <Label layoutX="6.0" layoutY="-9.0" text="+">
-                     <font>
-                        <Font size="33.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
+            <Button fx:id="plusButton" graphicTextGap="0.0" layoutX="137.0" layoutY="6.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="38.0" styleClass="plus-minus-button" text="+">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="minusButton" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="38.0" styleClass="plus-minus-button" text="-">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
             <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="58.0" layoutY="2.0" prefHeight="46.0" prefWidth="70.0" promptText="0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;">
                <font>
                   <Font size="20.0" />

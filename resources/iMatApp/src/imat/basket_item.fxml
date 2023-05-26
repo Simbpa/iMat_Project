@@ -34,7 +34,7 @@
       <AnchorPane layoutX="566.0" layoutY="36.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="150.0" style="-fx-background-radius: 12; -fx-border-color: black; -fx-border-radius: 12; -fx-border-style: solid; -fx-border-width: 1;">
          <children>
             <Button fx:id="plusButton" layoutX="115.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="plus-minus-button" text="+" />
-            <Button id="minus-button" fx:id="minusButton" layoutX="6.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="plus-minus-button" text="-" />
+            <Button fx:id="minusButton" layoutX="6.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="plus-minus-button" text="-" />
             <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="48.0" layoutY="1.0" prefHeight="30.0" prefWidth="54.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;">
                <font>
                   <Font size="20.0" />
