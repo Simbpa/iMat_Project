@@ -50,7 +50,6 @@ public class MainViewItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        System.out.println(minusButton.getId());
         this.product = product;
         this.mainViewItemDetail = new MainViewItemDetail(product);
 

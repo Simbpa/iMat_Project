@@ -23,32 +23,37 @@
                         <Font size="40.0" />
                      </font>
                   </Label>
-                  <TextField layoutX="21.0" layoutY="77.0" prefHeight="57.0" prefWidth="309.0" promptText="Förnamn">
+                  <TextField fx:id="firstNameField" layoutX="21.0" layoutY="77.0" prefHeight="57.0" prefWidth="309.0" promptText="Förnamn">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="363.0" layoutY="77.0" prefHeight="57.0" prefWidth="309.0" promptText="Efternamn">
+                  <TextField fx:id="lastNameField" layoutX="363.0" layoutY="77.0" prefHeight="57.0" prefWidth="309.0" promptText="Efternamn">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="21.0" layoutY="148.0" prefHeight="57.0" prefWidth="650.0" promptText="Adress">
+                  <TextField fx:id="adressField" layoutX="21.0" layoutY="148.0" prefHeight="57.0" prefWidth="650.0" promptText="Adress">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="21.0" layoutY="222.0" prefHeight="57.0" prefWidth="309.0" promptText="Post">
+                  <TextField fx:id="postcodeField" layoutX="21.0" layoutY="222.0" prefHeight="57.0" prefWidth="309.0" promptText="Postkod">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="363.0" layoutY="222.0" prefHeight="57.0" prefWidth="309.0" promptText="Telefonnummer">
+                  <TextField fx:id="cityField" layoutX="363.0" layoutY="222.0" prefHeight="57.0" prefWidth="309.0" promptText="Ort">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="21.0" layoutY="295.0" prefHeight="57.0" prefWidth="650.0" promptText="Adress">
+                  <TextField fx:id="emailField" layoutX="20.0" layoutY="296.0" prefHeight="66.0" prefWidth="310.0" promptText="Epost">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="phoneField" layoutX="362.0" layoutY="296.0" prefHeight="66.0" prefWidth="310.0" promptText="'">
                      <font>
                         <Font size="30.0" />
                      </font>
