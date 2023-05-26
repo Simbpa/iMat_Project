@@ -16,6 +16,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
@@ -101,12 +102,15 @@ public class BasketViewController extends AnchorPane {
     }
 
     // -- FXML-Object -- //
+
     @FXML
     private Button basketToMainViewButton;
     @FXML
     private Button basketToLoginViewButton;
     @FXML
     private FlowPane basketFlowPane;
+    @FXML
+    private FlowPane theFlowPane;
 
     // -- Methods -- //
 
@@ -115,14 +119,13 @@ public class BasketViewController extends AnchorPane {
         Collection<TitledPane> result = new ArrayList<TitledPane>();
         for(ArrayList<ShoppingItem> productsInCategory : basketItems){
             if(productsInCategory.size() >= 1) {
-                TitledPane tp = new TitledPane();
-                tp.setText(productsInCategory.get(0).getProduct().getCategory().name());
-                FlowPane fp = new FlowPane();
+                customTitledPane2 tp = new customTitledPane2(productsInCategory.get(0).getProduct().getCategory().name() + "              Styckpris");
+                tp.setText("Antal         Totalt pris");
                 for (ShoppingItem item : productsInCategory) {
                     BasketItem basketItem = new BasketItem(item);
-                    fp.getChildren().add(basketItem);
+                    tp.theFlowPane.getChildren().add(basketItem);
                 }
-                tp.setContent(fp);
+                tp.setContent(tp.theFlowPane);
                 result.add(tp);
             }
         }

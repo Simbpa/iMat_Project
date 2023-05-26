@@ -87,7 +87,6 @@ public class BasketItem extends AnchorPane {
                         }
                     }
                     System.out.println(Double.valueOf(shoppingCart.getTotal()));
-                    MainViewController.getInstance().populateMainView();
                     MainViewController.getInstance().populateMainViewBasket();
                     BasketViewController.getInstance().populateMainViewBasket();
 
@@ -118,7 +117,6 @@ public class BasketItem extends AnchorPane {
         shoppingCart.addProduct(product.getProduct());
         int amount = (int) product.getAmount();
         itemAmountLabel.setText(Integer.toString(amount));
-        MainViewController.getInstance().populateMainView();
         MainViewController.getInstance().populateMainViewBasket();
         BasketViewController.getInstance().populateMainViewBasket();
 
@@ -137,7 +135,6 @@ public class BasketItem extends AnchorPane {
             itemAmountLabel.setText(Integer.toString(amount));
         }
         System.out.println(IMatDataHandler.getInstance().getShoppingCart().getTotal());
-        MainViewController.getInstance().populateMainView();
         MainViewController.getInstance().populateMainViewBasket();
         BasketViewController.getInstance().populateMainViewBasket();
 
