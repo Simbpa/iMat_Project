@@ -60,9 +60,9 @@ public class BasketItem extends AnchorPane {
 
         itemImageView.setImage(iMatDataHandler.getFXImage(product.getProduct()));
         itemNameLabel.setText(product.getProduct().getName());
-        itemPriceLabel.setText(Double.toString(product.getProduct().getPrice()));
+        itemPriceLabel.setText(Double.toString(product.getProduct().getPrice()) + " kr");
         itemAmountLabel.setText(Integer.toString(amount));
-        basketItemSum.setText(Double.toString(amount * product.getProduct().getPrice()));
+        basketItemSum.setText(Double.toString(amount * product.getProduct().getPrice()) + " kr");
 
 
 
