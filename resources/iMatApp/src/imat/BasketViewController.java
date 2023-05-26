@@ -83,11 +83,11 @@ public class BasketViewController extends AnchorPane {
 
     // -- Methods -- //
 
-    public void populateMainViewBasket() {
+    public void populateBasketViewBasket() {
         basketFlowPane.getChildren().clear();
         ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
         for (ShoppingItem shoppingItem : shoppingCart.getItems()) {
-            BasketItem basketItem = new BasketItem(shoppingItem.getProduct());
+            BasketItem basketItem = new BasketItem(shoppingItem.getProduct(), shoppingItem.getAmount());
             basketFlowPane.getChildren().add(basketItem);
         }
     }

@@ -12,17 +12,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
+import java.util.ConcurrentModificationException;
+import java.util.List;
 
 public class BasketItem extends AnchorPane {
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
-    ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
     private Product product;
     private int amount = 0;
     @FXML
@@ -40,7 +38,7 @@ public class BasketItem extends AnchorPane {
 
 
     // -- Constructor -- //
-    public BasketItem(Product product){
+    public BasketItem(Product product, Double given_amount){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("basket_item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -52,6 +50,7 @@ public class BasketItem extends AnchorPane {
         }
 
         this.product = product;
+        this.amount = given_amount.intValue();
 
         itemImageView.setImage(iMatDataHandler.getFXImage(product));
         itemNameLabel.setText(product.getName());
@@ -71,28 +70,48 @@ public class BasketItem extends AnchorPane {
                 addItemToShoppingCart();
             }
         });
+
+        // Shopping Cart Listener
+
+        iMatDataHandler.getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                updateItem(cartEvent.getShoppingItem());
+            }
+        });
     }
+
+
+
 
     // -- Methods -- //
 
+
+    public void updateItem(ShoppingItem shoppingItem) {
+        amount = MainViewController.getInstance().mainViewItemMap.get(product.getName()).getAmount();
+        if (shoppingItem != null) {
+            if (shoppingItem.getProduct() == product) {
+                if (amount <= 0) {
+                    amount = 0;
+                    iMatDataHandler.getShoppingCart().removeProduct(product);
+                }
+                itemAmountLabel.setText(Integer.toString(amount));
+            }
+        }
+    }
     public void addItemToShoppingCart() {
-        shoppingCart.addProduct(product);
-        int amount = Integer.valueOf(itemAmountLabel.getText());
-        amount += 1;
-        itemAmountLabel.setText(Integer.toString(amount));
+        MainViewController.getInstance().mainViewItemMap.get(product.getName()).increaseAmount();
+        iMatDataHandler.getShoppingCart().addProduct(product);
+        BasketViewController.getInstance().populateBasketViewBasket();
         MainViewController.getInstance().populateMainViewBasket();
     }
 
     public void removeItemFromShoppingCart() {
-        shoppingCart.removeProduct(product);
-        int amount = Integer.valueOf(itemAmountLabel.getText());
-        if (amount >= 1) {
-            amount -= 1;
-        }
-        itemAmountLabel.setText(Integer.toString(amount));
+        MainViewController.getInstance().mainViewItemMap.get(product.getName()).decreaseAmount();
+        iMatDataHandler.getShoppingCart().addProduct(product, -1);
+        BasketViewController.getInstance().populateBasketViewBasket();
         MainViewController.getInstance().populateMainViewBasket();
     }
-
 }
 
 

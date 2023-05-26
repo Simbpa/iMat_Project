@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -81,7 +82,7 @@ public class ShowAccountViewController extends AnchorPane {
     @FXML
     private Button showAccountViewNextButton;
     @FXML
-    private TextField showAccountPageNameText;
+    private Label showAccountPageNameText;
     @FXML
     private TextField loginEmailTextField;
     @FXML

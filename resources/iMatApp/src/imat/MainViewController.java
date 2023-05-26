@@ -29,7 +29,7 @@ import java.util.ResourceBundle;
 public class MainViewController extends AnchorPane {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
-    private Map<String, MainViewItem> mainViewItemMap = new HashMap<String, MainViewItem>();
+    public Map<String, MainViewItem> mainViewItemMap = new HashMap<String, MainViewItem>();
     List<Product> productList =  iMatDataHandler.getProducts();
     private static MainViewController instance = null;
 
@@ -70,6 +70,7 @@ public class MainViewController extends AnchorPane {
         mainViewToBasketButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                MainViewController.getInstance().populateMainViewBasket();
                 ApplicationController.getInstance().switchPage(BasketViewController.getPage());
             }
         });

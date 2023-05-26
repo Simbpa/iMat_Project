@@ -13,20 +13,18 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
+import java.util.ConcurrentModificationException;
+import java.util.List;
 
 public class MainViewItem extends AnchorPane {
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
-    ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
+    private int amount = 0;
     private Product product;
     private MainViewItemDetail mainViewItemDetail;
-    private int amount = 0;
     @FXML
     private ImageView itemImageView;
     @FXML
@@ -59,7 +57,7 @@ public class MainViewItem extends AnchorPane {
         itemImageView.setImage(iMatDataHandler.getFXImage(product));
         itemNameText.setText(product.getName());
         itemPriceLabel.setText(Double.toString(product.getPrice()));
-        itemAmountTextField.setText(Integer.toString(amount));
+        itemAmountTextField.setText(Integer.toString(0));
 
         // Button Actions
 
@@ -81,40 +79,78 @@ public class MainViewItem extends AnchorPane {
                 addItemToShoppingCart();
             }
         });
+
+        // Add listener to Shopping Cart
+        iMatDataHandler.getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                updateItem(cartEvent.getShoppingItem());
+            }
+        });
     }
 
     // -- Methods -- //
 
+    public void updateItem(ShoppingItem shoppingItem) {
+        if (shoppingItem != null) {
+            if (shoppingItem.getProduct() == product) {
+                if (amount <= 0) {
+                    amount = 0;
+                    iMatDataHandler.getShoppingCart().removeProduct(product);
+                }
+                itemAmountTextField.setText(Integer.toString(amount));
+            }
+        }
+
+    }
     public void addItemToShoppingCart() {
-        shoppingCart.addProduct(product);
-        int amount = Integer.valueOf(itemAmountTextField.getText());
         amount += 1;
-        itemAmountTextField.setText(Integer.toString(amount));
+        iMatDataHandler.getShoppingCart().addProduct(product);
+        BasketViewController.getInstance().populateBasketViewBasket();
         MainViewController.getInstance().populateMainViewBasket();
-        BasketViewController.getInstance().populateMainViewBasket();
     }
 
     public void removeItemFromShoppingCart() {
-        shoppingCart.removeProduct(product);
-        int amount = Integer.valueOf(itemAmountTextField.getText());
-        if (amount >= 1) {
-            amount -= 1;
-        }
-        itemAmountTextField.setText(Integer.toString(amount));
+        amount -= 1;
+        iMatDataHandler.getShoppingCart().addProduct(product, -1);
+        BasketViewController.getInstance().populateBasketViewBasket();
         MainViewController.getInstance().populateMainViewBasket();
-        BasketViewController.getInstance().populateMainViewBasket();
+
+        /*
+        int amount = 0;
+        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
+        for (ShoppingItem shoppingItem: shoppingCart.getItems()) {
+            if (shoppingItem.getProduct() == product) {
+                amount = (int) shoppingItem.getAmount();
+                if (amount > 1) {
+
+                    //shoppingItem.setAmount(amount-1);
+                    iMatDataHandler.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+                } else {
+                    iMatDataHandler.getShoppingCart().removeProduct(product);
+                }
+            }
+        }
+         */
     }
     public void setItemInShoppingCart() {
         int amount = Integer.valueOf(itemAmountTextField.getText());
         if (amount >= 0) {
-            shoppingCart.removeItem(new ShoppingItem(product));
+            iMatDataHandler.getShoppingCart().removeItem(new ShoppingItem(product));
             Double new_amount = Double.valueOf(amount);
-            shoppingCart.addProduct(product, new_amount);
+            iMatDataHandler.getShoppingCart().addProduct(product, new_amount);
         }
-        MainViewController.getInstance().populateMainViewBasket();
-        BasketViewController.getInstance().populateMainViewBasket();
     }
 
+    public void increaseAmount() {
+        amount += 1;
+    }
+    public void decreaseAmount() {
+        amount -= 1;
+    }
+    public int getAmount() {
+        return amount;
+    }
 }
 
 

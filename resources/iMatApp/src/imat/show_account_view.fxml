@@ -46,11 +46,6 @@
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="showAccountPageNameText" alignment="CENTER" layoutX="290.0" layoutY="48.0" prefHeight="57.0" prefWidth="316.0" text="&lt;förnamn efternamn&gt;">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
                   <Line endX="562.0" endY="-3.0517578125E-5" layoutX="341.0" layoutY="183.0" startX="-333.9999694824219" startY="-3.0517578125E-5" />
                   <Line endX="562.0" endY="-3.0517578125E-5" layoutX="340.0" layoutY="257.0" startX="-333.9999694824219" startY="-3.0517578125E-5" />
                   <Line endX="562.0" endY="-3.0517578125E-5" layoutX="339.0" layoutY="331.0" startX="-333.9999694824219" startY="-3.0517578125E-5" />
@@ -140,6 +135,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
+                  <Label fx:id="showAccountPageNameText" layoutX="434.0" layoutY="72.0" text="Label" />
                </children>
             </AnchorPane>
             <Button fx:id="showAccountViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="green-rounded-buttons" text="    Tillbaka">
