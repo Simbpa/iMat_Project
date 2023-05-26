@@ -13,9 +13,9 @@
     <children>
       <AnchorPane layoutX="352.0" layoutY="325.0" prefHeight="300.0" prefWidth="580.0" style="-fx-border-radius: 15; -fx-border-color: black;">
          <children>
-            <ScrollPane layoutX="65.0" layoutY="15.0" prefHeight="270.0" prefWidth="450.0">
+            <ScrollPane hbarPolicy="NEVER" layoutX="65.0" layoutY="15.0" prefHeight="270.0" prefWidth="450.0" vbarPolicy="NEVER">
                <content>
-                  <FlowPane prefHeight="200.0" prefWidth="200.0" />
+                  <FlowPane fx:id="deliveryViewFlowPane" prefHeight="270.0" prefWidth="449.0" />
                </content>
             </ScrollPane>
             <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15;" text="Button" />

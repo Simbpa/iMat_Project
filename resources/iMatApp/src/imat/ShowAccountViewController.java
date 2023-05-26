@@ -84,7 +84,7 @@ public class ShowAccountViewController extends AnchorPane {
     @FXML
     private Button showAccountViewNextButton;
     @FXML
-    private Label showAccountPageNameText;
+    private TextField showAccountPageNameText;
     @FXML
     private TextField loginEmailTextField;
     @FXML
