@@ -89,7 +89,7 @@ public class MainViewBasketItem extends AnchorPane {
             if (shoppingItem.getProduct() == product) {
                 if (amount <= 0) {
                     amount = 0;
-                    iMatDataHandler.getShoppingCart().removeProduct(product);
+                    minusButton.setId("gray-minus-button");
                 }
                 itemAmountLabel.setText(Integer.toString(amount));
             }
@@ -113,6 +113,7 @@ public class MainViewBasketItem extends AnchorPane {
             shoppingCart.removeItem(new ShoppingItem(product));
             Double new_amount = Double.valueOf(amount);
             shoppingCart.addProduct(product, new_amount);
+
         }
         MainViewController.getInstance().populateMainViewBasket();
 

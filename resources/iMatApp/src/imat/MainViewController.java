@@ -32,6 +32,9 @@ public class MainViewController extends AnchorPane {
     public Map<String, MainViewItem> mainViewItemMap = new HashMap<String, MainViewItem>();
     List<Product> productList =  iMatDataHandler.getProducts();
     private static MainViewController instance = null;
+    public Map<String, MainViewItem> getMainViewItemMap(){
+        return mainViewItemMap;
+    }
 
     // -- Methods -- //
 
