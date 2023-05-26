@@ -34,9 +34,9 @@ public class MainViewItem extends AnchorPane {
     @FXML
     private TextField itemAmountTextField;
     @FXML
-    private AnchorPane minusButton;
+    private Button minusButton;
     @FXML
-    private AnchorPane plusButton;
+    private Button plusButton;
 
 
     // -- Constructor -- //
@@ -50,7 +50,7 @@ public class MainViewItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-
+        System.out.println(minusButton.getId());
         this.product = product;
         this.mainViewItemDetail = new MainViewItemDetail(product);
 
@@ -111,6 +111,7 @@ public class MainViewItem extends AnchorPane {
     }
 
     public void removeItemFromShoppingCart() {
+
         amount -= 1;
         iMatDataHandler.getShoppingCart().addProduct(product, -1);
         BasketViewController.getInstance().populateBasketViewBasket();
@@ -139,6 +140,7 @@ public class MainViewItem extends AnchorPane {
             iMatDataHandler.getShoppingCart().removeItem(new ShoppingItem(product));
             Double new_amount = Double.valueOf(amount);
             iMatDataHandler.getShoppingCart().addProduct(product, new_amount);
+
         }
     }
 

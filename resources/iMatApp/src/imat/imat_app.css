@@ -13,7 +13,7 @@
 }
 
 /* Hand icon */
-.white-rounded-buttons, #account-side-bar-button, .green-rounded-buttons, #logo, #clickable-main-view, .white-button, .special-rounded-button, .button{
+.white-rounded-buttons, #account-side-bar-button, .green-rounded-buttons, #logo, #clickable-main-view, .white-button, .special-rounded-button, .button, .plus-minus-button{
     -fx-cursor: hand;
 }
 /*Logo color */
@@ -62,14 +62,14 @@
     -fx-background-color: #cc9c1f;
 }
 /* Green background */
-.green-rounded-buttons, .top-bar{
+.green-rounded-buttons, .top-bar, .plus-minus-button{
     -fx-background-color: #A2D085;
 }
 
-.green-rounded-buttons:hover{
+.green-rounded-buttons:hover, .plus-minus-button:hover{
     -fx-background-color: #91BB77;
 }
-.green-rounded-buttons:pressed{
+.green-rounded-buttons:pressed, .plus-minus-button:pressed{
     -fx-background-color: #81A66A;
 }
 
@@ -78,9 +78,16 @@
 .account-side-bar, .search-bar, .white-rounded-buttons, .white-button{
     -fx-background-color : #ffffff;
 }
-.white-rounded-buttons:hover, .white-button:hover{
+.white-rounded-buttons:hover, .white-button:hover, #minusButton{
     -fx-background-color : #e5e5e5;
 }
-.white-rounded-buttons:pressed, .white-button:pressed{
+.white-rounded-buttons:pressed, .white-button:pressed, #minusButton:hover{
     -fx-background-color : #cccccc;
 }
+
+#minusButton:pressed{
+    -fx-background-color: #bfbfbf;
+}
+
+
+

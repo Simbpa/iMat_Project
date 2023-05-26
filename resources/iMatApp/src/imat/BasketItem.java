@@ -88,7 +88,7 @@ public class BasketItem extends AnchorPane {
 
 
     public void updateItem(ShoppingItem shoppingItem) {
-        amount = MainViewController.getInstance().mainViewItemMap.get(product.getName()).getAmount();
+        amount = MainViewController.getInstance().getMainViewItemMap().get(product.getName()).getAmount();
         if (shoppingItem != null) {
             if (shoppingItem.getProduct() == product) {
                 if (amount <= 0) {

@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="120.0" prefWidth="945.0" style="-fx-background-color: #ffffff;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="120.0" prefWidth="945.0" style="-fx-background-color: #ffffff;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="itemImageView" fitHeight="106.0" fitWidth="143.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="7.0" />
       <Label fx:id="itemNameLabel" layoutX="175.0" layoutY="19.0" prefHeight="36.0" prefWidth="180.0" text="&lt;Varunamn&gt;">
@@ -33,8 +33,8 @@
       </Label>
       <AnchorPane layoutX="566.0" layoutY="36.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="150.0" style="-fx-background-radius: 12; -fx-border-color: black; -fx-border-radius: 12; -fx-border-style: solid; -fx-border-width: 1;">
          <children>
-            <Button fx:id="plusButton" layoutX="115.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #a2d085; -fx-background-radius: 8;" text="+" />
-            <Button fx:id="minusButton" layoutX="6.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 8;" text="-" />
+            <Button fx:id="plusButton" layoutX="115.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="plus-minus-button" text="+" />
+            <Button fx:id="minusButton" layoutX="6.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="plus-minus-button" text="-" />
             <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="48.0" layoutY="1.0" prefHeight="30.0" prefWidth="54.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;">
                <font>
                   <Font size="20.0" />
