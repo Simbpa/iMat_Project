@@ -33,7 +33,7 @@
       </AnchorPane>
       <AnchorPane layoutX="19.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="186.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
          <children>
-            <AnchorPane fx:id="minusButton" layoutX="14.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-style: solid; -fx-border-width: 1;">
+            <AnchorPane fx:id="minusButton" layoutX="14.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 10;">
                <children>
                   <Button layoutX="4.0" layoutY="5.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: #c0c0c0;" />
                   <Label layoutX="10.0" layoutY="-9.0" prefHeight="40.0" prefWidth="15.0" text="-">
@@ -43,7 +43,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="plusButton" layoutX="141.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #a2d085; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-style: solid; -fx-border-width: 1;">
+            <AnchorPane fx:id="plusButton" layoutX="141.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: #a2d085; -fx-background-radius: 10;">
                <children>
                   <Button layoutX="3.0" layoutY="4.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: #a2d085;" />
                   <Label layoutX="6.0" layoutY="-9.0" text="+">

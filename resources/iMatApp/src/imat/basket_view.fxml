@@ -48,7 +48,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="basketToLoginViewButton" alignment="CENTER" layoutX="29.0" layoutY="325.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="204.0" styleClass="special-rounded-button" text="Nästa       ">
+            <Button fx:id="basketToLoginViewButton" alignment="CENTER" layoutX="29.0" layoutY="325.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="204.0" style="-fx-background-radius: 35;" styleClass="special-rounded-button" text="Nästa       ">
                <font>
                   <Font size="30.0" />
                </font>
@@ -66,60 +66,60 @@
                </content>
             </ScrollPane>
          </children></AnchorPane>
-      <AnchorPane layoutX="-96.0" layoutY="36.0" prefHeight="44.0" prefWidth="878.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="-96.0" layoutY="36.0" prefHeight="40.0" prefWidth="878.0" style="-fx-background-color: white;">
          <children>
             <AnchorPane layoutX="393.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="12.0" layoutY="1.0" prefHeight="35.0" prefWidth="17.0" text="1">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="1">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="23.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="574.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="11.0" layoutY="1.0" text="2">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="2">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="23.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="752.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="11.0" layoutY="2.0" text="3">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="3">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="23.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="931.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="9.0" text="4">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="4">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="23.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="1107.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="11.0" layoutY="2.0" text="5">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" text="5">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="23.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="440.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
+            <AnchorPane layoutX="440.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: d9d9d9;" />
             <AnchorPane layoutX="618.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
             <AnchorPane layoutX="797.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
             <AnchorPane layoutX="974.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
-            <Button fx:id="basketToMainViewButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="211.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-background-color: white; -fx-border-color: black;" text="Fortsätt handla">
+            <Button fx:id="basketToMainViewButton" layoutX="133.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: a2d085; -fx-background-radius: 25;" text="Fortsätt handla">
                <font>
-                  <Font size="26.0" />
+                  <Font size="18.0" />
                </font>
             </Button>
          </children>

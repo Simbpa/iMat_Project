@@ -49,69 +49,69 @@
                         <Font size="45.0" />
                      </font>
                   </Label>
-                  <Button fx:id="confirmationViewToMainViewButton" alignment="CENTER" layoutX="110.0" layoutY="424.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="396.0" styleClass="green-rounded-buttons" text="Fortsätt handla">
+                  <Button fx:id="confirmationViewToMainViewButton" alignment="CENTER" layoutX="188.0" layoutY="422.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="257.0" style="-fx-background-radius: 40;" styleClass="green-rounded-buttons" text="Fortsätt handla">
                      <font>
-                        <Font size="40.0" />
+                        <Font size="30.0" />
                      </font>
                   </Button>
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="-96.0" layoutY="36.0" prefHeight="44.0" prefWidth="878.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="-96.0" layoutY="36.0" prefHeight="40.0" prefWidth="878.0" style="-fx-background-color: white;">
          <children>
             <AnchorPane layoutX="393.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="12.0" layoutY="1.0" text="1">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="1">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="23.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="574.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
+            <AnchorPane layoutX="574.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: a2d085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="11.0" layoutY="1.0" text="2">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="2">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="23.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="752.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
+            <AnchorPane layoutX="752.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: a2d085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="11.0" layoutY="2.0" text="3">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="3">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="23.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="931.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
+            <AnchorPane layoutX="931.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: a2d085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="9.0" text="4">
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" text="4">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="23.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="1107.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
+            <AnchorPane layoutX="1107.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: a2d085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="11.0" layoutY="2.0" text="5">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="40.0" text="5">
                      <font>
-                        <Font size="30.0" />
+                        <Font size="23.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="440.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
-            <AnchorPane layoutX="618.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
-            <AnchorPane layoutX="797.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
-            <AnchorPane layoutX="974.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
-            <Button fx:id="confirmationToMainViewButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="211.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-background-color: white; -fx-border-color: black;" text="Fortsätt handla">
+            <AnchorPane layoutX="440.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: a2d085;" />
+            <AnchorPane layoutX="618.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: a2d085;" />
+            <AnchorPane layoutX="797.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: a2d085;" />
+            <AnchorPane layoutX="974.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: a2d085;" />
+            <Button fx:id="confirmationToMainViewButton" layoutX="133.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: a2d085; -fx-background-radius: 25;" text="Fortsätt handla">
                <font>
-                  <Font size="26.0" />
+                  <Font size="18.0" />
                </font>
             </Button>
          </children>
