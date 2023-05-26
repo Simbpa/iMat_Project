@@ -13,7 +13,7 @@
 }
 
 /* Hand icon */
-.white-rounded-buttons, #account-side-bar-button, .green-rounded-buttons, #logo, #clickable-main-view, .white-button{
+.white-rounded-buttons, #account-side-bar-button, .green-rounded-buttons, #logo, #clickable-main-view, .white-button, .special-rounded-button, .button{
     -fx-cursor: hand;
 }
 /*Logo color */

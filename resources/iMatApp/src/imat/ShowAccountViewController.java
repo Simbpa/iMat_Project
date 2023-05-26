@@ -72,6 +72,8 @@ public class ShowAccountViewController extends AnchorPane {
             }
         });
 
+        showAccountPageNameText.toFront();
+
     }
 
     // -- FXML Objects -- //

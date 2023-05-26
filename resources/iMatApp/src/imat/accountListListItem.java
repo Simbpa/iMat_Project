@@ -40,6 +40,9 @@ public class accountListListItem extends AnchorPane {
         for(ShoppingItem item : this.content){
             IMatDataHandler.getInstance().getShoppingCart().addItem(item);
         }
+        MainViewController.getInstance().populateMainViewBasket();
+        BasketViewController.getInstance().populateMainViewBasket();
+
     }
     @FXML
     protected void removeButtonClick(){

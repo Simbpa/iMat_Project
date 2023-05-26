@@ -7,48 +7,48 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="675.0" prefWidth="1280.0" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="675.0" prefWidth="1280.0" style="-fx-background-color: white;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="80.0" layoutY="157.0" prefHeight="407.0" prefWidth="744.0" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-color: white; -fx-background-radius: 15;">
          <children>
-            <Label layoutX="71.0" layoutY="83.0" text="Kortnummer:">
+            <Label layoutX="68.0" layoutY="70.0" text="Kortnummer:">
                <font>
-                  <Font size="24.0" />
+                  <Font size="35.0" />
                </font>
             </Label>
-            <Label layoutX="75.8" layoutY="186.0" text="Giltighetstid:">
+            <Label layoutX="76.0" layoutY="170.0" text="Giltighetstid:">
                <font>
-                  <Font size="24.0" />
+                  <Font size="35.0" />
                </font>
             </Label>
-            <Label layoutX="159.8" layoutY="290.0" text="CVC:">
+            <Label layoutX="181.0" layoutY="270.0" text="CVC:">
                <font>
-                  <Font size="24.0" />
+                  <Font size="35.0" />
                </font>
             </Label>
-            <TextField alignment="CENTER" layoutX="250.0" layoutY="88.0" promptText="0000 0000 0000 0000">
+            <TextField alignment="CENTER" layoutX="294.0" layoutY="70.0" prefHeight="38.0" prefWidth="263.0" promptText="0000 0000 0000 0000">
                <font>
-                  <Font size="13.0" />
+                  <Font size="22.0" />
                </font>
             </TextField>
-            <TextField alignment="CENTER" layoutX="250.0" layoutY="294.0" prefHeight="26.0" prefWidth="98.0" promptText="CVC">
+            <TextField alignment="CENTER" layoutX="294.0" layoutY="270.0" prefHeight="26.0" prefWidth="98.0" promptText="CVC">
                <font>
-                  <Font size="13.0" />
+                  <Font size="22.0" />
                </font>
             </TextField>
-            <TextField alignment="CENTER" layoutX="250.0" layoutY="191.0" prefHeight="27.0" prefWidth="63.0" promptText="MM">
+            <TextField alignment="CENTER" layoutX="294.0" layoutY="170.0" prefHeight="27.0" prefWidth="63.0" promptText="MM">
                <font>
-                  <Font size="13.0" />
+                  <Font size="22.0" />
                </font>
             </TextField>
-            <TextField alignment="CENTER" layoutX="339.0" layoutY="190.0" prefHeight="27.0" prefWidth="63.0" promptText="ÅÅ">
+            <TextField alignment="CENTER" layoutX="389.0" layoutY="170.0" prefHeight="27.0" prefWidth="63.0" promptText="ÅÅ">
                <font>
-                  <Font size="13.0" />
+                  <Font size="22.0" />
                </font>
             </TextField>
-            <Label layoutX="323.0" layoutY="186.0" text="/">
+            <Label layoutX="369.0" layoutY="168.0" text="/">
                <font>
-                  <Font size="24.0" />
+                  <Font size="35.0" />
                </font>
             </Label>
          </children>
@@ -91,63 +91,78 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="paymentViewPayButton" layoutX="75.0" layoutY="335.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="133.0" styleClass="special-rounded-button" text="Betala" />
+            <Button fx:id="paymentViewPayButton" alignment="CENTER" layoutX="19.0" layoutY="328.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="special-rounded-button" text="Betala">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
-      <Button fx:id="paymentViewBackButton" layoutX="50.0" layoutY="597.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="134.0" styleClass="green-rounded-buttons" text="Tillbaka" />
-      <AnchorPane layoutX="50.0" layoutY="45.0" prefHeight="40.0" prefWidth="997.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="-76.0" layoutY="56.0" prefHeight="44.0" prefWidth="878.0" style="-fx-background-color: white;">
          <children>
-            <AnchorPane layoutX="275.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">
+            <AnchorPane layoutX="393.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="13.0" layoutY="2.0" text="1">
+                  <Label layoutX="12.0" layoutY="1.0" text="1">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="30.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="485.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">
+            <AnchorPane layoutX="574.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="13.0" layoutY="2.0" text="2">
+                  <Label layoutX="11.0" layoutY="1.0" text="2">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="30.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="695.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">
+            <AnchorPane layoutX="752.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="13.0" layoutY="2.0" text="3">
+                  <Label layoutX="11.0" layoutY="2.0" text="3">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="30.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="905.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">
+            <AnchorPane layoutX="931.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="13.0" layoutY="2.0" text="4">
+                  <Label layoutX="9.0" text="4">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="30.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="1115.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
+            <AnchorPane layoutX="1107.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="14.0" layoutY="2.0" text="5">
+                  <Label layoutX="11.0" layoutY="2.0" text="5">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="30.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="335.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #a2d085;" />
-            <AnchorPane layoutX="545.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #a2d085;" />
-            <AnchorPane layoutX="755.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #a2d085;" />
-            <AnchorPane layoutX="965.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
-            <Button fx:id="paymentViewToMainViewButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 30; -fx-border-color: black; -fx-background-radius: 30;" text="Forsätt handla" />
+            <AnchorPane layoutX="440.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
+            <AnchorPane layoutX="618.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
+            <AnchorPane layoutX="797.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
+            <AnchorPane layoutX="974.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
+            <Button fx:id="paymentViewToMainViewButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="211.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-background-color: white; -fx-border-color: black;" text="Fortsätt handla">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
+      <Button fx:id="paymentViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="green-rounded-buttons" text="  Tillbaka">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Button>
+      <Line endX="89.16592407226562" layoutX="35.0" layoutY="618.0" startX="58.08722686767578" strokeWidth="5.0" />
+      <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="33.0" layoutY="603.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
+      <Line endX="54.58723068237305" endY="1.0" layoutX="38.0" layoutY="618.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
    </children>
 </fx:root>

@@ -13,7 +13,7 @@
    <children>
       <AnchorPane layoutX="-21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="215.0" layoutY="85.0" prefHeight="480.0" prefWidth="906.0" style="-fx-border-color: black; -fx-border-radius: 10;">
+            <AnchorPane layoutX="215.0" layoutY="93.0" prefHeight="480.0" prefWidth="906.0" style="-fx-border-color: black; -fx-border-radius: 10;">
                <children>
                   <Line endX="562.0" endY="-3.0517578125E-5" layoutX="338.0" layoutY="110.0" startX="-333.9999694824219" startY="-3.0517578125E-5" />
                   <TextField fx:id="loginPostCodeTextField" layoutX="199.0" layoutY="191.0" prefHeight="50.0" prefWidth="498.0" promptText="Postkod" style="-fx-border-color: black;">
@@ -135,7 +135,11 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label fx:id="showAccountPageNameText" layoutX="434.0" layoutY="72.0" text="Label" />
+                  <TextField fx:id="showAccountPageNameText" layoutX="302.0" layoutY="48.0" prefHeight="57.0" prefWidth="285.0" promptText="förnamn efternamn">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
                </children>
             </AnchorPane>
             <Button fx:id="showAccountViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="green-rounded-buttons" text="    Tillbaka">
@@ -156,7 +160,7 @@
             <Line endX="54.58723068237305" endY="1.0" layoutX="1159.0" layoutY="618.0" rotate="90.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="-116.0" layoutY="16.0" prefHeight="44.0" prefWidth="1183.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="-96.0" layoutY="36.0" prefHeight="44.0" prefWidth="878.0" style="-fx-background-color: white;">
          <children>
             <AnchorPane layoutX="393.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>

@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280" style="-fx-background-color: white;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
       <AnchorPane layoutX="352.0" layoutY="325.0" prefHeight="300.0" prefWidth="580.0" style="-fx-border-radius: 15; -fx-border-color: black;">
          <children>
@@ -36,60 +36,6 @@
             <TextField layoutX="215.0" layoutY="21.0" prefHeight="30.0" prefWidth="350.0" />
             <TextField layoutX="215.0" layoutY="60.0" prefHeight="30.0" prefWidth="350.0" />
          </children></AnchorPane>
-      <AnchorPane layoutX="50.0" layoutY="45.0" prefHeight="40.0" prefWidth="997.0" style="-fx-background-color: white;">
-         <children>
-            <AnchorPane layoutX="275.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">
-               <children>
-                  <Label layoutX="13.0" layoutY="2.0" text="1">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="485.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">
-               <children>
-                  <Label layoutX="13.0" layoutY="2.0" text="2">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="695.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #a2d085; -fx-background-radius: 25;">
-               <children>
-                  <Label layoutX="13.0" layoutY="2.0" text="3">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="905.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
-               <children>
-                  <Label layoutX="13.0" layoutY="2.0" text="4">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="1115.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
-               <children>
-                  <Label layoutX="14.0" layoutY="2.0" text="5">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="335.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #a2d085;" />
-            <AnchorPane layoutX="545.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #a2d085;" />
-            <AnchorPane layoutX="755.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
-            <AnchorPane layoutX="965.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
-            <Button fx:id="deliveryViewToMainViewButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-border-radius: 30; -fx-border-color: black; -fx-background-radius: 30;" text="Forsätt handla" />
-         </children>
-      </AnchorPane>
       <Button fx:id="deliveryViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="green-rounded-buttons" text="  Tillbaka">
          <font>
             <Font size="33.0" />
@@ -106,5 +52,63 @@
       <Line endX="89.16592407226562" layoutX="1135.0" layoutY="618.0" startX="58.08722686767578" strokeWidth="5.0" />
       <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="1155.0" layoutY="603.0" rotate="90.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
       <Line endX="54.58723068237305" endY="1.0" layoutX="1160.0" layoutY="618.0" rotate="90.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
+      <AnchorPane layoutX="-106.0" layoutY="26.0" prefHeight="44.0" prefWidth="878.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="393.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="12.0" layoutY="1.0" text="1">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="574.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="11.0" layoutY="1.0" text="2">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="752.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="11.0" layoutY="2.0" text="3">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="931.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="9.0" text="4">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="1107.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #d9d9d9; -fx-background-radius: 25;">
+               <children>
+                  <Label layoutX="11.0" layoutY="2.0" text="5">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="440.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
+            <AnchorPane layoutX="618.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: A2D085;" />
+            <AnchorPane layoutX="797.0" layoutY="18.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
+            <AnchorPane layoutX="974.0" layoutY="16.0" prefHeight="8.0" prefWidth="130.0" style="-fx-background-radius: 4; -fx-background-color: #d9d9d9;" />
+            <Button fx:id="deliveryViewToMainViewButton" layoutX="130.0" layoutY="-4.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="211.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-background-color: white; -fx-border-color: black;" text="Fortsätt handla">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
     </children>
 </fx:root>
