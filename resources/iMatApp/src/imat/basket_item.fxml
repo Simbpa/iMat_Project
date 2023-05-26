@@ -34,7 +34,7 @@
          <children>
             <Button fx:id="plusButton" layoutX="115.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #a2d085; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;" text="+" />
             <Button fx:id="minusButton" layoutX="6.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;" text="-" />
-            <TextField fx:id="itemAmountLabel" layoutX="48.0" layoutY="9.0" prefHeight="30.0" prefWidth="53.0" />
+            <TextField fx:id="itemAmountTextField" layoutX="48.0" layoutY="9.0" prefHeight="30.0" prefWidth="53.0" />
          </children>
       </AnchorPane>
    </children>

@@ -41,7 +41,7 @@ public class accountListListItem extends AnchorPane {
             IMatDataHandler.getInstance().getShoppingCart().addItem(item);
         }
         MainViewController.getInstance().populateMainViewBasket();
-        BasketViewController.getInstance().populateMainViewBasket();
+        //BasketViewController.getInstance().populateMainViewBasket();
 
     }
     @FXML

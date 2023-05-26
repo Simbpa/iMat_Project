@@ -30,7 +30,7 @@ public class BasketItem extends AnchorPane {
     @FXML
     private Label itemPriceLabel;
     @FXML
-    private Label itemAmountLabel;
+    private TextField itemAmountTextField;
     @FXML
     private Button minusButton;
     @FXML
@@ -55,7 +55,7 @@ public class BasketItem extends AnchorPane {
         itemImageView.setImage(iMatDataHandler.getFXImage(product));
         itemNameLabel.setText(product.getName());
         itemPriceLabel.setText(Double.toString(product.getPrice()));
-        itemAmountLabel.setText(Integer.toString(amount));
+        itemAmountTextField.setText(Integer.toString(amount));
 
         // Button Actions
         minusButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -95,7 +95,7 @@ public class BasketItem extends AnchorPane {
                     amount = 0;
                     iMatDataHandler.getShoppingCart().removeProduct(product);
                 }
-                itemAmountLabel.setText(Integer.toString(amount));
+                itemAmountTextField.setText(Integer.toString(amount));
             }
         }
     }
