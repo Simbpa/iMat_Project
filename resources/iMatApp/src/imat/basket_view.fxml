@@ -60,9 +60,9 @@
       </AnchorPane>
       <AnchorPane layoutX="15.0" layoutY="110.0" prefHeight="540.0" prefWidth="975.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15;">
          <children>
-            <ScrollPane prefHeight="541.0" prefWidth="975.0">
+            <ScrollPane hbarPolicy="NEVER" layoutX="15.0" layoutY="1.0" prefHeight="541.0" prefWidth="945.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER">
                <content>
-                  <FlowPane fx:id="basketFlowPane" prefHeight="540.0" prefWidth="954.0" />
+                  <FlowPane fx:id="basketFlowPane" prefHeight="540.0" prefWidth="945.0" style="-fx-background-color: #ffffff;" />
                </content>
             </ScrollPane>
          </children></AnchorPane>
@@ -70,7 +70,7 @@
          <children>
             <AnchorPane layoutX="393.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: A2D085; -fx-background-radius: 25;">
                <children>
-                  <Label layoutX="12.0" layoutY="1.0" text="1">
+                  <Label layoutX="12.0" layoutY="1.0" prefHeight="35.0" prefWidth="17.0" text="1">
                      <font>
                         <Font size="30.0" />
                      </font>
