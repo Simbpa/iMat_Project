@@ -5,39 +5,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="270.0" prefWidth="146.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="270.0" prefWidth="153.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="6.0" prefHeight="270.0" prefWidth="134.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
+      <AnchorPane layoutX="8.0" layoutY="3.0" prefHeight="74.0" prefWidth="138.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: gray;">
          <children>
-            <AnchorPane layoutX="2.0" prefHeight="70.0" prefWidth="134.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: gray;">
-               <children>
-                  <Label fx:id="dateLabel" alignment="CENTER" layoutX="1.0" layoutY="36.0" prefHeight="35.0" prefWidth="134.0" text="Maj 4">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="2.0" prefHeight="35.0" prefWidth="134.0" style="-fx-background-color: #a2d085; -fx-background-radius: 5;">
-               <children>
-                  <Label fx:id="dayLabel" alignment="CENTER" prefHeight="35.0" prefWidth="134.0" text="Idag">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <Button fx:id="morningButton" layoutX="13.0" layoutY="88.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: C9E8B7; -fx-background-radius: 5;" text="8:00 - 12:00">
+            <Label fx:id="dateLabel" alignment="CENTER" layoutX="19.0" layoutY="35.0" prefHeight="35.0" prefWidth="102.0" text="Maj 4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="8.0" prefHeight="35.0" prefWidth="138.0" style="-fx-background-color: #a2d085; -fx-background-radius: 5;">
+         <children>
+            <Label fx:id="dayLabel" alignment="CENTER" layoutX="13.0" prefHeight="35.0" prefWidth="111.0" text="Idag">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="8.0" prefHeight="262.0" prefWidth="138.0" style="-fx-border-color: gray; -fx-border-radius: 5;">
+         <children>
+            <Button fx:id="morningButton" layoutX="9.0" layoutY="85.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: C9E8B7; -fx-background-radius: 5;" text="8:00 - 12:00">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="nightButton" layoutX="13.0" layoutY="214.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: C9E8B7; -fx-background-radius: 5;" text="18:00-22:00">
+            <Button fx:id="nightButton" layoutX="9.0" layoutY="202.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: C9E8B7; -fx-background-radius: 5;" text="18:00-22:00">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="eveningButton" layoutX="13.0" layoutY="151.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: C9E8B7; -fx-background-radius: 5;" text="14:00-18:00">
+            <Button fx:id="eveningButton" layoutX="9.0" layoutY="144.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: C9E8B7; -fx-background-radius: 5;" text="14:00-18:00">
                <font>
                   <Font size="18.0" />
                </font>
