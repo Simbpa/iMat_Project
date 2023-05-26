@@ -125,19 +125,18 @@ public class BasketItem extends AnchorPane {
     }
 
     public void removeItemFromShoppingCart() {
+        System.out.println(IMatDataHandler.getInstance().getShoppingCart().getTotal());
         int amount = (int) product.getAmount();
         if (amount <= 1) {
             shoppingCart.removeItem(product);
         }
         else{
-            System.out.println(amount);
             amount -= 1;
-            System.out.println(amount);
             shoppingCart.addProduct(product.getProduct(), -1);
-            System.out.println(product.getAmount());
 
             itemAmountLabel.setText(Integer.toString(amount));
         }
+        System.out.println(IMatDataHandler.getInstance().getShoppingCart().getTotal());
         MainViewController.getInstance().populateMainView();
         MainViewController.getInstance().populateMainViewBasket();
         BasketViewController.getInstance().populateMainViewBasket();
