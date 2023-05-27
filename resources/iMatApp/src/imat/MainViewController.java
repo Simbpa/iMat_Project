@@ -120,6 +120,9 @@ public class MainViewController extends AnchorPane {
     // -- Methods -- //
 
 
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
+    }
 
     public void mainViewInitialize() {
         populateItemMap();

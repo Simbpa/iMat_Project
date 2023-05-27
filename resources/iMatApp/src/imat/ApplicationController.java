@@ -19,6 +19,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.Product;
+
+import java.util.List;
 
 
 public class ApplicationController extends AnchorPane {
@@ -48,6 +51,20 @@ public class ApplicationController extends AnchorPane {
 
         switchPage(MainViewController.getPage());
         AccountViewController.getInstance().initMonthMap();
+
+        searchArea.textProperty().addListener((observable, oldValue, newValue) -> {
+            if(newValue.equals("") || newValue.isEmpty() || newValue.isBlank()){
+                System.out.print("Here");
+                List<Product> result = IMatDataHandler.getInstance().getProducts();
+                MainViewController.getInstance().setProductList(result);
+                MainViewController.getInstance().populateMainView();
+            }
+            else {
+                List<Product> result = IMatDataHandler.getInstance().findProducts(newValue);
+                MainViewController.getInstance().setProductList(result);
+                MainViewController.getInstance().populateMainView();
+            }
+        });
 
         // Button Actions
         closeLoginPopupButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -122,6 +139,8 @@ public class ApplicationController extends AnchorPane {
 
 
     // -- Specific Attributes -- //
+    @FXML
+    private TextField searchArea;
     @FXML
     private Button accountButtonLoggedIn;
     // Main View

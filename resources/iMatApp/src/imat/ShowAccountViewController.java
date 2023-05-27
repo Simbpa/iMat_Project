@@ -12,8 +12,10 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.Product;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ShowAccountViewController extends AnchorPane {
 
@@ -46,6 +48,7 @@ public class ShowAccountViewController extends AnchorPane {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+
 
         // Button Actions
         showAccountViewtoMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -162,6 +165,8 @@ public class ShowAccountViewController extends AnchorPane {
     }
 
     // -- FXML Objects -- //
+    @FXML
+    private TextField searchArea;
     @FXML
     private Button adressButton;
     @FXML
