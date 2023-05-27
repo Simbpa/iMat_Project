@@ -7,32 +7,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="400.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: black;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="65.0" prefWidth="400.0" style="-fx-border-width: 0 0 1 0; -fx-border-color: black;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="260.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="116.0" style="-fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid; -fx-border-width: 1; -fx-background-color: A2D085;">
+      <AnchorPane layoutX="250.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="136.0" style="-fx-background-radius: 5; -fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid; -fx-border-width: 1; -fx-background-color: A2D085;">
          <children>
-            <Button id="minusButton" fx:id="minusButton" alignment="CENTER" layoutX="3.0" layoutY="4.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="35.0" styleClass="plus-minus-button" text="-">
+            <Button id="minusButton" fx:id="minusButton" alignment="CENTER" layoutX="3.0" layoutY="4.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" styleClass="plus-minus-button" text="-">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Button>
-            <Button fx:id="plusButton" layoutX="77.0" layoutY="4.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="35.0" styleClass="plus-minus-button" text="+">
+            <Button fx:id="plusButton" layoutX="91.0" layoutY="4.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" styleClass="plus-minus-button" text="+">
                <font>
-                  <Font size="14.0" />
+                  <Font size="17.0" />
                </font>
             </Button>
-            <TextField fx:id="itemAmountTextField" layoutX="40.0" layoutY="7.0" prefHeight="26.0" prefWidth="35.0" />
+            <TextField fx:id="itemAmountTextField" layoutX="47.0" layoutY="7.0" prefHeight="32.0" prefWidth="42.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
          </children>
       </AnchorPane>
-      <ImageView fx:id="itemImageView" fitHeight="57.0" fitWidth="61.0" layoutX="3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Label fx:id="itemNameLabel" layoutX="70.0" layoutY="1.0" prefHeight="26.0" prefWidth="94.0" text="Varunamn">
+      <ImageView fx:id="itemImageView" fitHeight="65.0" fitWidth="61.0" layoutX="3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label fx:id="itemNameLabel" layoutX="70.0" layoutY="1.0" prefHeight="32.0" prefWidth="116.0" text="Varunamn">
          <font>
-            <Font size="15.0" />
+            <Font size="22.0" />
          </font></Label>
-      <Label layoutX="108.0" layoutY="30.0" text="/st" />
-      <Label fx:id="itemPriceLabel" layoutX="72.0" layoutY="27.0" prefHeight="17.0" prefWidth="35.0" text="00:00">
+      <Label layoutX="126.0" layoutY="28.0" text="/st">
          <font>
-            <Font size="14.0" />
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="itemPriceLabel" layoutX="72.0" layoutY="27.0" prefHeight="30.0" prefWidth="61.0" text="00:00">
+         <font>
+            <Font size="20.0" />
          </font></Label>
    </children>
 </fx:root>
