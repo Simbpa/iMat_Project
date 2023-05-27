@@ -97,7 +97,7 @@ public class MainViewItem extends AnchorPane {
             if (shoppingItem.getProduct() == product) {
                 if (amount <= 0) {
                     amount = 0;
-                    backgroundAnchorPane.setStyle("-fx-background-color: white");
+                    backgroundAnchorPane.setStyle("-fx-background-color: white; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-style: solid; -fx-border-color: black; -fx-border-width: 1;");
                     iMatDataHandler.getShoppingCart().removeProduct(product);
                 }
                 else{

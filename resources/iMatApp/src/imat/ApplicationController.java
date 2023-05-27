@@ -20,8 +20,10 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
+import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
 import java.util.List;
 
@@ -53,6 +55,12 @@ public class ApplicationController extends AnchorPane {
 
         switchPage(MainViewController.getPage());
         AccountViewController.getInstance().initMonthMap();
+        IMatDataHandler.getInstance().getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                applicationBasketButton.setText(Double.toString(IMatDataHandler.getInstance().getShoppingCart().getTotal()) + " kr");
+            }
+        });
         searchArea.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent ke) {
