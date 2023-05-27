@@ -84,6 +84,9 @@ public class MainViewBasketItem extends AnchorPane {
     }
 
     // -- Methods -- //
+    public void recipeDetail(){
+        MainViewController.getInstance().displayDetailView(product, MainViewController.getInstance().mainViewItemMap.get(product.getName()));
+    }
 
     public void updateItem(ShoppingItem shoppingItem) {
         amount = MainViewController.getInstance().getMainViewItemMap().get(product.getName()).getAmount();

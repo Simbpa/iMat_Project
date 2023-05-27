@@ -123,7 +123,6 @@ public class MainViewItem extends AnchorPane {
     }
 
     public void removeItemFromShoppingCart() {
-
         amount -= 1;
         iMatDataHandler.getShoppingCart().addProduct(product, -1);
         BasketViewController.getInstance().populateBasketViewBasket();
