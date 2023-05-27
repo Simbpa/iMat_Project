@@ -58,6 +58,7 @@ public class CreateAccountViewController extends AnchorPane {
             @Override
             public void handle(ActionEvent event) {
                 saveInformation();
+                ApplicationController.getInstance().setLoggedIn(true);
                 ApplicationController.getInstance().switchPage(ShowAccountViewController.getPage());
             }
         });

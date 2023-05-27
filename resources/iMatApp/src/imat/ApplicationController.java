@@ -65,6 +65,7 @@ public class ApplicationController extends AnchorPane {
         loginMainButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                logged_in = true;
                 accountButtonLoggedIn.setText(IMatDataHandler.getInstance().getCustomer().getFirstName());
                 accountButtonLoggedIn.toFront();
                 loginPopup.toBack();
@@ -97,6 +98,10 @@ public class ApplicationController extends AnchorPane {
     public boolean isLogged_in(){
         return logged_in;
     }
+    public void setLoggedIn(boolean log_in) {
+            logged_in = log_in;
+    }
+
 
     ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);
     ColorAdjust exitAdjust = new ColorAdjust(0, 0, 0, 0);

@@ -67,6 +67,7 @@ public class BasketViewController extends AnchorPane {
         basketToLoginViewButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                System.out.println(ApplicationController.getInstance().isLogged_in());
                 if(ApplicationController.getInstance().isLogged_in()){
                     ApplicationController.getInstance().switchPage(ShowAccountViewController.getPage());
 
