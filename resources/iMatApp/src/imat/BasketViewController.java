@@ -52,15 +52,15 @@ public class BasketViewController extends AnchorPane {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        totalSumLabel.setText("0");
-        finalPriceLabel.setText("70");
+        totalSumLabel.setText("0 kr");
+        finalPriceLabel.setText("70 kr");
         // Button Actions
         IMatDataHandler.getInstance().getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
             @Override
             public void shoppingCartChanged(CartEvent cartEvent) {
                 double cartSum = IMatDataHandler.getInstance().getShoppingCart().getTotal();
-                totalSumLabel.setText(Double.toString(cartSum));
-                finalPriceLabel.setText(Double.toString(cartSum + 70));
+                totalSumLabel.setText(Double.toString(cartSum) + " kr");
+                finalPriceLabel.setText(Double.toString(cartSum + 70) + " kr");
             }
         });
         basketToMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
