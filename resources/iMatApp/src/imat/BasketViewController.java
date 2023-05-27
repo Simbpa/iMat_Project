@@ -11,15 +11,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -54,9 +52,17 @@ public class BasketViewController extends AnchorPane {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
+        totalSumLabel.setText("0");
+        finalPriceLabel.setText("70");
         // Button Actions
-
+        IMatDataHandler.getInstance().getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                double cartSum = IMatDataHandler.getInstance().getShoppingCart().getTotal();
+                totalSumLabel.setText(Double.toString(cartSum));
+                finalPriceLabel.setText(Double.toString(cartSum + 70));
+            }
+        });
         basketToMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -81,6 +87,10 @@ public class BasketViewController extends AnchorPane {
     }
 
     // -- FXML-Object -- //
+    @FXML
+    private Label finalPriceLabel;
+    @FXML
+    private Label totalSumLabel;
     @FXML
     private Button basketToMainViewButton;
     @FXML

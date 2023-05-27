@@ -60,7 +60,7 @@
                   </TextField>
                </children>
             </AnchorPane>
-            <Button fx:id="createAccountViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: A2D085; -fx-background-radius: 40;" text="  Tillbaka">
+            <Button fx:id="createAccountViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="green-rounded-buttons" text="  Tillbaka">
                <font>
                   <Font size="30.0" />
                </font>

@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="120.0" prefWidth="945.0" style="-fx-background-color: #ffffff;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="120.0" prefWidth="961.0" style="-fx-background-color: #ffffff;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="itemImageView" fitHeight="106.0" fitWidth="143.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="7.0" />
       <Label fx:id="itemNameLabel" layoutX="175.0" layoutY="19.0" prefHeight="36.0" prefWidth="180.0" text="&lt;Varunamn&gt;">
