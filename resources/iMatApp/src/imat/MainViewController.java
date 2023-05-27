@@ -95,9 +95,114 @@ public class MainViewController extends AnchorPane {
 
             }
         });
+        frukt.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                List<Product> list_one = IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT);
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.VEGETABLE_FRUIT));
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT));
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT));
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.MELONS));
+
+                productList = list_one;
+                populateMainView();
+            }
+        });
+        fisk.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                productList = IMatDataHandler.getInstance().getProducts(ProductCategory.FISH);
+                populateMainView();
+            }
+        });
+        meat.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                productList = IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT);
+                populateMainView();
+            }
+        });
+        mejeri.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                productList= IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES);
+                populateMainView();
+            }
+        });
+        drinks.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                List<Product> list_one = IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS);
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
+                productList = list_one;
+                populateMainView();
+            }
+        });
+        skafferi.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                List<Product> list_one = IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA);
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
+                productList = list_one;
+                populateMainView();
+            }
+        });
+        kryddor.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                List<Product> list_one = IMatDataHandler.getInstance().getProducts(ProductCategory.HERB);
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
+                productList = list_one;
+                populateMainView();
+            }
+        });
+        bread.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                productList = IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD);
+                populateMainView();
+            }
+        });
+        sweet.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                productList = IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET);
+                populateMainView();
+            }
+        });
+        allt.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                productList = IMatDataHandler.getInstance().getProducts();
+                populateMainView();
+            }
+        });
     }
 
     // -- FXML objects -- //
+    @FXML
+    private Button allt;
+    @FXML
+    private Button frukt;
+    @FXML
+    private Button fisk;
+    @FXML
+    private Button mejeri;
+    @FXML
+    private Button meat;
+    @FXML
+    private Button drinks;
+    @FXML
+    private Button skafferi;
+    @FXML
+    private Button sweet;
+    @FXML
+    private Button bread;
+    @FXML
+    private Button kryddor;
+
 
 
     @FXML
