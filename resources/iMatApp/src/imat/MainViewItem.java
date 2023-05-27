@@ -1,6 +1,7 @@
 package imat;
 
 // -- Imports -- //
+import com.sun.tools.javac.Main;
 import imat.MainViewItemDetail;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -110,6 +111,9 @@ public class MainViewItem extends AnchorPane {
 
         }
 
+    }
+    public void recipeDetail(){
+        MainViewController.getInstance().displayDetailView(product, this);
     }
     public void addItemToShoppingCart() {
         amount += 1;

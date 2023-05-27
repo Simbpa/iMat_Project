@@ -13,6 +13,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
@@ -34,6 +37,8 @@ public class MainViewController extends AnchorPane {
     public Map<String, MainViewItem> getMainViewItemMap(){
         return mainViewItemMap;
     }
+    private Product detailProduct;
+    private MainViewItem detailItem;
 
     // -- Methods -- //
 
@@ -182,7 +187,74 @@ public class MainViewController extends AnchorPane {
         });
     }
 
+    public void displayDetailView(Product product, MainViewItem item){
+        this.detailProduct = product;
+        this.detailItem = item;
+        itemDetailAmountField.setText(Integer.toString(item.getAmount()));
+        if(item.getAmount() > 0){
+            itemDetailAmountPane.setStyle("-fx-background-color: #A2D085; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-style: solid; -fx-border-color: black; -fx-border-width: 1;");
+        }
+        else{
+            itemDetailAmountPane.setStyle("-fx-background-color: white; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-style: solid; -fx-border-color: black; -fx-border-width: 1;");
+        }
+        itemDetailImage.setImage(IMatDataHandler.getInstance().getFXImage(product));
+        itemDetailInformation.setText("En helt underbar vara");
+        itemDetailNameLabel.setText(product.getName());
+        itemDetailPriceLabel.setText(Double.toString(product.getPrice()));
+        itemDetailView.toFront();
+    }
+
+    public void closeDetailView(){
+        itemDetailView.toBack();
+    }
+
+    public void updateItem(ShoppingItem shoppingItem) {
+        double amount = MainViewController.getInstance().getMainViewItemMap().get(detailProduct.getName()).getAmount();
+        if (shoppingItem != null) {
+            if (shoppingItem.getProduct() == detailProduct) {
+                if (amount <= 0) {
+                    amount = 0;
+                    iMatDataHandler.getShoppingCart().removeProduct(detailProduct);
+                }
+                itemDetailAmountField.setText(Double.toString(amount));
+            }
+        }
+    }
+    public void addItemToShoppingCart() {
+        MainViewController.getInstance().mainViewItemMap.get(detailProduct.getName()).increaseAmount();
+        iMatDataHandler.getShoppingCart().addProduct(detailProduct);
+        displayDetailView(detailProduct, detailItem);
+        BasketViewController.getInstance().populateBasketViewBasket();
+        MainViewController.getInstance().populateMainViewBasket();
+    }
+
+    public void removeItemFromShoppingCart() {
+        MainViewController.getInstance().mainViewItemMap.get(detailProduct.getName()).decreaseAmount();
+        iMatDataHandler.getShoppingCart().addProduct(detailProduct, -1);
+        displayDetailView(detailProduct, detailItem);
+        BasketViewController.getInstance().populateBasketViewBasket();
+        MainViewController.getInstance().populateMainViewBasket();
+    }
+
     // -- FXML objects -- //
+    @FXML
+    private AnchorPane itemDetailAmountPane;
+    @FXML
+    private TextField itemDetailAmountField;
+    @FXML
+    private AnchorPane itemDetailView;
+    @FXML
+    private ImageView itemDetailImage;
+    @FXML
+    private Label itemDetailNameLabel;
+    @FXML
+    private Label itemDetailPriceLabel;
+    @FXML
+    private TextArea itemDetailInformation;
+
+
+
+
     @FXML
     private Button allt;
     @FXML

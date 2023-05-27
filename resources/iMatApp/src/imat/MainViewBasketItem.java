@@ -54,7 +54,7 @@ public class MainViewBasketItem extends AnchorPane {
         this.amount = given_amount.intValue();
 
 
-        itemImageView.setImage(iMatDataHandler.getFXImage(product));
+        itemImageView.setImage(iMatDataHandler.getFXImage(product, 65, 65));
         itemNameLabel.setText(product.getName());
         itemPriceLabel.setText(Double.toString(product.getPrice()));
         itemAmountTextField.setText(Integer.toString(amount));

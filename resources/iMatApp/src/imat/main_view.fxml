@@ -4,14 +4,18 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root prefHeight="800.0" prefWidth="1280.0" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane fx:id="mainViewBasket" layoutX="874.0" prefHeight="685.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 0 1;" AnchorPane.rightAnchor="0.0">
          <children>
@@ -370,5 +374,79 @@
             </AnchorPane>
         </items>
       </SplitPane>
+      <AnchorPane fx:id="itemDetailView" layoutX="193.39999389648438" layoutY="89.86000061035156" onMouseClicked="#closeDetailView" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #000000bf;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="-58.69999694824219" layoutY="-50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="799.0" prefWidth="1444.0" scaleX="0.65" scaleY="0.65" style="-fx-background-color: white;">
+               <children>
+                  <SplitPane dividerPositions="0.4071132596685083" layoutX="-2.0" layoutY="5.0" prefHeight="792.0" prefWidth="1450.0" style="-fx-background-color: white;">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;">
+                           <children>
+                              <ImageView fx:id="itemDetailImage" fitHeight="412.0" fitWidth="551.0" layoutX="18.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+                              <AnchorPane fx:id="itemDetailAmountPane" layoutX="105.0" layoutY="535.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="111.0" prefWidth="385.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
+                                 <children>
+                                    <TextField fx:id="itemDetailAmountField" alignment="CENTER" layoutX="116.0" layoutY="15.0" prefHeight="60.0" prefWidth="150.0" text="12 st">
+                                       <font>
+                                          <Font size="35.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="plusButton" layoutX="277.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#addItemToShoppingCart" prefHeight="79.0" prefWidth="98.0" styleClass="plus-minus-button" text="+">
+                                       <font>
+                                          <Font name="System Bold" size="40.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="minusButton" layoutX="9.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#removeItemFromShoppingCart" prefHeight="79.0" prefWidth="98.0" styleClass="plus-minus-button" text="-">
+                                       <font>
+                                          <Font size="40.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="712.0" prefWidth="779.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label fx:id="itemDetailNameLabel" layoutX="71.0" layoutY="52.0" prefHeight="142.0" prefWidth="650.0" text="Varunamn" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="96.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="itemDetailPriceLabel" layoutX="84.0" layoutY="189.0" prefHeight="103.0" prefWidth="191.0" text="9:00">
+                                 <font>
+                                    <Font size="70.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="253.0" layoutY="213.0" text="/st">
+                                 <font>
+                                    <Font size="45.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="81.0" layoutY="337.0" prefHeight="293.0" prefWidth="638.0" style="-fx-border-color: black; -fx-border-radius: 10; -fx-background-color: white;">
+                                 <children>
+                                    <Label layoutX="11.0" layoutY="7.0" text="Produktsinformation">
+                                       <font>
+                                          <Font size="38.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="196.9873046875" layoutX="168.0" layoutY="70.0" startX="-164.68646240234375" />
+                                    <Line endX="11.9873046875" endY="-47.0" layoutX="353.0" layoutY="47.0" startX="11.9873046875" startY="22.5" />
+                                    <TextArea fx:id="itemDetailInformation" editable="false" layoutX="2.0" layoutY="87.0" prefHeight="211.0" prefWidth="636.0" style="-fx-background-color: white;" text="Äpple" wrapText="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0">
+                                       <font>
+                                          <Font size="33.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                              </AnchorPane>
+                              <Circle fill="WHITE" layoutX="777.0" layoutY="71.0" onMouseClicked="#closeDetailView" radius="47.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="6.0" styleClass="white-button" />
+                              <Line endX="66.650146484375" endY="-21.01095199584961" layoutX="690.0" layoutY="73.0" onMouseClicked="#closeDetailView" startX="106.5048828125" startY="16.230392456054688" strokeWidth="5.0" />
+                              <Line endX="66.650146484375" endY="-21.01095199584961" layoutX="691.0" layoutY="73.0" onMouseClicked="#closeDetailView" rotate="90.0" startX="106.5048828125" startY="16.230392456054688" strokeWidth="5.0" />
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </fx:root>

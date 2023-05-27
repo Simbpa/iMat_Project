@@ -27,16 +27,16 @@
                </font></TextField>
          </children>
       </AnchorPane>
-      <ImageView fx:id="itemImageView" fitHeight="65.0" fitWidth="61.0" layoutX="3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Label fx:id="itemNameLabel" layoutX="70.0" layoutY="1.0" prefHeight="32.0" prefWidth="116.0" text="Varunamn">
+      <ImageView fx:id="itemImageView" fitHeight="65.0" fitWidth="65.0" layoutX="3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label fx:id="itemNameLabel" layoutX="73.0" layoutY="1.0" prefHeight="32.0" prefWidth="116.0" text="Varunamn">
          <font>
             <Font size="22.0" />
          </font></Label>
-      <Label layoutX="126.0" layoutY="28.0" text="/st">
+      <Label layoutX="130.0" layoutY="28.0" text="/st">
          <font>
             <Font size="18.0" />
          </font></Label>
-      <Label fx:id="itemPriceLabel" layoutX="72.0" layoutY="27.0" prefHeight="30.0" prefWidth="61.0" text="00:00">
+      <Label fx:id="itemPriceLabel" layoutX="76.0" layoutY="27.0" prefHeight="30.0" prefWidth="61.0" text="00:00">
          <font>
             <Font size="20.0" />
          </font></Label>
