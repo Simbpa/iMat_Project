@@ -151,7 +151,8 @@ public class ShowAccountViewController extends AnchorPane {
                 orderInformation.add(loginPostCodeTextField.getText());
                 orderInformation.add(loginEmailTextField.getText());
                 orderInformation.add(loginTelephoneTextField.getText());
-                DeliveryViewController.set
+                DeliveryViewController.getInstance().setDeliveryAdressField(orderInformation.get(0));
+                DeliveryViewController.getInstance().setDeliveryPostCodeField(orderInformation.get(2));
                 ApplicationController.getInstance().switchPage(DeliveryViewController.getPage());
             }
         });

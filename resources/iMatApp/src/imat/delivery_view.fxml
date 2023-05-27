@@ -40,8 +40,8 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <TextField layoutX="215.0" layoutY="21.0" prefHeight="30.0" prefWidth="350.0" />
-            <TextField layoutX="215.0" layoutY="60.0" prefHeight="30.0" prefWidth="350.0" />
+            <TextField fx:id="deliveryAdressField" layoutX="215.0" layoutY="21.0" prefHeight="30.0" prefWidth="350.0" />
+            <TextField fx:id="deliveryPostcodeField" layoutX="215.0" layoutY="60.0" prefHeight="30.0" prefWidth="350.0" />
          </children></AnchorPane>
       <Button fx:id="deliveryViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="green-rounded-buttons" text="  Tillbaka">
          <font>

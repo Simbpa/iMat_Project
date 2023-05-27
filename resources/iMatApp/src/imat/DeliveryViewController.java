@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
@@ -21,7 +22,7 @@ public class DeliveryViewController extends AnchorPane {
 
     // -- Methods -- //
 
-    private static synchronized DeliveryViewController getInstance() {
+    public static synchronized DeliveryViewController getInstance() {
         if (instance == null) {
             instance = new DeliveryViewController();
         }
@@ -68,7 +69,18 @@ public class DeliveryViewController extends AnchorPane {
 
     }
 
+    public void setDeliveryAdressField(String s) {
+        this.deliveryAdressField.setText(s);
+    }
+    public void setDeliveryPostCodeField(String s) {
+        this.deliveryPostcodeField.setText(s);
+    }
+
     // -- FXML-Object -- //
+    @FXML
+    private TextField deliveryPostcodeField;
+    @FXML
+    private TextField deliveryAdressField;
     @FXML
     private Button deliveryViewToMainViewButton;
     @FXML
