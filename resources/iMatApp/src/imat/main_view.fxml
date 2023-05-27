@@ -292,7 +292,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="sweet" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="601.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Godis" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="600.0">
+                                    <Button fx:id="sweet" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="601.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Godis &amp; Nötter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="600.0">
                                        <font>
                                           <Font size="30.0" />
                                        </font>

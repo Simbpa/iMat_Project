@@ -43,6 +43,7 @@ public class BasketViewController extends AnchorPane {
 
     private BasketViewController() {
         initCategories();
+        initCategories2();
         FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("basket_view.fxml"));
         loader.setRoot(this);
         loader.setController(this);
@@ -104,37 +105,50 @@ public class BasketViewController extends AnchorPane {
     // -- Methods -- //
 
     // -- Methods -- //
-    private Map<String, Integer> categoryMap = new HashMap<String, Integer>();
+    private Map<Integer, String> categoryMap2 = new HashMap<Integer, String>();
 
-    private void initCategories() {
-        categoryMap.put("BERRY", 0);
-        categoryMap.put("BREAD", 1);
-        categoryMap.put("CABBAGE", 2);
-        categoryMap.put("CITRUS_FRUITS", 3);
-        categoryMap.put("COLD_DRINKS", 4);
-        categoryMap.put("DAIRIES", 5);
-        categoryMap.put("EXOTIC_FRUIT", 6);
-        categoryMap.put("FISH", 7);
-        categoryMap.put("FLOUR_SUGAR_SALT", 8);
-        categoryMap.put("FRUIT", 9);
-        categoryMap.put("HERB", 10);
-        categoryMap.put("HOT_DRINKS", 11);
-        categoryMap.put("MEAT", 12);
-        categoryMap.put("MELONS", 13);
-        categoryMap.put("NUTS_AND_SEEDS", 14);
-        categoryMap.put("PASTA", 15);
-        categoryMap.put("POD", 16);
-        categoryMap.put("POTATO_RICE", 17);
-        categoryMap.put("ROOT_VEGETABLE", 18);
-        categoryMap.put("SWEET", 19);
-        categoryMap.put("VEGETABLE_FRUIT", 20);
+    private void initCategories2() {
+        categoryMap2.put(0, "Frukt & Grönt");
+        categoryMap2.put(1, "Fisk");
+        categoryMap2.put(2, "Mejeri & Ägg");
+        categoryMap2.put(3, "Kött, Fågel & Chark");
+        categoryMap2.put(4, "Dryck");
+        categoryMap2.put(5, "Skafferi");
+        categoryMap2.put(6, "Bröd");
+        categoryMap2.put(7, "Godis & Nötter");
+        categoryMap2.put(8, "Kryddor");
     }
+    private Map<String, Integer> categoryMap = new HashMap<String, Integer>();
+    private void initCategories() {
+        categoryMap.put("EXOTIC_FRUIT", 0);
+        categoryMap.put("CABBAGE", 0);
+        categoryMap.put("CITRUS_FRUITS", 0);
+        categoryMap.put("BERRY", 0);
+        categoryMap.put("VEGETABLE_FRUIT", 0);
+        categoryMap.put("ROOT_VEGETABLE", 0);
+        categoryMap.put("MELONS", 0);
+        categoryMap.put("FRUIT", 0);
+        categoryMap.put("FISH", 1);
+        categoryMap.put("DAIRIES", 2);
+        categoryMap.put("MEAT", 3);
+        categoryMap.put("COLD_DRINKS", 4);
+        categoryMap.put("HOT_DRINKS", 4);
+        categoryMap.put("PASTA", 5);
+        categoryMap.put("POTATO_RICE", 5);
+        categoryMap.put("POD", 5);
+        categoryMap.put("BREAD", 6);
+        categoryMap.put("NUTS_AND_SEEDS", 7);
+        categoryMap.put("SWEET", 7);
+        categoryMap.put("FLOUR_SUGAR_SALT", 8);
+        categoryMap.put("HERB", 8);
+    }
+
 
     private Collection<TitledPane> createPanes(ArrayList<ArrayList<ShoppingItem>> basketItems){
         Collection<TitledPane> result = new ArrayList<TitledPane>();
         for(ArrayList<ShoppingItem> productsInCategory : basketItems){
             if(productsInCategory.size() >= 1) {
-                customTitledPane2 tp = new customTitledPane2(productsInCategory.get(0).getProduct().getCategory().name() + "              Styckpris");
+                customTitledPane2 tp = new customTitledPane2(categoryMap2.get(categoryMap.get(productsInCategory.get(0).getProduct().getCategory().name())) + "              Styckpris");
                 tp.setText("Antal         Totalt pris");
                 for (ShoppingItem item : productsInCategory) {
                     BasketItem basketItem = new BasketItem(item.getProduct(), item.getAmount());
@@ -152,8 +166,6 @@ public class BasketViewController extends AnchorPane {
             categorizedBasket.add(new ArrayList<ShoppingItem>());
         }
         for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems()){
-            System.out.println(categoryMap.get(item.getProduct().getCategory().name()));
-            System.out.println(item.getProduct().getCategory().name());
             categorizedBasket.get(categoryMap.get(item.getProduct().getCategory().name())).add(item);
         }
         return categorizedBasket;

@@ -104,7 +104,8 @@ public class MainViewController extends AnchorPane {
                 list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.EXOTIC_FRUIT));
                 list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.CITRUS_FRUIT));
                 list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.MELONS));
-
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.BERRY));
+                list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.CABBAGE));
                 productList = list_one;
                 populateMainView();
             }

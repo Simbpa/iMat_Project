@@ -91,9 +91,9 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="paymentViewPayButton" alignment="CENTER" layoutX="19.0" layoutY="328.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="special-rounded-button" text="Betala">
+            <Button fx:id="paymentViewPayButton" alignment="CENTER" layoutX="19.0" layoutY="325.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="special-rounded-button" text="Betala">
                <font>
-                  <Font size="33.0" />
+                  <Font name="System Bold" size="34.0" />
                </font>
             </Button>
          </children>
