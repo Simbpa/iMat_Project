@@ -6,30 +6,49 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="200.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="69.0" prefWidth="395.0" style="-fx-border-color: black;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="127.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="72.0" style="-fx-background-radius: 12; -fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid; -fx-border-width: 1;">
+      <AnchorPane layoutX="282.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="96.0" style="-fx-background-radius: 12; -fx-border-color: black; -fx-border-radius: 5; -fx-border-style: solid; -fx-border-width: 1;">
          <children>
-            <Button fx:id="minusButton" layoutX="3.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;">
+            <Button fx:id="minusButton" layoutX="5.0" layoutY="6.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="22.0" style="-fx-background-color: #c0c0c0; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;">
                <font>
                   <Font size="6.0" />
                </font>
             </Button>
-            <Button fx:id="plusButton" layoutX="54.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" style="-fx-background-color: #a2d085; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;">
+            <Button fx:id="plusButton" layoutX="69.0" layoutY="6.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="22.0" style="-fx-background-color: #a2d085; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: black;">
                <font>
                   <Font size="5.0" />
                </font>
             </Button>
-            <Label fx:id="itemAmountLabel" alignment="CENTER" layoutY="4.0" prefHeight="17.0" prefWidth="72.0" text="0 " textAlignment="CENTER" />
+            <Label fx:id="itemAmountLabel" alignment="CENTER" layoutY="8.0" prefHeight="17.0" prefWidth="96.0" text="0 " textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="3.0" text="+">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="3.0" text="-">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
-      <ImageView fx:id="itemImageView" fitHeight="47.0" fitWidth="50.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="itemNameLabel" layoutX="58.0" layoutY="6.0" text="Varunamn" />
-      <Label layoutX="99.0" layoutY="34.0" text="/st">
+      <ImageView fx:id="itemImageView" fitHeight="63.0" fitWidth="77.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="itemNameLabel" layoutX="85.0" layoutY="7.0" text="Varunamn">
          <font>
-            <Font size="10.0" />
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="153.0" layoutY="36.0" text="/st">
+         <font>
+            <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="itemPriceLabel" layoutX="58.0" layoutY="27.0" prefHeight="17.0" prefWidth="35.0" text="00:00" />
+      <Label fx:id="itemPriceLabel" layoutX="85.0" layoutY="31.0" prefHeight="26.0" prefWidth="66.0" text="00:00">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
    </children>
 </fx:root>
