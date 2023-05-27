@@ -155,6 +155,9 @@ public class ApplicationController extends AnchorPane {
     ColorAdjust exitAdjust = new ColorAdjust(0, 0, 0, 0);
     ColorAdjust pressAdjust = new ColorAdjust(0, 0, -0.2, 0);
 
+    public void Search(){
+        switchPage(MainViewController.getPage());
+    }
 
     // -- Specific Attributes -- //
     @FXML
