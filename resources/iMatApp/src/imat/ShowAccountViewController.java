@@ -27,7 +27,7 @@ public class ShowAccountViewController extends AnchorPane {
 
     // -- Methods -- //
 
-    private static synchronized ShowAccountViewController getInstance() {
+    public static synchronized ShowAccountViewController getInstance() {
         if (instance == null) {
             instance = new ShowAccountViewController();
         }
@@ -163,7 +163,9 @@ public class ShowAccountViewController extends AnchorPane {
         showAccountPageNameText.toFront();
 
     }
-
+    public ArrayList<String> getOrderInformation(){
+        return orderInformation;
+    }
     // -- FXML Objects -- //
     @FXML
     private TextField searchArea;

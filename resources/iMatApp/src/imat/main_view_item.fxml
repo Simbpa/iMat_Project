@@ -31,7 +31,7 @@
             </Text>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="19.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="186.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
+      <AnchorPane fx:id="backgroundAnchorPane" layoutX="19.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="186.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
          <children>
             <Button fx:id="plusButton" graphicTextGap="0.0" layoutX="137.0" layoutY="6.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="38.0" styleClass="plus-minus-button" text="+">
                <font>
@@ -43,9 +43,9 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="58.0" layoutY="2.0" prefHeight="46.0" prefWidth="70.0" promptText="0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;">
+            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="62.0" layoutY="4.0" prefHeight="39.0" prefWidth="62.0" promptText="0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;">
                <font>
-                  <Font size="20.0" />
+                  <Font size="18.0" />
                </font>
             </TextField>
          </children>

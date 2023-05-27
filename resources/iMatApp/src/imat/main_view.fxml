@@ -361,9 +361,9 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="662.0" prefWidth="914.0">
                <children>
-                  <ScrollPane layoutX="1.0" layoutY="171.0" prefHeight="662.0" prefWidth="937.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ScrollPane layoutX="1.0" layoutY="171.0" prefHeight="662.0" prefWidth="937.0" style="-fx-background-color: D2D2D2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <FlowPane fx:id="mainViewFlowPane" prefHeight="672.0" prefWidth="918.0" />
+                        <FlowPane fx:id="mainViewFlowPane" prefHeight="672.0" prefWidth="918.0" style="-fx-background-color: D2D2D2;" />
                      </content>
                   </ScrollPane>
                </children>

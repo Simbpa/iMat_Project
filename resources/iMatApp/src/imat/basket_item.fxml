@@ -31,13 +31,19 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="566.0" layoutY="36.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="150.0" style="-fx-background-radius: 12; -fx-border-color: black; -fx-border-radius: 12; -fx-border-style: solid; -fx-border-width: 1;">
+      <AnchorPane layoutX="566.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="157.0" style="-fx-background-radius: 12; -fx-border-color: black; -fx-border-radius: 12; -fx-border-style: solid; -fx-border-width: 1; -fx-background-color: A2D085;">
          <children>
-            <Button fx:id="plusButton" layoutX="115.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="plus-minus-button" text="+" />
-            <Button fx:id="minusButton" layoutX="6.0" layoutY="9.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="plus-minus-button" text="-" />
-            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="48.0" layoutY="1.0" prefHeight="30.0" prefWidth="54.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;">
+            <Button fx:id="plusButton" layoutX="113.0" layoutY="13.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="plus-minus-button" text="+">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
+               </font></Button>
+            <Button fx:id="minusButton" layoutX="5.0" layoutY="13.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" styleClass="plus-minus-button" text="-">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Button>
+            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="51.0" layoutY="13.0" prefHeight="30.0" prefWidth="54.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;">
+               <font>
+                  <Font size="16.0" />
                </font></TextField>
          </children>
       </AnchorPane>

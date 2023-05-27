@@ -29,12 +29,12 @@
                         <Font size="45.0" />
                      </font>
                   </Label>
-                  <Label layoutX="333.0" layoutY="118.0" text="&lt;belopp&gt;">
+                  <Label fx:id="amountField" layoutX="333.0" layoutY="118.0" text="&lt;belopp&gt;">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </Label>
-                  <Label layoutX="323.0" layoutY="216.0" text="&lt;adress&gt;">
+                  <Label fx:id="adressField" layoutX="323.0" layoutY="216.0" text="&lt;adress&gt;">
                      <font>
                         <Font size="45.0" />
                      </font>

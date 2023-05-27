@@ -70,9 +70,12 @@ public class PaymentViewController extends AnchorPane {
         paymentViewPayButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                ConfirmationViewController.getInstance().setFinalPrice(IMatDataHandler.getInstance().getShoppingCart().getTotal());
+                ConfirmationViewController.getInstance().setAdressField();
                 IMatDataHandler.getInstance().placeOrder();
-                AccountViewController.getInstance().initHistoryView();
                 ApplicationController.getInstance().switchPage(ConfirmationViewController.getPage());
+                AccountViewController.getInstance().initHistoryView();
+
             }
         });
 

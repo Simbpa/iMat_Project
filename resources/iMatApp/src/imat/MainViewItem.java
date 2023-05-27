@@ -37,6 +37,8 @@ public class MainViewItem extends AnchorPane {
     private Button minusButton;
     @FXML
     private Button plusButton;
+    @FXML
+    private AnchorPane backgroundAnchorPane;
 
 
     // -- Constructor -- //
@@ -94,12 +96,18 @@ public class MainViewItem extends AnchorPane {
         if (shoppingItem != null) {
             if (shoppingItem.getProduct() == product) {
                 if (amount <= 0) {
-
                     amount = 0;
+                    backgroundAnchorPane.setStyle("-fx-background-color: white");
                     iMatDataHandler.getShoppingCart().removeProduct(product);
                 }
+                else{
+                    backgroundAnchorPane.setStyle("-fx-background-color: #A2D085; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-style: solid; -fx-border-color: black; -fx-border-width: 1;");
+
+                }
+
                 itemAmountTextField.setText(Integer.toString(amount));
             }
+
         }
 
     }
