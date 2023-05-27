@@ -94,6 +94,7 @@ public class MainViewItem extends AnchorPane {
         if (shoppingItem != null) {
             if (shoppingItem.getProduct() == product) {
                 if (amount <= 0) {
+
                     amount = 0;
                     iMatDataHandler.getShoppingCart().removeProduct(product);
                 }
@@ -146,7 +147,10 @@ public class MainViewItem extends AnchorPane {
     public void increaseAmount() {
         amount += 1;
     }
-    public void clearedBasket(){amount = 0;}
+    public void clearedBasket(){
+        amount = 0;
+        itemAmountTextField.setText(Integer.toString(amount));
+    }
     public void decreaseAmount() {
         amount -= 1;
     }

@@ -25,7 +25,7 @@ public class ApplicationController extends AnchorPane {
 
     // -- General Attributes -- //
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
-
+    private boolean logged_in = false;
     private static ApplicationController instance = null;
 
     public static synchronized ApplicationController getInstance() {
@@ -50,11 +50,32 @@ public class ApplicationController extends AnchorPane {
         AccountViewController.getInstance().initMonthMap();
 
         // Button Actions
+        closeLoginPopupButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                loginPopup.toBack();
+            }
+        });
+        accountButtonLoggedIn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                switchPage(AccountViewController.getPage());
+            }
+        });
+        loginMainButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                accountButtonLoggedIn.setText(IMatDataHandler.getInstance().getCustomer().getFirstName());
+                accountButtonLoggedIn.toFront();
+                loginPopup.toBack();
+            }
+        });
+
 
         applicationAccountButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                switchPage(AccountViewController.getPage());
+                loginPopup.toFront();
             }
         });
 
@@ -73,7 +94,9 @@ public class ApplicationController extends AnchorPane {
         });
 
     }
-
+    public boolean isLogged_in(){
+        return logged_in;
+    }
 
     ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);
     ColorAdjust exitAdjust = new ColorAdjust(0, 0, 0, 0);
@@ -81,8 +104,10 @@ public class ApplicationController extends AnchorPane {
 
 
     // -- Specific Attributes -- //
-
+    @FXML
+    private Button accountButtonLoggedIn;
     // Main View
+
     @FXML
     private AnchorPane mainViewRoot;
     @FXML
@@ -104,6 +129,7 @@ public class ApplicationController extends AnchorPane {
     private Button testButton2;
 
     // Navigation Bar Component
+
     @FXML
     private Button applicationAccountButton;
     @FXML
@@ -132,9 +158,13 @@ public class ApplicationController extends AnchorPane {
 
     // Login View
     @FXML
+    private AnchorPane loginPopup;
+    @FXML
     private Button loginMainButton;
     @FXML
     private Button loginCreateAccountButton;
+    @FXML
+    private Button closeLoginPopupButton;
     @FXML
     private Button loginBackButton;
     @FXML

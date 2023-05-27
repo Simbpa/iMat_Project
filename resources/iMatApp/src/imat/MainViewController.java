@@ -69,6 +69,7 @@ public class MainViewController extends AnchorPane {
         });
 
         // Button Actions
+
         mainViewBasketCloseButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -97,6 +98,8 @@ public class MainViewController extends AnchorPane {
     }
 
     // -- FXML objects -- //
+
+
     @FXML
     private Button clearBasketButton;
     @FXML
