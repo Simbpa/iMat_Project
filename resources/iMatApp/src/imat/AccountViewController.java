@@ -31,7 +31,7 @@ public class AccountViewController extends AnchorPane {
     private static AccountViewController instance = null;
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
-    private static synchronized AccountViewController getInstance() {
+    public static synchronized AccountViewController getInstance() {
         if (instance == null) {
             instance = new AccountViewController();
         }
@@ -65,6 +65,8 @@ public class AccountViewController extends AnchorPane {
         }
 
         // Button Actions
+        initHistoryView();
+        initListView();
         initAccountView();
 
         myAccountButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -163,11 +165,9 @@ public class AccountViewController extends AnchorPane {
     }
     public void showMyListWindow() {
         myListWindow.toFront();
-        initListView();
     }
     public void showMyHistoryWindow() {
         myHistoryWindow.toFront();
-        initHistoryView();
     }
 
     // -- Extra Code -- //

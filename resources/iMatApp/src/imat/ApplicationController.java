@@ -47,6 +47,7 @@ public class ApplicationController extends AnchorPane {
         instance = this;
 
         switchPage(MainViewController.getPage());
+        AccountViewController.getInstance().initMonthMap();
 
         // Button Actions
 

@@ -78,15 +78,24 @@
 .account-side-bar, .search-bar, .white-rounded-buttons, .white-button{
     -fx-background-color : #ffffff;
 }
-.white-rounded-buttons:hover, .white-button:hover, #minusButton{
+.white-rounded-buttons:hover, .white-button:hover{
     -fx-background-color : #e5e5e5;
 }
-.white-rounded-buttons:pressed, .white-button:pressed, #minusButton:hover{
+.white-rounded-buttons:pressed, .white-button:pressed{
     -fx-background-color : #cccccc;
 }
+.plus-minus-button{
+    -fx-background-radius: 10;
+}
 
-#minusButton:pressed{
+#minusButton{
     -fx-background-color: #bfbfbf;
+}
+#minusButton:hover {
+    -fx-background-color: #b3b3b3;
+}
+#minusButton:pressed{
+    -fx-background-color: #a6a6a6;
 }
 
 

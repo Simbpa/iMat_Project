@@ -11,13 +11,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
-import se.chalmers.cse.dat216.project.ShoppingItem;
+import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
 import java.net.URL;
@@ -60,14 +58,26 @@ public class MainViewController extends AnchorPane {
         catch (Exception e) {
             throw new RuntimeException(e);
         }
-
+        sumLabel.setText("0 kr");
         mainViewInitialize();
+        IMatDataHandler.getInstance().getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                sumLabel.setText(Double.toString(IMatDataHandler.getInstance().getShoppingCart().getTotal()) + " kr");
+            }
+        });
 
         // Button Actions
         mainViewBasketCloseButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 hideMainViewBasket();
+            }
+        });
+        clearBasketButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                IMatDataHandler.getInstance().getShoppingCart().clear();
             }
         });
         mainViewToBasketButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -82,6 +92,10 @@ public class MainViewController extends AnchorPane {
 
     // -- FXML objects -- //
     @FXML
+    private Button clearBasketButton;
+    @FXML
+    private Label sumLabel;
+    @FXML
     private FlowPane mainViewFlowPane;
     @FXML
     private AnchorPane mainViewBasket;
@@ -95,6 +109,8 @@ public class MainViewController extends AnchorPane {
 
 
     // -- Methods -- //
+
+
 
     public void mainViewInitialize() {
         populateItemMap();
@@ -124,7 +140,7 @@ public class MainViewController extends AnchorPane {
         mainViewBasketFlowPane.getChildren().clear();
         ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
         for (ShoppingItem shoppingItem : shoppingCart.getItems()) {
-            MainViewBasketItem mainViewBasketItem = new MainViewBasketItem(shoppingItem.getProduct());
+            MainViewBasketItem mainViewBasketItem = new MainViewBasketItem(shoppingItem.getProduct(), shoppingItem.getAmount());
             mainViewBasketFlowPane.getChildren().add(mainViewBasketItem);
         }
     }

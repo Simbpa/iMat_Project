@@ -312,7 +312,7 @@
                            </image>
                         </ImageView>
                      </graphic></Button>
-                  <Button fx:id="clearMainViewBasketButton" layoutX="189.0" layoutY="54.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="193.0" styleClass="green-rounded-buttons" text="                                                  ">
+                  <Button fx:id="clearBasketButton" layoutX="189.0" layoutY="54.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="193.0" styleClass="green-rounded-buttons" text="                                                  ">
                      <graphic>
                         <Label text="Töm varukorgen">
                            <font>
@@ -351,7 +351,7 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <Label layoutX="115.0" layoutY="29.0" text="&lt;summa&gt;">
+                  <Label fx:id="sumLabel" layoutX="115.0" layoutY="29.0" text="&lt;summa&gt;">
                      <font>
                         <Font size="25.0" />
                      </font>
