@@ -157,6 +157,7 @@ public class AccountViewController extends AnchorPane {
         if(emailField != null){
             IMatDataHandler.getInstance().getCustomer().setEmail(emailField.getText());
         };
+        IMatDataHandler.getInstance().shutDown();
         initAccountView();
     }
     public void showMyAccountWindow() {
@@ -173,7 +174,7 @@ public class AccountViewController extends AnchorPane {
     // -- Extra Code -- //
 
     public void initAccountView(){
-
+        System.out.println(IMatDataHandler.getInstance().getCustomer().getFirstName());
         if(IMatDataHandler.getInstance().getCustomer().getFirstName() != null){
             firstnameField.setText(IMatDataHandler.getInstance().getCustomer().getFirstName());
         };

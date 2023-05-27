@@ -13,6 +13,81 @@
 
 <fx:root prefHeight="800.0" prefWidth="1280.0" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <AnchorPane fx:id="mainViewBasket" layoutX="874.0" prefHeight="685.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 0 1;" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="2.0" prefHeight="100.0" prefWidth="399.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-border-style: solid;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label layoutX="18.0" prefHeight="50.0" prefWidth="203.0" text="Varukorg" AnchorPane.leftAnchor="18.0">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="mainViewBasketCloseButton" layoutX="337.0" layoutY="13.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/icon_close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="clearBasketButton" layoutX="189.0" layoutY="54.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="193.0" styleClass="green-rounded-buttons" text="                                                  ">
+                     <graphic>
+                        <Label text="Töm varukorgen">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/free-trash-icon-347-thumb.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </graphic></Button>
+                  <Button fx:id="saveTheListButton" layoutX="18.0" layoutY="53.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="151.0" styleClass="green-rounded-buttons" text="                                     " textAlignment="RIGHT">
+                     <graphic>
+                        <Label text="Spara listan">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/1913842-200.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                     </graphic></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="171.0" layoutY="487.0" prefHeight="120.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 1 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label layoutX="38.0" layoutY="29.0" text="Totalt:" AnchorPane.leftAnchor="38.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sumLabel" layoutX="115.0" layoutY="29.0" text="&lt;summa&gt;">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="mainViewToBasketButton" layoutX="252.0" layoutY="23.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="137.0" styleClass="special-rounded-button" text="Till kassa">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <ScrollPane hbarPolicy="NEVER" layoutX="2.0" layoutY="110.0" prefHeight="455.0" prefWidth="399.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+               <content>
+                  <FlowPane fx:id="mainViewBasketFlowPane" prefHeight="450.0" prefWidth="400.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
       <SplitPane dividerPositions="0.2633" layoutX="100.0" prefHeight="664.0" prefWidth="1280.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="662.0" prefWidth="312.0">
@@ -295,80 +370,5 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <AnchorPane fx:id="mainViewBasket" layoutX="874.0" prefHeight="685.0" prefWidth="400.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 0 0 0 1;" AnchorPane.rightAnchor="0.0">
-         <children>
-            <AnchorPane layoutX="2.0" prefHeight="100.0" prefWidth="399.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0; -fx-border-style: solid;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0">
-               <children>
-                  <Label layoutX="18.0" prefHeight="50.0" prefWidth="203.0" text="Varukorg" AnchorPane.leftAnchor="18.0">
-                     <font>
-                        <Font size="40.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="mainViewBasketCloseButton" layoutX="337.0" layoutY="13.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/icon_close.png" />
-                           </image>
-                        </ImageView>
-                     </graphic></Button>
-                  <Button fx:id="clearBasketButton" layoutX="189.0" layoutY="54.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="193.0" styleClass="green-rounded-buttons" text="                                                  ">
-                     <graphic>
-                        <Label text="Töm varukorgen">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/free-trash-icon-347-thumb.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Label>
-                     </graphic></Button>
-                  <Button fx:id="saveTheListButton" layoutX="18.0" layoutY="53.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="151.0" styleClass="green-rounded-buttons" text="                                     " textAlignment="RIGHT">
-                     <graphic>
-                        <Label text="Spara listan">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/1913842-200.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Label>
-                     </graphic></Button>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="171.0" layoutY="487.0" prefHeight="120.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 1 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <children>
-                  <Label layoutX="38.0" layoutY="29.0" text="Totalt:" AnchorPane.leftAnchor="38.0">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="sumLabel" layoutX="115.0" layoutY="29.0" text="&lt;summa&gt;">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="mainViewToBasketButton" layoutX="252.0" layoutY="23.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="137.0" styleClass="special-rounded-button" text="Till kassa">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <ScrollPane hbarPolicy="NEVER" layoutX="2.0" layoutY="110.0" prefHeight="455.0" prefWidth="399.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
-               <content>
-                  <FlowPane fx:id="mainViewBasketFlowPane" prefHeight="450.0" prefWidth="400.0" />
-               </content>
-            </ScrollPane>
-         </children>
-      </AnchorPane>
    </children>
 </fx:root>

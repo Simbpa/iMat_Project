@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1280.0" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-21.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="323.0" layoutY="111.0" prefHeight="465.0" prefWidth="695.0" style="-fx-border-color: black; -fx-border-radius: 15;">
+               <children>
+                  <Button fx:id="createAccountViewCreateAccountButton" alignment="CENTER" layoutX="219.0" layoutY="372.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="262.0" styleClass="special-rounded-button" text="Skapa konto">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="259.0" layoutY="11.0" text="Gå med...">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="firstNameField" layoutX="21.0" layoutY="77.0" prefHeight="57.0" prefWidth="309.0" promptText="Förnamn">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="lastNameField" layoutX="363.0" layoutY="77.0" prefHeight="57.0" prefWidth="309.0" promptText="Efternamn">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="adressField" layoutX="21.0" layoutY="148.0" prefHeight="57.0" prefWidth="650.0" promptText="Adress">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="postcodeField" layoutX="21.0" layoutY="222.0" prefHeight="57.0" prefWidth="309.0" promptText="Postkod">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="cityField" layoutX="363.0" layoutY="222.0" prefHeight="57.0" prefWidth="309.0" promptText="Ort">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="emailField" layoutX="20.0" layoutY="296.0" prefHeight="66.0" prefWidth="310.0" promptText="Epost">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="phoneField" layoutX="362.0" layoutY="296.0" prefHeight="66.0" prefWidth="310.0" promptText="Telefonnummer">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <Button fx:id="createAccountViewBackButton" alignment="CENTER" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" style="-fx-background-color: A2D085; -fx-background-radius: 40;" text="  Tillbaka">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Line endX="89.16592407226562" layoutX="27.0" layoutY="618.0" startX="58.08722686767578" strokeWidth="5.0" />
+            <Line endX="72.5081787109375" endY="2.5794677734375" layoutX="25.0" layoutY="603.0" startX="58.18406677246094" startY="14.41802978515625" strokeWidth="5.0" />
+            <Line endX="54.58723068237305" endY="1.0" layoutX="30.0" layoutY="618.0" startX="65.5" startY="13.20001220703125" strokeWidth="5.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</fx:root>

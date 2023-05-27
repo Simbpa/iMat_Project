@@ -56,18 +56,24 @@ public class ApplicationController extends AnchorPane {
                 loginPopup.toBack();
             }
         });
+        loginCreateAccountButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                loginPopup.toBack();
+                switchPage(CreateAccountViewController2.getPage());
+            }
+        });
         accountButtonLoggedIn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                loginPopup.toBack();
                 switchPage(AccountViewController.getPage());
             }
         });
         loginMainButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                logged_in = true;
-                accountButtonLoggedIn.setText(IMatDataHandler.getInstance().getCustomer().getFirstName());
-                accountButtonLoggedIn.toFront();
+                login();
                 loginPopup.toBack();
             }
         });
@@ -98,9 +104,16 @@ public class ApplicationController extends AnchorPane {
     public boolean isLogged_in(){
         return logged_in;
     }
-    public void setLoggedIn(boolean log_in) {
-            logged_in = log_in;
+    public void login() {
+            logged_in = true;
+            accountButtonLoggedIn.setText(IMatDataHandler.getInstance().getCustomer().getFirstName());
+            accountButtonLoggedIn.toFront();
     }
+    public void logout(){
+        logged_in = false;
+        applicationAccountButton.toFront();
+    }
+
 
 
     ColorAdjust enterAdjust = new ColorAdjust(0, 0, -0.1, 0);

@@ -8,20 +8,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import org.w3c.dom.Text;
 import se.chalmers.cse.dat216.project.Customer;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
-public class CreateAccountViewController extends AnchorPane {
+public class CreateAccountViewController2 extends AnchorPane {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
-    private static CreateAccountViewController instance = null;
+    private static CreateAccountViewController2 instance = null;
 
     // -- Methods -- //
 
-    private static synchronized CreateAccountViewController getInstance() {
+    private static synchronized CreateAccountViewController2 getInstance() {
         if (instance == null) {
-            instance = new CreateAccountViewController();
+            instance = new CreateAccountViewController2();
         }
         return instance;
     }
@@ -30,8 +29,8 @@ public class CreateAccountViewController extends AnchorPane {
         return getInstance();
     }
 
-    private CreateAccountViewController() {
-        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("create_account_view.fxml"));
+    private CreateAccountViewController2() {
+        FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("create_account_view2.fxml"));
         loader.setRoot(this);
         loader.setController(this);
 
@@ -42,16 +41,10 @@ public class CreateAccountViewController extends AnchorPane {
         }
 
         // Button Actions
-        createAccountViewToMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                ApplicationController.getInstance().switchPage(MainViewController.getPage());
-            }
-        });
         createAccountViewBackButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                ApplicationController.getInstance().switchPage(BasketViewController.getPage());
+                ApplicationController.getInstance().switchPage(MainViewController.getPage());
             }
         });
         createAccountViewCreateAccountButton.setOnAction(new EventHandler<ActionEvent>() {
@@ -59,7 +52,7 @@ public class CreateAccountViewController extends AnchorPane {
             public void handle(ActionEvent event) {
                 saveInformation();
                 ApplicationController.getInstance().login();
-                ApplicationController.getInstance().switchPage(ShowAccountViewController.getPage());
+                ApplicationController.getInstance().switchPage(MainViewController.getPage());
             }
         });
 
@@ -76,7 +69,6 @@ public class CreateAccountViewController extends AnchorPane {
         customer.setPostAddress(cityField.getText());
         AccountViewController.getInstance().initAccountView();
         IMatDataHandler.getInstance().shutDown();
-
     }
 
     // -- FXML Objects -- //

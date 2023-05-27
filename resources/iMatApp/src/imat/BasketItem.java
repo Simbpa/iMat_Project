@@ -24,6 +24,8 @@ public class BasketItem extends AnchorPane {
     private Product product;
     private int amount = 0;
     @FXML
+    private Label basketItemSum;
+    @FXML
     private ImageView itemImageView;
     @FXML
     private Label itemNameLabel;
@@ -51,6 +53,7 @@ public class BasketItem extends AnchorPane {
 
         this.product = product;
         this.amount = given_amount.intValue();
+        this.basketItemSum.setText(Double.toString(Double.valueOf(amount) * product.getPrice()));
 
         itemImageView.setImage(iMatDataHandler.getFXImage(product));
         itemNameLabel.setText(product.getName());
@@ -77,6 +80,7 @@ public class BasketItem extends AnchorPane {
             @Override
             public void shoppingCartChanged(CartEvent cartEvent) {
                 updateItem(cartEvent.getShoppingItem());
+
             }
         });
     }
@@ -96,6 +100,7 @@ public class BasketItem extends AnchorPane {
                     iMatDataHandler.getShoppingCart().removeProduct(product);
                 }
                 itemAmountTextField.setText(Integer.toString(amount));
+                this.basketItemSum.setText(Double.toString(Double.valueOf(amount) * product.getPrice()));
             }
         }
     }
