@@ -15,6 +15,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.ColorAdjust;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
@@ -51,10 +53,18 @@ public class ApplicationController extends AnchorPane {
 
         switchPage(MainViewController.getPage());
         AccountViewController.getInstance().initMonthMap();
+        searchArea.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent ke) {
+                if (ke.getCode().equals(KeyCode.ENTER)) {
+                    switchPage(MainViewController.getPage());
+                }
+            }
+        });
+
 
         searchArea.textProperty().addListener((observable, oldValue, newValue) -> {
             if(newValue.equals("") || newValue.isEmpty() || newValue.isBlank()){
-                System.out.print("Here");
                 List<Product> result = IMatDataHandler.getInstance().getProducts();
                 MainViewController.getInstance().setProductList(result);
                 MainViewController.getInstance().populateMainView();
