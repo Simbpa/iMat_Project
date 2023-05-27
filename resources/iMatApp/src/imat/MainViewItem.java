@@ -146,6 +146,7 @@ public class MainViewItem extends AnchorPane {
     public void increaseAmount() {
         amount += 1;
     }
+    public void clearedBasket(){amount = 0;}
     public void decreaseAmount() {
         amount -= 1;
     }

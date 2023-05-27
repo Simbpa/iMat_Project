@@ -4,6 +4,7 @@
 package imat;
 
 // -- Imports -- //
+import com.sun.tools.javac.Main;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -77,7 +78,12 @@ public class MainViewController extends AnchorPane {
         clearBasketButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                for(MainViewItem item :mainViewItemMap.values()){
+                    item.clearedBasket();
+                }
                 IMatDataHandler.getInstance().getShoppingCart().clear();
+                BasketViewController.getInstance().populateBasketViewBasket();
+                MainViewController.getInstance().populateMainViewBasket();
             }
         });
         mainViewToBasketButton.setOnAction(new EventHandler<ActionEvent>() {
