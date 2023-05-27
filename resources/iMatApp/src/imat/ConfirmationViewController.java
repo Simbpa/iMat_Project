@@ -45,13 +45,14 @@ public class ConfirmationViewController extends AnchorPane {
         confirmationViewToMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                System.out.print(IMatDataHandler.getInstance().getShoppingCart().getItems());
                 ApplicationController.getInstance().switchPage(MainViewController.getPage());
             }
         });
 
     }
     public void setFinalPrice(double amount){
-        amountField.setText(Double.toString(amount));
+        amountField.setText(Double.toString(amount+70) + " kr");
     }
     public void setAdressField(){
         ArrayList<String> oi = ShowAccountViewController.getInstance().getOrderInformation();

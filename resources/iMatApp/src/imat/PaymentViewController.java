@@ -11,6 +11,7 @@ import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 public class PaymentViewController extends AnchorPane {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -72,7 +73,13 @@ public class PaymentViewController extends AnchorPane {
             public void handle(ActionEvent event) {
                 ConfirmationViewController.getInstance().setFinalPrice(IMatDataHandler.getInstance().getShoppingCart().getTotal());
                 ConfirmationViewController.getInstance().setAdressField();
+                for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+                    MainViewController.getInstance().mainViewItemMap.get(item.getProduct().getName()).clearedBasket();
+                }
                 IMatDataHandler.getInstance().placeOrder();
+                IMatDataHandler.getInstance().shutDown();
+                MainViewController.getInstance().populateMainViewBasket();
+                BasketViewController.getInstance().populateBasketViewBasket();
                 ApplicationController.getInstance().switchPage(ConfirmationViewController.getPage());
                 AccountViewController.getInstance().initHistoryView();
 
