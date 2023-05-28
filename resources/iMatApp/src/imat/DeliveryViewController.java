@@ -94,19 +94,19 @@ public class DeliveryViewController extends AnchorPane {
             // Determine week day
             switch (calendar.get(Calendar.DAY_OF_WEEK)) {
                 case 1:
-                    weekDay = "Monday";     break;
+                    weekDay = "Måndag";     break;
                 case 2:
-                    weekDay = "Tuesday";    break;
+                    weekDay = "Tisdag";    break;
                 case 3:
-                    weekDay = "Wednesday";  break;
+                    weekDay = "Onsdag";  break;
                 case 4:
-                    weekDay = "Thursday";   break;
+                    weekDay = "Torsdag";   break;
                 case 5:
-                    weekDay = "Friday";     break;
+                    weekDay = "Fredag";     break;
                 case 6:
-                    weekDay = "Saturday";   break;
+                    weekDay = "Lördag";   break;
                 case 7:
-                    weekDay = "Sunday";     break;
+                    weekDay = "Söndag";     break;
             }
             // Determine day
             day = Integer.toString(calendar.get(Calendar.DAY_OF_MONTH));
