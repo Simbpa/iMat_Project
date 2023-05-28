@@ -24,6 +24,7 @@ public class MainViewItem extends AnchorPane {
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     private int amount = 0;
+    public String colour = "White";
     private Product product;
     private MainViewItemDetail mainViewItemDetail;
     @FXML
@@ -40,11 +41,13 @@ public class MainViewItem extends AnchorPane {
     private Button plusButton;
     @FXML
     private AnchorPane backgroundAnchorPane;
+    @FXML
+    private Button mainViewItemFavouriteButton;
 
 
     // -- Constructor -- //
     public MainViewItem(Product product){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main_view_item.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main_view_item_2.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -79,6 +82,22 @@ public class MainViewItem extends AnchorPane {
             @Override
             public void handle(MouseEvent event) {
                 addItemToShoppingCart();
+            }
+        });
+        mainViewItemFavouriteButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if (colour == "White") {
+                    colour = "Red";
+                    mainViewItemFavouriteButton.setStyle("-fx-background-color: red;" +  "-fx-border-color: red;");
+                    iMatDataHandler.addFavorite(product);
+                }
+                else if (colour == "Red") {
+                    colour = "White";
+                    mainViewItemFavouriteButton.setStyle("-fx-background-color: white;" +  "-fx-border-color: #D2D2D2;");
+                    iMatDataHandler.removeFavorite(product);
+                }
+
             }
         });
 

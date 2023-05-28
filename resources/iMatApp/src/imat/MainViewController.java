@@ -186,6 +186,13 @@ public class MainViewController extends AnchorPane {
                 populateMainView();
             }
         });
+        favoriter.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                productList = IMatDataHandler.getInstance().favorites();
+                populateMainView();
+            }
+        });
     }
 
     public void displayDetailView(Product product, MainViewItem item){
@@ -255,9 +262,10 @@ public class MainViewController extends AnchorPane {
 
 
 
-
     @FXML
     private Button allt;
+    @FXML
+    private Button favoriter;
     @FXML
     private Button frukt;
     @FXML

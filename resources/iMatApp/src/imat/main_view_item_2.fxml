@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="product" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="226.0" style="-fx-background-color: D2D2D2;" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="product" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="226.0" style="-fx-background-color: D2D2D2;" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="321.0" layoutX="5.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
       <ImageView id="clickable-main-view" fx:id="itemImageView" fitHeight="122.0" fitWidth="170.0" layoutX="29.0" layoutY="62.0" onMouseClicked="#recipeDetail" pickOnBounds="true" preserveRatio="true" />
@@ -55,6 +55,6 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" styleClass="heart-button" stylesheets="@imat_app.css" />
+      <Button fx:id="mainViewItemFavouriteButton" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" styleClass="heart-button" stylesheets="@imat_app.css" />
    </children>
-</AnchorPane>
+</fx:root>
