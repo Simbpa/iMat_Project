@@ -22,6 +22,7 @@ public class DeliveryDateItem extends AnchorPane {
     String weekDay;
     String day;
     String month;
+    String colour = "Green";
 
     // -- Constructor -- //
     public DeliveryDateItem(String givenWeekDay, String givenDay, String givenMonth) {
@@ -44,14 +45,61 @@ public class DeliveryDateItem extends AnchorPane {
 
 
         // Button Actions
-        /*
-        minusButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+
+        morningButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                //removeItemFromShoppingCart();
+                // Reset Colour on all buttons
+                if (colour == "Green") {
+                    DeliveryViewController.getInstance().resetDateItemColours();
+                }
+                // Set Colour on this button
+                if (colour == "Green") {
+                    morningButton.setStyle("-fx-background-color: #FFC327");
+                    colour = "Yellow";
+                }
+                else if (colour == "Yellow") {
+                    morningButton.setStyle("-fx-background-color: #C9E8B7");
+                    colour = "Green";
+                }
             }
         });
-         */
+        eveningButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                // Reset Colour on all buttons
+                if (colour == "Green") {
+                    DeliveryViewController.getInstance().resetDateItemColours();
+                }
+                // Set Colour on this button
+                if (colour == "Green") {
+                    eveningButton.setStyle("-fx-background-color: #FFC327");
+                    colour = "Yellow";
+                }
+                else if (colour == "Yellow") {
+                    eveningButton.setStyle("-fx-background-color: #C9E8B7");
+                    colour = "Green";
+                }
+            }
+        });
+        nightButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                // Reset Colour on all buttons
+                if (colour == "Green") {
+                    DeliveryViewController.getInstance().resetDateItemColours();
+                }
+                // Set Colour on this button
+                if (colour == "Green") {
+                    nightButton.setStyle("-fx-background-color: #FFC327");
+                    colour = "Yellow";
+                }
+                else if (colour == "Yellow") {
+                    nightButton.setStyle("-fx-background-color: #C9E8B7");
+                    colour = "Green";
+                }
+            }
+        });
     }
 
     // -- FXMl-Objekt -- //
@@ -61,11 +109,11 @@ public class DeliveryDateItem extends AnchorPane {
     @FXML
     private Label dateLabel;
     @FXML
-    private Button morningButton;
+    public Button morningButton;
     @FXML
-    private Button eveningButton;
+    public Button eveningButton;
     @FXML
-    private Button nightButton;
+    public Button nightButton;
 
     // -- Methods -- //
 
