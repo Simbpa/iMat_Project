@@ -122,7 +122,6 @@ public class MainViewItem extends AnchorPane {
                 }
                 else{
                     backgroundAnchorPane.setStyle("-fx-background-color: #A2D085; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-style: solid; -fx-border-color: black; -fx-border-width: 1;");
-
                 }
 
                 itemAmountTextField.setText(Integer.toString(amount));
