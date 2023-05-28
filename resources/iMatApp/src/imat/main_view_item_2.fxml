@@ -31,19 +31,19 @@
             </Text>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="backgroundAnchorPane" layoutX="19.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="186.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
+      <AnchorPane fx:id="backgroundAnchorPane" layoutX="29.0" layoutY="261.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="165.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
          <children>
-            <Button fx:id="plusButton" graphicTextGap="0.0" layoutX="137.0" layoutY="6.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="38.0" styleClass="plus-minus-button" text="+">
+            <Button fx:id="plusButton" graphicTextGap="0.0" layoutX="142.0" layoutY="5.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="38.0" styleClass="plus-minus-button" text="+" AnchorPane.rightAnchor="6.0">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Button>
-            <Button fx:id="minusButton" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="38.0" styleClass="plus-minus-button" text="-">
+            <Button fx:id="minusButton" layoutX="6.0" layoutY="5.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="38.0" styleClass="plus-minus-button" text="-" AnchorPane.leftAnchor="6.0">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="62.0" layoutY="4.0" prefHeight="39.0" prefWidth="62.0" promptText="0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;">
+            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="62.0" layoutY="4.0" prefHeight="39.0" prefWidth="62.0" promptText="0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="61.00000000000001" AnchorPane.rightAnchor="62.00000000000001">
                <font>
                   <Font size="18.0" />
                </font>
@@ -55,6 +55,6 @@
             <Font size="25.0" />
          </font>
       </Text>
-      <Button fx:id="mainViewItemFavouriteButton" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" styleClass="heart-button" stylesheets="@imat_app.css" />
+      <Button fx:id="mainViewItemFavouriteButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="38.0" styleClass="heart-button" stylesheets="@imat_app.css" />
    </children>
 </fx:root>
