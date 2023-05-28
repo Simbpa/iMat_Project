@@ -173,12 +173,12 @@
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="accountViewMonth" alignment="BOTTOM_LEFT" layoutX="506.0" layoutY="488.0" prefHeight="47.0" prefWidth="54.0" promptText="Postkod" styleClass="info-field" text="MM">
+                        <TextField fx:id="accountViewMonth" alignment="BOTTOM_LEFT" layoutX="506.0" layoutY="488.0" prefHeight="47.0" prefWidth="54.0" promptText="MM" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="accountViewCVC" alignment="BOTTOM_LEFT" layoutX="644.0" layoutY="488.0" prefHeight="47.0" prefWidth="68.0" promptText="Postkod" styleClass="info-field" text="CVC">
+                        <TextField fx:id="accountViewCVC" alignment="BOTTOM_LEFT" layoutX="644.0" layoutY="488.0" prefHeight="47.0" prefWidth="68.0" promptText="CVC" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
@@ -188,7 +188,7 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="accountViewYear" alignment="BOTTOM_LEFT" layoutX="580.0" layoutY="488.0" prefHeight="47.0" prefWidth="54.0" promptText="Postkod" styleClass="info-field" text="ÅÅ">
+                        <TextField fx:id="accountViewYear" alignment="BOTTOM_LEFT" layoutX="580.0" layoutY="488.0" prefHeight="47.0" prefWidth="54.0" promptText="ÅÅ" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>

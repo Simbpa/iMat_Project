@@ -64,6 +64,11 @@ public class DeliveryViewController extends AnchorPane {
         deliveryViewNextButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                PaymentViewController.getInstance().cardNumber.setText(IMatDataHandler.getInstance().getCreditCard().getCardNumber());
+                PaymentViewController.getInstance().cardNumber.setText(IMatDataHandler.getInstance().getCreditCard().getCardNumber());
+                PaymentViewController.getInstance().cvc.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getVerificationCode()));
+                PaymentViewController.getInstance().month.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getValidMonth()));
+                PaymentViewController.getInstance().year.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getValidYear()));
                 ApplicationController.getInstance().switchPage(PaymentViewController.getPage());
             }
         });
