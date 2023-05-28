@@ -20,7 +20,7 @@
                   <AnchorPane layoutX="26.0" layoutY="24.0" prefHeight="619.0" prefWidth="231.0" styleClass="account-side-bar">
                      <children>
                         <AnchorPane fx:id="accountIndicator" layoutX="18.0" layoutY="167.0" prefHeight="6.0" prefWidth="200.0" style="-fx-background-color: #a2d085; -fx-background-radius: 6;" />
-                        <AnchorPane fx:id="historyIndicatior" layoutX="18.0" layoutY="299.0" prefHeight="6.0" prefWidth="200.0" style="-fx-background-color: #a2d085; -fx-background-radius: 6;" />
+                        <AnchorPane fx:id="historyIndicator" layoutX="18.0" layoutY="299.0" prefHeight="6.0" prefWidth="200.0" style="-fx-background-color: #a2d085; -fx-background-radius: 6;" />
                         <AnchorPane fx:id="listIndicator" layoutX="18.0" layoutY="231.0" prefHeight="6.0" prefWidth="200.0" style="-fx-background-color: #a2d085; -fx-background-radius: 6;" />
                         <Text layoutX="9.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mitt namn" textAlignment="CENTER" wrappingWidth="213.13671875">
                            <font>

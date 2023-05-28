@@ -65,6 +65,8 @@ public class AccountViewController extends AnchorPane {
             throw new RuntimeException(e);
         }
 
+        accountIndicator.toFront();
+
         // Button Actions
         initHistoryView();
         initListView();
@@ -73,14 +75,18 @@ public class AccountViewController extends AnchorPane {
         myAccountButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                hideAllIndicators();
                 showMyAccountWindow();
+                accountIndicator.toFront();
             }
         });
 
         myListButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                hideAllIndicators();
                 showMyListWindow();
+                listIndicator.toFront();
             }
         });
 
@@ -88,6 +94,8 @@ public class AccountViewController extends AnchorPane {
             @Override
             public void handle(ActionEvent event) {
                 showMyHistoryWindow();
+                hideAllIndicators();
+                historyIndicator.toFront();
             }
         });
 
@@ -147,6 +155,12 @@ public class AccountViewController extends AnchorPane {
     private Text postcodeError;
     @FXML
     private Text phoneErrorField;
+    @FXML
+    private AnchorPane listIndicator;
+    @FXML
+    private AnchorPane historyIndicator;
+    @FXML
+    private AnchorPane accountIndicator;
 
     // -- Methods -- //
     public void saveAccountInfo(){
@@ -373,6 +387,12 @@ public class AccountViewController extends AnchorPane {
             System.out.println("Input String cannot be parsed to Integer.");
         }
         return false;
+    }
+
+    public void hideAllIndicators() {
+        accountIndicator.toBack();
+        listIndicator.toBack();
+        historyIndicator.toBack();
     }
 
 }
