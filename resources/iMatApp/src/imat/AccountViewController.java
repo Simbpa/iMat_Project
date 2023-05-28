@@ -99,6 +99,14 @@ public class AccountViewController extends AnchorPane {
             }
         });
 
+        logOutButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ApplicationController.getInstance().logout();
+                ApplicationController.getInstance().switchPage(MainViewController.getPage());
+            }
+        });
+
     }
 
     // -- FXML Object -- //
@@ -161,6 +169,8 @@ public class AccountViewController extends AnchorPane {
     private AnchorPane historyIndicator;
     @FXML
     private AnchorPane accountIndicator;
+    @FXML
+    private Button logOutButton;
 
     // -- Methods -- //
     public void saveAccountInfo(){
