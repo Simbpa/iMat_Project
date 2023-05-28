@@ -92,7 +92,7 @@ public class DeliveryViewController extends AnchorPane {
 
     // -- Methods -- //
 
-    private void populateDeliveryViewList() {
+    public void populateDeliveryViewList() {
 
         for (int i = 0; i < 6; i++) {
             Calendar calendar = Calendar.getInstance((TimeZone.getTimeZone("GMT")));
@@ -146,10 +146,19 @@ public class DeliveryViewController extends AnchorPane {
         }
     }
 
-    private void populateDeliveryView() {
+    public void populateDeliveryView() {
         deliveryViewFlowPane.getChildren().clear();
         for (int i = 0; i < deliveryDateItemList.size(); i++) {
             deliveryViewFlowPane.getChildren().add(deliveryDateItemList.get(i));
+        }
+    }
+
+    public void resetDateItemColours() {
+        for (DeliveryDateItem deliveryDateItem: deliveryDateItemList) {
+            deliveryDateItem.colour = "Green";
+            deliveryDateItem.morningButton.setStyle("-fx-background-color: #C9E8B7");
+            deliveryDateItem.eveningButton.setStyle("-fx-background-color: #C9E8B7");
+            deliveryDateItem.nightButton.setStyle("-fx-background-color: #C9E8B7");
         }
     }
 
