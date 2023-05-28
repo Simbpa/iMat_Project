@@ -138,6 +138,18 @@
                         <Font size="18.75" />
                     </font>
                 </Button>
+            <Button fx:id="applicationBasketButton2" graphicTextGap="0.0" layoutX="1104.0" layoutY="34.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="142.0" style="-fx-background-color: #d2d2d2; -fx-background-radius: 30;" text="0,00 kr">
+               <graphic>
+                  <ImageView fitHeight="33.75" fitWidth="33.75" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/263142.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="18.75" />
+               </font>
+            </Button>
                 <Button fx:id="applicationBasketButton" graphicTextGap="0.0" layoutX="1104.0" layoutY="29.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="142.0" styleClass="white-rounded-buttons" stylesheets="@imat_app.css" text="0,00 kr" AnchorPane.topAnchor="34.0">
                     <graphic>
                         <ImageView fitHeight="33.75" fitWidth="33.75" pickOnBounds="true" preserveRatio="true">

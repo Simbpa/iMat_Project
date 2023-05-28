@@ -6,6 +6,7 @@ package imat;
 
 // -- Imports -- //
 
+import javafx.beans.value.ChangeListener;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -78,6 +79,7 @@ public class ApplicationController extends AnchorPane {
             @Override
             public void shoppingCartChanged(CartEvent cartEvent) {
                 applicationBasketButton.setText(Double.toString(IMatDataHandler.getInstance().getShoppingCart().getTotal()) + " kr");
+                applicationBasketButton2.setText(Double.toString(IMatDataHandler.getInstance().getShoppingCart().getTotal()) + " kr");
             }
         });
         searchArea.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -308,6 +310,9 @@ public class ApplicationController extends AnchorPane {
     @FXML
     private Button applicationHelpPopUpCloseButton;
 
+    @FXML
+    private Button applicationBasketButton2;
+
 
     // -- Methods -- //
     public void addShoppingList(ArrayList<ShoppingItem> newList, String name){
@@ -331,6 +336,12 @@ public class ApplicationController extends AnchorPane {
         pageRoot.getChildren().add(page);
         loginPopup.toBack();
         applicationHelpPopUp.toBack();
+        if (page != MainViewController.getPage()) {
+            applicationBasketButton2.toFront();
+
+        } else if (page == MainViewController.getPage()) {
+            applicationBasketButton.toFront();
+        }
     }
 
     // Main View Methods
