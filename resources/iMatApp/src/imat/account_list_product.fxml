@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane prefHeight="189.0" prefWidth="200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.AccountListProduct">
    <children>
@@ -17,5 +17,6 @@
       <Text layoutX="84.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Äpple" />
       <Text layoutX="91.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2 st" />
       <Line endX="100.0" layoutX="100.0" layoutY="133.0" startX="-100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label layoutX="201.0" layoutY="143.0" text="Label" />
    </children>
 </AnchorPane>
