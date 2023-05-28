@@ -96,7 +96,7 @@
 }
 
 #minusButton{
-    -fx-background-color: #bfbfbf;
+    -fx-background-color: #D9D9D9;
 }
 #minusButton:hover {
     -fx-background-color: #b3b3b3;
@@ -113,3 +113,7 @@
     -fx-background-insets: 0 0 -1 0, 0, 1, 2;
 }
 
+.titled-pane > .title {
+                       -fx-border-radius: 20;
+                       -fx-background-color: #D9D9D9;
+                       -fx-background-radius: 20;}

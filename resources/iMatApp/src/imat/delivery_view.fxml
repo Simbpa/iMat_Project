@@ -14,16 +14,16 @@
     <children>
       <AnchorPane layoutX="352.0" layoutY="325.0" prefHeight="300.0" prefWidth="580.0" style="-fx-border-radius: 15; -fx-border-color: black;">
          <children>
-            <ScrollPane hbarPolicy="NEVER" layoutX="65.0" layoutY="15.0" prefHeight="270.0" prefWidth="457.0" style="-fx-border-color: ffffff; -fx-background-color: ffffff;" vbarPolicy="NEVER">
+            <ScrollPane fx:id="deliveryViewScrollPane" hbarPolicy="NEVER" layoutX="65.0" layoutY="15.0" prefHeight="270.0" prefWidth="457.0" style="-fx-border-color: ffffff; -fx-background-color: ffffff;" vbarPolicy="NEVER">
                <content>
                   <FlowPane fx:id="deliveryViewFlowPane" prefHeight="270.0" prefWidth="925.0" style="-fx-background-color: ffffff;" />
                </content>
             </ScrollPane>
-            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15;">
+            <Button fx:id="deliveryViewLeftButton" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15;">
                <graphic>
                   <Polygon fill="DODGERBLUE" points="0.0, 0.0, 0.0, 12.399993896484375, 9.4000244140625, 6.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: gray;" />
                </graphic></Button>
-            <Button layoutX="535.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15;">
+            <Button fx:id="deliveryViewRightButton" layoutX="535.0" layoutY="15.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15;">
                <graphic>
                   <Polygon fill="DODGERBLUE" layoutY="4.0" points="0.0, 0.0, 0.0, 12.399993896484375, 9.4000244140625, 6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: gray;" />
                </graphic></Button>

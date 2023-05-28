@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -66,6 +67,19 @@ public class DeliveryViewController extends AnchorPane {
                 ApplicationController.getInstance().switchPage(PaymentViewController.getPage());
             }
         });
+        deliveryViewLeftButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                deliveryViewScrollPane.setHvalue(0.01);
+
+            }
+        });
+        deliveryViewRightButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                deliveryViewScrollPane.setHvalue(0.98);
+            }
+        });
 
     }
 
@@ -89,6 +103,12 @@ public class DeliveryViewController extends AnchorPane {
     private Button deliveryViewNextButton;
     @FXML
     private FlowPane deliveryViewFlowPane;
+    @FXML
+    private Button deliveryViewLeftButton;
+    @FXML
+    private Button deliveryViewRightButton;
+    @FXML
+    private ScrollPane deliveryViewScrollPane;
 
     // -- Methods -- //
 

@@ -65,6 +65,7 @@ public class MainViewController extends AnchorPane {
             throw new RuntimeException(e);
         }
         sumLabel.setText("0 kr");
+        alltIndicator.toFront();
         mainViewInitialize();
         IMatDataHandler.getInstance().getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
             @Override
