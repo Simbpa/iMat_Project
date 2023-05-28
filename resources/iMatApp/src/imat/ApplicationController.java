@@ -150,6 +150,16 @@ public class ApplicationController extends AnchorPane {
                 switchPage(MainViewController.getPage());
             }
         });
+        applicationHelpButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {applicationHelpPopUp.toFront();}
+
+        });
+        applicationHelpPopUpCloseButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {applicationHelpPopUp.toBack();}
+
+        });
 
     }
     public boolean isLogged_in(){
@@ -210,6 +220,9 @@ public class ApplicationController extends AnchorPane {
     private Button applicationAccountButton;
     @FXML
     private Button applicationBasketButton;
+    @FXML
+    private Button applicationHelpButton;
+
     // Main View
 
     @FXML
@@ -256,6 +269,12 @@ public class ApplicationController extends AnchorPane {
 
     @FXML
     private Button confirmationMainButton;
+
+    // Popups
+    @FXML
+    private AnchorPane applicationHelpPopUp;
+    @FXML
+    private Button applicationHelpPopUpCloseButton;
 
 
     // -- Methods -- //
