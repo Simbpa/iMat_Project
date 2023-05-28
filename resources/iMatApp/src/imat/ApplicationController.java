@@ -108,8 +108,21 @@ public class ApplicationController extends AnchorPane {
         loginMainButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                login();
-                loginPopup.toBack();
+                if(loginTelephoneTextField.getText().isEmpty() || loginTelephoneTextField.getText().isBlank() || !AccountViewController.isNumeric(loginTelephoneTextField.getText())){
+                    loginError.toFront();
+                    loginError.setText("Fel telefonnummer eller lösenord!");
+                    loginTelephoneTextField.setStyle("-fx-border-width: 10");
+                    loginTelephoneTextField.setStyle("-fx-border-color: red");
+                    loginPasswordTextField.setStyle("-fx-border-width: 10");
+                    loginPasswordTextField.setStyle("-fx-border-color: red");
+                }
+                else {
+                    loginError.toBack();
+                    loginPasswordTextField.setStyle("-fx-border-width: 0");
+                    loginTelephoneTextField.setStyle("-fx-border-width: 0");
+                    login();
+                    loginPopup.toBack();
+                }
             }
         });
 
@@ -174,6 +187,8 @@ public class ApplicationController extends AnchorPane {
     private AnchorPane pageRoot;
     @FXML
     private Button homeButton;
+    @FXML
+    private Label loginError;
 
     @FXML
     private AnchorPane applicationRoot;

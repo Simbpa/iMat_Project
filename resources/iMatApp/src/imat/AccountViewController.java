@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -94,6 +95,14 @@ public class AccountViewController extends AnchorPane {
 
     // -- FXML Object -- //
     @FXML
+    private TextField accountViewCard;
+    @FXML
+    private TextField accountViewMonth;
+    @FXML
+    private TextField accountViewYear;
+    @FXML
+    private TextField accountViewCVC;
+    @FXML
     private TextField firstnameField;
     @FXML
     private TextField lastnameField;
@@ -130,33 +139,83 @@ public class AccountViewController extends AnchorPane {
     @FXML
     private FlowPane theFlowPane;
 
-
-
+    @FXML
+    private Text firstnameError;
+    @FXML
+    private Text lastnameError;
+    @FXML
+    private Text postcodeError;
+    @FXML
+    private Text phoneErrorField;
 
     // -- Methods -- //
     public void saveAccountInfo(){
-        if(firstnameField != null){
+        if(!firstnameField.getText().isBlank() || !firstnameField.getText().isEmpty()){
             IMatDataHandler.getInstance().getCustomer().setFirstName(firstnameField.getText());
-        };
+            firstnameError.setText(" ");
+            firstnameField.setStyle("-fx-border-width: 0");
+        }
+        else{
+            firstnameError.setText("Du måste fylla i detta fältet!");
+            firstnameField.setStyle("-fx-border-width: 2");
+            firstnameField.setStyle("-fx-border-color: red");
+        }
 
-        if(lastnameField != null){
+        if(!lastnameField.getText().isBlank() || !lastnameField.getText().isEmpty()){
             IMatDataHandler.getInstance().getCustomer().setLastName(lastnameField.getText());
-        };
+            lastnameError.setText(" ");
+            lastnameField.setStyle("-fx-border-width: 0");
+        }
+        else{
+            lastnameError.setText("Du måste fylla i detta fältet!");
+            lastnameField.setStyle("-fx-border-width: 2");
+            lastnameField.setStyle("-fx-border-color: red");
+        }
+
+
         if(addressField != null){
             IMatDataHandler.getInstance().getCustomer().setAddress(addressField.getText());
         };
         if(cityField != null){
             IMatDataHandler.getInstance().getCustomer().setPostAddress(cityField.getText());
-        };
-        if(postcodeField!= null){
-            IMatDataHandler.getInstance().getCustomer().setPostCode(postcodeField.getText());
-        };
-        if(phoneField!= null){
-            IMatDataHandler.getInstance().getCustomer().setMobilePhoneNumber(phoneField.getText());
-        };
+        }
+        if(postcodeField.getText().isBlank() || postcodeField.getText().isEmpty()){
+            postcodeError.setText("Du måste fylla i detta fältet!");
+
+            postcodeField.setStyle("-fx-border-width: 2");
+            postcodeField.setStyle("-fx-border-color: red");
+        } else if (!isNumeric(postcodeField.getText())) {
+            postcodeError.setText("Postkoden får bara innehålla siffror!");
+            postcodeField.setStyle("-fx-border-width: 2");
+            postcodeField.setStyle("-fx-border-color: red");
+        } else{
+            IMatDataHandler.getInstance().getCustomer().setLastName(postcodeField.getText());
+            postcodeError.setText(" ");
+            postcodeField.setStyle("-fx-border-width: 0");
+        }
+
+        if(phoneField.getText().isBlank() || phoneField.getText().isEmpty()){
+            phoneErrorField.setText("Du måste fylla i detta fältet!");
+            phoneField.setStyle("-fx-border-width: 2");
+            phoneField.setStyle("-fx-border-color: red");
+        } else if (!isNumeric(phoneField.getText())) {
+            phoneErrorField.setText("Postkoden får bara innehålla siffror!");
+            phoneField.setStyle("-fx-border-width: 2");
+            phoneField.setStyle("-fx-border-color: red");
+        } else{
+            IMatDataHandler.getInstance().getCustomer().setLastName(phoneField.getText());
+            phoneErrorField.setText(" ");
+            phoneField.setStyle("-fx-border-width: 0");
+        }
         if(emailField != null){
             IMatDataHandler.getInstance().getCustomer().setEmail(emailField.getText());
         };
+        /*
+        IMatDataHandler.getInstance().getCreditCard().setCardNumber(accountViewCard.getText());
+        IMatDataHandler.getInstance().getCreditCard().setVerificationCode(Integer.valueOf(accountViewCVC.getText()));
+        IMatDataHandler.getInstance().getCreditCard().setValidMonth(Integer.valueOf(accountViewMonth.getText()));
+        IMatDataHandler.getInstance().getCreditCard().setValidYear(Integer.valueOf(accountViewYear.getText()));*/
+
         IMatDataHandler.getInstance().shutDown();
         initAccountView();
     }
@@ -295,6 +354,25 @@ public class AccountViewController extends AnchorPane {
         }
         test3 = new accountListListItem("Storhandling", test);
         accountListFlowPane.getChildren().add(test3);
+    }
+
+    public static boolean isNumeric(String string) {
+        int intValue;
+
+        System.out.println(String.format("Parsing string: \"%s\"", string));
+
+        if(string == null || string.equals("")) {
+            System.out.println("String cannot be parsed, it is null or empty.");
+            return false;
+        }
+
+        try {
+            intValue = Integer.parseInt(string);
+            return true;
+        } catch (NumberFormatException e) {
+            System.out.println("Input String cannot be parsed to Integer.");
+        }
+        return false;
     }
 
 }
