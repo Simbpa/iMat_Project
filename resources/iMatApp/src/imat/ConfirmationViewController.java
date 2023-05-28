@@ -49,6 +49,14 @@ public class ConfirmationViewController extends AnchorPane {
                 ApplicationController.getInstance().switchPage(MainViewController.getPage());
             }
         });
+        confirmationToMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.print(IMatDataHandler.getInstance().getShoppingCart().getItems());
+                ApplicationController.getInstance().switchPage(MainViewController.getPage());
+            }
+        });
+
 
     }
     public void setFinalPrice(double amount){
@@ -65,4 +73,20 @@ public class ConfirmationViewController extends AnchorPane {
     private Label adressField;
     @FXML
     private Button confirmationViewToMainViewButton;
+    @FXML
+    private Button confirmationToMainViewButton;
+    @FXML
+    private Label dateLabel;
+    @FXML
+    private Label timeLabel;
+
+    // -- Methods -- //
+
+    public void setDateLabel(String string) {
+        dateLabel.setText(string);
+    }
+    public void setTimeLabel(String string) {
+        timeLabel.setText(string);
+    }
+
 }

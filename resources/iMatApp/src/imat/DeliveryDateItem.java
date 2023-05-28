@@ -19,10 +19,10 @@ import java.util.ConcurrentModificationException;
 import java.util.List;
 
 public class DeliveryDateItem extends AnchorPane {
-    String weekDay;
-    String day;
-    String month;
-    String colour = "Green";
+    private String weekDay;
+    private String day;
+    private String month;
+    public String colour = "Green";
 
     // -- Constructor -- //
     public DeliveryDateItem(String givenWeekDay, String givenDay, String givenMonth) {
@@ -57,6 +57,8 @@ public class DeliveryDateItem extends AnchorPane {
                 if (colour == "Green") {
                     morningButton.setStyle("-fx-background-color: #FFC327");
                     colour = "Yellow";
+                    ConfirmationViewController.getInstance().setTimeLabel(morningButton.getText());
+                    ConfirmationViewController.getInstance().setDateLabel(day + " " + month);
                 }
                 else if (colour == "Yellow") {
                     morningButton.setStyle("-fx-background-color: #C9E8B7");
@@ -75,6 +77,8 @@ public class DeliveryDateItem extends AnchorPane {
                 if (colour == "Green") {
                     eveningButton.setStyle("-fx-background-color: #FFC327");
                     colour = "Yellow";
+                    ConfirmationViewController.getInstance().setTimeLabel(eveningButton.getText());
+                    ConfirmationViewController.getInstance().setDateLabel(day + " " + month);
                 }
                 else if (colour == "Yellow") {
                     eveningButton.setStyle("-fx-background-color: #C9E8B7");
@@ -93,6 +97,8 @@ public class DeliveryDateItem extends AnchorPane {
                 if (colour == "Green") {
                     nightButton.setStyle("-fx-background-color: #FFC327");
                     colour = "Yellow";
+                    ConfirmationViewController.getInstance().setTimeLabel(nightButton.getText());
+                    ConfirmationViewController.getInstance().setDateLabel(day + " " + month);
                 }
                 else if (colour == "Yellow") {
                     nightButton.setStyle("-fx-background-color: #C9E8B7");
