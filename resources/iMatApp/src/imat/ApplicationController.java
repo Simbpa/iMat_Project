@@ -296,6 +296,8 @@ public class ApplicationController extends AnchorPane {
         }
 
         pageRoot.getChildren().add(page);
+        loginPopup.toBack();
+        applicationHelpPopUp.toBack();
     }
 
     // Main View Methods
