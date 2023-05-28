@@ -72,6 +72,12 @@ public class MainViewBasketItem extends AnchorPane {
                 addItemToShoppingCart();
             }
         });
+        itemAmountTextField.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                setItemInShoppingCart();
+            }
+        });
 
         // Shopping Cart Listener
 
@@ -114,17 +120,15 @@ public class MainViewBasketItem extends AnchorPane {
         BasketViewController.getInstance().populateBasketViewBasket();
         MainViewController.getInstance().populateMainViewBasket();
     }
-}
-    /*public void setItemInShoppingCart() {
-        int amount = Integer.valueOf(itemAmountLabel.getText());
-        if (amount >= 0) {
-            shoppingCart.removeItem(new ShoppingItem(product));
-            Double new_amount = Double.valueOf(amount);
-            shoppingCart.addProduct(product, new_amount);
-
-        }
+    public void setItemInShoppingCart() {
+        int current_amount = Integer.valueOf(itemAmountTextField.getText());
+        int difference = current_amount - MainViewController.getInstance().mainViewItemMap.get(product.getName()).getAmount();
+        MainViewController.getInstance().mainViewItemMap.get(product.getName()).setAmount(current_amount);
+        iMatDataHandler.getShoppingCart().addProduct(product, difference);
+        BasketViewController.getInstance().populateBasketViewBasket();
         MainViewController.getInstance().populateMainViewBasket();
-    }*/
+    }
+}
 
 
 

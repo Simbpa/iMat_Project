@@ -128,31 +128,14 @@ public class MainViewItem extends AnchorPane {
         BasketViewController.getInstance().populateBasketViewBasket();
         MainViewController.getInstance().populateMainViewBasket();
 
-        /*
-        int amount = 0;
-        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
-        for (ShoppingItem shoppingItem: shoppingCart.getItems()) {
-            if (shoppingItem.getProduct() == product) {
-                amount = (int) shoppingItem.getAmount();
-                if (amount > 1) {
-
-                    //shoppingItem.setAmount(amount-1);
-                    iMatDataHandler.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
-                } else {
-                    iMatDataHandler.getShoppingCart().removeProduct(product);
-                }
-            }
-        }
-         */
     }
     public void setItemInShoppingCart() {
-        int amount = Integer.valueOf(itemAmountTextField.getText());
-        if (amount >= 0) {
-            iMatDataHandler.getShoppingCart().removeItem(new ShoppingItem(product));
-            Double new_amount = Double.valueOf(amount);
-            iMatDataHandler.getShoppingCart().addProduct(product, new_amount);
-
-        }
+        int current_amount = Integer.valueOf(itemAmountTextField.getText());
+        int difference = current_amount - amount;
+        amount = current_amount;
+        iMatDataHandler.getShoppingCart().addProduct(product, difference);
+        BasketViewController.getInstance().populateBasketViewBasket();
+        MainViewController.getInstance().populateMainViewBasket();
     }
 
     public void increaseAmount() {
@@ -167,6 +150,9 @@ public class MainViewItem extends AnchorPane {
     }
     public int getAmount() {
         return amount;
+    }
+    public void setAmount(int i) {
+        amount = i;
     }
 }
 
