@@ -171,6 +171,10 @@ public class BasketViewController extends AnchorPane {
         return categorizedBasket;
     }
 
+    public void clearBasketViewItemColour() {
+        
+    }
+
     public void populateBasketViewBasket() {
         /*basketFlowPane.getChildren().clear();
         ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
