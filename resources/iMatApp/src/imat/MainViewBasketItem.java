@@ -30,7 +30,7 @@ public class MainViewBasketItem extends AnchorPane {
     @FXML
     private Label itemPriceLabel;
     @FXML
-    private Label itemAmountLabel;
+    private TextField itemAmountTextField;
     @FXML
     private Button minusButton;
     @FXML
@@ -38,7 +38,7 @@ public class MainViewBasketItem extends AnchorPane {
 
 
     // -- Constructor -- //
-    public MainViewBasketItem(Product product){
+    public MainViewBasketItem(Product product, Double given_amount){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main_view_basket_item.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -51,11 +51,13 @@ public class MainViewBasketItem extends AnchorPane {
 
         this.product = product;
         this.mainViewItemDetail = new MainViewItemDetail(product);
+        this.amount = given_amount.intValue();
 
-        itemImageView.setImage(iMatDataHandler.getFXImage(product));
+
+        itemImageView.setImage(iMatDataHandler.getFXImage(product, 65, 65));
         itemNameLabel.setText(product.getName());
         itemPriceLabel.setText(Double.toString(product.getPrice()));
-        itemAmountLabel.setText(Integer.toString(amount));
+        itemAmountTextField.setText(Integer.toString(amount));
 
         // Button Actions
         minusButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
@@ -82,16 +84,19 @@ public class MainViewBasketItem extends AnchorPane {
     }
 
     // -- Methods -- //
+    public void recipeDetail(){
+        MainViewController.getInstance().displayDetailView(product, MainViewController.getInstance().mainViewItemMap.get(product.getName()));
+    }
 
     public void updateItem(ShoppingItem shoppingItem) {
-        amount = MainViewController.getInstance().mainViewItemMap.get(product.getName()).getAmount();
+        amount = MainViewController.getInstance().getMainViewItemMap().get(product.getName()).getAmount();
         if (shoppingItem != null) {
             if (shoppingItem.getProduct() == product) {
                 if (amount <= 0) {
                     amount = 0;
-                    minusButton.setId("gray-minus-button");
+                    iMatDataHandler.getShoppingCart().removeProduct(product);
                 }
-                itemAmountLabel.setText(Integer.toString(amount));
+                itemAmountTextField.setText(Integer.toString(amount));
             }
         }
     }
@@ -100,14 +105,17 @@ public class MainViewBasketItem extends AnchorPane {
         MainViewController.getInstance().mainViewItemMap.get(product.getName()).increaseAmount();
         iMatDataHandler.getShoppingCart().addProduct(product);
         BasketViewController.getInstance().populateBasketViewBasket();
+        MainViewController.getInstance().populateMainViewBasket();
     }
 
     public void removeItemFromShoppingCart() {
         MainViewController.getInstance().mainViewItemMap.get(product.getName()).decreaseAmount();
         iMatDataHandler.getShoppingCart().addProduct(product, -1);
         BasketViewController.getInstance().populateBasketViewBasket();
+        MainViewController.getInstance().populateMainViewBasket();
     }
-    public void setItemInShoppingCart() {
+}
+    /*public void setItemInShoppingCart() {
         int amount = Integer.valueOf(itemAmountLabel.getText());
         if (amount >= 0) {
             shoppingCart.removeItem(new ShoppingItem(product));
@@ -116,10 +124,8 @@ public class MainViewBasketItem extends AnchorPane {
 
         }
         MainViewController.getInstance().populateMainViewBasket();
+    }*/
 
-    }
-
-}
 
 
 

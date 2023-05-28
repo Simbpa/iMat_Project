@@ -1,6 +1,7 @@
 package imat;
 
 // -- Imports -- //
+import com.sun.tools.javac.Main;
 import imat.MainViewItemDetail;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -37,6 +38,8 @@ public class MainViewItem extends AnchorPane {
     private Button minusButton;
     @FXML
     private Button plusButton;
+    @FXML
+    private AnchorPane backgroundAnchorPane;
 
 
     // -- Constructor -- //
@@ -50,7 +53,6 @@ public class MainViewItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        System.out.println(minusButton.getId());
         this.product = product;
         this.mainViewItemDetail = new MainViewItemDetail(product);
 
@@ -96,12 +98,22 @@ public class MainViewItem extends AnchorPane {
             if (shoppingItem.getProduct() == product) {
                 if (amount <= 0) {
                     amount = 0;
+                    backgroundAnchorPane.setStyle("-fx-background-color: white; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-style: solid; -fx-border-color: black; -fx-border-width: 1;");
                     iMatDataHandler.getShoppingCart().removeProduct(product);
                 }
+                else{
+                    backgroundAnchorPane.setStyle("-fx-background-color: #A2D085; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-style: solid; -fx-border-color: black; -fx-border-width: 1;");
+
+                }
+
                 itemAmountTextField.setText(Integer.toString(amount));
             }
+
         }
 
+    }
+    public void recipeDetail(){
+        MainViewController.getInstance().displayDetailView(product, this);
     }
     public void addItemToShoppingCart() {
         amount += 1;
@@ -111,7 +123,6 @@ public class MainViewItem extends AnchorPane {
     }
 
     public void removeItemFromShoppingCart() {
-
         amount -= 1;
         iMatDataHandler.getShoppingCart().addProduct(product, -1);
         BasketViewController.getInstance().populateBasketViewBasket();
@@ -146,6 +157,10 @@ public class MainViewItem extends AnchorPane {
 
     public void increaseAmount() {
         amount += 1;
+    }
+    public void clearedBasket(){
+        amount = 0;
+        itemAmountTextField.setText(Integer.toString(amount));
     }
     public void decreaseAmount() {
         amount -= 1;

@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -79,82 +80,157 @@
                   </AnchorPane>
                   <AnchorPane fx:id="myAccountWindow" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <TextField fx:id="firstnameField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Förnamn" styleClass="info-field">
+                        <TextField fx:id="firstnameField" alignment="BOTTOM_LEFT" layoutX="310.0" layoutY="91.0" prefHeight="47.0" prefWidth="184.0" promptText="Förnamn" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="lastnameField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="183.0" prefHeight="47.0" prefWidth="184.0" promptText="Efternamn" styleClass="info-field">
+                        <TextField fx:id="lastnameField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="91.0" prefHeight="47.0" prefWidth="184.0" promptText="Efternamn" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="addressField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="260.0" prefHeight="47.0" prefWidth="403.0" promptText="Adress" styleClass="info-field">
+                        <TextField fx:id="addressField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="178.0" prefHeight="47.0" prefWidth="403.0" promptText="Adress" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="cityField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="333.0" prefHeight="47.0" prefWidth="184.0" promptText="Ort" styleClass="info-field">
+                        <TextField fx:id="cityField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="278.0" prefHeight="47.0" prefWidth="184.0" promptText="Ort" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="postcodeField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="332.0" prefHeight="47.0" prefWidth="184.0" promptText="Postkod" styleClass="info-field">
+                        <TextField fx:id="postcodeField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="277.0" prefHeight="47.0" prefWidth="184.0" promptText="Postkod" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="phoneField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="408.0" prefHeight="47.0" prefWidth="184.0" promptText="Telefonnummer" styleClass="info-field">
+                        <TextField fx:id="phoneField" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="365.0" prefHeight="47.0" prefWidth="184.0" promptText="Telefonnummer" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="emailField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="408.0" prefHeight="47.0" prefWidth="184.0" promptText="E-post" styleClass="info-field">
+                        <TextField fx:id="emailField" alignment="BOTTOM_LEFT" layoutX="526.0" layoutY="364.0" prefHeight="47.0" prefWidth="184.0" promptText="E-post" styleClass="info-field">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </TextField>
-                        <Button fx:id="saveButton" layoutX="460.0" layoutY="518.0" mnemonicParsing="false" onMouseClicked="#saveAccountInfo" styleClass="green-rounded-buttons" text="Spara">
+                        <Button fx:id="saveButton" layoutX="463.0" layoutY="590.0" mnemonicParsing="false" onMouseClicked="#saveAccountInfo" styleClass="green-rounded-buttons" text="Spara">
                            <font>
                               <Font size="25.0" />
                            </font>
                         </Button>
-                        <Text layoutX="378.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina uppgifter">
+                        <Text layoutX="379.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina uppgifter">
                            <font>
                               <Font size="40.0" />
                            </font>
                         </Text>
-                        <Text layoutX="310.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Förnamn">
+                        <Text layoutX="310.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Förnamn">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text layoutX="526.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn">
+                        <Text layoutX="526.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text layoutX="311.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress">
+                        <Text layoutX="311.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text layoutX="526.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ort">
+                        <Text layoutX="526.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ort">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text layoutX="308.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postkod">
+                        <Text layoutX="308.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postkod">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text layoutX="526.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-post">
+                        <Text layoutX="526.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-post">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text layoutX="309.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer">
+                        <Text layoutX="309.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="accountViewCard" alignment="BOTTOM_LEFT" layoutX="309.0" layoutY="488.0" prefHeight="47.0" prefWidth="187.0" promptText="0000 0000 0000 0000" styleClass="info-field">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="accountViewMonth" alignment="BOTTOM_LEFT" layoutX="506.0" layoutY="488.0" prefHeight="47.0" prefWidth="54.0" promptText="Postkod" styleClass="info-field" text="MM">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="accountViewCVC" alignment="BOTTOM_LEFT" layoutX="644.0" layoutY="488.0" prefHeight="47.0" prefWidth="68.0" promptText="Postkod" styleClass="info-field" text="CVC">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="420.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalningsinformation">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="accountViewYear" alignment="BOTTOM_LEFT" layoutX="580.0" layoutY="488.0" prefHeight="47.0" prefWidth="54.0" promptText="Postkod" styleClass="info-field" text="ÅÅ">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="562.0" layoutY="483.0" text="/">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="309.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortnummer">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ec0000" layoutX="309.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="187.20000000000005">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="phoneErrorField" fill="#ec0000" layoutX="307.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="187.20000000000005">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ec0000" layoutX="524.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="187.20000000000005">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="postcodeError" fill="#ec0000" layoutX="309.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="240.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ec0000" layoutX="524.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="240.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="firstnameError" fill="#ec0000" layoutX="309.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="240.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lastnameError" fill="#ec0000" layoutX="527.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="240.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ec0000" layoutX="309.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="403.20000000000016">
                            <font>
                               <Font size="15.0" />
                            </font>

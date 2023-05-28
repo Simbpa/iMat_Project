@@ -27,7 +27,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="143.0" layoutY="134.0" text="250:49 kr">
+            <Label fx:id="totalSumLabel" layoutX="143.0" layoutY="134.0" text="0 kr">
                <font>
                   <Font size="24.0" />
                </font>
@@ -43,7 +43,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="143.0" layoutY="276.0" text="329:49 kr">
+            <Label fx:id="finalPriceLabel" layoutX="143.0" layoutY="276.0" text="70 kr">
                <font>
                   <Font size="24.0" />
                </font>
@@ -60,9 +60,9 @@
       </AnchorPane>
       <AnchorPane layoutX="15.0" layoutY="110.0" prefHeight="540.0" prefWidth="975.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 15; -fx-border-radius: 15;">
          <children>
-            <ScrollPane hbarPolicy="NEVER" layoutX="15.0" layoutY="1.0" prefHeight="541.0" prefWidth="945.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER">
+            <ScrollPane hbarPolicy="NEVER" layoutX="6.0" layoutY="5.0" prefHeight="538.0" prefWidth="961.0" style="-fx-background-color: #ffffff;" vbarPolicy="NEVER">
                <content>
-                  <FlowPane fx:id="basketFlowPane" prefHeight="540.0" prefWidth="945.0" style="-fx-background-color: #ffffff;" />
+                  <FlowPane fx:id="basketFlowPane" prefHeight="540.0" prefWidth="961.0" style="-fx-background-color: #ffffff;" />
                </content>
             </ScrollPane>
          </children></AnchorPane>

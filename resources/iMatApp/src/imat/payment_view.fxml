@@ -70,7 +70,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="143.0" layoutY="134.0" text="250:49 kr">
+            <Label fx:id="totalSumLabel" layoutX="143.0" layoutY="134.0" text="0 kr">
                <font>
                   <Font size="24.0" />
                </font>
@@ -86,14 +86,14 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="143.0" layoutY="276.0" text="329:49 kr">
+            <Label fx:id="finalPriceLabel" layoutX="143.0" layoutY="276.0" text="70 kr">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="paymentViewPayButton" alignment="CENTER" layoutX="19.0" layoutY="328.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="special-rounded-button" text="Betala">
+            <Button fx:id="paymentViewPayButton" alignment="CENTER" layoutX="19.0" layoutY="325.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="225.0" styleClass="special-rounded-button" text="Betala">
                <font>
-                  <Font size="33.0" />
+                  <Font name="System Bold" size="34.0" />
                </font>
             </Button>
          </children>

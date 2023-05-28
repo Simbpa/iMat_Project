@@ -1,15 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <fx:root fx:id="applicationRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
+      <AnchorPane fx:id="loginPopup" layoutX="594.0" layoutY="60.0" prefHeight="632.0" prefWidth="638.0">
+         <children>
+            <Label fx:id="loginError" layoutX="92.0" layoutY="342.0" prefHeight="26.0" prefWidth="450.0" text="Fel lösenord eller telefonnummer" textFill="RED">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="493.0" layoutX="1.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="636.0" />
+            <Line endX="320.0" layoutX="317.0" layoutY="489.0" startX="-316.0" />
+            <Button fx:id="loginMainButton" alignment="CENTER" layoutX="137.0" layoutY="375.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="364.0" style="-fx-background-color: FFC327; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="Log in">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+            <Button fx:id="loginCreateAccountButton" alignment="CENTER" layoutX="142.0" layoutY="497.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="354.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="Skapa konto">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Button>
+            <TextField fx:id="loginTelephoneTextField" layoutX="92.0" layoutY="148.0" prefHeight="89.0" prefWidth="449.0" promptText="Telefon" style="-fx-border-color: black;">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="loginPasswordTextField" layoutX="94.0" layoutY="252.0" prefHeight="89.0" prefWidth="449.0" promptText="Lösenord" style="-fx-border-color: black;">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </TextField>
+            <Line endX="25.5" endY="33.0" layoutX="449.0" layoutY="87.0" startX="-16.5" startY="-47.0" />
+            <Line endX="20.325721740722656" endY="37.43083572387695" layoutX="404.0" layoutY="86.0" rotate="45.0" startX="-7.059975624084473" startY="-49.79571533203125" />
+            <Button fx:id="closeLoginPopupButton" layoutX="562.0" layoutY="136.0" mnemonicParsing="false" style="-fx-background-color: white;" styleClass="white-button">
+               <graphic>
+                  <ImageView fitHeight="98.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon_close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
         <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="1456.0" style="-fx-background-color: #A2D085;" styleClass="top-bar">
             <children>
                 <TextField fx:id="searchArea" alignment="BOTTOM_LEFT" layoutX="191.0" layoutY="38.0" prefHeight="53.0" prefWidth="603.0" promptText="Sök..." styleClass="search-bar" AnchorPane.bottomAnchor="35.0" AnchorPane.topAnchor="38.0">
@@ -34,7 +79,7 @@
                         <Font size="18.75" />
                     </font>
                 </Button>
-                <Button fx:id="accountButtonLoggedIn" layoutX="941.0" layoutY="31.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="153.75" styleClass="green-rounded-buttons" stylesheets="@imat_app.css" text="Mitt namn" AnchorPane.topAnchor="34.0">
+                <Button fx:id="accountButtonLoggedIn" layoutX="941.0" layoutY="31.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="153.75" styleClass="white-rounded-buttons" stylesheets="@imat_app.css" text="Mitt namn" AnchorPane.topAnchor="34.0">
                     <graphic>
                         <ImageView fitHeight="33.75" fitWidth="33.75" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -58,7 +103,7 @@
                         <Font size="18.75" />
                     </font>
                 </Button>
-                <Button fx:id="applicationBasketButton" layoutX="1104.0" layoutY="29.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="127.5" styleClass="white-rounded-buttons" stylesheets="@imat_app.css" text="0,00 kr" AnchorPane.topAnchor="34.0">
+                <Button fx:id="applicationBasketButton" graphicTextGap="0.0" layoutX="1104.0" layoutY="29.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="142.0" styleClass="white-rounded-buttons" stylesheets="@imat_app.css" text="0,00 kr" AnchorPane.topAnchor="34.0">
                     <graphic>
                         <ImageView fitHeight="33.75" fitWidth="33.75" pickOnBounds="true" preserveRatio="true">
                             <image>

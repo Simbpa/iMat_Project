@@ -5,9 +5,13 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 public class PaymentViewController extends AnchorPane {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -37,8 +41,21 @@ public class PaymentViewController extends AnchorPane {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
+        if(IMatDataHandler.getInstance().getShoppingCart().getTotal() != 0){
+            double cartSum = IMatDataHandler.getInstance().getShoppingCart().getTotal();
+            totalSumLabel.setText(Double.toString(cartSum) + " kr");
+            finalPriceLabel.setText(Double.toString(cartSum + 70) + " kr");
+        }
+        IMatDataHandler.getInstance().getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                double cartSum = IMatDataHandler.getInstance().getShoppingCart().getTotal();
+                totalSumLabel.setText(Double.toString(cartSum) + " kr");
+                finalPriceLabel.setText(Double.toString(cartSum + 70) + " kr");
+            }
+        });
         // Button Actions
+
         paymentViewToMainViewButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -54,13 +71,28 @@ public class PaymentViewController extends AnchorPane {
         paymentViewPayButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                ConfirmationViewController.getInstance().setFinalPrice(IMatDataHandler.getInstance().getShoppingCart().getTotal());
+                ConfirmationViewController.getInstance().setAdressField();
+                for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems()){
+                    MainViewController.getInstance().mainViewItemMap.get(item.getProduct().getName()).clearedBasket();
+                }
+                IMatDataHandler.getInstance().placeOrder();
+                IMatDataHandler.getInstance().shutDown();
+                MainViewController.getInstance().populateMainViewBasket();
+                BasketViewController.getInstance().populateBasketViewBasket();
                 ApplicationController.getInstance().switchPage(ConfirmationViewController.getPage());
+                AccountViewController.getInstance().initHistoryView();
+
             }
         });
 
     }
 
     // -- FXML Objects -- //
+    @FXML
+    private Label finalPriceLabel;
+    @FXML
+    private Label totalSumLabel;
     @FXML
     private Button paymentViewToMainViewButton;
     @FXML
