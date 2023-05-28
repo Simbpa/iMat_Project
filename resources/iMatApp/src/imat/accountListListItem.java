@@ -4,6 +4,7 @@ import com.sun.tools.javac.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -19,7 +20,7 @@ import java.util.HashMap;
 
 public class accountListListItem extends AnchorPane {
     @FXML
-    private Text nameText;
+    private TextField nameText;
     @FXML
     private FlowPane listItemOpenedFlow;
     @FXML

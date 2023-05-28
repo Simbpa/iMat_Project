@@ -13,24 +13,24 @@
 
 <fx:root type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <javafx.scene.layout.AnchorPane prefHeight="253.0" prefWidth="920.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white;" stylesheets="@imat_app.css">
+      <javafx.scene.layout.AnchorPane prefHeight="253.0" prefWidth="920.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white; -fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@imat_app.css">
          <children>
-            <Text fx:id="dateText" layoutX="23.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23 april 2022">
+            <Text fx:id="dateText" layoutX="21.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23 april 2022">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fx:id="amountOfProductText" layoutX="248.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36 varor">
+            <Text fx:id="amountOfProductText" layoutX="286.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36 varor">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="totalPriceText" layoutX="376.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3954 kr">
+            <Text fx:id="totalPriceText" layoutX="410.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3954 kr">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Button layoutX="538.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Maila kvitto">
+            <Button layoutX="507.0" layoutY="12.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="142.0" styleClass="green-rounded-buttons" text="Maila kvitto">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -39,15 +39,15 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="13.0" />
+                  <Font size="18.0" />
                </font>
             </Button>
             <Button layoutX="799.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#historyViewAllClick" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Visa allt">
                <font>
-                  <Font size="13.0" />
+                  <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="677.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="102.0" styleClass="green-rounded-buttons" text="Skriv ut">
+            <Button layoutX="668.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Skriv ut">
                <graphic>
                   <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -56,12 +56,12 @@
                   </ImageView>
                </graphic>
                <font>
-                  <Font size="13.0" />
+                  <Font size="18.0" />
                </font>
             </Button>
-            <ScrollPane fx:id="historyItemScrollPane" hbarPolicy="NEVER" hmax="2.0" layoutX="169.0" layoutY="62.0" prefHeight="189.0" prefWidth="768.0" vbarPolicy="NEVER" vmax="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <ScrollPane fx:id="historyItemScrollPane" hbarPolicy="NEVER" hmax="2.0" layoutX="73.0" layoutY="62.0" prefHeight="190.0" prefWidth="772.0" style="-fx-background-color: ffffff;" vbarPolicy="NEVER" vmax="0.0" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="76.0">
                <content>
-                  <FlowPane fx:id="itemFlowPane" maxHeight="190.0" minHeight="189.0" prefHeight="190.0" prefWrapLength="40000.0" />
+                  <FlowPane fx:id="itemFlowPane" maxHeight="190.0" minHeight="189.0" prefHeight="190.0" prefWrapLength="40000.0" style="-fx-background-color: ffffff;" />
                </content>
             </ScrollPane>
          </children>
