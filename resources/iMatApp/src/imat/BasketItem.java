@@ -73,7 +73,12 @@ public class BasketItem extends AnchorPane {
                 addItemToShoppingCart();
             }
         });
-
+        itemAmountTextField.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                setItemInShoppingCart();
+            }
+        });
         // Shopping Cart Listener
 
         iMatDataHandler.getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
@@ -114,6 +119,14 @@ public class BasketItem extends AnchorPane {
     public void removeItemFromShoppingCart() {
         MainViewController.getInstance().mainViewItemMap.get(product.getName()).decreaseAmount();
         iMatDataHandler.getShoppingCart().addProduct(product, -1);
+        BasketViewController.getInstance().populateBasketViewBasket();
+        MainViewController.getInstance().populateMainViewBasket();
+    }
+    public void setItemInShoppingCart() {
+        int current_amount = Integer.valueOf(itemAmountTextField.getText());
+        int difference = current_amount - MainViewController.getInstance().mainViewItemMap.get(product.getName()).getAmount();
+        MainViewController.getInstance().mainViewItemMap.get(product.getName()).setAmount(current_amount);
+        iMatDataHandler.getShoppingCart().addProduct(product, difference);
         BasketViewController.getInstance().populateBasketViewBasket();
         MainViewController.getInstance().populateMainViewBasket();
     }
