@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<fx:root prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-
-</fx:root>
+<AnchorPane fx:id="product" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="334.0" prefWidth="226.0" style="-fx-background-color: D2D2D2;" stylesheets="@imat_app.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="321.0" layoutX="5.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
+      <ImageView id="clickable-main-view" fx:id="itemImageView" fitHeight="122.0" fitWidth="170.0" layoutX="29.0" layoutY="62.0" onMouseClicked="#recipeDetail" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="97.0" layoutY="7.0" prefHeight="49.0" prefWidth="116.0" style="-fx-border-color: black;" styleClass="chattBubbla">
+         <cursor>
+            <Cursor fx:constant="SW_RESIZE" />
+         </cursor>
+         <children>
+            <Label layoutX="91.0" layoutY="14.0" prefHeight="34.0" prefWidth="23.0" text="/st">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Text fx:id="itemPriceLabel" layoutX="-8.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9:00" textAlignment="RIGHT" wrappingWidth="94.18802370340347">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="backgroundAnchorPane" layoutX="19.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="186.0" style="-fx-background-radius: 15; -fx-border-color: black; -fx-border-radius: 15; -fx-border-style: solid; -fx-border-width: 1;">
+         <children>
+            <Button fx:id="plusButton" graphicTextGap="0.0" layoutX="137.0" layoutY="6.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="38.0" styleClass="plus-minus-button" text="+">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="minusButton" layoutX="14.0" layoutY="5.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="38.0" styleClass="plus-minus-button" text="-">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="62.0" layoutY="4.0" prefHeight="39.0" prefWidth="62.0" promptText="0" style="-fx-border-color: #FFFFFF; -fx-background-color: #FFFFFF;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Text id="clickable-main-view" fx:id="itemNameText" layoutX="21.0" layoutY="213.0" onMouseClicked="#recipeDetail" strokeType="OUTSIDE" strokeWidth="0.0" text="ehffniekhsvikejsvojeovsf" textAlignment="CENTER" wrappingWidth="177.90548706054688">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Button layoutX="14.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0" styleClass="heart-button" stylesheets="@imat_app.css" />
+   </children>
+</AnchorPane>
