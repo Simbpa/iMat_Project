@@ -58,7 +58,7 @@ public class DeliveryViewController extends AnchorPane {
         deliveryViewBackButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                ApplicationController.getInstance().switchPage(BasketViewController.getPage());
+                ApplicationController.getInstance().switchPage(ShowAccountViewController.getPage());
             }
         });
         deliveryViewNextButton.setOnAction(new EventHandler<ActionEvent>() {
