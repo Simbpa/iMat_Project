@@ -75,12 +75,14 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="closeLoginPopupButton" layoutX="263.0" layoutY="74.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;" styleClass="white-button" />
-            <ImageView fx:id="closeLoginPopupButton1" fitHeight="25.0" fitWidth="21.0" layoutX="270.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/icon_close.png" />
-               </image>
-            </ImageView>
+            <Button fx:id="closeLoginPopupButton" layoutX="260.0" layoutY="36.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;" styleClass="white-button">
+               <graphic>
+                  <ImageView fx:id="closeLoginPopupButton1" fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/icon_close.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             <Label layoutX="117.0" layoutY="45.0" text="Logga in">
                <font>
                   <Font size="18.0" />
