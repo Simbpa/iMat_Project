@@ -134,13 +134,14 @@ public class ApplicationController extends AnchorPane {
             @Override
             public void handle(ActionEvent event) {
                 if(!AccountViewController.isNumeric(loginTelephoneTextField.getText())){
+                    loginError.toFront();
                     loginError.setText("Telefonnummret måste bestå av siffror!");
                     loginTelephoneTextField.setStyle("-fx-border-width: 10");
                     loginTelephoneTextField.setStyle("-fx-border-color: red");
                     loginPasswordTextField.setStyle("-fx-border-width: 10");
                     loginPasswordTextField.setStyle("-fx-border-color: red");
                 }
-                else if (loginTelephoneTextField.getText().isEmpty() || loginTelephoneTextField.getText().isBlank() || IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber().equals(loginTelephoneTextField.getText()) ||IMatDataHandler.getInstance().getUser().getPassword().equals(loginPasswordTextField.getText())) {
+                else if (loginTelephoneTextField.getText().isEmpty() || loginTelephoneTextField.getText().isBlank() || !IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber().equals(loginTelephoneTextField.getText()) || !IMatDataHandler.getInstance().getUser().getPassword().equals(loginPasswordTextField.getText())) {
                     loginError.toFront();
                     loginError.setText("Fel telefonnummer eller lösenord!");
                     loginTelephoneTextField.setStyle("-fx-border-width: 10");
