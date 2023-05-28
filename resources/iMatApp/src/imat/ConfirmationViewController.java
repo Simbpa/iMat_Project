@@ -56,8 +56,6 @@ public class ConfirmationViewController extends AnchorPane {
                 ApplicationController.getInstance().switchPage(MainViewController.getPage());
             }
         });
-
-
     }
     public void setFinalPrice(double amount){
         amountField.setText(Double.toString(amount+70) + " kr");

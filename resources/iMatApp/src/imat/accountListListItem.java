@@ -38,10 +38,10 @@ public class accountListListItem extends AnchorPane {
     @FXML
     protected void addListToCart(){
         for(ShoppingItem item : this.content){
-            IMatDataHandler.getInstance().getShoppingCart().addItem(item);
+            for(int i = 0; i<item.getAmount(); i++)
+            MainViewController.getInstance().mainViewItemMap.get(item.getProduct().getName()).addItemToShoppingCart();
         }
-        MainViewController.getInstance().populateMainViewBasket();
-        //BasketViewController.getInstance().populateMainViewBasket();
+
 
     }
     @FXML

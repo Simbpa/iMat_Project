@@ -41,7 +41,7 @@
                <font>
                   <Font name="System Bold" size="16.0" />
                </font></Button>
-            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="51.0" layoutY="13.0" prefHeight="30.0" prefWidth="54.0" style="-fx-background-color: #ffffff; -fx-border-color: #ffffff;">
+            <TextField fx:id="itemAmountTextField" alignment="CENTER" layoutX="51.0" layoutY="13.0" prefHeight="30.0" prefWidth="54.0" style="-fx-background-color: A2D085;">
                <font>
                   <Font size="16.0" />
                </font></TextField>

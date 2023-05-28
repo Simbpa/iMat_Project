@@ -83,11 +83,6 @@
             </Button>
          </children>
       </javafx.scene.layout.AnchorPane>
-      <Button fx:id="deliveryViewRightButton" layoutX="545.0" layoutY="25.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-radius: 15;">
-         <graphic>
-            <Polygon fill="DODGERBLUE" layoutY="4.0" points="0.0, 0.0, 0.0, 12.399993896484375, 9.4000244140625, 6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: gray;" />
-         </graphic>
-      </Button>
    </children>
    <padding>
       <Insets bottom="7.0" />
