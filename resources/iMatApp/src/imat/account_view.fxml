@@ -42,6 +42,11 @@
                               <Font size="27.0" />
                            </font>
                         </Button>
+                        <Button fx:id="logOutButton" layoutX="56.0" layoutY="547.0" mnemonicParsing="false" styleClass="green-rounded-buttons" text="Log Out">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Button>
                      </children>
                   </AnchorPane>
                   <AnchorPane fx:id="myListWindow" prefHeight="689.0" prefWidth="1000.0" styleClass="accountPage" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">

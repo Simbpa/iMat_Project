@@ -65,7 +65,7 @@ public class PaymentViewController extends AnchorPane {
         paymentViewBackButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                ApplicationController.getInstance().switchPage(ShowAccountViewController.getPage());
+                ApplicationController.getInstance().switchPage(DeliveryViewController.getPage());
             }
         });
         paymentViewPayButton.setOnAction(new EventHandler<ActionEvent>() {

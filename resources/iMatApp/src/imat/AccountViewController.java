@@ -99,6 +99,14 @@ public class AccountViewController extends AnchorPane {
             }
         });
 
+        logOutButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ApplicationController.getInstance().logout();
+                ApplicationController.getInstance().switchPage(MainViewController.getPage());
+            }
+        });
+
     }
 
     // -- FXML Object -- //
@@ -161,6 +169,8 @@ public class AccountViewController extends AnchorPane {
     private AnchorPane historyIndicator;
     @FXML
     private AnchorPane accountIndicator;
+    @FXML
+    private Button logOutButton;
 
     // -- Methods -- //
     public void saveAccountInfo(){
@@ -351,23 +361,13 @@ public class AccountViewController extends AnchorPane {
 
     public void initListView(){
         accountListFlowPane.getChildren().clear();
-        ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
-        Random rand = new Random();
-        for(int i = 1; i<10; i++){
-            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble()*10);
-            test.add(test2);
+        HashMap<Integer, String> names = ApplicationController.getInstance().getShoppingListNames();
+        int i = 0;
+        for(ArrayList<ShoppingItem> list : ApplicationController.getInstance().getShoppingLists()) {
+            accountListListItem test3 = new accountListListItem(names.get(i), list);
+            accountListFlowPane.getChildren().add(test3);
+            i++;
         }
-        accountListListItem test3 = new accountListListItem("Söndag", test);
-        accountListFlowPane.getChildren().add(test3);
-
-        test = new ArrayList<ShoppingItem>();
-        rand = new Random();
-        for(int i = 11; i<35; i++){
-            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble()*10);
-            test.add(test2);
-        }
-        test3 = new accountListListItem("Storhandling", test);
-        accountListFlowPane.getChildren().add(test3);
     }
 
     public static boolean isNumeric(String string) {
