@@ -20,12 +20,13 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-import se.chalmers.cse.dat216.project.CartEvent;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCartListener;
+import se.chalmers.cse.dat216.project.*;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 
 public class ApplicationController extends AnchorPane {
@@ -34,6 +35,9 @@ public class ApplicationController extends AnchorPane {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     private boolean logged_in = false;
     private static ApplicationController instance = null;
+    private ArrayList<ArrayList<ShoppingItem>> shoppingLists= new ArrayList<ArrayList<ShoppingItem>>();
+    private HashMap<Integer, String> shoppingListNames = new HashMap<Integer, String>();
+
 
     public static synchronized ApplicationController getInstance() {
         return instance;
@@ -41,6 +45,21 @@ public class ApplicationController extends AnchorPane {
 
 
     public ApplicationController() {
+        ArrayList<ShoppingItem> test = new ArrayList<ShoppingItem>();
+        Random rand = new Random();
+        for(int i = 1; i<10; i++){
+            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble()*10);
+            test.add(test2);
+        }
+        addShoppingList(test, "Söndag");
+        test = new ArrayList<ShoppingItem>();
+        rand = new Random();
+        for(int i = 11; i<35; i++){
+            ShoppingItem test2 = new ShoppingItem(IMatDataHandler.getInstance().getProduct(i), rand.nextDouble()*10);
+            test.add(test2);
+        }
+        addShoppingList(test, "Storhandling");
+
         FXMLLoader loader = new FXMLLoader(ApplicationController.class.getResource("imat_app.fxml"));
         loader.setRoot(this);
         loader.setController(this);
@@ -69,6 +88,9 @@ public class ApplicationController extends AnchorPane {
                 }
             }
         });
+
+
+
 
 
         searchArea.textProperty().addListener((observable, oldValue, newValue) -> {
@@ -278,6 +300,17 @@ public class ApplicationController extends AnchorPane {
 
 
     // -- Methods -- //
+    public void addShoppingList(ArrayList<ShoppingItem> newList, String name){
+        Integer var = shoppingLists.size()-1;
+        shoppingListNames.put(var, name);
+        shoppingLists.add(newList);
+    }
+    public ArrayList<ArrayList<ShoppingItem>> getShoppingLists(){
+        return shoppingLists;
+    }
+    public HashMap<Integer, String> getShoppingListNames(){
+        return shoppingListNames;
+    }
 
     public void switchPage(Pane page) {
         if (pageRoot.getChildren().size() > 0) {
