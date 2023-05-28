@@ -96,6 +96,7 @@ public class ApplicationController extends AnchorPane {
             public void handle(ActionEvent actionEvent) {
                 loginPopup.toBack();
                 MainViewController.getInstance().hideMainViewBasket();
+                applicationHelpPopUp.toBack();
                 switchPage(CreateAccountViewController2.getPage());
             }
         });
@@ -125,6 +126,7 @@ public class ApplicationController extends AnchorPane {
                     login();
                     loginPopup.toBack();
                     MainViewController.getInstance().hideMainViewBasket();
+                    applicationHelpPopUp.toBack();
                 }
             }
         });
@@ -134,6 +136,8 @@ public class ApplicationController extends AnchorPane {
             @Override
             public void handle(ActionEvent event) {
                 loginPopup.toFront();
+                applicationHelpPopUp.toBack();
+                MainViewController.getInstance().hideMainViewBasket();
             }
         });
 
@@ -141,6 +145,8 @@ public class ApplicationController extends AnchorPane {
             @Override
             public void handle(ActionEvent event) {
                 MainViewController.getInstance().showMainViewBasket();
+                loginPopup.toBack();
+                applicationHelpPopUp.toBack();
             }
         });
 
@@ -152,7 +158,11 @@ public class ApplicationController extends AnchorPane {
         });
         applicationHelpButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(ActionEvent event) {applicationHelpPopUp.toFront();}
+            public void handle(ActionEvent event) {
+                applicationHelpPopUp.toFront();
+                loginPopup.toBack();
+                MainViewController.getInstance().hideMainViewBasket();
+            }
 
         });
         applicationHelpPopUpCloseButton.setOnAction(new EventHandler<ActionEvent>() {
