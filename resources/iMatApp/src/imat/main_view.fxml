@@ -330,6 +330,17 @@
                               </AnchorPane>
                               <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="827.0" prefWidth="324.0" style="-fx-border-color: black; -fx-border-width: 1;">
                                  <children>
+                                    <AnchorPane fx:id="alltIndicatior" layoutX="14.0" layoutY="65.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
+                                    <AnchorPane fx:id="favoriterIndicator" layoutX="14.0" layoutY="140.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
+                                    <AnchorPane fx:id="fruktIndicator" layoutX="14.0" layoutY="215.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
+                                    <AnchorPane fx:id="fiskIndicator" layoutX="14.0" layoutY="290.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
+                                    <AnchorPane fx:id="mejeriIndicator" layoutX="14.0" layoutY="365.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
+                                    <AnchorPane fx:id="meatIndicator" layoutX="14.0" layoutY="440.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
+                                    <AnchorPane fx:id="drinksIndicator" layoutX="14.0" layoutY="515.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
+                                    <AnchorPane fx:id="skafferiIndicator" layoutX="14.0" layoutY="590.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
+                                    <AnchorPane fx:id="breadIndicator" layoutX="14.0" layoutY="665.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
+                                    <AnchorPane fx:id="sweetIndicator" layoutX="14.0" layoutY="740.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
+                                    <AnchorPane fx:id="kryddorIndicator" layoutX="14.0" layoutY="815.0" prefHeight="2.0" prefWidth="260.0" style="-fx-background-color: a2d085; -fx-background-radius: 2;" />
                                     <Button fx:id="frukt" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="76.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Frukt &amp; Grönt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
                                        <font>
                                           <Font size="30.0" />
