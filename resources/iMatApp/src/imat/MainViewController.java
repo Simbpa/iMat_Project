@@ -235,9 +235,11 @@ public class MainViewController extends AnchorPane {
         itemDetailAmountField.setText(Integer.toString(item.getAmount()));
         if(item.getAmount() > 0){
             itemDetailAmountPane.setStyle("-fx-background-color: #A2D085; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-style: solid; -fx-border-color: black; -fx-border-width: 1;");
+            itemDetailAmountField.setStyle("-fx-background-color: #A2D085");
         }
         else{
             itemDetailAmountPane.setStyle("-fx-background-color: white; -fx-background-radius: 15px; -fx-border-radius: 15px; -fx-border-style: solid; -fx-border-color: black; -fx-border-width: 1;");
+            itemDetailAmountField.setStyle("-fx-background-color: white");
         }
         itemDetailImage.setImage(IMatDataHandler.getInstance().getFXImage(product));
         itemDetailInformation.setText("En helt underbar vara");

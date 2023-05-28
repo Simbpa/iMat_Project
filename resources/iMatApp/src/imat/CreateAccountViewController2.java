@@ -61,6 +61,7 @@ public class CreateAccountViewController2 extends AnchorPane {
     public void saveInformation(){
         Customer customer = IMatDataHandler.getInstance().getCustomer();
         customer.setAddress(adressField.getText());
+        IMatDataHandler.getInstance().getUser().setPassword(passwordField.getText());
         customer.setFirstName(firstNameField.getText());
         customer.setLastName(lastNameField.getText());
         customer.setEmail(emailField.getText());
@@ -72,6 +73,8 @@ public class CreateAccountViewController2 extends AnchorPane {
     }
 
     // -- FXML Objects -- //
+    @FXML
+    private TextField passwordField;
     @FXML
     private TextField cityField;
     @FXML
