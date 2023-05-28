@@ -14,6 +14,47 @@
 
 <fx:root fx:id="applicationRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="@imat_app.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
     <children>
+      <AnchorPane fx:id="loginPopup" layoutX="706.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label fx:id="loginError" layoutX="222.0" layoutY="253.0" prefHeight="26.0" prefWidth="184.0" text="Fel lösenord eller telefonnummer" textFill="RED" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="286.0" layoutX="159.0" layoutY="107.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+            <Button fx:id="loginMainButton" layoutX="238.0" layoutY="282.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: FFC327; -fx-background-radius: 30;" text="Logga in" AnchorPane.leftAnchor="238.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Polygon fill="WHITE" layoutX="310.0" layoutY="71.0" points="-18.040435791015625, 37.70710754394531, 16.70709228515625, 37.70710754394531, 0.0, 9.999992370605469" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Line endX="-0.33331298828125" endY="-2.288818359375E-5" layoutX="310.0" layoutY="79.0" startX="-17.33331298828125" startY="28.0" />
+            <Line endX="75.0" endY="63.0" layoutX="251.0" layoutY="44.0" startX="59.373779296875" startY="34.292869567871094" />
+            <TextField fx:id="loginTelephoneTextField" layoutX="198.0" layoutY="155.0" promptText="Telefon">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="loginPasswordTextField" layoutX="198.0" layoutY="207.0" promptText="Lösenord">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Line endX="149.0" layoutX="309.0" layoutY="333.0" startX="-149.0" />
+            <Button fx:id="loginCreateAccountButton" layoutX="238.0" layoutY="341.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: A2D085; -fx-background-radius: 30;" text="Skapa Konto" AnchorPane.leftAnchor="238.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeLoginPopupButton" layoutX="422.0" layoutY="148.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;" styleClass="white-button" />
+            <ImageView fx:id="closeLoginPopupButton1" fitHeight="25.0" fitWidth="21.0" layoutX="429.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/icon_close.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="276.0" layoutY="119.0" text="Logga in">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="applicationHelpPopUp" layoutX="572.0" layoutY="-6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="150.0" layoutY="132.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
@@ -43,48 +84,6 @@
             <Button fx:id="applicationHelpPopUpCloseButton" layoutX="408.0" layoutY="136.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="35.0" style="-fx-background-color: white;" styleClass="white-button">
                <graphic>
                   <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/icon_close.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="loginPopup" layoutX="594.0" layoutY="60.0" prefHeight="632.0" prefWidth="638.0">
-         <children>
-            <Label fx:id="loginError" layoutX="92.0" layoutY="342.0" prefHeight="26.0" prefWidth="450.0" text="Fel lösenord eller telefonnummer" textFill="RED">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="493.0" layoutX="1.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="636.0" />
-            <Line endX="320.0" layoutX="317.0" layoutY="489.0" startX="-316.0" />
-            <Button fx:id="loginMainButton" alignment="CENTER" layoutX="137.0" layoutY="375.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="364.0" style="-fx-background-color: FFC327; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="Log in">
-               <font>
-                  <Font size="50.0" />
-               </font>
-            </Button>
-            <Button fx:id="loginCreateAccountButton" alignment="CENTER" layoutX="142.0" layoutY="497.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="354.0" style="-fx-background-color: A2D085; -fx-border-color: black; -fx-background-radius: 50; -fx-border-radius: 50;" text="Skapa konto">
-               <font>
-                  <Font size="50.0" />
-               </font>
-            </Button>
-            <TextField fx:id="loginTelephoneTextField" layoutX="92.0" layoutY="148.0" prefHeight="89.0" prefWidth="449.0" promptText="Telefon" style="-fx-border-color: black;">
-               <font>
-                  <Font size="40.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="loginPasswordTextField" layoutX="94.0" layoutY="252.0" prefHeight="89.0" prefWidth="449.0" promptText="Lösenord" style="-fx-border-color: black;">
-               <font>
-                  <Font size="40.0" />
-               </font>
-            </TextField>
-            <Line endX="25.5" endY="33.0" layoutX="449.0" layoutY="87.0" startX="-16.5" startY="-47.0" />
-            <Line endX="20.325721740722656" endY="37.43083572387695" layoutX="404.0" layoutY="86.0" rotate="45.0" startX="-7.059975624084473" startY="-49.79571533203125" />
-            <Button fx:id="closeLoginPopupButton" layoutX="562.0" layoutY="136.0" mnemonicParsing="false" style="-fx-background-color: white;" styleClass="white-button">
-               <graphic>
-                  <ImageView fitHeight="98.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@resources/icon_close.png" />
                      </image>
