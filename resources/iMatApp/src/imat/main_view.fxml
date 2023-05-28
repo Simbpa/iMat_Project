@@ -85,7 +85,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <ScrollPane hbarPolicy="NEVER" layoutX="2.0" layoutY="110.0" prefHeight="455.0" prefWidth="399.0" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+            <ScrollPane hbarPolicy="NEVER" layoutX="2.0" layoutY="110.0" prefHeight="455.0" prefWidth="399.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
                <content>
                   <FlowPane fx:id="mainViewBasketFlowPane" prefHeight="450.0" prefWidth="400.0" />
                </content>
