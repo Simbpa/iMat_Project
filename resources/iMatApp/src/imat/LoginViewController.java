@@ -5,6 +5,8 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -57,8 +59,29 @@ public class LoginViewController extends AnchorPane {
         loginViewLoginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                ApplicationController.getInstance().login();
-                ApplicationController.getInstance().switchPage(ShowAccountViewController.getPage());
+                if(!AccountViewController.isNumeric(loginTelephoneTextField.getText())){
+                    loginError.toFront();
+                    loginError.setText("Telefonnummret måste bestå av siffror!");
+                    loginTelephoneTextField.setStyle("-fx-border-width: 10");
+                    loginTelephoneTextField.setStyle("-fx-border-color: red");
+                    loginPasswordTextField.setStyle("-fx-border-width: 10");
+                    loginPasswordTextField.setStyle("-fx-border-color: red");
+                }
+                else if (loginTelephoneTextField.getText().isEmpty() || loginTelephoneTextField.getText().isBlank() || IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber().equals(loginTelephoneTextField.getText()) ||IMatDataHandler.getInstance().getUser().getPassword().equals(loginPasswordTextField.getText())) {
+                    loginError.toFront();
+                    loginError.setText("Fel telefonnummer eller lösenord!");
+                    loginTelephoneTextField.setStyle("-fx-border-width: 10");
+                    loginTelephoneTextField.setStyle("-fx-border-color: red");
+                    loginPasswordTextField.setStyle("-fx-border-width: 10");
+                    loginPasswordTextField.setStyle("-fx-border-color: red");
+                }
+                else {
+                    loginError.toBack();
+                    loginPasswordTextField.setStyle("-fx-border-width: 0");
+                    loginTelephoneTextField.setStyle("-fx-border-width: 0");
+                    ApplicationController.getInstance().login();
+                    MainViewController.getInstance().hideMainViewBasket();
+                }
             }
         });
 
@@ -72,6 +95,12 @@ public class LoginViewController extends AnchorPane {
     }
 
     // -- FXML Objects -- //
+    @FXML
+    private Label loginError;
+    @FXML
+    private TextField loginTelephoneTextField;
+    @FXML
+    private TextField loginPasswordTextField;
 
     @FXML
     private Button loginViewToMainViewButton;

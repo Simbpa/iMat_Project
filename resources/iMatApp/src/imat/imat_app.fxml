@@ -49,7 +49,7 @@
       </AnchorPane>
       <AnchorPane fx:id="loginPopup" layoutX="867.0" layoutY="96.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="324.0" prefWidth="311.0">
          <children>
-            <Label fx:id="loginError" layoutX="63.0" layoutY="179.0" prefHeight="26.0" prefWidth="184.0" text="Fel lösenord eller telefonnummer" textFill="RED" />
+            <Label fx:id="loginError" layoutX="40.0" layoutY="179.0" prefHeight="26.0" prefWidth="223.0" text="Fel lösenord eller telefonnummer" textFill="RED" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="286.0" layoutY="33.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
             <Button fx:id="loginMainButton" layoutX="81.0" layoutY="208.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="135.0" style="-fx-background-color: FFC327; -fx-background-radius: 30;" text="Logga in" AnchorPane.leftAnchor="81.0">
                <font>

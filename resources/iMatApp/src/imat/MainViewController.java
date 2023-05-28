@@ -23,10 +23,7 @@ import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class MainViewController extends AnchorPane {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -75,6 +72,17 @@ public class MainViewController extends AnchorPane {
         });
 
         // Button Actions
+        saveTheListButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                ArrayList<ShoppingItem> test = new ArrayList<>();
+                for(ShoppingItem item: IMatDataHandler.getInstance().getShoppingCart().getItems()){
+                    test.add(item);
+                }
+                ApplicationController.getInstance().addShoppingList(test, "Min lista");
+                AccountViewController.getInstance().initListView();
+            }
+        });
 
         mainViewBasketCloseButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -281,6 +289,8 @@ public class MainViewController extends AnchorPane {
     }
 
     // -- FXML objects -- //
+    @FXML
+    private Button saveTheListButton;
     @FXML
     private AnchorPane itemDetailAmountPane;
     @FXML

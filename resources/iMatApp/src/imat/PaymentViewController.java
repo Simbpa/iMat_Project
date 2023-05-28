@@ -5,7 +5,9 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.CartEvent;
@@ -71,6 +73,21 @@ public class PaymentViewController extends AnchorPane {
         paymentViewPayButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                if(saveInfoBox.isSelected()){
+                    if(!year.getText().isBlank() || !year.getText().isBlank()) {
+                        IMatDataHandler.getInstance().getCreditCard().setValidYear(Integer.valueOf(year.getText()));
+                    }
+                    if(!month.getText().isBlank() || !month.getText().isBlank()) {
+                        IMatDataHandler.getInstance().getCreditCard().setValidMonth(Integer.valueOf(month.getText()));
+                    }
+                    if(!cvc.getText().isBlank() || !cvc.getText().isBlank()) {
+                        IMatDataHandler.getInstance().getCreditCard().setVerificationCode(Integer.valueOf(cvc.getText()));
+                    }
+                    if(!cardNumber.getText().isBlank() || !cardNumber.getText().isBlank()) {
+                        IMatDataHandler.getInstance().getCreditCard().setCardNumber(cardNumber.getText());
+                    }
+                }
+
                 ConfirmationViewController.getInstance().setFinalPrice(IMatDataHandler.getInstance().getShoppingCart().getTotal());
                 ConfirmationViewController.getInstance().setAdressField();
                 for(ShoppingItem item : IMatDataHandler.getInstance().getShoppingCart().getItems()){
@@ -99,5 +116,16 @@ public class PaymentViewController extends AnchorPane {
     private Button paymentViewBackButton;
     @FXML
     private Button paymentViewPayButton;
+    @FXML
+    private TextField cvc;
+    @FXML
+    private TextField cardNumber;
+    @FXML
+    private TextField month;
+    @FXML
+    private TextField year;
+    @FXML
+    private CheckBox saveInfoBox;
+
 
 }

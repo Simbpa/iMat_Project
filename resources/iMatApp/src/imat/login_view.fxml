@@ -13,21 +13,26 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1280.0" style="-fx-background-color: white;" stylesheets="@imat_app.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="353.0" layoutY="103.0" prefHeight="454.0" prefWidth="638.0">
+            <AnchorPane layoutX="353.0" layoutY="103.0" prefHeight="497.0" prefWidth="638.0">
                <children>
+                  <Label fx:id="loginError" layoutX="94.0" layoutY="267.0" prefHeight="26.0" prefWidth="450.0" text="Fel användarnamn eller lösenord!" textFill="RED">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
                   <Label layoutX="234.0" layoutY="20.0" text="Logga in">
                      <font>
                         <Font size="45.0" />
                      </font>
                   </Label>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="351.0" layoutX="1.0" layoutY="93.0" stroke="BLACK" strokeType="INSIDE" width="636.0" />
-                  <Line endX="320.0" layoutX="317.0" layoutY="354.0" startX="-316.0" />
-                  <Button fx:id="loginViewLoginButton" alignment="CENTER" layoutX="215.0" layoutY="275.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="204.0" styleClass="special-rounded-button" text="Logga in">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="388.0" layoutX="1.0" layoutY="93.0" stroke="BLACK" strokeType="INSIDE" width="636.0" />
+                  <Line endX="320.0" layoutX="315.0" layoutY="382.0" startX="-316.0" />
+                  <Button fx:id="loginViewLoginButton" alignment="CENTER" layoutX="218.0" layoutY="297.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="204.0" styleClass="special-rounded-button" text="Logga in">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Button>
-                  <Button fx:id="loginViewCreateAccountButton" alignment="CENTER" layoutX="207.0" layoutY="364.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="220.0" styleClass="green-rounded-buttons" text="Skapa konto">
+                  <Button fx:id="loginViewCreateAccountButton" alignment="CENTER" layoutX="207.0" layoutY="399.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="220.0" styleClass="green-rounded-buttons" text="Skapa konto">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -36,7 +41,7 @@
                      <font>
                         <Font size="35.0" />
                      </font></TextField>
-                  <PasswordField fx:id="loginPasswordTextField" layoutX="92.0" layoutY="184.0" prefHeight="69.0" prefWidth="450.0" promptText="Lösenord" style="-fx-border-color: black;">
+                  <PasswordField fx:id="loginPasswordTextField" layoutX="94.0" layoutY="193.0" prefHeight="69.0" prefWidth="450.0" promptText="Lösenord" style="-fx-border-color: black;">
                      <font>
                         <Font size="35.0" />
                      </font>
