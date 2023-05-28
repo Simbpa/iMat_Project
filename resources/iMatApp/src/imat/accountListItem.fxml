@@ -12,24 +12,24 @@
 
 <fx:root style="-fx-background-radius: 20;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <javafx.scene.layout.AnchorPane prefHeight="189.0" prefWidth="201.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white;" stylesheets="@imat_app.css">
+      <javafx.scene.layout.AnchorPane prefHeight="189.0" prefWidth="201.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: white; -fx-background-radius: 30; -fx-border-radius: 30;" stylesheets="@imat_app.css">
          <children>
-            <Text fx:id="nameText" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23 april 2022">
+            <Text fx:id="nameText" layoutX="49.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23 april 2022">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text fx:id="amountOfProductText" layoutX="256.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36 varor">
+            <Text fx:id="amountOfProductText" layoutX="260.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="36 varor">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text fx:id="totalPriceText" layoutX="397.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3954 kr">
+            <Text fx:id="totalPriceText" layoutX="389.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3954 kr">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Button layoutX="547.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Ta bort">
+            <Button layoutX="520.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Ta bort">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -41,7 +41,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="669.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Ändra">
+            <Button layoutX="639.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" styleClass="green-rounded-buttons" text="Ändra">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -53,7 +53,7 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="790.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addListToCart" prefHeight="40.0" prefWidth="118.0" styleClass="green-rounded-buttons" text="Lägg till">
+            <Button layoutX="758.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addListToCart" prefHeight="40.0" prefWidth="118.0" styleClass="green-rounded-buttons" text="Lägg till">
                <graphic>
                   <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -65,12 +65,12 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <ScrollPane fx:id="listItemScrollPane" fitToHeight="true" hbarPolicy="NEVER" layoutX="169.0" layoutY="62.0" prefHeight="189.0" prefWidth="768.0" vbarPolicy="NEVER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <ScrollPane fx:id="listItemScrollPane" fitToHeight="true" hbarPolicy="NEVER" layoutX="55.0" layoutY="62.0" prefHeight="190.0" prefWidth="824.0" style="-fx-background-color: white; -fx-border-color: white;" vbarPolicy="NEVER" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="43.0">
                <content>
-                  <FlowPane fx:id="itemFlowPane" maxHeight="189.0" minHeight="189.0" prefHeight="189.0" prefWrapLength="40000.0" />
+                  <FlowPane fx:id="itemFlowPane" maxHeight="190.0" minHeight="189.0" prefHeight="190.0" prefWidth="39981.0" prefWrapLength="40000.0" style="-fx-background-color: white; -fx-border-color: white;" />
                </content>
             </ScrollPane>
-            <Button layoutX="32.0" layoutY="132.0" mnemonicParsing="false" onMouseClicked="#leftArrowClick">
+            <Button layoutX="14.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#leftArrowClick" prefHeight="27.0" prefWidth="35.0" style="-fx-background-radius: 150;">
                <graphic>
                   <ImageView fitHeight="23.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
                      <image>
