@@ -22,7 +22,7 @@ public class PaymentViewController extends AnchorPane {
 
     // -- Methods -- //
 
-    private static synchronized PaymentViewController getInstance() {
+    public static synchronized PaymentViewController getInstance() {
         if (instance == null) {
             instance = new PaymentViewController();
         }
@@ -117,15 +117,15 @@ public class PaymentViewController extends AnchorPane {
     @FXML
     private Button paymentViewPayButton;
     @FXML
-    private TextField cvc;
+    public TextField cvc;
     @FXML
-    private TextField cardNumber;
+    public TextField cardNumber;
     @FXML
-    private TextField month;
+    public TextField month;
     @FXML
-    private TextField year;
+    public TextField year;
     @FXML
-    private CheckBox saveInfoBox;
+    public CheckBox saveInfoBox;
 
 
 }

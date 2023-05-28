@@ -234,11 +234,18 @@ public class AccountViewController extends AnchorPane {
         if(emailField != null){
             IMatDataHandler.getInstance().getCustomer().setEmail(emailField.getText());
         };
-        /*
-        IMatDataHandler.getInstance().getCreditCard().setCardNumber(accountViewCard.getText());
-        IMatDataHandler.getInstance().getCreditCard().setVerificationCode(Integer.valueOf(accountViewCVC.getText()));
-        IMatDataHandler.getInstance().getCreditCard().setValidMonth(Integer.valueOf(accountViewMonth.getText()));
-        IMatDataHandler.getInstance().getCreditCard().setValidYear(Integer.valueOf(accountViewYear.getText()));*/
+        if(accountViewCard.getText() != null) {
+            IMatDataHandler.getInstance().getCreditCard().setCardNumber(accountViewCard.getText());
+        }
+        if(accountViewCVC.getText() != null) {
+            IMatDataHandler.getInstance().getCreditCard().setVerificationCode(Integer.valueOf(accountViewCVC.getText()));
+        }
+        if(accountViewMonth.getText() != null) {
+            IMatDataHandler.getInstance().getCreditCard().setValidMonth(Integer.valueOf(accountViewMonth.getText()));
+        }
+        if(accountViewYear.getText() != null) {
+            IMatDataHandler.getInstance().getCreditCard().setValidYear(Integer.valueOf(accountViewYear.getText()));
+        }
 
         IMatDataHandler.getInstance().shutDown();
         initAccountView();
@@ -279,6 +286,17 @@ public class AccountViewController extends AnchorPane {
         if(IMatDataHandler.getInstance().getCustomer().getEmail() != null){
             emailField.setText(IMatDataHandler.getInstance().getCustomer().getEmail());
         };
+        if(IMatDataHandler.getInstance().getCreditCard().getCardNumber() != null){
+            accountViewCard.setText(IMatDataHandler.getInstance().getCreditCard().getCardNumber());
+        };
+
+            accountViewCVC.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getVerificationCode()));
+        
+
+            accountViewYear.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getValidYear()));
+
+            accountViewMonth.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getValidMonth()));
+
     }
 
     public HashMap<Integer, String> monthMap = new HashMap<Integer, String>();
