@@ -133,7 +133,14 @@ public class ApplicationController extends AnchorPane {
         loginMainButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if(loginTelephoneTextField.getText().isEmpty() || loginTelephoneTextField.getText().isBlank() || !AccountViewController.isNumeric(loginTelephoneTextField.getText())){
+                if(!AccountViewController.isNumeric(loginTelephoneTextField.getText())){
+                    loginError.setText("Telefonnummret måste bestå av siffror!");
+                    loginTelephoneTextField.setStyle("-fx-border-width: 10");
+                    loginTelephoneTextField.setStyle("-fx-border-color: red");
+                    loginPasswordTextField.setStyle("-fx-border-width: 10");
+                    loginPasswordTextField.setStyle("-fx-border-color: red");
+                }
+                else if (loginTelephoneTextField.getText().isEmpty() || loginTelephoneTextField.getText().isBlank() || IMatDataHandler.getInstance().getCustomer().getMobilePhoneNumber().equals(loginTelephoneTextField.getText()) ||IMatDataHandler.getInstance().getUser().getPassword().equals(loginPasswordTextField.getText())) {
                     loginError.toFront();
                     loginError.setText("Fel telefonnummer eller lösenord!");
                     loginTelephoneTextField.setStyle("-fx-border-width: 10");
@@ -311,9 +318,9 @@ public class ApplicationController extends AnchorPane {
 
     // -- Methods -- //
     public void addShoppingList(ArrayList<ShoppingItem> newList, String name){
+        shoppingLists.add(newList);
         Integer var = shoppingLists.size()-1;
         shoppingListNames.put(var, name);
-        shoppingLists.add(newList);
     }
     public ArrayList<ArrayList<ShoppingItem>> getShoppingLists(){
         return shoppingLists;
