@@ -8,28 +8,27 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="244.0" prefWidth="311.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="150.0" layoutY="132.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
-      <Label layoutX="215.0" layoutY="147.0" text="Kontakta oss">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="7.0" layoutY="37.0" stroke="BLACK" strokeType="INSIDE" width="300.0" />
+      <Label layoutX="72.0" layoutY="52.0" text="Kontakta oss">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="218.0" layoutY="197.0" text="Tel: 070 707 07 07">
+      <Label layoutX="75.0" layoutY="102.0" text="Tel: 070 707 07 07">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="213.0" layoutY="234.0" text="Mejl: iMat@iMat.se">
+      <Label layoutX="70.0" layoutY="139.0" text="Mejl: iMat@iMat.se">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="242.0" layoutY="275.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: A2D085; -fx-background-radius: 30;" text="Vanliga frågor" />
-      <Polygon fill="WHITE" layoutX="300.0" layoutY="96.0" points="-18.040435791015625, 37.70710754394531, 16.70709228515625, 37.70710754394531, 0.0, 9.999992370605469" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Line endX="-0.33331298828125" endY="-2.288818359375E-5" layoutX="300.0" layoutY="104.0" startX="-17.33331298828125" startY="28.0" />
-      <Line endX="75.0" endY="63.0" layoutX="241.0" layoutY="69.0" startX="59.373779296875" startY="34.292869567871094" />
+      <Button layoutX="99.0" layoutY="180.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: A2D085; -fx-background-radius: 30;" text="Vanliga frågor" />
+      <Polygon fill="WHITE" layoutX="157.0" layoutY="1.0" points="-18.040435791015625, 37.70710754394531, 16.70709228515625, 37.70710754394531, 0.0, 9.999992370605469" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Line endX="-0.33331298828125" endY="-2.288818359375E-5" layoutX="157.0" layoutY="9.0" startX="-17.33331298828125" startY="28.0" />
+      <Line endX="75.0" endY="63.0" layoutX="98.0" layoutY="-26.0" startX="59.373779296875" startY="34.292869567871094" />
    </children>
 </AnchorPane>
