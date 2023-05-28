@@ -328,34 +328,39 @@
                                     </Text>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="324.0" style="-fx-border-color: black; -fx-border-width: 1;">
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="827.0" prefWidth="324.0" style="-fx-border-color: black; -fx-border-width: 1;">
                                  <children>
-                                    <Button fx:id="frukt" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="76.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Frukt &amp; Grönt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+                                    <Button fx:id="frukt" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="76.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Frukt &amp; Grönt" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="fisk" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="150.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Fisk" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
+                                    <Button fx:id="favoriter" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="86.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Favoriter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="mejeri" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="225.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Mejeri &amp; Ägg" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="225.0">
+                                    <Button fx:id="fisk" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="150.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Fisk" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="225.0">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="meat" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="300.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Kött, Fågel &amp; Chark" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
+                                    <Button fx:id="mejeri" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="225.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Mejeri &amp; Ägg" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="drinks" alignment="BASELINE_LEFT" layoutX="3.0" layoutY="375.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Dryck" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="375.0">
+                                    <Button fx:id="meat" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="300.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Kött, Fågel &amp; Chark" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="375.0">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="skafferi" alignment="BASELINE_LEFT" layoutX="3.0" layoutY="450.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Skafferi" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="450.0">
+                                    <Button fx:id="drinks" alignment="BASELINE_LEFT" layoutX="3.0" layoutY="375.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Dryck" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="450.0">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="skafferi" alignment="BASELINE_LEFT" layoutX="3.0" layoutY="450.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Skafferi" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="525.0">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
@@ -365,17 +370,17 @@
                                           <Font size="35.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="bread" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="526.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Bröd" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="525.0">
+                                    <Button fx:id="bread" alignment="BASELINE_LEFT" layoutX="1.0" layoutY="526.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Bröd" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="600.0">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="sweet" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="601.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Godis &amp; Nötter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="600.0">
+                                    <Button fx:id="sweet" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="601.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Godis &amp; Nötter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="675.0">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="kryddor" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="676.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Kryddor" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="675.0">
+                                    <Button fx:id="kryddor" alignment="BASELINE_LEFT" layoutX="2.0" layoutY="676.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="316.0" style="-fx-border-color: black; -fx-border-width: 0 0 1 0;" styleClass="white-button" text="Kryddor" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="750.0">
                                        <font>
                                           <Font size="30.0" />
                                        </font>
@@ -426,6 +431,11 @@
                                        </image>
                                     </ImageView>
                                     <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="700.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/32213.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="44.0" fitWidth="36.0" layoutX="285.0" layoutY="782.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@resources/32213.png" />
                                        </image>
