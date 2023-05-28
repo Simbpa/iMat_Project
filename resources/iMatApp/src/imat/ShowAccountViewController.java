@@ -57,7 +57,7 @@ public class ShowAccountViewController extends AnchorPane {
                 ApplicationController.getInstance().switchPage(MainViewController.getPage());
             }
         });
-        showAccountPageNameText.setText(IMatDataHandler.getInstance().getCustomer().getFirstName() + " " +IMatDataHandler.getInstance().getCustomer().getLastName());
+        showAccountViewNameLabel.setText(IMatDataHandler.getInstance().getCustomer().getFirstName() + " " +IMatDataHandler.getInstance().getCustomer().getLastName());
         loginEmailTextField.setText(IMatDataHandler.getInstance().getCustomer().getEmail());
         loginAdressTextField.setText(IMatDataHandler.getInstance().getCustomer().getAddress());
         loginPostCodeTextField.setText(IMatDataHandler.getInstance().getCustomer().getPostCode());
@@ -160,7 +160,7 @@ public class ShowAccountViewController extends AnchorPane {
             }
         });
 
-        showAccountPageNameText.toFront();
+        showAccountViewNameLabel.toFront();
 
     }
     public ArrayList<String> getOrderInformation(){
@@ -186,7 +186,7 @@ public class ShowAccountViewController extends AnchorPane {
     @FXML
     private Button showAccountViewNextButton;
     @FXML
-    private TextField showAccountPageNameText;
+    private Label showAccountViewNameLabel;
     @FXML
     private TextField loginEmailTextField;
     @FXML

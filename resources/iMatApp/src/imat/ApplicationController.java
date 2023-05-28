@@ -95,6 +95,7 @@ public class ApplicationController extends AnchorPane {
             @Override
             public void handle(ActionEvent actionEvent) {
                 loginPopup.toBack();
+                MainViewController.getInstance().hideMainViewBasket();
                 switchPage(CreateAccountViewController2.getPage());
             }
         });
@@ -102,6 +103,7 @@ public class ApplicationController extends AnchorPane {
             @Override
             public void handle(ActionEvent event) {
                 loginPopup.toBack();
+                MainViewController.getInstance().hideMainViewBasket();
                 switchPage(AccountViewController.getPage());
             }
         });
@@ -122,6 +124,7 @@ public class ApplicationController extends AnchorPane {
                     loginTelephoneTextField.setStyle("-fx-border-width: 0");
                     login();
                     loginPopup.toBack();
+                    MainViewController.getInstance().hideMainViewBasket();
                 }
             }
         });

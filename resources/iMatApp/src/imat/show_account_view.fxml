@@ -135,7 +135,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Label fx:id="showAccountPageNameText" alignment="CENTER" contentDisplay="CENTER" layoutX="219.0" layoutY="52.0" prefHeight="45.0" prefWidth="457.0" text="&lt;Name&gt;" textAlignment="CENTER">
+                  <Label fx:id="showAccountViewNameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="219.0" layoutY="52.0" prefHeight="45.0" prefWidth="457.0" text="&lt;Name&gt;" textAlignment="CENTER">
                      <font>
                         <Font size="30.0" />
                      </font>
