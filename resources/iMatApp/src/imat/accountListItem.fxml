@@ -67,12 +67,12 @@
                   <FlowPane fx:id="itemFlowPane" maxHeight="190.0" minHeight="189.0" prefHeight="190.0" prefWidth="39981.0" prefWrapLength="40000.0" style="-fx-background-color: white; -fx-border-color: white;" />
                </content>
             </ScrollPane>
-            <Button layoutX="9.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#leftArrowClick" prefHeight="24.0" prefWidth="26.0" rotate="180.0" scaleX="1.4" scaleY="1.4" style="-fx-background-radius: 15;">
+            <Button layoutX="9.0" layoutY="135.0" mnemonicParsing="false" onMouseClicked="#leftArrowClick" prefHeight="25.6" prefWidth="24.0" rotate="180.0" scaleX="1.4" scaleY="1.4" style="-fx-background-radius: 15;">
                <graphic>
                   <Polygon fill="DODGERBLUE" points="0.0, 0.0, 0.0, 12.399993896484375, 9.4000244140625, 6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: gray;" />
                </graphic>
             </Button>
-            <Button layoutX="873.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#rightArrowClick" scaleX="1.4" scaleY="1.4" style="-fx-background-radius: 15;">
+            <Button layoutX="873.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#rightArrowClick" prefHeight="25.6" prefWidth="24.0" scaleX="1.4" scaleY="1.4" style="-fx-background-radius: 15;">
                <graphic>
                   <Polygon fill="DODGERBLUE" points="0.0, 0.0, 0.0, 12.399993896484375, 9.4000244140625, 6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: gray;" />
                </graphic>
