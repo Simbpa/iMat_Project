@@ -104,6 +104,9 @@ public class MainViewController extends AnchorPane {
         frukt.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                fruktIndicator.toFront();
+
                 List<Product> list_one = IMatDataHandler.getInstance().getProducts(ProductCategory.FRUIT);
                 list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.VEGETABLE_FRUIT));
                 list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.ROOT_VEGETABLE));
@@ -119,6 +122,9 @@ public class MainViewController extends AnchorPane {
         fisk.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                fiskIndicator.toFront();
+
                 productList = IMatDataHandler.getInstance().getProducts(ProductCategory.FISH);
                 populateMainView();
             }
@@ -126,6 +132,9 @@ public class MainViewController extends AnchorPane {
         meat.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                meatIndicator.toFront();
+
                 productList = IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT);
                 populateMainView();
             }
@@ -133,6 +142,9 @@ public class MainViewController extends AnchorPane {
         mejeri.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                mejeriIndicator.toFront();
+
                 productList= IMatDataHandler.getInstance().getProducts(ProductCategory.DAIRIES);
                 populateMainView();
             }
@@ -140,6 +152,9 @@ public class MainViewController extends AnchorPane {
         drinks.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                drinksIndicator.toFront();
+
                 List<Product> list_one = IMatDataHandler.getInstance().getProducts(ProductCategory.COLD_DRINKS);
                 list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.HOT_DRINKS));
                 productList = list_one;
@@ -149,6 +164,9 @@ public class MainViewController extends AnchorPane {
         skafferi.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                skafferiIndicator.toFront();
+
                 List<Product> list_one = IMatDataHandler.getInstance().getProducts(ProductCategory.PASTA);
                 list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.POD));
                 list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.POTATO_RICE));
@@ -159,6 +177,9 @@ public class MainViewController extends AnchorPane {
         kryddor.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                kryddorIndicator.toFront();
+
                 List<Product> list_one = IMatDataHandler.getInstance().getProducts(ProductCategory.HERB);
                 list_one.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FLOUR_SUGAR_SALT));
                 productList = list_one;
@@ -168,6 +189,9 @@ public class MainViewController extends AnchorPane {
         bread.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                breadIndicator.toFront();
+
                 productList = IMatDataHandler.getInstance().getProducts(ProductCategory.BREAD);
                 populateMainView();
             }
@@ -175,6 +199,9 @@ public class MainViewController extends AnchorPane {
         sweet.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                sweetIndicator.toFront();
+
                 productList = IMatDataHandler.getInstance().getProducts(ProductCategory.SWEET);
                 populateMainView();
             }
@@ -182,6 +209,9 @@ public class MainViewController extends AnchorPane {
         allt.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                alltIndicator.toFront();
+
                 productList = IMatDataHandler.getInstance().getProducts();
                 populateMainView();
             }
@@ -189,6 +219,9 @@ public class MainViewController extends AnchorPane {
         favoriter.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
+                hideAllIndicators();
+                favoriterIndicator.toFront();
+
                 productList = IMatDataHandler.getInstance().favorites();
                 populateMainView();
             }
@@ -285,6 +318,28 @@ public class MainViewController extends AnchorPane {
     @FXML
     private Button kryddor;
 
+    @FXML
+    private AnchorPane alltIndicator;
+    @FXML
+    private AnchorPane favoriterIndicator;
+    @FXML
+    private AnchorPane fruktIndicator;
+    @FXML
+    private AnchorPane fiskIndicator;
+    @FXML
+    private AnchorPane mejeriIndicator;
+    @FXML
+    private AnchorPane meatIndicator;
+    @FXML
+    private AnchorPane drinksIndicator;
+    @FXML
+    private AnchorPane skafferiIndicator;
+    @FXML
+    private AnchorPane breadIndicator;
+    @FXML
+    private AnchorPane sweetIndicator;
+    @FXML
+    private AnchorPane kryddorIndicator;
 
 
     @FXML
@@ -342,5 +397,18 @@ public class MainViewController extends AnchorPane {
             MainViewBasketItem mainViewBasketItem = new MainViewBasketItem(shoppingItem.getProduct(), shoppingItem.getAmount());
             mainViewBasketFlowPane.getChildren().add(mainViewBasketItem);
         }
+    }
+    public void hideAllIndicators() {
+        alltIndicator.toBack();
+        favoriterIndicator.toBack();
+        fruktIndicator.toBack();
+        fiskIndicator.toBack();
+        mejeriIndicator.toBack();
+        meatIndicator.toBack();
+        drinksIndicator.toBack();
+        skafferiIndicator.toBack();
+        breadIndicator.toBack();
+        sweetIndicator.toBack();
+        kryddorIndicator.toBack();
     }
 }
