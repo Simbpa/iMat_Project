@@ -227,7 +227,7 @@ public class AccountViewController extends AnchorPane {
             phoneField.setStyle("-fx-border-width: 2");
             phoneField.setStyle("-fx-border-color: red");
         } else{
-            IMatDataHandler.getInstance().getCustomer().setLastName(phoneField.getText());
+            IMatDataHandler.getInstance().getCustomer().setMobilePhoneNumber(phoneField.getText());
             phoneErrorField.setText(" ");
             phoneField.setStyle("-fx-border-width: 0");
         }
@@ -264,7 +264,6 @@ public class AccountViewController extends AnchorPane {
     // -- Extra Code -- //
 
     public void initAccountView(){
-        System.out.println(IMatDataHandler.getInstance().getCustomer().getFirstName());
         if(IMatDataHandler.getInstance().getCustomer().getFirstName() != null){
             firstnameField.setText(IMatDataHandler.getInstance().getCustomer().getFirstName());
         };
@@ -289,13 +288,9 @@ public class AccountViewController extends AnchorPane {
         if(IMatDataHandler.getInstance().getCreditCard().getCardNumber() != null){
             accountViewCard.setText(IMatDataHandler.getInstance().getCreditCard().getCardNumber());
         };
-
-            accountViewCVC.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getVerificationCode()));
-
-
-            accountViewYear.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getValidYear()));
-
-            accountViewMonth.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getValidMonth()));
+        accountViewCVC.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getVerificationCode()));
+        accountViewYear.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getValidYear()));
+        accountViewMonth.setText(Integer.toString(IMatDataHandler.getInstance().getCreditCard().getValidMonth()));
 
     }
 

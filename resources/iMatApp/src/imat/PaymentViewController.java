@@ -86,6 +86,8 @@ public class PaymentViewController extends AnchorPane {
                     if(!cardNumber.getText().isBlank() || !cardNumber.getText().isBlank()) {
                         IMatDataHandler.getInstance().getCreditCard().setCardNumber(cardNumber.getText());
                     }
+                    IMatDataHandler.getInstance().shutDown();
+                    AccountViewController.getInstance().initAccountView();
                 }
 
                 ConfirmationViewController.getInstance().setFinalPrice(IMatDataHandler.getInstance().getShoppingCart().getTotal());
